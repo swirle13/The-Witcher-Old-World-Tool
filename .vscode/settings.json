@@ -2,5 +2,27 @@
     "typescript.tsdk": "node_modules/typescript/lib",
     "editor.rulers": [
         120
+    ],
+    "cSpell.words": [
+        "Beauclair",
+        "Caduch",
+        "Cidaris",
+        "Cintra",
+        "Dhuwod",
+        "Doldeth",
+        "Glenmore",
+        "Gorthur",
+        "Guaed",
+        "Haern",
+        "Hengfors",
+        "Ichaer",
+        "Kaer",
+        "Modron",
+        "Morhen",
+        "Novigrad",
+        "Seren",
+        "Stygga",
+        "Vengerberg",
+        "Vizima"
     ]
 }

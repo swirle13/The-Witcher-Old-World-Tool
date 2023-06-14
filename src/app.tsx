@@ -1,6 +1,7 @@
 // Use components from https://react-bootstrap.netlify.app/docs/getting-started/introduction
 
-import React, { useRef } from 'react';
+// TODO: move all of this terrain selector code into a terrains.tsx or new file to be used by other classes
+// and pass in here via a clean single component instead of all this mess.
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -9,9 +10,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import logo from './img/logo192.png';
 import Button from 'react-bootstrap/esm/Button';
-import { ButtonGroup } from 'react-bootstrap';
 import TerrainTokenDeck, { type ForestToken, type MountainToken, type WaterToken } from '../src/classes/terrains';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const localTerrainDeck = new TerrainTokenDeck();
 
@@ -19,6 +19,20 @@ export default function App() {
   const [displayedMountainToken, setMountainToken] = useState<MountainToken>();
   const [displayedForestToken, setForestToken] = useState<ForestToken>();
   const [displayedWaterToken, setWaterToken] = useState<WaterToken>();
+
+  /*
+    TODO: Create simplified home page for generic actions, e.g.
+    Setup:
+        1. Roll the proper amount of monster cards, subsequent terrain tokens, and randomly assign one to each.
+        2. Randomly assign player boards
+        3. Generate player cards and gold setup
+        All based on provided number of players to adjust, and selected expansions.
+    Three monsters pictures, each with three buttons underneath:
+        1. Defeated monster
+        2. Chased away monster
+        3. Complete loss to monster
+        Automatically rolls new monster of new appropriate level for situation
+  */
 
   return (
     <Container>
@@ -60,6 +74,7 @@ export default function App() {
             <h1>
               Randomly draw a token
             </h1>
+            {/* https://mdbootstrap.com/docs/react/utilities/spacing/ */}
             <Container className='d-grid gap-3 p-3 ms-3 me-3'>
               <Row className='d-flex align-items-center'>
                 <Col md lg="5">

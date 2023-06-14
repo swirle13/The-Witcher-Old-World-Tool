@@ -73,21 +73,12 @@ const WaterTokens: Array<WaterToken> = [
 ]
 
 export default class TerrainTokenDeck {
-    /* what do we want?
-        * immutable list of each token
-        * way to toggle each token as used/unused
-        * fetch any unused tokens
-        * add used tokens back to the pile
-        * prevent any invalid tokens
-        * keep track of which tokens are used for what and disallow shuffling them back in
-    */
+    // TODO: rename ReadonlyDeck to ImmutableDeck
     mountainDeck: ReadonlyDeck<MountainToken>;
     forestDeck: ReadonlyDeck<ForestToken>;
     waterDeck: ReadonlyDeck<WaterToken>;
     allDeck: ReadonlyDeck<TerrainToken>;
     activelyUsedTokens: Deck<TerrainToken>;
-
-    // everything could just be a record: Record<number, object> = {1: {terrainType: "Water", name: Kaer Seren}}
 
     constructor() {
         this.mountainDeck = new ReadonlyDeck<MountainToken>(MountainTokens)
@@ -149,7 +140,6 @@ export default class TerrainTokenDeck {
         } else {
             throw Error(`TerrainType ${type} is not a valid match. Can only add "Mountain", "Forest", and "Water".`)
         }
-
     }
 
     refillAllDecks(): void {
@@ -170,4 +160,3 @@ export {
     WaterTokens,
     TerrainTokenDeck
 }
-
