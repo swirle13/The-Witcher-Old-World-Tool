@@ -1,24 +1,24 @@
-// use components from https://react-bootstrap.netlify.app/docs/getting-started/introduction
+// Use components from https://react-bootstrap.netlify.app/docs/getting-started/introduction
 
-import React, { useRef } from 'react'
+import React, { useRef } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import logo from './img/logo192.png'
+import logo from './img/logo192.png';
 import Button from 'react-bootstrap/esm/Button';
 import { ButtonGroup } from 'react-bootstrap';
-import TerrainTokenDeck, { ForestToken, MountainToken, WaterToken } from '../src/classes/terrains'
+import TerrainTokenDeck, { type ForestToken, type MountainToken, type WaterToken } from '../src/classes/terrains';
 import { useEffect, useState } from 'react';
 
 const localTerrainDeck = new TerrainTokenDeck();
 
 export default function App() {
-  const [displayedMountainToken, setMountainToken] = useState<MountainToken>()
-  const [displayedForestToken, setForestToken] = useState<ForestToken>()
-  const [displayedWaterToken, setWaterToken] = useState<WaterToken>()
+  const [displayedMountainToken, setMountainToken] = useState<MountainToken>();
+  const [displayedForestToken, setForestToken] = useState<ForestToken>();
+  const [displayedWaterToken, setWaterToken] = useState<WaterToken>();
 
   return (
     <Container>
@@ -30,7 +30,6 @@ export default function App() {
               width="30"
               height="30"
               className="d-inline-block align-top"
-            // alt="React Bootstrap logo"
             />{" "}
             React-Bootstrap
           </Navbar.Brand>
@@ -57,46 +56,60 @@ export default function App() {
       <Container fluid className="mx-auto">
         <Row>
           <Col />
-          <Col className='d-grid gap-3 p-3'>
+          <Col className='d-grid gap-3 p-3' xxl="auto">
             <h1>
               Randomly draw a token
             </h1>
-            <Row>
-              <Col md lg="4">
-                <Button
-                  variant="outline-secondary"
-                  onClick={() => setMountainToken(localTerrainDeck.drawMountainToken())}
-                >
-                  Mountain
-                </Button>
-              </Col>
-              <Col sm lg="1">{displayedMountainToken?.number}</Col>
-              <Col>{displayedMountainToken?.name}</Col>
-            </Row>
-            <Row>
-              <Col md lg="4">
-                <Button
-                  variant="outline-secondary"
-                  onClick={() => setForestToken(localTerrainDeck.drawForestToken())}
-                >
-                  Forest
-                </Button>
-              </Col>
-              <Col sm lg="1">{displayedForestToken?.number}</Col>
-              <Col>{displayedForestToken?.name}</Col>
-            </Row>
-            <Row>
-              <Col md lg="4">
-                <Button
-                  variant="outline-secondary"
-                  onClick={() => setWaterToken(localTerrainDeck.drawWaterToken())}
-                >
-                  Water
-                </Button>
-              </Col>
-              <Col sm lg="1">{displayedWaterToken?.number}</Col>
-              <Col>{displayedWaterToken?.name}</Col>
-            </Row>
+            <Container className='d-grid gap-3 p-3 ms-3 me-3'>
+              <Row className='d-flex align-items-center'>
+                <Col md lg="5">
+                  <Button
+                    variant="outline-secondary"
+                    onClick={() => setMountainToken(localTerrainDeck.drawMountainToken())}
+                  >
+                    Mountain
+                  </Button>
+                </Col>
+                <Col sm lg="1">
+                  {displayedMountainToken?.number}
+                </Col>
+                <Col>
+                  {displayedMountainToken?.name}
+                </Col>
+              </Row>
+              <Row className='d-flex align-items-center'>
+                <Col md lg="5">
+                  <Button
+                    variant="outline-secondary"
+                    onClick={() => setForestToken(localTerrainDeck.drawForestToken())}
+                  >
+                    Forest
+                  </Button>
+                </Col>
+                <Col sm lg="1">
+                  {displayedForestToken?.number}
+                </Col>
+                <Col>
+                  {displayedForestToken?.name}
+                </Col>
+              </Row>
+              <Row className='d-flex align-items-center'>
+                <Col md lg="5">
+                  <Button
+                    variant="outline-secondary"
+                    onClick={() => setWaterToken(localTerrainDeck.drawWaterToken())}
+                  >
+                    Water
+                  </Button>
+                </Col>
+                <Col sm lg="1">
+                  {displayedWaterToken?.number}
+                </Col>
+                <Col>
+                  {displayedWaterToken?.name}
+                </Col>
+              </Row>
+            </Container>
           </Col>
           <Col />
         </Row>
