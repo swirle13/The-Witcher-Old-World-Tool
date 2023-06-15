@@ -11,7 +11,7 @@ export default function LostMount() {
                     <Image src={img} rounded />
                 </Col>
             </Row>
-            <TerrainTokenPicker />
+            <TerrainTokenPicker HeaderText="Lost Mount Location Randomizer"/>
         </Container>
     )
 }
