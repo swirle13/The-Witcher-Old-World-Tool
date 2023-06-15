@@ -150,6 +150,7 @@ export default abstract class Deck<T> {
         } else {
             this.deckQueue.populate(this.allItems);
         }
+        this.deckQueue.shuffle();
     }
     shuffle(): void {
         // shuffles only existing cards in deck
