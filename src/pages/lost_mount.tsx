@@ -1,6 +1,7 @@
 import TerrainTokenPicker from "../components/terrain_token_picker";
 import { Col, Container, Image, Row } from "react-bootstrap";
-import img from "../img/LostMountExpansion.jpg"
+import LostMountExpansion from "../img/LostMountExpansion.jpg"
+import AdventurePackHeader from "../img/expansionHeaders/adventurePack.png"
 
 export default function LostMount() {
 
@@ -8,7 +9,12 @@ export default function LostMount() {
         <Container>
             <Row className='d-flex justify-content-center'>
                 <Col xs={6} md={4} className='d-flex justify-content-center'>
-                    <Image src={img} rounded />
+                    <Image src={LostMountExpansion} rounded />
+                </Col>
+            </Row>
+            <Row className='d-flex justify-content-center'>
+                <Col xs={6} md={4} className='d-flex justify-content-center'>
+                    <Image src={AdventurePackHeader} rounded fluid/>
                 </Col>
             </Row>
             <TerrainTokenPicker HeaderText="Lost Mount Location Randomizer"/>
