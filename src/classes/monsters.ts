@@ -33,6 +33,13 @@ Gameplay all-in is comprised of the following expansions:
     * Skellige
     * Mages
     * Legendary Hunt
+
+List all possible purchaseable versions of the game from KS
+
+List which packs of the game are mutually exclusive
+
+Decks:
+    * Monster Trail weakness tokens
 */
 
 const baseSetMonsters: Record<string, Array<string>> = {

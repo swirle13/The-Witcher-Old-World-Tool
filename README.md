@@ -4,11 +4,34 @@ Tool to help ease the small tedia of the board game The Witcher: Old World
 The main goal is to create a few tools to make the randomized parts of the game more fluid and faster than the current methods, something akin to the automations in Tabletop Simulator.
 
 A few ideas:
+
 * Lost Mount location randomizer (can be just a d20, but there are 19 locations, 0-18). Unsure how it integrates with Skellige expansion.
 * 3 Monster panel with results button(s) adjacent which automatically randomize same level monster or increased monster level and randomizes location to same type
-* Quest location randomizer - terrain type
-* Monster Trail location randomizer - terrain type
+* Quest location randomizer
+  * Terrain tokens
+* Monster Trail location randomizer
+  * Terrain tokens
+  * Weakness tokens
 * (Much more complex/longer term) Monster passive/ability calculator to help resolve any questions on how a passive would trigger/resolve/etc provided a current player's card combo
-* Player card randomizer. Rule book says shuffle and pick two, yet the backs of each player card has the school icon on the back, making it not truly random.
+* Witcher/mage card randomizer.
+  * Rule book says shuffle and pick two, yet the backs of each player card has the school icon on the back, making it not truly random.
   * can choose which expansion(s)
 * All location randomizers will try to take already-used locations into account, when/where applicable. Until implemented, users can just reroll and there will be a notice when a location shouldn't be on the same space as another entity.
+* Inventory list for each expansion
+  * Cards
+    * [Action cards vs Advanced Action cards vs Unique Action Cards explanation (discord comment)](https://discord.com/channels/1055042717626929162/1059499187386986608/1118233102377042080)
+  * Tokens
+  * Minis
+  * Where to locate some of the harder to find items
+    * e.g. closed tavern token being in plastic witcher trophy tokens, Ciri & Manticore minis
+* List of each mini per number
+  * [Discord comment asking this](https://discord.com/channels/1055042717626929162/1059499187386986608/1118484066237419621)
+  * Solution: [Witcher Monster Tray Position](https://boardgamegeek.com/filepage/259976/witcher-monster-tray-position)
+* Summarized Setup doc
+  * [Link to doc](https://cdn.discordapp.com/attachments/1059499187386986608/1117901655212564520/Witcher_Old_World_Setup_Summary.pdf).
+    * [Credit to pkitty](https://boardgamegeek.com/user/pkitty) - [Witcher: Old World - Setup Summary (combined)](https://boardgamegeek.com/filepage/254182/witcher-old-world-setup-summary-combined)
+* Useful/helpful links to community resources
+  * Official Discord
+  * [BoardGameGeek Old World Files](https://boardgamegeek.com/boardgame/331106/witcher-old-world/files)
+    * [Witcher Old World Rule Summaries](https://boardgamegeek.com/filepage/259481/witcher-old-world-rules-summary-handouts-55-x-85?rnd=0zhb8)
+    * [Witcher Monster Tray Position](https://boardgamegeek.com/filepage/259976/witcher-monster-tray-position)
