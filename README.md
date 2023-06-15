@@ -9,9 +9,11 @@ A few ideas:
 * 3 Monster panel with results button(s) adjacent which automatically randomize same level monster or increased monster level and randomizes location to same type
 * Quest location randomizer
   * Terrain tokens
-* Monster Trail location randomizer
+* Monster Trail
+  * Location randomizer
   * Terrain tokens
   * Weakness tokens
+  * Destruction tokens (movement?)
 * (Much more complex/longer term) Monster passive/ability calculator to help resolve any questions on how a passive would trigger/resolve/etc provided a current player's card combo
 * Witcher/mage card randomizer.
   * Rule book says shuffle and pick two, yet the backs of each player card has the school icon on the back, making it not truly random.
@@ -24,6 +26,8 @@ A few ideas:
   * Minis
   * Where to locate some of the harder to find items
     * e.g. closed tavern token being in plastic witcher trophy tokens, Ciri & Manticore minis
+  * How to fit all cards into the big box
+    * [Link](https://www.youtube.com/watch?v=Hj7oTXJOFfg)
 * List of each mini per number
   * [Discord comment asking this](https://discord.com/channels/1055042717626929162/1059499187386986608/1118484066237419621)
   * Solution: [Witcher Monster Tray Position](https://boardgamegeek.com/filepage/259976/witcher-monster-tray-position)
