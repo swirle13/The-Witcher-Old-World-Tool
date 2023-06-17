@@ -1,21 +1,38 @@
 // set up following https://dev.to/alekseiberezkin/setting-up-react-typescript-app-without-create-react-app-oph
 
 import React from 'react'
-import {
-    createBrowserRouter,
-    RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { createRoot } from 'react-dom/client'
-import Home from './app'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'
+
+import Home from './app'
 import ErrorPage from "./pages/error_page";
+import LostMount from './pages/lost_mount';
+import CommunityLinks from './pages/community_links';
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Home />,
         errorElement: <ErrorPage />,
+        children: [
+            {
+                path: "communityLinks",
+                element: <CommunityLinks />
+            },
+            {
+                path: "lostMount",
+                element: <LostMount />
+            },
+        ],
     },
+    {
+        // This should always be last
+        path: "*",
+        element: <ErrorPage />
+    }
 ]);
 
 const container = document.getElementById('app-root') as HTMLElement;
@@ -32,4 +49,4 @@ root.render(
     /* The following line can be included in your src/index.js or App.js file */
     // Taken from https://react-bootstrap.netlify.app/docs/getting-started/introduction#css
 }
-import 'bootstrap/dist/css/bootstrap.min.css';
+

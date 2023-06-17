@@ -41,7 +41,7 @@ export default function TerrainTokenPicker({
                         </h1>
                     </Col>
                     {/* https://mdbootstrap.com/docs/react/utilities/spacing/ */}
-                    <Row className='Buttons justify-content-center px-1'>
+                    <Row id='TerrainTokenButtons' className='justify-content-center px-1'>
                         <Col xs="auto" className='p-1'>
                             <Button variant="secondary" size="lg" className='px-1'
                                 onClick={() => setMountainToken(localTerrainDeck.drawMountainToken())}

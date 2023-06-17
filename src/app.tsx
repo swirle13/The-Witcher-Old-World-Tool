@@ -2,7 +2,7 @@
 
 import Container from 'react-bootstrap/Container';
 import Navbar from './components/navbar';
-import LostMount from './pages/lost_mount';
+import { Outlet } from 'react-router-dom';
 
 export default function Home() {
 
@@ -20,10 +20,21 @@ export default function Home() {
           Automatically rolls new monster of new appropriate level for situation
     */
 
+    /*
+        Breakpoints
+        ============================
+        X-Small		 None	<576px
+        Small		 sm		≥576px
+        Medium		 md		≥768px
+        Large		 lg		≥992px
+        Extra large	 xl		≥1200px
+        Extra extra  large	xxl	≥1400px
+    */
+
     return (
-        <Container>
+        <Container className='BaseContainer px-0'>
             <Navbar />
-            <LostMount />
+            <Outlet />
         </Container>
     );
 }
