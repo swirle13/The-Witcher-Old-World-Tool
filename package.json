@@ -1,66 +1,68 @@
 {
-  "name": "the-witcher-old-world-tool",
-  "version": "0.0.1",
-  "description": "Tool to help ease the small tedia of the board game The Witcher: Old World",
-  "main": "index.js",
-  "scripts": {
-    "dev": "tsc-watch --onSuccess \"npm start\"",
-    "start": "webpack serve --port 3000",
-    "build": "NODE_ENV=production webpack",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint '*/**/*.ts'"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mjohnson159/The-Witcher-Old-World-Tool.git"
-  },
-  "keywords": [
-    "Witcher",
-    "Automations",
-    "Board game"
-  ],
-  "author": "Matthew Johnson",
-  "license": "GPL-3.0-or-later",
-  "bugs": {
-    "url": "https://github.com/mjohnson159/The-Witcher-Old-World-Tool/issues"
-  },
-  "homepage": "https://github.com/mjohnson159/The-Witcher-Old-World-Tool#readme",
-  "devDependencies": {
-    "@types/react": "^18.2.12",
-    "@types/react-dom": "^18.2.5",
-    "@types/webpack-env": "^1.18.1",
-    "@typescript-eslint/eslint-plugin": "^5.59.11",
-    "@typescript-eslint/parser": "^5.59.11",
-    "css-loader": "^6.8.1",
-    "eslint": "^8.42.0",
-    "eslint-config-xo": "^0.43.1",
-    "eslint-config-xo-typescript": "^0.57.0",
-    "eslint-plugin-react": "^7.32.2",
-    "html-webpack-plugin": "^5.5.3",
-    "mini-css-extract-plugin": "^2.7.6",
-    "tailwindcss": "^3.3.2",
-    "ts-loader": "^9.4.3",
-    "tsc-watch": "^6.0.4",
-    "typescript": "^5.1.3",
-    "url-loader": "^4.1.1",
-    "webpack": "^5.86.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
-  },
-  "dependencies": {
-    "-": "^0.0.1",
-    "@react-three/fiber": "^8.13.3",
-    "@types/three": "^0.152.1",
-    "bootstrap": "^5.3.0",
-    "gh-pages": "^5.0.0",
-    "localforage": "^1.10.0",
-    "match-sorter": "^6.3.1",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.7.4",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.13.0",
-    "save-dev": "^0.0.1-security",
-    "sort-by": "^1.2.0",
-    "three": "^0.153.0"
-  }
+    "name": "the-witcher-old-world-tool",
+    "version": "0.0.1",
+    "description": "Tool to help ease the small tedia of the board game The Witcher: Old World",
+    "main": "index.js",
+    "scripts": {
+        "dev": "tsc-watch --onSuccess \"npm start\"",
+        "start": "webpack serve --port 3000",
+        "build": "NODE_ENV=production webpack",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint '*/**/*.ts'",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mjohnson159/The-Witcher-Old-World-Tool.git"
+    },
+    "keywords": [
+        "Witcher",
+        "Automations",
+        "Board game"
+    ],
+    "author": "Matthew Johnson",
+    "license": "GPL-3.0-or-later",
+    "bugs": {
+        "url": "https://github.com/mjohnson159/The-Witcher-Old-World-Tool/issues"
+    },
+    "homepage": "https://mjohnson159.github.io",
+    "devDependencies": {
+        "@types/react": "^18.2.12",
+        "@types/react-dom": "^18.2.5",
+        "@types/webpack-env": "^1.18.1",
+        "@typescript-eslint/eslint-plugin": "^5.59.11",
+        "@typescript-eslint/parser": "^5.59.11",
+        "css-loader": "^6.8.1",
+        "eslint": "^8.42.0",
+        "eslint-config-xo": "^0.43.1",
+        "eslint-config-xo-typescript": "^0.57.0",
+        "eslint-plugin-react": "^7.32.2",
+        "html-webpack-plugin": "^5.5.3",
+        "mini-css-extract-plugin": "^2.7.6",
+        "tailwindcss": "^3.3.2",
+        "ts-loader": "^9.4.3",
+        "tsc-watch": "^6.0.4",
+        "typescript": "^5.1.3",
+        "url-loader": "^4.1.1",
+        "webpack": "^5.86.0",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^4.15.1"
+    },
+    "dependencies": {
+        "-": "^0.0.1",
+        "@react-three/fiber": "^8.13.3",
+        "@types/three": "^0.152.1",
+        "bootstrap": "^5.3.0",
+        "gh-pages": "^5.0.0",
+        "localforage": "^1.10.0",
+        "match-sorter": "^6.3.1",
+        "react": "^18.2.0",
+        "react-bootstrap": "^2.7.4",
+        "react-dom": "^18.2.0",
+        "react-router-dom": "^6.13.0",
+        "save-dev": "^0.0.1-security",
+        "sort-by": "^1.2.0",
+        "three": "^0.153.0"
+    }
 }
