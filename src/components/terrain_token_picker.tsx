@@ -2,19 +2,23 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/esm/Button';
-import TerrainTokenDeck, { MountainToken, type ForestToken, type WaterToken } from '../classes/terrains';
+import TerrainTokenDeck, { MountainToken, ForestToken, WaterToken } from '../classes/terrains';
 import { useEffect, useState } from 'react';
 
 const localTerrainDeck = new TerrainTokenDeck();
+
+// TODO: get images of the terrain tokens, damage tokens, and weakness tokens
+
+// TODO: for 3D object rendering, Threejs is necessary. React Three Fiber is a React Typescript renderer for Threejs.
 
 export default function TerrainTokenPicker({
     HeaderText = "Randomly draw a token"
 }: {
     HeaderText: string
 }) {
-    const [displayedMountainToken, setMountainToken] = useState<MountainToken>();
-    const [displayedForestToken, setForestToken] = useState<ForestToken>();
-    const [displayedWaterToken, setWaterToken] = useState<WaterToken>();
+    const [displayedMountainToken, setMountainToken] = useState<MountainToken>(new MountainToken());
+    const [displayedForestToken, setForestToken] = useState<ForestToken>(new ForestToken());
+    const [displayedWaterToken, setWaterToken] = useState<WaterToken>(new WaterToken());
     const [displayedToken, setToken] = useState<MountainToken | ForestToken | WaterToken>();
 
     useEffect(() => {
@@ -29,52 +33,51 @@ export default function TerrainTokenPicker({
 
     return (
         <Container fluid className="mx-auto">
-            <Row>
-                <Col className='gap-3 p-3 mx-auto' lg="auto">
+            <Row className='py-2'>
+                <Col className='mx-auto'>
                     <Col className='d-flex justify-content-center'>
-                        <h1 >
+                        <h1 className='text-center'>
                             {HeaderText}
                         </h1>
                     </Col>
                     {/* https://mdbootstrap.com/docs/react/utilities/spacing/ */}
-                    <div className="d-grid gap-2 justify-content-center">
-                        <Row>
-                            <Col md>
-                                <Button variant="secondary" size="lg"
-                                    onClick={() => setMountainToken(localTerrainDeck.drawMountainToken())}
-                                >
-                                    Mountain
-                                </Button>
-                            </Col>
-                            <Col md>
-                                <Button variant="success" size="lg"
-                                    onClick={() => setForestToken(localTerrainDeck.drawForestToken())}
-                                >
-                                    Forest
-                                </Button>
-                            </Col>
-                            <Col md>
-                                <Button variant="primary" size="lg"
-                                    onClick={() => setWaterToken(localTerrainDeck.drawWaterToken())}
-                                >
-                                    Water
-                                </Button>
-                            </Col>
-                        </Row>
-                        <Row className='justify-content-center' s>
-                            <Col md className='justify-content-center'>
-                                <Row md="auto" className='justify-content-center'>
-                                    <Col className='ms-1 me-1 ' xs="2">
-                                        <h2>
-                                            {displayedToken?.number}{" "}{displayedToken?.name}
-                                        </h2>
-                                    </Col>
-                                </Row>
-                            </Col>
-                        </Row>
-                    </div>
+                    <Row className='Buttons justify-content-center px-1'>
+                        <Col xs="auto" className='p-1'>
+                            <Button variant="secondary" size="lg" className='px-1'
+                                onClick={() => setMountainToken(localTerrainDeck.drawMountainToken())}
+                            >
+                                Mountain
+                            </Button>
+                        </Col>
+                        <Col xs="auto" className='p-1'>
+                            <Button variant="success" size="lg"
+                                onClick={() => setForestToken(localTerrainDeck.drawForestToken())}
+                            >
+                                Forest
+                            </Button>
+                        </Col>
+                        <Col xs="auto" className='p-1'>
+                            <Button variant="primary" size="lg" className='px-3'
+                                onClick={() => setWaterToken(localTerrainDeck.drawWaterToken())}
+                            >
+                                Water
+                            </Button>
+                        </Col>
+                    </Row>
+                </Col>
+            </Row>
+            <Row className='py-2'>
+                <Col className='mx-auto'>
+                    <Col className='d-flex justify-content-center'>
+                        {displayedToken?.img()}
+                    </Col>
                 </Col>
             </Row>
         </Container>
     );
 }
+
+// @keyframes spin {
+//     from { transform: rotate(0deg); }
+//     to { transform: rotate(360deg); }
+// }

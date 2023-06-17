@@ -39,3 +39,4 @@ A few ideas:
   * [BoardGameGeek Old World Files](https://boardgamegeek.com/boardgame/331106/witcher-old-world/files)
     * [Witcher Old World Rule Summaries](https://boardgamegeek.com/filepage/259481/witcher-old-world-rules-summary-handouts-55-x-85?rnd=0zhb8)
     * [Witcher Monster Tray Position](https://boardgamegeek.com/filepage/259976/witcher-monster-tray-position)
+  * [Thingiverse 3D model card and token organization](https://thingiverse.com/thing:6078120)
