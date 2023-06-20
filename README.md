@@ -41,3 +41,4 @@ A few ideas:
     * [Witcher Old World Rule Summaries](https://boardgamegeek.com/filepage/259481/witcher-old-world-rules-summary-handouts-55-x-85?rnd=0zhb8)
     * [Witcher Monster Tray Position](https://boardgamegeek.com/filepage/259976/witcher-monster-tray-position)
   * [Thingiverse 3D model card and token organization](https://thingiverse.com/thing:6078120)
+  * [Official Guide: Organizing All Cards in Big Box](https://youtu.be/Hj7oTXJOFfg)

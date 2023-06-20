@@ -59,7 +59,7 @@ class MountainToken extends TerrainTokenClass implements TerrainToken {
     readonly type: TerrainType;
     readonly imgStr: string;
 
-    constructor(number: number = -1, name: string = "DefaultMountainToken", img: string = DefaultMountainToken) {
+    constructor(number = -1, name = "DefaultMountainToken", img: string = DefaultMountainToken) {
         super();
         this.name = name;
         this.number = number;
@@ -74,7 +74,7 @@ class ForestToken extends TerrainTokenClass implements TerrainToken {
     readonly type: TerrainType;
     readonly imgStr: string;
 
-    constructor(number: number = -1, name: string = "DefaultForestToken", img: string = DefaultForestToken) {
+    constructor(number = -1, name = "DefaultForestToken", img: string = DefaultForestToken) {
         super();
         this.name = name;
         this.number = number;
@@ -89,7 +89,7 @@ class WaterToken extends TerrainTokenClass implements TerrainToken {
     readonly type: TerrainType;
     readonly imgStr: string;
 
-    constructor(number: number = -1, name: string = "DefaultWaterToken", img: string = DefaultWaterToken) {
+    constructor(number = -1, name = "DefaultWaterToken", img: string = DefaultWaterToken) {
         super();
         this.name = name;
         this.number = number;

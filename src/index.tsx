@@ -7,26 +7,37 @@ import { createRoot } from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'
 
-import Home from './app'
+import Home from './pages/home'
 import ErrorPage from "./pages/error_page";
 import LostMount from './pages/lost_mount';
 import CommunityLinks from './pages/community_links';
+import Root from './pages/root';
 
+// hashRouter vs browserRouter https://stackoverflow.com/a/74149347/6811686
 const router = createHashRouter([
     {
         path: "/",
-        element: <Home />,
+        element: <Root />,
         errorElement: <ErrorPage />,
         children: [
+            // TODO: follow react router demo to add an index that all pages inherit from
+            {
+                path: "/",
+                element: <Home />,
+                errorElement: <ErrorPage />,
+                children: [
+                    // TODO: follow react router demo to add an index that all pages inherit from
+                ],
+            },
+            {
+                path: "communityLinks",
+                element: <CommunityLinks />
+            },
+            {
+                path: "lostMount",
+                element: <LostMount />
+            },
         ],
-    },
-    {
-        path: "communityLinks",
-        element: <CommunityLinks />
-    },
-    {
-        path: "lostMount",
-        element: <LostMount />
     },
     {
         // This should always be last
@@ -39,6 +50,7 @@ const container = document.getElementById('app-root') as HTMLElement;
 const root = createRoot(container);
 root.render(
     <React.StrictMode>
+        {/* <Navbar /> */}
         <RouterProvider router={router} />
     </React.StrictMode>
 );
