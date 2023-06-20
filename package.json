@@ -26,7 +26,7 @@
     "bugs": {
         "url": "https://github.com/mjohnson159/The-Witcher-Old-World-Tool/issues"
     },
-    "homepage": "https://mjohnson159.github.io",
+    "homepage": "https://mjohnson159.github.io/The-Witcher-Old-World-Tool",
     "devDependencies": {
         "@types/react": "^18.2.12",
         "@types/react-dom": "^18.2.5",
