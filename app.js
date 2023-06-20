@@ -7,7 +7,7 @@ const jsx_runtime_1 = require("react/jsx-runtime");
 // Use components from https://react-bootstrap.netlify.app/docs/getting-started/introduction
 const Container_1 = __importDefault(require("react-bootstrap/Container"));
 const navbar_1 = __importDefault(require("./components/navbar"));
-const lost_mount_1 = __importDefault(require("./pages/lost_mount"));
+const react_router_dom_1 = require("react-router-dom");
 function Home() {
     /*
       TODO: Create simplified home page for generic actions, e.g.
@@ -32,6 +32,6 @@ function Home() {
         Extra large	 xl		≥1200px
         Extra extra  large	xxl	≥1400px
     */
-    return ((0, jsx_runtime_1.jsxs)(Container_1.default, { className: 'BaseContainer px-0', children: [(0, jsx_runtime_1.jsx)(navbar_1.default, {}), (0, jsx_runtime_1.jsx)(lost_mount_1.default, {})] }));
+    return ((0, jsx_runtime_1.jsxs)(Container_1.default, { className: 'BaseContainer px-0', children: [(0, jsx_runtime_1.jsx)(navbar_1.default, {}), (0, jsx_runtime_1.jsx)(react_router_dom_1.Outlet, {})] }));
 }
 exports.default = Home;
