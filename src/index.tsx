@@ -34,7 +34,7 @@ const router = createBrowserRouter([
         element: <ErrorPage />
     }
 ], {
-    basename: "/the-witcher-old-world-tool"
+    basename: "/The-Witcher-Old-World-Tool"
 },);
 
 const container = document.getElementById('app-root') as HTMLElement;
