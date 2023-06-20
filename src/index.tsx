@@ -1,7 +1,7 @@
 // set up following https://dev.to/alekseiberezkin/setting-up-react-typescript-app-without-create-react-app-oph
 
 import React from 'react'
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import { createRoot } from 'react-dom/client'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,7 +12,7 @@ import ErrorPage from "./pages/error_page";
 import LostMount from './pages/lost_mount';
 import CommunityLinks from './pages/community_links';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         element: <Home />,
