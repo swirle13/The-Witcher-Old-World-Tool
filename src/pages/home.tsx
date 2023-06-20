@@ -75,7 +75,7 @@ export default function Home() {
                 {linkedPages.map((_, idx) => (
                     <Col key={idx}>
                         <Card>
-                            <Card.Img variant="top" src="holder.js/100px160" />
+                            <Card.Img variant="top" src="" />
                             <Card.Body>
                                 <Card.Title>{_.name}</Card.Title>
                                 <Card.Text>{_.desc}</Card.Text>

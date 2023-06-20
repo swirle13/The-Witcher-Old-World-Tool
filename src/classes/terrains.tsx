@@ -1,9 +1,9 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
+import Image from "react-bootstrap/Image";
 
 import Deck, { MutableDeck, ReadonlyDeck } from "./dataClasses";
-import { Image } from "react-bootstrap";
 import DefaultMountainToken from "../img/tokens/terrainTokens/MountainBack.png"
 import DefaultForestToken from "../img/tokens/terrainTokens/ForestBack.png"
 import DefaultWaterToken from "../img/tokens/terrainTokens/WaterBack.png"
@@ -176,7 +176,7 @@ export default class TerrainTokenDeck {
         } else if (token.type === "Water" && token instanceof WaterToken) {
             this.waterDeck.addItem(token)
         } else {
-            throw Error(
+            throw new Error(
                 `TerrainToken ${token}'s type ${token.type} is not a valid match.` +
                 `Can only add "Mountain", "Forest", and "Water".`
             )
@@ -191,7 +191,7 @@ export default class TerrainTokenDeck {
         } else if (type === "Water") {
             this.waterDeck.repopulate()
         } else {
-            throw Error(`TerrainType ${type} is not a valid match. Can only add "Mountain", "Forest", and "Water".`)
+            throw new Error(`TerrainType ${type} is not a valid match. Can only add "Mountain", "Forest", and "Water".`)
         }
     }
 
