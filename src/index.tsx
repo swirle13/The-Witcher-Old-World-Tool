@@ -33,9 +33,7 @@ const router = createHashRouter([
         path: "*",
         element: <ErrorPage />
     }
-], {
-    basename: "/The-Witcher-Old-World-Tool"
-},);
+]);
 
 const container = document.getElementById('app-root') as HTMLElement;
 const root = createRoot(container);
