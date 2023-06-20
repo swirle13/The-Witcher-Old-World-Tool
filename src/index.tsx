@@ -18,22 +18,24 @@ const router = createBrowserRouter([
         element: <Home />,
         errorElement: <ErrorPage />,
         children: [
-            {
-                path: "communityLinks",
-                element: <CommunityLinks />
-            },
-            {
-                path: "lostMount",
-                element: <LostMount />
-            },
         ],
+    },
+    {
+        path: "communityLinks",
+        element: <CommunityLinks />
+    },
+    {
+        path: "lostMount",
+        element: <LostMount />
     },
     {
         // This should always be last
         path: "*",
         element: <ErrorPage />
     }
-]);
+], {
+    basename: "/the-witcher-old-world-tool"
+},);
 
 const container = document.getElementById('app-root') as HTMLElement;
 const root = createRoot(container);
