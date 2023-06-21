@@ -168,7 +168,7 @@ export default class TerrainTokenDeck {
         return this.waterDeck.draw();
     }
 
-    addTokenToDeck(token: MountainToken | ForestToken | WaterToken) {
+    addTokenBackToDeck(token: MountainToken | ForestToken | WaterToken) {
         if (token.type === "Mountain" && token instanceof MountainToken) {
             this.mountainDeck.addItem(token)
         } else if (token.type === "Forest" && token instanceof ForestToken) {

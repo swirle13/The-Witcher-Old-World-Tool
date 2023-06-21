@@ -12,6 +12,7 @@ import ErrorPage from "./pages/error_page";
 import LostMount from './pages/lost_mount';
 import CommunityLinks from './pages/community_links';
 import Root from './pages/root';
+import MonsterRoller from './pages/monster_roller';
 
 // hashRouter vs browserRouter https://stackoverflow.com/a/74149347/6811686
 const router = createHashRouter([
@@ -35,6 +36,18 @@ const router = createHashRouter([
             },
             {
                 path: "lostMount",
+                element: <LostMount />
+            },
+            {
+                path: "monsterRoller",
+                element: <MonsterRoller />
+            },
+            {
+                path: "setupHelper",
+                element: <LostMount />
+            },
+            {
+                path: "inventoryChecker",
                 element: <LostMount />
             },
         ],

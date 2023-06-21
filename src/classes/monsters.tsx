@@ -1,14 +1,14 @@
 import React from "react";
-import Deck, { MutableDeck, ReadonlyDeck } from "./dataClasses";
+import { ReadonlyDeck } from "./dataClasses";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import levelOneBackside from "../img/monsters/level1Monsters/levelOneBackside.png"
-import levelTwoBackside from "../img/monsters/level2Monsters/levelTwoBackside.png"
-import levelThreeBackside from "../img/monsters/level3Monsters/levelThreeBackside.png"
+import levelOneBackside from "../img/monsters/level1Monsters/level1Backside.png"
+import levelTwoBackside from "../img/monsters/level2Monsters/level2Backside.png"
+import levelThreeBackside from "../img/monsters/level3Monsters/level3Backside.png"
 
 // level 1 monster token imports
 import nekkersNest from "../img/monsters/level1Monsters/nekkersNest.png"
 import arachas from "../img/monsters/level1Monsters/arachas.png"
-import archspore from "../img/monsters/level1Monsters/archspore.png"
+import archespore from "../img/monsters/level1Monsters/archespore.png"
 import barghest from "../img/monsters/level1Monsters/barghest.png"
 import foglet from "../img/monsters/level1Monsters/foglet.png"
 import harpy from "../img/monsters/level1Monsters/harpy.png"
@@ -43,7 +43,7 @@ import troll from "../img/monsters/level3Monsters/troll.png"
 /*
 Identify what monsters come in which expansions and set toggles for each
     * Base set: 15 monsters
-        * level 1: Nekker's Nest, Arachas, Archspore, Barghest, Foglet, Harpy, Ghoul Nest
+        * level 1: Nekker's Nest, Arachas, archespore, Barghest, Foglet, Harpy, Ghoul Nest
         * level 2: Griffin, Wyvern, Werewolf, Fiend, Noonwraith
         * level 3: Leshen, Striga, Bruxa
     * Stretch goals: 14 monsters
@@ -92,14 +92,20 @@ interface monsterToken {
 }
 
 abstract class monsterClass {
+    readonly name: string = "DefaultMonsterName";
     readonly tokenImgStr: string = "";
     readonly miniImgStr: string = "";
     tokenImg(): React.ReactNode {
         return (
-            <Container fluid="md" className='TokenContainer container mx-auto px-4'>
+            <Container fluid="md" className='mx-auto px-4 py-2'>
                 <Row xs={6} md={4} lg={2} className='d-flex justify-content-center'>
-                    <Col xs={8} md={4} lg={2}>
-                        <Image className="object-contain h-48 overflow-hidden" src={this.tokenImgStr} roundedCircle fluid />
+                    <Col xs={8} md={4} lg={2} className="justify-content-center">
+                        <Image id="monsterIconImage" className="object-contain h-48" src={this.tokenImgStr} fluid />
+                    </Col>
+                </Row>
+                <Row xs={6} md={4} lg={2} className='d-flex justify-content-center'>
+                    <Col>
+                        <h2 className="text-center">{this.name}</h2>
                     </Col>
                 </Row>
             </Container>
@@ -110,7 +116,7 @@ abstract class monsterClass {
             <Container fluid="md" className='MiniatureContainer container mx-auto px-4'>
                 <Row xs={6} md={4} lg={2} className='d-flex justify-content-center'>
                     <Col xs={8} md={4} lg={2}>
-                        <Image className="object-contain h-48 overflow-hidden" src={this.miniImgStr} roundedCircle fluid />
+                        <Image className="object-contain h-48" src={this.miniImgStr} fluid />
                     </Col>
                 </Row>
             </Container>
@@ -118,69 +124,69 @@ abstract class monsterClass {
     }
 }
 
-class levelOneMonster extends monsterClass implements monsterToken {
-    readonly name: string;
+export class levelOneMonster extends monsterClass implements monsterToken {
+    readonly name: string = "DefaultLevelOneName";
     readonly level: number = 1;
-    readonly tokenImgStr: string;
+    readonly tokenImgStr: string = levelOneBackside;
     readonly tokenBackImgStr: string = levelOneBackside;
-    readonly miniImgStr: string;
-
-    constructor(
-        name = "DefaultLevelOneName",
-        tokenImgStr: string,
-        miniImgStr = "",
-    ) {
-        super();
-        this.name = name;
-        this.tokenImgStr = tokenImgStr;
-        this.miniImgStr = miniImgStr;
-    }
-}
-
-class levelTwoMonster extends monsterClass implements monsterToken {
-    readonly name: string;
-    readonly level: number = 2;
-    readonly tokenImgStr: string;
-    readonly tokenBackImgStr: string = levelTwoBackside;
-    readonly miniImgStr: string;
-
-    constructor(
-        name = "DefaultLevelTwoName",
-        tokenImgStr: string,
-        miniImgStr = "",
-    ) {
-        super();
-        this.name = name;
-        this.tokenImgStr = tokenImgStr;
-        this.miniImgStr = miniImgStr;
-    }
-}
-
-class levelThreeMonster extends monsterClass implements monsterToken {
-    readonly name: string;
-    readonly level: number = 1;
-    readonly tokenImgStr: string;
-    readonly tokenBackImgStr: string = levelThreeBackside;
     readonly miniImgStr: string = "";
 
     constructor(
-        name = "DefaultLevelThreeName",
-        tokenImgStr: string,
+        name?: string,
+        tokenImgStr?: string,
         miniImgStr?: string,
     ) {
         super();
-        this.name = name;
-        this.tokenImgStr = tokenImgStr;
+        if (name) this.name = name;
+        if (tokenImgStr) this.tokenImgStr = tokenImgStr;
         if (miniImgStr) this.miniImgStr = miniImgStr;
     }
 }
 
-const baseMonsters: Record<string, Array<string>> = {
-    "levelOne": ["Nekker's Nest", "Arachas", "Archspore", "Barghest", "Foglet", "Harpy", "Ghoul's Nest"],
+export class levelTwoMonster extends monsterClass implements monsterToken {
+    readonly name: string = "DefaultLevelTwoName";
+    readonly level: number = 2;
+    readonly tokenImgStr: string = levelTwoBackside;
+    readonly tokenBackImgStr: string = levelTwoBackside;
+    readonly miniImgStr: string = "";
+
+    constructor(
+        name?: string,
+        tokenImgStr?: string,
+        miniImgStr?: string,
+    ) {
+        super();
+        if (name) this.name = name;
+        if (tokenImgStr) this.tokenImgStr = tokenImgStr;
+        if (miniImgStr) this.miniImgStr = miniImgStr;
+    }
+}
+
+export class levelThreeMonster extends monsterClass implements monsterToken {
+    readonly name: string = "DefaultLevelThreeName";
+    readonly level: number = 2;
+    readonly tokenImgStr: string = levelThreeBackside;
+    readonly tokenBackImgStr: string = levelThreeBackside;
+    readonly miniImgStr: string = "";
+
+    constructor(
+        name?: string,
+        tokenImgStr?: string,
+        miniImgStr?: string,
+    ) {
+        super();
+        if (name) this.name = name;
+        if (tokenImgStr) this.tokenImgStr = tokenImgStr;
+        if (miniImgStr) this.miniImgStr = miniImgStr;
+    }
+}
+
+export const baseMonsters: Record<string, Array<string>> = {
+    "levelOne": ["Nekker's Nest", "Arachas", "Archespore", "Barghest", "Foglet", "Harpy", "Ghoul's Nest"],
     "levelTwo": ["Griffin", "Wyvern", "Werewolf", "Fiend", "Noonwraith"],
     "levelThree": ["Leshen", "Striga", "Bruxa"]
 }
-const stretchGoalMonsters: Record<string, Array<string>> = {
+export const stretchGoalMonsters: Record<string, Array<string>> = {
     "levelOne": ["Drowner's Nest", "Rotfiend", "Ekimmara"],
     "levelTwo": ["Nightwraith", "Water Hag", "Manticore", "Whispess", "Weavess", "Penitent", "Grave Hag"],
     "levelThree": ["Glustyworp", "Brewess", "Yghern", "Troll"]
@@ -189,11 +195,11 @@ const stretchGoalMonsters: Record<string, Array<string>> = {
 const baseLevelOneMonsters: Array<levelOneMonster> = [
     new levelOneMonster("Nekker's Nest", nekkersNest),
     new levelOneMonster("Arachas", arachas),
-    new levelOneMonster("Archspore", archspore),
+    new levelOneMonster("archespore", archespore),
     new levelOneMonster("Barghest", barghest),
     new levelOneMonster("Foglet", foglet),
     new levelOneMonster("Harpy", harpy),
-    new levelOneMonster("Ghoul Nest", ghoulsNest),
+    new levelOneMonster("Ghoul's Nest", ghoulsNest),
 ]
 
 const stretchGoalLevelOneMonsters: Array<levelOneMonster> = [
@@ -237,7 +243,7 @@ export default class MonstersDeck {
     levelOneMonstersDeck: ReadonlyDeck<levelOneMonster> = new ReadonlyDeck(baseLevelOneMonsters);
     levelTwoMonstersDeck: ReadonlyDeck<levelTwoMonster> = new ReadonlyDeck(baseLevelTwoMonsters);
     levelThreeMonstersDeck: ReadonlyDeck<levelThreeMonster> = new ReadonlyDeck(baseLevelThreeMonsters);
-    
+
     constructor(stretchGoalMonsters = false,) {
         if (stretchGoalMonsters) {
             this.levelOneMonstersDeck = new ReadonlyDeck([...baseLevelOneMonsters, ...stretchGoalLevelOneMonsters]);

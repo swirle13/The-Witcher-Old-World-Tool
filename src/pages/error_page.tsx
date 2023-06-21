@@ -1,5 +1,7 @@
 import { isRouteErrorResponse, useRouteError } from "react-router-dom";
 
+// Taken from https://github.com/remix-run/react-router/discussions/9628
+
 export default function ErrorPage() {
     const error = useRouteError();
 
