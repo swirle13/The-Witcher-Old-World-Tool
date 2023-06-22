@@ -8,8 +8,8 @@ const jsx_runtime_1 = require("react/jsx-runtime");
 const Row_1 = __importDefault(require("react-bootstrap/Row"));
 const Col_1 = __importDefault(require("react-bootstrap/Col"));
 const Container_1 = __importDefault(require("react-bootstrap/Container"));
+const Image_1 = __importDefault(require("react-bootstrap/Image"));
 const dataClasses_1 = require("./dataClasses");
-const react_bootstrap_1 = require("react-bootstrap");
 const MountainBack_png_1 = __importDefault(require("../img/tokens/terrainTokens/MountainBack.png"));
 const ForestBack_png_1 = __importDefault(require("../img/tokens/terrainTokens/ForestBack.png"));
 const WaterBack_png_1 = __importDefault(require("../img/tokens/terrainTokens/WaterBack.png"));
@@ -34,7 +34,7 @@ const Water15GorthurGuaed_png_1 = __importDefault(require("../img/tokens/terrain
 class TerrainTokenClass {
     imgStr = "";
     img() {
-        return ((0, jsx_runtime_1.jsx)(Container_1.default, { fluid: "md", className: 'TokenContainer container mx-auto px-4', children: (0, jsx_runtime_1.jsx)(Row_1.default, { xs: 6, md: 4, lg: 2, className: 'd-flex justify-content-center', children: (0, jsx_runtime_1.jsx)(Col_1.default, { xs: 8, md: 4, lg: 2, children: (0, jsx_runtime_1.jsx)(react_bootstrap_1.Image, { className: "object-contain h-48 overflow-hidden", src: this.imgStr, roundedCircle: true, fluid: true }) }) }) }));
+        return ((0, jsx_runtime_1.jsx)(Container_1.default, { fluid: "md", className: 'TokenContainer container mx-auto px-4', children: (0, jsx_runtime_1.jsx)(Row_1.default, { xs: 6, md: 4, lg: 2, className: 'd-flex justify-content-center', children: (0, jsx_runtime_1.jsx)(Col_1.default, { xs: 8, md: 4, lg: 2, children: (0, jsx_runtime_1.jsx)(Image_1.default, { className: "object-contain h-48 overflow-hidden", src: this.imgStr, roundedCircle: true, fluid: true }) }) }) }));
     }
 }
 class MountainToken extends TerrainTokenClass {
@@ -147,7 +147,7 @@ class TerrainTokenDeck {
         }
         return this.waterDeck.draw();
     }
-    addTokenToDeck(token) {
+    addTokenBackToDeck(token) {
         if (token.type === "Mountain" && token instanceof MountainToken) {
             this.mountainDeck.addItem(token);
         }
@@ -158,7 +158,7 @@ class TerrainTokenDeck {
             this.waterDeck.addItem(token);
         }
         else {
-            throw Error(`TerrainToken ${token}'s type ${token.type} is not a valid match.` +
+            throw new Error(`TerrainToken ${token}'s type ${token.type} is not a valid match.` +
                 `Can only add "Mountain", "Forest", and "Water".`);
         }
     }
@@ -173,7 +173,7 @@ class TerrainTokenDeck {
             this.waterDeck.repopulate();
         }
         else {
-            throw Error(`TerrainType ${type} is not a valid match. Can only add "Mountain", "Forest", and "Water".`);
+            throw new Error(`TerrainType ${type} is not a valid match. Can only add "Mountain", "Forest", and "Water".`);
         }
     }
     refillAllDecks() {

@@ -103,8 +103,17 @@ class Deck {
     size() {
         return this.deckQueue.size();
     }
+    /**
+     * Add given, existing item to deck queue. Does not add new item to deck pool.
+     * @param item An item already a member of this.allItems.
+     */
     addItem(item) {
-        this.deckQueue.enqueue(item);
+        if (this.allItems.includes(item)) {
+            this.deckQueue.enqueue(item);
+        }
+        else {
+            throw new Error(`Could not add item, ${item}, to deck as ${item} was not a member of this.allItems.`);
+        }
     }
     draw() {
         return this.deckQueue.dequeue();
@@ -120,6 +129,9 @@ class Deck {
             const set = new Set(this.allItems);
             if (items.every(x => set.has(x))) {
                 this.deckQueue.populate(items);
+            }
+            else {
+                throw new Error(`Could not add items, ${items}, to deck as ${items} were not members of this.allItems.`);
             }
         }
         else {
