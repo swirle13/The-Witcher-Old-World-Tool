@@ -7,7 +7,7 @@ import logo from '../../public/logo192.png';
 
 export default function Navbar() {
     return (
-        <BSNavbar collapseOnSelect id='Navbar' bg="dark" expand="xl" className="bg-body-primary" variant="dark">
+        <BSNavbar collapseOnSelect id='Navbar' expand="xl" className="bg-body-secondary" variant="light">
             <Container>
                 <BSNavbar.Brand href="/" className=''>
                     <img

@@ -36,9 +36,7 @@ export default function TerrainTokenPicker({
             <Row className='py-2'>
                 <Col className='mx-auto'>
                     <Col className='d-flex justify-content-center'>
-                        <h1 className='text-center'>
-                            {HeaderText}
-                        </h1>
+                        <h1 className='text-center'>{HeaderText}</h1>
                     </Col>
                     {/* TODO: Update the buttons to images of the respective tokens */}
                     <Row id='TerrainTokenButtons' className='justify-content-center px-1'>
