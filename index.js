@@ -10,40 +10,40 @@ const react_router_dom_1 = require("react-router-dom");
 const client_1 = require("react-dom/client");
 require("bootstrap/dist/css/bootstrap.min.css");
 require("./index.css");
-const home_1 = __importDefault(require("./pages/home"));
-const error_page_1 = __importDefault(require("./pages/error_page"));
-const lost_mount_1 = __importDefault(require("./pages/lost_mount"));
-const community_links_1 = __importDefault(require("./pages/community_links"));
-const root_1 = __importDefault(require("./pages/root"));
-const monster_roller_1 = __importDefault(require("./pages/monster_roller"));
+const Home_1 = __importDefault(require("./pages/Home"));
+const ErrorPage_1 = __importDefault(require("./pages/ErrorPage"));
+const LostMount_1 = __importDefault(require("./pages/LostMount"));
+const CommunityLinks_1 = __importDefault(require("./pages/CommunityLinks"));
+const Root_1 = __importDefault(require("./pages/Root"));
+const MonsterRoller_1 = __importDefault(require("./pages/MonsterRoller"));
 const setupHelper_1 = __importDefault(require("./pages/setupHelper"));
 // hashRouter vs browserRouter https://stackoverflow.com/a/74149347/6811686
 const router = (0, react_router_dom_1.createHashRouter)([
     {
         path: "/",
-        element: (0, jsx_runtime_1.jsx)(root_1.default, {}),
-        errorElement: (0, jsx_runtime_1.jsx)(error_page_1.default, {}),
+        element: (0, jsx_runtime_1.jsx)(Root_1.default, {}),
+        errorElement: (0, jsx_runtime_1.jsx)(ErrorPage_1.default, {}),
         children: [
             // TODO: follow react router demo to add an index that all pages inherit from
             {
                 path: "/",
-                element: (0, jsx_runtime_1.jsx)(home_1.default, {}),
-                errorElement: (0, jsx_runtime_1.jsx)(error_page_1.default, {}),
+                element: (0, jsx_runtime_1.jsx)(Home_1.default, {}),
+                errorElement: (0, jsx_runtime_1.jsx)(ErrorPage_1.default, {}),
                 children: [
                 // TODO: follow react router demo to add an index that all pages inherit from
                 ],
             },
             {
                 path: "communityLinks",
-                element: (0, jsx_runtime_1.jsx)(community_links_1.default, {})
+                element: (0, jsx_runtime_1.jsx)(CommunityLinks_1.default, {})
             },
             {
                 path: "lostMount",
-                element: (0, jsx_runtime_1.jsx)(lost_mount_1.default, {})
+                element: (0, jsx_runtime_1.jsx)(LostMount_1.default, {})
             },
             {
                 path: "monsterRoller",
-                element: (0, jsx_runtime_1.jsx)(monster_roller_1.default, {})
+                element: (0, jsx_runtime_1.jsx)(MonsterRoller_1.default, {})
             },
             {
                 path: "setupHelper",
@@ -51,14 +51,14 @@ const router = (0, react_router_dom_1.createHashRouter)([
             },
             {
                 path: "inventoryChecker",
-                element: (0, jsx_runtime_1.jsx)(lost_mount_1.default, {})
+                element: (0, jsx_runtime_1.jsx)(LostMount_1.default, {})
             },
         ],
     },
     {
         // This should always be last
         path: "*",
-        element: (0, jsx_runtime_1.jsx)(error_page_1.default, {})
+        element: (0, jsx_runtime_1.jsx)(ErrorPage_1.default, {})
     }
 ]);
 const container = document.getElementById('app-root');

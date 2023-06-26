@@ -15,12 +15,6 @@ const linkedPages = [
         btn: "Come, Roach"
     },
     {
-        name: "Community Links",
-        link: "#/communityLinks",
-        desc: "A collection of neat and awesome links from the community. Always growing!",
-        btn: "Show me"
-    },
-    {
         name: "Monster Roller",
         link: "#/monsterRoller",
         desc: "Tired of shuffling your tokens, monster cards, and hunting down the mini?",
@@ -38,7 +32,13 @@ const linkedPages = [
         desc: "To help those just receiving their The Witcher: Old World game, here's an in-depth guide on what " +
             "you (probably) received.",
         btn: "Medallion's humming.."
-    }
+    },
+    {
+        name: "Community Links",
+        link: "#/communityLinks",
+        desc: "A collection of neat and awesome links from the community. Always growing!",
+        btn: "Show me"
+    },
 ];
 function Home() {
     /*
