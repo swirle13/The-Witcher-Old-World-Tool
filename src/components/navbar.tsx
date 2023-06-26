@@ -2,35 +2,38 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import { default as BSNavbar } from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link } from 'react-router-dom';
 import logo from '../../public/logo192.png';
+import useResize from '../util/useResize';
 
 export default function Navbar() {
+    const size = useResize();
     return (
-        <BSNavbar collapseOnSelect id='Navbar' expand="xl" className="bg-body-secondary" variant="light">
+        <BSNavbar collapseOnSelect id='Navbar' expand="md" className="bg-body-secondary">
             <Container>
-                <BSNavbar.Brand href="/" className=''>
+                <BSNavbar.Brand href="/">
                     <img
                         src={logo}
                         width="30"
                         height="30"
                         className="d-inline-block align-top"
                     />{" "}
-                    The Witcher: Old World Helper
+                    {size.width < 401 ? "TW: Old World Helper" : "The Witcher: Old World Helper"}
+                    {/* "The Witcher: Old World Helper" */}
                 </BSNavbar.Brand>
                 <BSNavbar.Toggle aria-controls="basic-navbar-nav" />
                 <BSNavbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="#/communityLinks">Community Links</Nav.Link>
                         <NavDropdown title="Gameplay Tools" id="basic-nav-dropdown">
-                            <NavDropdown.Item>
-                                <Link to={`lostMount`}>Lost Mount Randomizer</Link>
+                            <NavDropdown.Item href="#/lostMount">
+                                Lost Mount Randomizer
                             </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
-                                Another action
+                            <NavDropdown.Item href="#/monsterRoller">
+                                Monster Roller
                             </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                            <NavDropdown.Item href="#/setupHelper">
+                                Setup Helper
+                            </NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="#action/3.4">
                                 Browse All Tools

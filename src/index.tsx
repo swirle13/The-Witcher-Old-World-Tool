@@ -7,12 +7,12 @@ import { createRoot } from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'
 
-import Home from './pages/home'
-import ErrorPage from "./pages/error_page";
-import LostMount from './pages/lost_mount';
-import CommunityLinks from './pages/community_links';
-import Root from './pages/root';
-import MonsterRoller from './pages/monster_roller';
+import Home from './pages/Home';
+import ErrorPage from "./pages/ErrorPage";
+import LostMount from './pages/LostMount';
+import CommunityLinks from './pages/CommunityLinks';
+import Root from './pages/Root';
+import MonsterRoller from './pages/MonsterRoller';
 import SetupHelper from './pages/setupHelper';
 
 // hashRouter vs browserRouter https://stackoverflow.com/a/74149347/6811686

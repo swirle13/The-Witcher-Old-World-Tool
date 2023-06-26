@@ -1,4 +1,4 @@
-import TerrainTokenPicker from "../components/terrain_token_picker";
+import TerrainTokenPicker from "../components/TerrainTokenPicker";
 import { Col, Container, Image, Row } from "react-bootstrap";
 import LostMountExpansion from "../img/LostMountExpansion.jpg"
 import AdventurePackHeader from "../img/expansionHeaders/adventurePack.png"

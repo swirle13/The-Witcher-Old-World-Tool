@@ -1,5 +1,5 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
-import MonsterPicker from "../components/monster_picker";
+import MonsterPicker from "../components/MonsterPicker";
 
 export default function MonsterRoller() {
     return (
