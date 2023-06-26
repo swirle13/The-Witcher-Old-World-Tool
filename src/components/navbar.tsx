@@ -10,7 +10,7 @@ export default function Navbar() {
     return (
         <BSNavbar collapseOnSelect id='Navbar' expand="md" className="bg-body-secondary">
             <Container>
-                <BSNavbar.Brand href="/">
+                <BSNavbar.Brand href="#/">
                     <img
                         src={logo}
                         width="30"
@@ -18,7 +18,6 @@ export default function Navbar() {
                         className="d-inline-block align-top"
                     />{" "}
                     {size.width < 401 ? "TW: Old World Helper" : "The Witcher: Old World Helper"}
-                    {/* "The Witcher: Old World Helper" */}
                 </BSNavbar.Brand>
                 <BSNavbar.Toggle aria-controls="basic-navbar-nav" />
                 <BSNavbar.Collapse id="basic-navbar-nav">
