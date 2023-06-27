@@ -34,7 +34,7 @@ export default function Navbar() {
                                 Setup Helper
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">
+                            <NavDropdown.Item href="#/home">
                                 Browse All Tools
                             </NavDropdown.Item>
                         </NavDropdown>

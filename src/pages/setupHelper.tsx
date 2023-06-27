@@ -17,7 +17,6 @@ export default function SetupHelper() {
                     <Col id="setupConfiguration" lg="4">
                         <Card>
                             <CardHeader as="h3" className="text-center">Setup Configuration</CardHeader>
-                            {/* <Card.Text> */}
                                 <Container className="gap-2 mt-3 mx-3 d-flex">
                                     <Stack gap={3}>
                                         <Form>
@@ -53,46 +52,44 @@ export default function SetupHelper() {
                                         </Form>
                                     </Stack>
                                 </Container>
-                            {/* </Card.Text> */}
                         </Card>
                     </Col>
                     <div className="vr p-0 mx-2 d-none d-lg-block"></div>
                     <Col id="setupInstructions">
                         <Card>
                             <CardHeader as="h3" className="text-center">Setup Instructions</CardHeader>
-                            {/* <Card.Text> */}
-                                <Container className="gap-2 my-3 d-flex">
-                                    <Stack gap={3}>
-                                        {/* TODO: Add data structure to store setup steps, use map to create divs dynamically */}
-                                        <Accordion defaultActiveKey="0">
-                                            <Accordion.Item eventKey="0">
-                                                <Accordion.Header>Accordion Item #1</Accordion.Header>
-                                                <Accordion.Body>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                                    culpa qui officia deserunt mollit anim id est laborum.
-                                                </Accordion.Body>
-                                            </Accordion.Item>
-                                            <Accordion.Item eventKey="1">
-                                                <Accordion.Header>Accordion Item #2</Accordion.Header>
-                                                <Accordion.Body>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                                    culpa qui officia deserunt mollit anim id est laborum.
-                                                </Accordion.Body>
-                                            </Accordion.Item>
-                                        </Accordion>
-                                    </Stack>
-                                </Container>
-                            {/* </Card.Text> */}
+                            <Container className="gap-2 my-3 d-flex">
+                                <Stack gap={3}>
+                                    {/* TODO: Add Starting Resources field for gold/cards*/}
+                                    {/* TODO: Add data structure to store setup steps, use map to create divs dynamically */}
+                                    <Accordion defaultActiveKey={["0"]} alwaysOpen>
+                                        <Accordion.Item eventKey="0">
+                                            <Accordion.Header>Accordion Item #1</Accordion.Header>
+                                            <Accordion.Body>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                                aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                                culpa qui officia deserunt mollit anim id est laborum.
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                        <Accordion.Item eventKey="1">
+                                            <Accordion.Header>Accordion Item #2</Accordion.Header>
+                                            <Accordion.Body>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                                aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                                culpa qui officia deserunt mollit anim id est laborum.
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                    </Accordion>
+                                </Stack>
+                            </Container>
                         </Card>
                     </Col>
                 </Row>

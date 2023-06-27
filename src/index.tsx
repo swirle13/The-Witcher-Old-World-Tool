@@ -13,7 +13,7 @@ import LostMount from './pages/LostMount';
 import CommunityLinks from './pages/CommunityLinks';
 import Root from './pages/Root';
 import MonsterRoller from './pages/MonsterRoller';
-import SetupHelper from './pages/setupHelper';
+import SetupHelper from './pages/SetupHelper';
 
 // hashRouter vs browserRouter https://stackoverflow.com/a/74149347/6811686
 const router = createHashRouter([
