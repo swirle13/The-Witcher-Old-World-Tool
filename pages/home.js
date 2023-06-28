@@ -42,25 +42,6 @@ const linkedPages = [
 ];
 function Home() {
     /*
-    TODO: Create simplified home page for generic actions, e.g.
-    Setup:
-        1. Roll the proper amount of monster cards, subsequent terrain tokens, and randomly assign one to each.
-        2. Randomly assign player boards
-        3. Generate player cards and gold setup
-        All based on provided number of players to adjust, and selected expansions.
-    Three monsters pictures, each with three buttons underneath:
-        1. Defeated monster
-        2. Chased away monster
-        3. Complete loss to monster
-        Automatically rolls new monster of new appropriate level for situation
-    Home screen will have two columns of cards for each tool
-        * will collapse to a single column of cards on mobile
-        1. Lost Mount/Terrain picker
-        2. Monster roller
-        3. Setup helper
-        4. Inventory checker
-    */
-    /*
         Breakpoints
         ============================
         X-Small		 None	<576px

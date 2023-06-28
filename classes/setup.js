@@ -121,7 +121,7 @@ function compileSteps(legendaryHunt = false, mages = false, monsterPack = false,
     tempArr.push("Turn the 3 Monster Tokens face up and place their corresponding Monster Cards in the slots on the game board matching the corresponding Location Tokens. Replace the tokens with miniatures if you have them.");
     if (monsterTrail)
         tempArr.push("Place the 3 corresponding large Monster Cards near the board.");
-    tempElem = ((0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsx)("p", { children: "Set up Monsters:" }), (0, jsx_runtime_1.jsx)("ol", { type: 'a', children: tempArr.map((text) => ((0, jsx_runtime_1.jsx)("li", { children: text }))) })] }));
+    tempElem = ((0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsx)("p", { children: "Set up Monsters:" }), (0, jsx_runtime_1.jsx)("ol", { type: 'a', children: tempArr.map((text, id) => ((0, jsx_runtime_1.jsx)("li", { children: text }, id))) })] }));
     finalSteps.push(tempElem);
     tempElem = "";
     // step
@@ -133,7 +133,6 @@ function compileSteps(legendaryHunt = false, mages = false, monsterPack = false,
     if (legendaryHunt)
         finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: "Choose a Legendary Monster. Place its large card and the Special Fight cards (shuffled) near the game board. Place its miniature on the location shown on its card. Shuffle the Destruction Tokens and keep them (face-down) near the board." }));
     // step
-    // TODO: include link or embed player board randomizer in below step
     finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: "Determine the starting player randomly, or it is whoever most recently read a Witcher book. Players choose Player Boards via any method they wish; see p. 7 of core rules for a fair drafting method." }));
     // step
     if (mages)
@@ -151,7 +150,7 @@ function compileSteps(legendaryHunt = false, mages = false, monsterPack = false,
     tempArr.push("Shuffle their starting cards and set the deck to the left of their board.");
     tempArr.push("Place their miniature on their School location on the map.");
     tempArr.push((0, jsx_runtime_1.jsxs)("p", { children: ["Draw the following cards and gold based on player position: ", startingResources(numPlayers)] }));
-    tempElem = ((0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsx)("p", { children: "Each player must:" }), (0, jsx_runtime_1.jsx)("ol", { type: 'a', children: tempArr.map((text) => ((0, jsx_runtime_1.jsx)("li", { children: text }))) })] }));
+    tempElem = ((0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsx)("p", { children: "Each player must:" }), (0, jsx_runtime_1.jsx)("ol", { type: 'a', children: tempArr.map((text, id) => ((0, jsx_runtime_1.jsx)("li", { children: text }, id))) })] }));
     finalSteps.push(tempElem);
     tempElem = {}, tempArr = [];
     if (monsterTrail)

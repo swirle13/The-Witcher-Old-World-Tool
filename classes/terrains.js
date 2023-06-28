@@ -107,7 +107,6 @@ const WaterTokens = [
 ];
 exports.WaterTokens = WaterTokens;
 class TerrainTokenDeck {
-    // TODO: rename ReadonlyDeck to ImmutableDeck
     mountainDeck;
     forestDeck;
     waterDeck;

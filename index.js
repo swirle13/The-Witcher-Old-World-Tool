@@ -24,14 +24,11 @@ const router = (0, react_router_dom_1.createHashRouter)([
         element: (0, jsx_runtime_1.jsx)(Root_1.default, {}),
         errorElement: (0, jsx_runtime_1.jsx)(ErrorPage_1.default, {}),
         children: [
-            // TODO: follow react router demo to add an index that all pages inherit from
             {
                 path: "/",
                 element: (0, jsx_runtime_1.jsx)(Home_1.default, {}),
                 errorElement: (0, jsx_runtime_1.jsx)(ErrorPage_1.default, {}),
-                children: [
-                // TODO: follow react router demo to add an index that all pages inherit from
-                ],
+                children: [],
             },
             {
                 path: "communityLinks",

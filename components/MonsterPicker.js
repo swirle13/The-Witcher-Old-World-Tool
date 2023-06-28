@@ -27,7 +27,6 @@ const jsx_runtime_1 = require("react/jsx-runtime");
 const react_1 = require("react");
 const react_bootstrap_1 = require("react-bootstrap");
 const monsters_1 = __importStar(require("../classes/monsters"));
-// TODO: genericize token picker from terrain_token_picker.tsx and use here for monsters
 const localMonsterDeck = new monsters_1.default();
 function MonsterPicker({ HeaderText = "Randomly draw a token" }) {
     const [displayedLevelOneMonster, setLevelOneMonster] = (0, react_1.useState)(new monsters_1.levelOneMonster(" "));

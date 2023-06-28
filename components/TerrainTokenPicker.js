@@ -34,8 +34,6 @@ const Button_1 = __importDefault(require("react-bootstrap/esm/Button"));
 const terrains_1 = __importStar(require("../classes/terrains"));
 const react_1 = require("react");
 const localTerrainDeck = new terrains_1.default();
-// TODO: get images of the terrain tokens, damage tokens, and weakness tokens
-// TODO: for 3D object rendering, Threejs is necessary. React Three Fiber is a React Typescript renderer for Threejs.
 function TerrainTokenPicker({ HeaderText = "Randomly draw a token" }) {
     const [displayedMountainToken, setMountainToken] = (0, react_1.useState)(new terrains_1.MountainToken());
     const [displayedForestToken, setForestToken] = (0, react_1.useState)(new terrains_1.ForestToken());
