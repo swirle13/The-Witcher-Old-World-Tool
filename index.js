@@ -16,7 +16,7 @@ const LostMount_1 = __importDefault(require("./pages/LostMount"));
 const CommunityLinks_1 = __importDefault(require("./pages/CommunityLinks"));
 const Root_1 = __importDefault(require("./pages/Root"));
 const MonsterRoller_1 = __importDefault(require("./pages/MonsterRoller"));
-const setupHelper_1 = __importDefault(require("./pages/setupHelper"));
+const SetupHelper_1 = __importDefault(require("./pages/SetupHelper"));
 // hashRouter vs browserRouter https://stackoverflow.com/a/74149347/6811686
 const router = (0, react_router_dom_1.createHashRouter)([
     {
@@ -47,7 +47,7 @@ const router = (0, react_router_dom_1.createHashRouter)([
             },
             {
                 path: "setupHelper",
-                element: (0, jsx_runtime_1.jsx)(setupHelper_1.default, {})
+                element: (0, jsx_runtime_1.jsx)(SetupHelper_1.default, {})
             },
             {
                 path: "inventoryChecker",
