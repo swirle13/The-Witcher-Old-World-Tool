@@ -22,13 +22,11 @@ const router = createHashRouter([
         element: <Root />,
         errorElement: <ErrorPage />,
         children: [
-            // TODO: follow react router demo to add an index that all pages inherit from
             {
                 path: "/",
                 element: <Home />,
                 errorElement: <ErrorPage />,
                 children: [
-                    // TODO: follow react router demo to add an index that all pages inherit from
                 ],
             },
             {

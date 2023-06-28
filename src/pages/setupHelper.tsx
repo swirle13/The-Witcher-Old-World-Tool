@@ -1,11 +1,33 @@
-import { useState } from "react";
-import { Accordion, Card, Col, Container, Form, FormCheck, FormGroup, FormLabel, Row, Stack } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import { Accordion, Card, Col, Container, Form, FormCheck, FormControl, FormGroup, FormLabel, Image, Row, Stack } from "react-bootstrap";
+import { compileSteps } from "../classes/setup";
 import CardHeader from "react-bootstrap/esm/CardHeader";
+import legendaryHunt from "../img/expansionHeaders/legendaryHunt.png";
+import mages from "../img/expansionHeaders/mages.png";
+import monsterPack from "../img/expansionHeaders/monsterPack.png";
+import monsterTrail from "../img/expansionHeaders/monsterTrail.png";
+import skellige from "../img/expansionHeaders/skellige.png";
+import lostMount from "../img/expansionHeaders/lostMount.png";
+import wildHunt from "../img/expansionHeaders/wildHunt.png";
 
-const expansions = ["Legendary Hunt", "Mages", "Monster Pack", "Monster Trail", "Skellige", "Stretch Goals"]
+const expansions = ["Legendary Hunt", "Mages", "Monster Pack", "Monster Trail", "Skellige", "Lost Mount", "Wild Hunt (Under development!)"];
+const expansionsImages = [legendaryHunt, mages, monsterPack, monsterTrail, skellige, lostMount, wildHunt];
 
 export default function SetupHelper() {
-    const [players, setPlayers] = useState<number>();
+    const [players, setPlayers] = useState<number>(1);
+    const [expansionsState, setExpansionsState] = useState<Array<boolean>>(
+        new Array(expansions.length).fill(false)
+    );
+    const [steps, setSteps] = useState<Array<string>>(compileSteps());
+    const handleExpansionOnChange = (position: number) => {
+        const updatedExpansionsState = expansionsState.map((item, index) => index === position ? !item : item);
+        setExpansionsState(updatedExpansionsState);
+    };
+
+    useEffect(() => {
+        const tempArr = [...expansionsState, players] as [boolean, boolean, boolean, boolean, boolean, boolean, boolean, number];
+        setSteps(compileSteps(...tempArr));
+    }, [players, expansionsState]);
 
     return (
         <Container>
@@ -17,41 +39,49 @@ export default function SetupHelper() {
                     <Col id="setupConfiguration" lg="4">
                         <Card>
                             <CardHeader as="h3" className="text-center">Setup Configuration</CardHeader>
-                                <Container className="gap-2 mt-3 mx-3 d-flex">
-                                    <Stack gap={3}>
-                                        <Form>
-                                            <FormGroup controlId="PlayerSelect">
-                                                {/* <h5>Select players</h5> */}
-                                                <Card.Title as="h5">Select Players</Card.Title>
-                                                <div key="inlinePlayers" className="mb-3">
-                                                    {[1, 2, 3, 4, 5].map((num) => (
-                                                        <FormCheck
-                                                            inline
-                                                            type="radio"
-                                                            name="group1"
-                                                            id={`${num}Player`}
-                                                            label={num}
-                                                            key={num}
-                                                        />
-                                                    ))}
-                                                </div>
-                                            </FormGroup>
-                                            <FormGroup controlId="expansionPicker">
-                                                <h5>Select your expansions</h5>
-                                                <div key="inlineExpansions" className="mb-3">
-                                                    {expansions.map((exp) => (
-                                                        <FormCheck
-                                                            name="group2"
-                                                            id={exp}
-                                                            label={exp}
-                                                            key={exp}
-                                                        />
-                                                    ))}
-                                                </div>
-                                            </FormGroup>
-                                        </Form>
-                                    </Stack>
-                                </Container>
+                            <Container className="gap-2 pt-3" fluid>
+                                <Stack gap={3}>
+                                    <Form>
+                                        <Row className='justify-content-center' xs={1}>
+                                            <Col>
+                                                <FormGroup controlId="PlayerSelect">
+                                                    <h5 className='text-center'>Select Players</h5>
+                                                    <div key="inlinePlayers" className="mb-3 text-center">
+                                                        {[1, 2, 3, 4, 5].map((num) => (
+                                                            <FormCheck
+                                                                defaultChecked={num === 1}
+                                                                inline
+                                                                type="radio"
+                                                                name="group1"
+                                                                id={`${num}Player`}
+                                                                label={num}
+                                                                key={num}
+                                                                onChange={() => { setPlayers(num); }}
+                                                            />
+                                                        ))}
+                                                    </div>
+                                                </FormGroup>
+                                            </Col>
+                                            <Col xs="auto">
+                                                <FormGroup controlId="expansionPicker">
+                                                    <h5 className='text-center'>Select your expansions</h5>
+                                                    <Col key="inlineExpansions" className="mb-3 text-center" sm="auto">
+                                                        {expansions.map((exp, index) => (
+                                                            <FormCheck
+                                                                name="group2"
+                                                                id={exp}
+                                                                label={<Image src={expansionsImages[index]} width={150} />}
+                                                                key={exp}
+                                                                onChange={() => handleExpansionOnChange(index)}
+                                                            />
+                                                        ))}
+                                                    </Col>
+                                                </FormGroup>
+                                            </Col>
+                                        </Row>
+                                    </Form>
+                                </Stack>
+                            </Container>
                         </Card>
                     </Col>
                     <div className="vr p-0 mx-2 d-none d-lg-block"></div>
@@ -60,33 +90,13 @@ export default function SetupHelper() {
                             <CardHeader as="h3" className="text-center">Setup Instructions</CardHeader>
                             <Container className="gap-2 my-3 d-flex">
                                 <Stack gap={3}>
-                                    {/* TODO: Add Starting Resources field for gold/cards*/}
-                                    {/* TODO: Add data structure to store setup steps, use map to create divs dynamically */}
-                                    <Accordion defaultActiveKey={["0"]} alwaysOpen>
-                                        <Accordion.Item eventKey="0">
-                                            <Accordion.Header>Accordion Item #1</Accordion.Header>
-                                            <Accordion.Body>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                                culpa qui officia deserunt mollit anim id est laborum.
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-                                        <Accordion.Item eventKey="1">
-                                            <Accordion.Header>Accordion Item #2</Accordion.Header>
-                                            <Accordion.Body>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                                culpa qui officia deserunt mollit anim id est laborum.
-                                            </Accordion.Body>
-                                        </Accordion.Item>
+                                    <Accordion defaultActiveKey={["0"]} alwaysOpen flush>
+                                        {steps.map((body, index) => (
+                                            <Accordion.Item eventKey={`${index}`}>
+                                                <Accordion.Header>Step {index + 1}</Accordion.Header>
+                                                <Accordion.Body>{body}</Accordion.Body>
+                                            </Accordion.Item>
+                                        ))}
                                     </Accordion>
                                 </Stack>
                             </Container>
@@ -95,5 +105,5 @@ export default function SetupHelper() {
                 </Row>
             </Col>
         </Container>
-    )
+    );
 }

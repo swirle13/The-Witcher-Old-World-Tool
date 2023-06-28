@@ -126,7 +126,6 @@ const WaterTokens: Array<WaterToken> = [
 ]
 
 export default class TerrainTokenDeck {
-    // TODO: rename ReadonlyDeck to ImmutableDeck
     mountainDeck: ReadonlyDeck<MountainToken>;
     forestDeck: ReadonlyDeck<ForestToken>;
     waterDeck: ReadonlyDeck<WaterToken>;

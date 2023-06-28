@@ -14,7 +14,7 @@ export default function MonsterRoller() {
                     {/* <Image src={AdventurePackHeader} rounded fluid/> */}
                 </Col>
             </Row>
-            <MonsterPicker HeaderText="Roll New Monsters"/>
+            <MonsterPicker HeaderText="Roll A New Monster"/>
         </Container>
     )
 }

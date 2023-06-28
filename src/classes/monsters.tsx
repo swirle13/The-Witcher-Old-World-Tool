@@ -277,5 +277,3 @@ export default class MonstersDeck {
         return this.levelThreeMonstersDeck.draw();
     }
 }
-
-// TODO: when users are choosing their options, provide checkboxes for expansions or an all-in

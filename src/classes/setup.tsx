@@ -128,8 +128,8 @@ export function compileSteps(
         <div>
             <p>Set up Monsters:</p>
             <ol type='a'>
-                {tempArr.map((text) => (
-                    <li>{text}</li>
+                {tempArr.map((text, id) => (
+                    <li key={id}>{text}</li>
                 ))}
             </ol>
         </div>
@@ -147,7 +147,6 @@ export function compileSteps(
     if (legendaryHunt) finalSteps.push(<p>Choose a Legendary Monster. Place its large card and the Special Fight cards (shuffled) near the game board. Place its miniature on the location shown on its card. Shuffle the Destruction Tokens and keep them (face-down) near the board.</p>);
 
     // step
-    // TODO: include link or embed player board randomizer in below step
     finalSteps.push(<p>Determine the starting player randomly, or it is whoever most recently read a Witcher book. Players choose Player Boards via any method they wish; see p. 7 of core rules for a fair drafting method.</p>);
 
     // step
@@ -168,8 +167,8 @@ export function compileSteps(
         <div>
             <p>Each player must:</p>
             <ol type='a'>
-                {tempArr.map((text) => (
-                    <li>{text}</li>
+                {tempArr.map((text, id) => (
+                    <li key={id}>{text}</li>
                 ))}
             </ol>
         </div>

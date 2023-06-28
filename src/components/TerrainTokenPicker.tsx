@@ -7,10 +7,6 @@ import { useEffect, useState } from 'react';
 
 const localTerrainDeck = new TerrainTokenDeck();
 
-// TODO: get images of the terrain tokens, damage tokens, and weakness tokens
-
-// TODO: for 3D object rendering, Threejs is necessary. React Three Fiber is a React Typescript renderer for Threejs.
-
 export default function TerrainTokenPicker({
     HeaderText = "Randomly draw a token"
 }: {
@@ -38,7 +34,6 @@ export default function TerrainTokenPicker({
                     <Col className='d-flex justify-content-center'>
                         <h1 className='text-center'>{HeaderText}</h1>
                     </Col>
-                    {/* TODO: Update the buttons to images of the respective tokens */}
                     <Row id='TerrainTokenButtons' className='justify-content-center px-1'>
                         <Col xs="auto" className='p-1'>
                             <Button variant="secondary" size="lg" className='px-1'

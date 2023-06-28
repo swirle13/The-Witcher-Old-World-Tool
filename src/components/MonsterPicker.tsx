@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import MonstersDeck, { levelOneMonster, levelTwoMonster, levelThreeMonster } from "../classes/monsters";
 
-// TODO: genericize token picker from terrain_token_picker.tsx and use here for monsters
-
 const localMonsterDeck = new MonstersDeck();
 
 export default function MonsterPicker({
@@ -35,7 +33,6 @@ export default function MonsterPicker({
                             {HeaderText}
                         </h1>
                     </Col>
-                    {/* TODO: Update the buttons to images of the respective tokens */}
                     <Row id='TerrainTokenButtons' className='justify-content-center px-1'>
                         <Col xs="auto" className='p-1'>
                             <Button variant="secondary" size="lg"
