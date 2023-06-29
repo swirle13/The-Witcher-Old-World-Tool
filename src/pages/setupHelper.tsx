@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Accordion, Card, Col, Container, Form, FormCheck, FormControl, FormGroup, FormLabel, Image, Row, Stack } from "react-bootstrap";
+import { Accordion, Card, Col, Container, Form, FormCheck, FormGroup, Image, Row, Stack } from "react-bootstrap";
 import { compileSteps } from "../classes/setup";
 import CardHeader from "react-bootstrap/esm/CardHeader";
 import legendaryHunt from "../img/expansionHeaders/legendaryHunt.png";
@@ -9,6 +9,7 @@ import monsterTrail from "../img/expansionHeaders/monsterTrail.png";
 import skellige from "../img/expansionHeaders/skellige.png";
 import lostMount from "../img/expansionHeaders/lostMount.png";
 import wildHunt from "../img/expansionHeaders/wildHunt.png";
+import "../css/SetupHelper.css";
 
 const expansions = ["Legendary Hunt", "Mages", "Monster Pack", "Monster Trail", "Skellige", "Lost Mount", "Wild Hunt (Under development!)"];
 const expansionsImages = [legendaryHunt, mages, monsterPack, monsterTrail, skellige, lostMount, wildHunt];
@@ -37,70 +38,63 @@ export default function SetupHelper() {
                 </Row>
                 <Row className="gap-2">
                     <Col id="setupConfiguration" lg="4">
-                        <Card>
-                            <CardHeader as="h3" className="text-center">Setup Configuration</CardHeader>
-                            <Container className="gap-2 pt-3" fluid>
-                                <Stack gap={3}>
-                                    <Form>
-                                        <Row className='justify-content-center' xs={1}>
-                                            <Col>
-                                                <FormGroup controlId="PlayerSelect">
-                                                    <h5 className='text-center'>Select Players</h5>
-                                                    <div key="inlinePlayers" className="mb-3 text-center">
-                                                        {[1, 2, 3, 4, 5].map((num) => (
-                                                            <FormCheck
-                                                                defaultChecked={num === 1}
-                                                                inline
-                                                                type="radio"
-                                                                name="group1"
-                                                                id={`${num}Player`}
-                                                                label={num}
-                                                                key={num}
-                                                                onChange={() => { setPlayers(num); }}
-                                                            />
-                                                        ))}
-                                                    </div>
-                                                </FormGroup>
-                                            </Col>
-                                            <Col xs="auto">
-                                                <FormGroup controlId="expansionPicker">
-                                                    <h5 className='text-center'>Select your expansions</h5>
-                                                    <Col key="inlineExpansions" className="mb-3 text-center" sm="auto">
-                                                        {expansions.map((exp, index) => (
-                                                            <FormCheck
-                                                                name="group2"
-                                                                id={exp}
-                                                                label={<Image src={expansionsImages[index]} width={150} />}
-                                                                key={exp}
-                                                                onChange={() => handleExpansionOnChange(index)}
-                                                            />
-                                                        ))}
-                                                    </Col>
-                                                </FormGroup>
-                                            </Col>
-                                        </Row>
-                                    </Form>
-                                </Stack>
-                            </Container>
-                        </Card>
-                    </Col>
-                    <div className="vr p-0 mx-2 d-none d-lg-block"></div>
-                    <Col id="setupInstructions">
-                        <Card>
-                            <CardHeader as="h3" className="text-center">Setup Instructions</CardHeader>
-                            <Container className="gap-2 my-3 d-flex">
-                                <Stack gap={3}>
-                                    <Accordion defaultActiveKey={["0"]} alwaysOpen flush>
-                                        {steps.map((body, index) => (
-                                            <Accordion.Item eventKey={`${index}`}>
-                                                <Accordion.Header>Step {index + 1}</Accordion.Header>
-                                                <Accordion.Body>{body}</Accordion.Body>
-                                            </Accordion.Item>
+                        <Form>
+                            <Row className='justify-content-center' lg={1}>
+                                <Col id="playersCol">
+                                    <h4 className='text-center mb-3'>Players</h4>
+                                    <div key="inlinePlayers" className="mb-3 pl-1 text-center">
+                                        {[1, 2, 3, 4, 5].map((num) => (
+                                            <FormCheck
+                                                defaultChecked={num === 1}
+                                                inline
+                                                type="radio"
+                                                name="group1"
+                                                id={`${num}Player`}
+                                                label={num}
+                                                key={num}
+                                                onChange={() => { setPlayers(num); }}
+                                                className={'align-items-center ' + (num === 5 ? 'mr-0 !important' : '')}
+                                            />
                                         ))}
-                                    </Accordion>
-                                </Stack>
-                            </Container>
-                        </Card>
+                                    </div>
+                                </Col>
+                            </Row>
+                            <Row className='justify-content-center' lg={1}>
+                                <Col id="expansionsCol">
+                                    <h4 className='text-center mb-3'>Expansions</h4>
+                                    <Row key="inlineExpansions" className="text-center justify-content-center" xxl={1}>
+                                        {expansions.map((exp, index) => (
+                                            <Col className="d-flex justify-content-center" xs="auto">
+                                                <FormCheck
+                                                    name="group2"
+                                                    id={exp}
+                                                    label={<Image src={expansionsImages[index]} width={150} />}
+                                                    key={exp}
+                                                    onChange={() => handleExpansionOnChange(index)}
+                                                    className='d-flex align-items-center'
+                                                />
+                                            </Col>
+                                        ))}
+                                    </Row>
+                                </Col>
+                            </Row>
+                        </Form>
+                    </Col>
+                    <div className="vr p-0 mx-2 d-none d-lg-block" />
+                    <div className="d-lg-none my-3 px-5"><hr className='my-0' /></div>
+                    <Col id="setupInstructions">
+                        <Stack gap={3}>
+                            <Accordion defaultActiveKey={["0"]} alwaysOpen flush>
+                                {steps.map((body, index) => (
+                                    <Accordion.Item eventKey={`${index}`}>
+                                        <Accordion.Header style={{ backgroundColor: "yellow" }}>
+                                            Step {index + 1}
+                                        </Accordion.Header>
+                                        <Accordion.Body className='lh-lg'>{body}</Accordion.Body>
+                                    </Accordion.Item>
+                                ))}
+                            </Accordion>
+                        </Stack>
                     </Col>
                 </Row>
             </Col>

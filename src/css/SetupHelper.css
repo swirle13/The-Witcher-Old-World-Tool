@@ -1,0 +1,17 @@
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #2f3337;
+}
+
+.form-check-input[type="checkbox"] {
+    /* TODO: when on small devices */
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.form-check {
+    width: auto;
+}
