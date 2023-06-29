@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import { Accordion, Card, Col, Container, Form, FormCheck, FormGroup, Image, Row, Stack } from "react-bootstrap";
+import { Accordion, Col, Container, Form, FormCheck, Image, Row, Stack } from "react-bootstrap";
 import { compileSteps } from "../classes/setup";
-import CardHeader from "react-bootstrap/esm/CardHeader";
 import legendaryHunt from "../img/expansionHeaders/legendaryHunt.png";
 import mages from "../img/expansionHeaders/mages.png";
 import monsterPack from "../img/expansionHeaders/monsterPack.png";
