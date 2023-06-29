@@ -47,58 +47,58 @@ function compileSteps(legendaryHunt = false, mages = false, monsterPack = false,
     const finalSteps = [];
     let tempElem = {}, tempStr = "", tempStr2 = "", tempArr = [];
     // step 1
-    finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: "Set out the playmat or game boards." }));
+    finalSteps.push('Set out the playmat or game boards.');
     // step
     if (legendaryHunt)
-        finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: "Put the large Legendary Hunt help near the board. Use Side B for a longer game." }));
+        finalSteps.push('Put the large Legendary Hunt help near the board. Use Side B for a longer game.');
     // step
     if (skellige)
-        finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: "Shuffle the Harbor tokens (anchor side up) and place them on the coastal locations (1, 5, 6, 9, 12, 13). Flip them over, place a Ship miniature on the three locations with a ship symbol, then flip them back to the anchor side (as a reminder)." }));
+        finalSteps.push('Shuffle the Harbor tokens (anchor side up) and place them on the coastal locations (1, 5, 6, 9, 12, 13). Flip them over, place a Ship miniature on the three locations with a ship symbol, then flip them back to the anchor side (as a reminder).');
     // step
-    finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: "Shuffle the Action Card deck and place it above the Action Card slots. Reveal cards until you have 3 \u201C0-cost\u201D cards, which go in the 3 lowest spaces (face up). Reshuffle any other revealed cards, then reveal 3 more cards for the remaining spaces (face up)." }));
+    finalSteps.push('Shuffle the Action Card deck and place it above the Action Card slots. Reveal cards until you have 3 “0-cost” cards, which go in the 3 lowest spaces (face up). Reshuffle any other revealed cards, then reveal 3 more cards for the remaining spaces (face up).');
     // step
     if (mages)
-        finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: "Repeat the above step for the Mage Action Cards. (Or replace that step if everyone is playing a mage.)" }));
+        finalSteps.push('Repeat the above step for the Mage Action Cards. (Or replace that step if everyone is playing a mage.)');
     // step
     if (numPlayers == 1) {
-        tempElem = (0, jsx_runtime_1.jsx)("p", { children: "Draw 1 random Attribute Trophy and place it on the edge of the board, below the Exploration Card slots, face up." });
+        tempElem = 'Draw 1 random Attribute Trophy and place it on the edge of the board, below the Exploration Card slots, face up.';
     }
     else if (numPlayers == 2 || numPlayers == 3) {
-        tempElem = (0, jsx_runtime_1.jsx)("p", { children: "Draw 4 Attribute Trophies, one for each attribute, and place them on the edge of the board, below the Exploration Card slots, face up." });
+        tempElem = 'Draw 4 Attribute Trophies, one for each attribute, and place them on the edge of the board, below the Exploration Card slots, face up.';
     }
     else if (numPlayers > 3) {
-        tempElem = (0, jsx_runtime_1.jsx)("p", { children: "Place all 8 Attribute Trophies on the edge of the board, below the Exploration Card slots, face up." });
+        tempElem = 'Place all 8 Attribute Trophies on the edge of the board, below the Exploration Card slots, face up.';
     }
     finalSteps.push(tempElem);
-    tempElem = (0, jsx_runtime_1.jsx)("p", {});
+    tempElem = '';
     // step
     if (monsterTrail)
-        finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: "Shuffle the Mutagen Deck and place it below the Attribute Trophy deck." }));
+        finalSteps.push('Shuffle the Mutagen Deck and place it below the Attribute Trophy deck.');
     // step
-    finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: "Shuffle the Potion deck and place it on the edge of the board, below the Action Cards." }));
+    finalSteps.push('Shuffle the Potion deck and place it on the edge of the board, below the Action Cards.');
     // step
     if (monsterTrail)
-        finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: "Shuffle the Bomb deck and place it below the Potion deck." }));
+        finalSteps.push('Shuffle the Bomb deck and place it below the Potion deck.');
     // step
-    finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: "Shuffle the City Exploration deck and Wilds Exploration deck. Do not shuffle the Event deck! Place each in the appropriate slot on the game board." }));
+    finalSteps.push('Shuffle the City Exploration deck and Wilds Exploration deck. Do not shuffle the Event deck! Place each in the appropriate slot on the game board.');
     // step
     if (skellige)
-        finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: "Shuffle the Skellige Exploration deck. Do not shuffle the Skellige Event deck! Place both in their slots above the islands on the game board." }));
+        finalSteps.push('Shuffle the Skellige Exploration deck. Do not shuffle the Skellige Event deck! Place both in their slots above the islands on the game board.');
     // step
     if (monsterTrail)
         tempStr = "and the large Dagon card ";
     if (skellige)
-        finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: `Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus deck and place it ${tempStr}near this track.` }));
+        finalSteps.push(`Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus deck and place it ${tempStr}near this track.`);
     // step
     if (monsterPack)
-        finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: "Place the Siren miniature on the Dagon location, with its Monster Card nearby." }));
-    tempElem = (0, jsx_runtime_1.jsx)("p", {});
+        finalSteps.push('Place the Siren miniature on the Dagon location, with its Monster Card nearby.');
+    tempElem = '';
     // step
     if (skellige)
         tempStr = "Quest Tokens, ";
-    finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: `Place Gold Tokens, ${tempStr}Poker Dice, and Closed Tavern token or mini near the game board.` }));
+    finalSteps.push(`Place Gold Tokens, ${tempStr}Poker Dice, and Closed Tavern token or mini near the game board.`);
     // step
-    finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: "Sort Location Tokens into 3 piles by terrain type. Shuffle each pile and place them (face down) near the game board. Draw 1 token from each pile and place them (face up) on their slots on the game board (to the right of the Monster slots)." }));
+    finalSteps.push('Sort Location Tokens into 3 piles by terrain type. Shuffle each pile and place them (face down) near the game board. Draw 1 token from each pile and place them (face up) on their slots on the game board (to the right of the Monster slots).');
     // create array of string list items to generate ordered list
     tempArr = [];
     tempArr.push("Sort Monster Cards and Monster Tokens by level (I, II, and III). Place the cards near the game board (face up). Shuffle the tokens and place them near the game board (face down).");
@@ -121,19 +121,19 @@ function compileSteps(legendaryHunt = false, mages = false, monsterPack = false,
     tempArr.push("Turn the 3 Monster Tokens face up and place their corresponding Monster Cards in the slots on the game board matching the corresponding Location Tokens. Replace the tokens with miniatures if you have them.");
     if (monsterTrail)
         tempArr.push("Place the 3 corresponding large Monster Cards near the board.");
-    tempElem = ((0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsx)("p", { children: "Set up Monsters:" }), (0, jsx_runtime_1.jsx)("ol", { type: 'a', children: tempArr.map((text, id) => ((0, jsx_runtime_1.jsx)("li", { children: text }, id))) })] }));
+    tempElem = ((0, jsx_runtime_1.jsxs)("div", { children: ["Set up Monsters:", (0, jsx_runtime_1.jsx)("ol", { type: 'a', children: tempArr.map((text, id) => ((0, jsx_runtime_1.jsx)("li", { children: text }, id))) })] }));
     finalSteps.push(tempElem);
     tempElem = "";
     // step
     if (monsterTrail)
-        finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: "Remove 8 Monster Fight cards from the deck. Put 4 back in the box and set 4 aside for later (when a Level III monster appears). Add the Special Attack cards to the Monster Fight deck." }));
+        finalSteps.push('Remove 8 Monster Fight cards from the deck. Put 4 back in the box and set 4 aside for later (when a Level III monster appears). Add the Special Attack cards to the Monster Fight deck.');
     // step
-    finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: "Shuffle the Monster Fight deck and place it (face down) near the game board." }));
+    finalSteps.push('Shuffle the Monster Fight deck and place it (face down) near the game board.');
     // step
     if (legendaryHunt)
-        finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: "Choose a Legendary Monster. Place its large card and the Special Fight cards (shuffled) near the game board. Place its miniature on the location shown on its card. Shuffle the Destruction Tokens and keep them (face-down) near the board." }));
+        finalSteps.push('Choose a Legendary Monster. Place its large card and the Special Fight cards (shuffled) near the game board. Place its miniature on the location shown on its card. Shuffle the Destruction Tokens and keep them (face-down) near the board.');
     // step
-    finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: "Determine the starting player randomly, or it is whoever most recently read a Witcher book. Players choose Player Boards via any method they wish; see p. 7 of core rules for a fair drafting method." }));
+    finalSteps.push('Determine the starting player randomly, or it is whoever most recently read a Witcher book. Players choose Player Boards via any method they wish; see p. 7 of core rules for a fair drafting method.');
     // step
     if (mages)
         tempStr = "or Energy ";
@@ -150,15 +150,15 @@ function compileSteps(legendaryHunt = false, mages = false, monsterPack = false,
     tempArr.push("Shuffle their starting cards and set the deck to the left of their board.");
     tempArr.push("Place their miniature on their School location on the map.");
     tempArr.push((0, jsx_runtime_1.jsxs)("p", { children: ["Draw the following cards and gold based on player position: ", startingResources(numPlayers)] }));
-    tempElem = ((0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsx)("p", { children: "Each player must:" }), (0, jsx_runtime_1.jsx)("ol", { type: 'a', children: tempArr.map((text, id) => ((0, jsx_runtime_1.jsx)("li", { children: text }, id))) })] }));
+    tempElem = ((0, jsx_runtime_1.jsxs)("div", { children: ["Each player must:", (0, jsx_runtime_1.jsx)("ol", { type: 'a', children: tempArr.map((text, id) => ((0, jsx_runtime_1.jsx)("li", { children: text }, id))) })] }));
     finalSteps.push(tempElem);
     tempElem = {}, tempArr = [];
     if (monsterTrail)
-        finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: "Draw 3 Location Tokens (1 of each terrain). If a Witcher is in that location, draw again. Place a random, face-down Monster Weakness token matching that terrain type at each location. Shuffle these location tokens back into their stacks." }));
+        finalSteps.push('Draw 3 Location Tokens (1 of each terrain). If a Witcher is in that location, draw again. Place a random, face-down Monster Weakness token matching that terrain type at each location. Shuffle these location tokens back into their stacks.');
     if (legendaryHunt)
-        finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: "The last player in turn order takes the Legendary Monster Movement deck (shuffled, face down)." }));
+        finalSteps.push('The last player in turn order takes the Legendary Monster Movement deck (shuffled, face down).');
     if (lostMount)
-        finalSteps.push((0, jsx_runtime_1.jsx)("p", { children: "Then they draw two Location Tokens (of any terrain), choose one to put the Lost Mount miniature at, and shuffle the tokens back in." }));
+        finalSteps.push('Then they draw two Location Tokens (of any terrain), choose one to put the Lost Mount miniature at, and shuffle the tokens back in.');
     return finalSteps;
 }
 exports.compileSteps = compileSteps;
