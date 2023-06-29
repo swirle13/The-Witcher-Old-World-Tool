@@ -64,7 +64,7 @@ export default function SetupHelper() {
                                     <h4 className='text-center mb-3'>Expansions</h4>
                                     <Row key="inlineExpansions" className="text-center justify-content-center" xxl={1}>
                                         {expansions.map((exp, index) => (
-                                            <Col className="d-flex justify-content-center" xs="auto">
+                                            <Col className={"d-flex justify-content-center " + (index === 6 ? '' : 'mb-2')} xs="auto">
                                                 <FormCheck
                                                     name="group2"
                                                     id={exp}
@@ -84,7 +84,10 @@ export default function SetupHelper() {
                     <div className="d-lg-none my-3 px-5"><hr className='my-0' /></div>
                     <Col id="setupInstructions">
                         <Stack gap={3}>
-                            <Accordion defaultActiveKey={["0"]} alwaysOpen flush>
+                            <Accordion
+                            defaultActiveKey={[...Array(steps.length).keys()].map(a=>String(a))}
+                            alwaysOpen
+                            flush>
                                 {steps.map((body, index) => (
                                     <Accordion.Item eventKey={`${index}`}>
                                         <Accordion.Header style={{ backgroundColor: "yellow" }}>
