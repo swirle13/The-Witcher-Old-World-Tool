@@ -38,6 +38,17 @@ export default function Navbar() {
                                 Browse All Tools
                             </NavDropdown.Item>
                         </NavDropdown>
+                        <NavDropdown title="Project Help" id="github-nav-dropdown">
+                            <NavDropdown.Item href="https://github.com/mjohnson159/The-Witcher-Old-World-Tool-Issues/issues">
+                                Github Issues
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="https://github.com/mjohnson159/The-Witcher-Old-World-Tool-Issues/discussions">
+                                Github Discussions
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="https://github.com/users/mjohnson159/projects/2">
+                                Project Timeline
+                            </NavDropdown.Item>
+                        </NavDropdown>
                     </Nav>
                 </BSNavbar.Collapse>
             </Container>
