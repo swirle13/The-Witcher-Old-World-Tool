@@ -60,7 +60,7 @@ export default function SetupHelper() {
                             <Row className='justify-content-center' lg={1}>
                                 <Col id="expansionsCol">
                                     <h4 className='text-center mb-3'>Expansions</h4>
-                                    <Row key="inlineExpansions" className="text-center justify-content-center" xxl={1}>
+                                    <Row key="inlineExpansions" className="text-center justify-content-center" xl={1}>
                                         {expansions.map((exp, index) => (
                                             <Col className={"d-flex justify-content-center " + (index === 6 ? '' : 'mb-2')} xs="auto">
                                                 <FormCheck
