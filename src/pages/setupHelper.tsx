@@ -9,6 +9,7 @@ import skellige from "../img/expansionHeaders/skellige.png";
 import lostMount from "../img/expansionHeaders/lostMount.png";
 import wildHunt from "../img/expansionHeaders/wildHunt.png";
 import "../css/SetupHelper.css";
+import PageTitle from '../components/PageTitle';
 
 const expansions = ["Legendary Hunt", "Mages", "Monster Pack", "Monster Trail", "Skellige", "Lost Mount", "Wild Hunt (Under development!)"];
 const expansionsImages = [legendaryHunt, mages, monsterPack, monsterTrail, skellige, lostMount, wildHunt];
@@ -30,11 +31,9 @@ export default function SetupHelper() {
     }, [players, expansionsState]);
 
     return (
-        <Container>
+        <Container className='mb-6'>
             <Col>
-                <Row md={1} lg={1} className="my-2">
-                    <h1 className='text-center'>Setup Helper</h1>
-                </Row>
+                <PageTitle HeaderText='Setup Helper' HeaderUnderline={false}/>
                 <Row className="gap-2">
                     <Col id="setupConfiguration" lg="4">
                         <Form>
@@ -71,6 +70,7 @@ export default function SetupHelper() {
                                                     key={exp}
                                                     onChange={() => handleExpansionOnChange(index)}
                                                     className='d-flex align-items-center'
+                                                    disabled={expansionsState[6] && ["Legendary Hunt", "Monster Pack", "Lost Mount"].includes(exp)}
                                                 />
                                             </Col>
                                         ))}
@@ -84,9 +84,10 @@ export default function SetupHelper() {
                     <Col id="setupInstructions">
                         <Stack gap={3}>
                             <Accordion
-                            defaultActiveKey={[...Array(steps.length).keys()].map(a=>String(a))}
-                            alwaysOpen
-                            flush>
+                                defaultActiveKey={[...Array(steps.length).keys()].map(a=>String(a))}
+                                alwaysOpen
+                                flush
+                            >
                                 {steps.map((body, index) => (
                                     <Accordion.Item eventKey={`${index}`}>
                                         <Accordion.Header style={{ backgroundColor: "yellow" }}>
