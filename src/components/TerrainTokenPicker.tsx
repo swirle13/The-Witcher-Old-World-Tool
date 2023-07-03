@@ -8,9 +8,9 @@ import { useEffect, useState } from 'react';
 const localTerrainDeck = new TerrainTokenDeck();
 
 export default function TerrainTokenPicker({
-    HeaderText = "Randomly draw a token"
+    HeaderText = "Draw a token"
 }: {
-    HeaderText: string
+    HeaderText: string;
 }) {
     const [displayedMountainToken, setMountainToken] = useState<MountainToken>(new MountainToken());
     const [displayedForestToken, setForestToken] = useState<ForestToken>(new ForestToken());

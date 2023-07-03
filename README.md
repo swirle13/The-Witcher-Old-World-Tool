@@ -23,6 +23,13 @@ A few ideas:
 * Inventory list for each expansion
   * Cards
     * [Action cards vs Advanced Action cards vs Unique Action Cards explanation (discord comment)](https://discord.com/channels/1055042717626929162/1059499187386986608/1118233102377042080)
+    * TWOW(06) 1-4/4 = Base Set
+    * TWOW(21) 1-2/4 = Ciri, Lost Mount, and Adventure Pack
+    * TWOW(21) 3/4 = Wild Hunt
+    * TWOW(21) 4/4 = Monster Trail
+    * TWOW(34) 1-2/2 = Mages expansion
+    * TWOW(45) = Legendary Hunt Expansion
+    * TWOW(53) = Skellige expansion
   * Tokens
   * Minis
   * Where to locate some of the harder to find items
