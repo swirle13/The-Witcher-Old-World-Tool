@@ -6,13 +6,13 @@ import mages from "../img/expansionHeaders/mages.png";
 import monsterPack from "../img/expansionHeaders/monsterPack.png";
 import monsterTrail from "../img/expansionHeaders/monsterTrail.png";
 import skellige from "../img/expansionHeaders/skellige.png";
-import lostMount from "../img/expansionHeaders/lostMount.png";
+import adventurePack from "../img/expansionHeaders/adventurePack.png";
 import wildHunt from "../img/expansionHeaders/wildHunt.png";
 import "../css/SetupHelper.css";
 import PageTitle from '../components/PageTitle';
 
-const expansions = ["Legendary Hunt", "Mages", "Monster Pack", "Monster Trail", "Skellige", "Lost Mount", "Wild Hunt (Under development!)"];
-const expansionsImages = [legendaryHunt, mages, monsterPack, monsterTrail, skellige, lostMount, wildHunt];
+const expansions = ["Legendary Hunt", "Mages", "Monster Pack", "Monster Trail", "Skellige", "Adventure Pack", "Wild Hunt"];
+const expansionsImages = [legendaryHunt, mages, monsterPack, monsterTrail, skellige, adventurePack, wildHunt];
 
 export default function SetupHelper() {
     const [players, setPlayers] = useState<number>(1);
@@ -22,6 +22,12 @@ export default function SetupHelper() {
     const [steps, setSteps] = useState<Array<string>>(compileSteps());
     const handleExpansionOnChange = (position: number) => {
         const updatedExpansionsState = expansionsState.map((item, index) => index === position ? !item : item);
+        if (position === 6) {
+            // if Wild Hunt is toggled
+            updatedExpansionsState[0] = !updatedExpansionsState[0];  // Legendary Hunt
+            updatedExpansionsState[2] = !updatedExpansionsState[2];  // Monster Pack
+            updatedExpansionsState[5] = !updatedExpansionsState[5];  // Adventure Pack
+        }
         setExpansionsState(updatedExpansionsState);
     };
 
@@ -31,9 +37,9 @@ export default function SetupHelper() {
     }, [players, expansionsState]);
 
     return (
-        <Container> 
+        <Container>
             <Col>
-                <PageTitle HeaderText='Setup Helper' HeaderUnderline={false}/>
+                <PageTitle HeaderText='Setup Helper' ConditionalRender='d-lg-none' />
                 <Row className="gap-2 mb-4 pb-4">
                     <Col id="setupConfiguration" lg="4">
                         <Form>
@@ -52,6 +58,7 @@ export default function SetupHelper() {
                                                 key={num}
                                                 onChange={() => { setPlayers(num); }}
                                                 className={'align-items-center ' + (num === 5 ? 'mr-0 !important' : '')}
+                                                style={{textAlign: 'center'}}
                                             />
                                         ))}
                                     </div>
@@ -70,7 +77,7 @@ export default function SetupHelper() {
                                                     key={exp}
                                                     onChange={() => handleExpansionOnChange(index)}
                                                     className='d-flex align-items-center'
-                                                    disabled={expansionsState[6] && ["Legendary Hunt", "Monster Pack", "Lost Mount"].includes(exp)}
+                                                    disabled={expansionsState[6] && ["Legendary Hunt", "Monster Pack", "Adventure Pack"].includes(exp)}
                                                 />
                                             </Col>
                                         ))}
@@ -85,19 +92,26 @@ export default function SetupHelper() {
                     <Col id="setupInstructions">
                         <Stack gap={3}>
                             <Accordion
-                                defaultActiveKey={[...Array(steps.length).keys()].map(a=>String(a))}
+                                defaultActiveKey={[...Array(steps.length).keys()].map(a => String(a))}
                                 alwaysOpen
                                 flush
                             >
                                 {steps.map((body, index) => (
                                     <Accordion.Item eventKey={`${index}`}>
-                                        <Accordion.Header style={{ backgroundColor: "yellow" }}>
+                                        <Accordion.Header>
                                             Step {index + 1}
                                         </Accordion.Header>
                                         <Accordion.Body className='lh-lg'>{body}</Accordion.Body>
                                     </Accordion.Item>
                                 ))}
                             </Accordion>
+                            <p className="fw-lighter">
+                                Credit to <a href='https://boardgamegeek.com/user/pkitty'>pkitty</a> from BoardGameGeek
+                                Forums for their work on <a
+                                    href='https://boardgamegeek.com/filepage/254182/witcher-old-world-setup-summary-combined'>
+                                    Witcher: Old World - Setup Summary (combined)
+                                </a> which provided the foundation for this page.
+                            </p>
                         </Stack>
                     </Col>
                 </Row>
