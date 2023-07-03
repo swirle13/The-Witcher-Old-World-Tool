@@ -27,16 +27,14 @@ export default function MonsterPicker({
     }, [displayedLevelThreeMonster]);
 
     return (
-        <Container fluid className="mx-auto">
+        <Container fluid className="mx-auto min-h-screen">
             <PageTitle HeaderText={HeaderText} />
-            <Row className='py-2' id="tokensRow">
-                <Col className='mx-auto'>
-                    <Col className='d-flex justify-content-center'>
-                        {displayedToken?.tokenImg()}
-                    </Col>
+            <Row id='tokensRow' className='py-2 mb-4'>
+                <Col className='d-flex justify-content-center'>
+                    {displayedToken?.tokenImg()}
                 </Col>
             </Row>
-            <Row id='TerrainTokenButtons' className='justify-content-center px-1'>
+            <Row id='MonsterButtons' className='justify-content-center px-1 py-2'>
                 <Col xs="auto" className='p-1'>
                     <Button variant="secondary" size="lg"
                         onClick={() => setLevelOneMonster(localMonsterDeck.drawLevelOneMonster())}

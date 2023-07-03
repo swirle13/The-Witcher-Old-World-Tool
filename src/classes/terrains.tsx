@@ -39,13 +39,20 @@ interface TerrainToken {
 }
 
 abstract class TerrainTokenClass {
+    readonly name: string = "DefaultTokenName";
     readonly imgStr: string = "";
     img(): React.ReactNode {
         return (
-            <Container fluid="md" className='TokenContainer container mx-auto px-4'>
-                <Row xs={6} md={4} lg={2} className='d-flex justify-content-center'>
-                    <Col xs={8} md={4} lg={2}>
-                        <Image className="object-contain h-48 overflow-hidden" src={this.imgStr} roundedCircle fluid />
+            <Container id='TokenContainer' className='px-4 py-2 m-2'>
+                <Row className="justify-content-center">
+                    <Col xs='auto'>
+                        <Image
+                            id={`${this.name}IconImage`}
+                            src={this.imgStr}
+                            width={150}
+                            alt={this.name}
+                            roundedCircle
+                        />
                     </Col>
                 </Row>
             </Container>

@@ -97,13 +97,19 @@ abstract class monsterClass {
     readonly miniImgStr: string = "";
     tokenImg(): React.ReactNode {
         return (
-            <Container fluid="md" className='mx-auto px-4 py-2'>
-                <Row xs={6} md={4} lg={2} className='d-flex justify-content-center'>
-                    <Col xs={8} md={4} lg={2} className="justify-content-center">
-                        <Image id="monsterIconImage" className="object-contain h-48" src={this.tokenImgStr} fluid />
+            <Container id='TokenContainer' className='mx-auto px-4 py-2'>
+                <Row className='justify-content-center'>
+                    <Col xs='auto'>
+                        <Image
+                            id={`${this.name}IconImage`}
+                            src={this.tokenImgStr}
+                            width={150}
+                            alt={this.name}
+                            roundedCircle
+                        />
                     </Col>
                 </Row>
-                <Row xs={6} md={4} lg={2} className='d-flex justify-content-center'>
+                <Row className='justify-content-center'>
                     <Col>
                         <h2 className="text-center">{this.name}</h2>
                     </Col>
