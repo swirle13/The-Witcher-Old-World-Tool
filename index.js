@@ -4,7 +4,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const jsx_runtime_1 = require("react/jsx-runtime");
-// set up following https://dev.to/alekseiberezkin/setting-up-react-typescript-app-without-create-react-app-oph
 const react_1 = __importDefault(require("react"));
 const react_router_dom_1 = require("react-router-dom");
 const client_1 = require("react-dom/client");
@@ -17,6 +16,8 @@ const CommunityLinks_1 = __importDefault(require("./pages/CommunityLinks"));
 const Root_1 = __importDefault(require("./pages/Root"));
 const MonsterRoller_1 = __importDefault(require("./pages/MonsterRoller"));
 const SetupHelper_1 = __importDefault(require("./pages/SetupHelper"));
+const LocationTokens_1 = __importDefault(require("./pages/LocationTokens"));
+const InventoryChecker_1 = __importDefault(require("./pages/InventoryChecker"));
 // hashRouter vs browserRouter https://stackoverflow.com/a/74149347/6811686
 const router = (0, react_router_dom_1.createHashRouter)([
     {
@@ -48,7 +49,11 @@ const router = (0, react_router_dom_1.createHashRouter)([
             },
             {
                 path: "inventoryChecker",
-                element: (0, jsx_runtime_1.jsx)(LostMount_1.default, {})
+                element: (0, jsx_runtime_1.jsx)(InventoryChecker_1.default, {})
+            },
+            {
+                path: "locationTokens",
+                element: (0, jsx_runtime_1.jsx)(LocationTokens_1.default, {})
             },
         ],
     },
@@ -61,7 +66,6 @@ const router = (0, react_router_dom_1.createHashRouter)([
 const container = document.getElementById('app-root');
 const root = (0, client_1.createRoot)(container);
 root.render((0, jsx_runtime_1.jsx)(react_1.default.StrictMode, { children: (0, jsx_runtime_1.jsx)(react_router_dom_1.RouterProvider, { router: router }) }));
-// to publish website to Github Pages, follow: https://www.c-sharpcorner.com/article/how-to-deploy-react-application-on-github-pages/
 {
     /* The following line can be included in your src/index.js or App.js file */
     // Taken from https://react-bootstrap.netlify.app/docs/getting-started/introduction#css

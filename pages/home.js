@@ -9,10 +9,16 @@ const Container_1 = __importDefault(require("react-bootstrap/Container"));
 const react_bootstrap_1 = require("react-bootstrap");
 const linkedPages = [
     {
-        name: "Lost Mount",
-        link: "#/lostMount",
-        desc: "Tired of picking two random tokens, choosing one, and having to shuffle them up every time?",
-        btn: "Come, Roach"
+        name: "Setup Helper",
+        link: "#/setupHelper",
+        desc: "A dynamically updated set of consolidated instructions for any expansion and player combination.",
+        btn: "Wind's howling.."
+    },
+    {
+        name: "Location Tokens",
+        link: "#/locationTokens",
+        desc: "Easily draw any terrain token type. Always randomized. No shuffling of cardboard tokens.",
+        btn: "Explore the Continent"
     },
     {
         name: "Monster Roller",
@@ -21,23 +27,23 @@ const linkedPages = [
         btn: "Damn, you're ugly"
     },
     {
-        name: "Setup Helper",
-        link: "#/setupHelper",
-        desc: "A convenient place to help you get your game started.",
-        btn: "Wind's howling"
+        name: "Community Links",
+        link: "#/communityLinks",
+        desc: "A collection of neat and awesome links from the community. Always growing!",
+        btn: "Show me"
     },
     {
         name: "Inventory Checker",
         link: "#/inventoryChecker",
         desc: "To help those just receiving their The Witcher: Old World game, here's an in-depth guide on what " +
-            "you (probably) received.",
+            "you (hopefully) received.",
         btn: "Medallion's humming.."
     },
     {
-        name: "Community Links",
-        link: "#/communityLinks",
-        desc: "A collection of neat and awesome links from the community. Always growing!",
-        btn: "Show me"
+        name: "Lost Mount",
+        link: "#/lostMount",
+        desc: "A more specific variant of the Location Token page with two tokens to choose from.",
+        btn: "Come, Roach"
     },
 ];
 function Home() {

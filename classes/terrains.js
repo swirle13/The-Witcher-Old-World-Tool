@@ -32,9 +32,10 @@ const Water12Glenmore_png_1 = __importDefault(require("../img/tokens/terrainToke
 const Water14LocIchaer_png_1 = __importDefault(require("../img/tokens/terrainTokens/Water14LocIchaer.png"));
 const Water15GorthurGuaed_png_1 = __importDefault(require("../img/tokens/terrainTokens/Water15GorthurGuaed.png"));
 class TerrainTokenClass {
+    name = "DefaultTokenName";
     imgStr = "";
     img() {
-        return ((0, jsx_runtime_1.jsx)(Container_1.default, { fluid: "md", className: 'TokenContainer container mx-auto px-4', children: (0, jsx_runtime_1.jsx)(Row_1.default, { xs: 6, md: 4, lg: 2, className: 'd-flex justify-content-center', children: (0, jsx_runtime_1.jsx)(Col_1.default, { xs: 8, md: 4, lg: 2, children: (0, jsx_runtime_1.jsx)(Image_1.default, { className: "object-contain h-48 overflow-hidden", src: this.imgStr, roundedCircle: true, fluid: true }) }) }) }));
+        return ((0, jsx_runtime_1.jsx)(Container_1.default, { id: 'TokenContainer', className: 'px-4 py-2 m-2', children: (0, jsx_runtime_1.jsx)(Row_1.default, { className: "justify-content-center", children: (0, jsx_runtime_1.jsx)(Col_1.default, { xs: 'auto', children: (0, jsx_runtime_1.jsx)(Image_1.default, { id: `${this.name}IconImage`, src: this.imgStr, width: 150, alt: this.name, roundedCircle: true }) }) }) }));
     }
 }
 class MountainToken extends TerrainTokenClass {
