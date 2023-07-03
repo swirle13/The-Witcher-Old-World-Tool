@@ -24,17 +24,20 @@ export default function Navbar() {
                     <Nav className="me-auto">
                         <Nav.Link href="#/communityLinks">Community Links</Nav.Link>
                         <NavDropdown title="Gameplay Tools" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#/lostMount">
-                                Lost Mount Randomizer
+                            <NavDropdown.Item href="#/setupHelper">
+                                Setup Helper
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#/locationTokens">
+                                Location Tokens
                             </NavDropdown.Item>
                             <NavDropdown.Item href="#/monsterRoller">
                                 Monster Roller
                             </NavDropdown.Item>
-                            <NavDropdown.Item href="#/setupHelper">
-                                Setup Helper
+                            <NavDropdown.Item href="#/lostMount">
+                                Lost Mount Locations
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#/home">
+                            <NavDropdown.Item href="#/">
                                 Browse All Tools
                             </NavDropdown.Item>
                         </NavDropdown>

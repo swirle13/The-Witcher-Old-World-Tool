@@ -1,5 +1,3 @@
-// set up following https://dev.to/alekseiberezkin/setting-up-react-typescript-app-without-create-react-app-oph
-
 import React from 'react'
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import { createRoot } from 'react-dom/client'
@@ -14,6 +12,8 @@ import CommunityLinks from './pages/CommunityLinks';
 import Root from './pages/Root';
 import MonsterRoller from './pages/MonsterRoller';
 import SetupHelper from './pages/SetupHelper';
+import LocationTokens from './pages/LocationTokens';
+import InventoryChecker from './pages/InventoryChecker';
 
 // hashRouter vs browserRouter https://stackoverflow.com/a/74149347/6811686
 const router = createHashRouter([
@@ -47,7 +47,11 @@ const router = createHashRouter([
             },
             {
                 path: "inventoryChecker",
-                element: <LostMount />
+                element: <InventoryChecker />
+            },
+            {
+                path: "locationTokens",
+                element: <LocationTokens />
             },
         ],
     },
@@ -62,12 +66,9 @@ const container = document.getElementById('app-root') as HTMLElement;
 const root = createRoot(container);
 root.render(
     <React.StrictMode>
-        {/* <Navbar /> */}
         <RouterProvider router={router} />
     </React.StrictMode>
 );
-
-// to publish website to Github Pages, follow: https://www.c-sharpcorner.com/article/how-to-deploy-react-application-on-github-pages/
 
 {
     /* The following line can be included in your src/index.js or App.js file */

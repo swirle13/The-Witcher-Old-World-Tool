@@ -2,7 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 
 export default function Footer() {
     return (
-        <footer className='footer bg-body-tertiary' style={{padding: '2rem'}}>
+        <footer className='footer bg-body-tertiary mt-auto' style={{padding: '2rem'}}>
             <Container fluid className='text-md-left'>
                 <Row className='footerLinks'>
                     <Col className='col-md-6 mt-md-0 mt-3'>

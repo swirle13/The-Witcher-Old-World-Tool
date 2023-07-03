@@ -1,4 +1,5 @@
 import { Card, Col, Container, Row } from "react-bootstrap";
+import PageTitle from '../components/PageTitle';
 
 const links = [
     {
@@ -36,6 +37,7 @@ const links = [
 export default function CommunityLinks() {
     return (
         <Container id="CommunityLinksBaseContainer">
+            <PageTitle HeaderText='Community Links' />
             <Row xs={1} md={2} lg={4} className="g-4 p-2">
                 {links.map((_, idx) => (
                     <Col key={idx}>
