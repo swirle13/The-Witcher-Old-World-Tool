@@ -111,13 +111,11 @@ class TerrainTokenDeck {
     forestDeck;
     waterDeck;
     allDeck;
-    activelyUsedTokens;
     constructor() {
         this.mountainDeck = new dataClasses_1.ReadonlyDeck(MountainTokens);
         this.forestDeck = new dataClasses_1.ReadonlyDeck(ForestTokens);
         this.waterDeck = new dataClasses_1.ReadonlyDeck(WaterTokens);
         this.allDeck = new dataClasses_1.ReadonlyDeck([...MountainTokens, ...ForestTokens, ...WaterTokens]);
-        this.activelyUsedTokens = new dataClasses_1.MutableDeck([]);
     }
     drawMountainToken() {
         try {
@@ -148,13 +146,13 @@ class TerrainTokenDeck {
     }
     addTokenBackToDeck(token) {
         if (token.type === "Mountain" && token instanceof MountainToken) {
-            this.mountainDeck.addItem(token);
+            this.mountainDeck.returnItem(token);
         }
         else if (token.type === "Forest" && token instanceof ForestToken) {
-            this.forestDeck.addItem(token);
+            this.forestDeck.returnItem(token);
         }
         else if (token.type === "Water" && token instanceof WaterToken) {
-            this.waterDeck.addItem(token);
+            this.waterDeck.returnItem(token);
         }
         else {
             throw new Error(`TerrainToken ${token}'s type ${token.type} is not a valid match.` +

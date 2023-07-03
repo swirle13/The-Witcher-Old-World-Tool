@@ -13,6 +13,10 @@ class QueueCollection extends Collection {
         super();
         this.capacity = capacity;
     }
+    /**
+     * Add item to end of queue.
+     * @param item Item to add to end of queue.
+     */
     enqueue(item) {
         if (this.isFull()) {
             throw Error("Queue has reached max capacity, you cannot add more items");
@@ -25,7 +29,7 @@ class QueueCollection extends Collection {
      */
     dequeue() {
         if (this.isEmpty()) {
-            throw Error("Queue is empty, you cannot dequeue nothing");
+            throw new Error("Queue is empty, you cannot dequeue nothing");
         }
         // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         return this.storage.shift();
@@ -91,23 +95,36 @@ class StackCollection extends Collection {
     }
 }
 exports.StackCollection = StackCollection;
+/**
+ * Abstracted Deck class with functions for interacting, mutating, checking size, and more.
+ *
+ * @property allItems - Contains all items that are in deck, regardless of state.
+ * @property deckQueue - Queue of all items currently available to be drawn from deck.
+ * @property removedItems - Array of all items removed from deck, unavailable to be drawn from deck.
+ */
 class Deck {
     allItems;
     deckQueue = new QueueCollection();
+    removedItems;
     constructor(allItems, deckQueueSize) {
         this.allItems = allItems;
         this.deckQueue = new QueueCollection(deckQueueSize);
         this.deckQueue.populate(this.allItems);
         this.deckQueue.shuffle();
+        this.removedItems = new Array;
     }
+    /**
+     * Get size of deck queue.
+     * @returns Size of deckQueue.
+     */
     size() {
         return this.deckQueue.size();
     }
     /**
-     * Add given, existing item to deck queue. Does not add new item to deck pool.
-     * @param item An item already a member of this.allItems.
+     * Add provided item to deck queue, if already member of `this.allItems`. Does not add new item to deck pool.
+     * @param item An item already a member of `this.allItems`.
      */
-    addItem(item) {
+    returnItem(item) {
         if (this.allItems.includes(item)) {
             this.deckQueue.enqueue(item);
         }
@@ -116,7 +133,9 @@ class Deck {
         }
     }
     draw() {
-        return this.deckQueue.dequeue();
+        const i = this.deckQueue.dequeue();
+        this.removedItems.push(i);
+        return i;
     }
     isFull() {
         return this.deckQueue.isFull();
@@ -124,6 +143,10 @@ class Deck {
     isEmpty() {
         return this.deckQueue.isEmpty();
     }
+    /**
+     * Repopulates deckQueue with provided items, if provided, or allItems if no arg is provided.
+     * @param items Array of items to repopulate deckQueue. Must be subset of allItems.
+     */
     repopulate(items) {
         if (items) {
             const set = new Set(this.allItems);
@@ -139,8 +162,10 @@ class Deck {
         }
         this.deckQueue.shuffle();
     }
+    /**
+     * Shuffles only existing cards in deckQueue.
+     */
     shuffle() {
-        // shuffles only existing cards in deck
         this.deckQueue.shuffle();
     }
     peek() {
@@ -154,6 +179,10 @@ exports.default = Deck;
 /**
  * Extension of Deck class but with allItems restricted to readonly. Useful for preventing
  * accidentally modifying decks that should never have more items added, e.g. exploration decks, quests,
+ *
+ * @property allItems - Contains all items that are in deck, regardless of state.
+ * @property deckQueue - Queue of all items currently available to be drawn from deck.
+ * @property removedItems - Array of all items removed from deck, unavailable to be drawn from deck.
  */
 class ReadonlyDeck extends Deck {
     allItems;
@@ -163,20 +192,32 @@ class ReadonlyDeck extends Deck {
     }
 }
 exports.ReadonlyDeck = ReadonlyDeck;
+/**
+ * Extension of Deck class but with allItems restricted to protected. Allows modifying decks that can have items added
+ * and removed, e.g. player's deck, player's hand, etc.
+ *
+ * @property allItems - Contains all items that are in deck, regardless of state.
+ * @property deckQueue - Queue of all items currently available to be drawn from deck.
+ * @property removedItems - Array of all items removed from deck, unavailable to be drawn from deck.
+ */
 class MutableDeck extends Deck {
     allItems;
     constructor(allItems) {
         super(allItems);
         this.allItems = allItems;
     }
+    /**
+     * Add given list of item(s) to allItems, increasing total deck contents.
+     * @param items {Array<T>} List of items to add to total deck contents.
+     */
     addToAllItems(items) {
-        if (items instanceof Array) {
+        try {
             items.forEach(item => {
                 this.allItems.push(item);
             });
         }
-        else {
-            this.allItems.push(items);
+        catch (error) {
+            throw new Error(`Couldn't add to allItems: ${error}`);
         }
     }
 }

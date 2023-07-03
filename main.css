@@ -8,6 +8,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.hr {
+    width: 200px;
+}
 .accordion-button:focus {
     box-shadow: none;
 }
