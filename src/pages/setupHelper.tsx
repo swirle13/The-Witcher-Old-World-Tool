@@ -31,10 +31,10 @@ export default function SetupHelper() {
     }, [players, expansionsState]);
 
     return (
-        <Container className='mb-6'>
+        <Container> 
             <Col>
                 <PageTitle HeaderText='Setup Helper' HeaderUnderline={false}/>
-                <Row className="gap-2">
+                <Row className="gap-2 mb-4 pb-4">
                     <Col id="setupConfiguration" lg="4">
                         <Form>
                             <Row className='justify-content-center' lg={1}>
