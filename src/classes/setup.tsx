@@ -45,38 +45,38 @@ export function wildHuntDifficulty(numPlayers: number): Array<string> {
     let ret: Array<string> = [""];
     if (numPlayers == 1) {
         ret = [
-            "Level I Monster (5 Shield Tokens)",
-            "Level I Monster (7 Shield Tokens)",
-            "Level II Monster (9 Shield Tokens)",
-            "Level II Monster (11 Shield Tokens)",
+            "Level I Monster\n5 Shield Tokens",
+            "Level I Monster\n7 Shield Tokens",
+            "Level II Monster\n9 Shield Tokens",
+            "Level II Monster\n11 Shield Tokens",
         ];
     } else if (numPlayers == 2) {
         ret = [
-            "Level II Monster (28 Shield Tokens)",
-            "Level I + Level II Monster (31 Shield Tokens)",
-            "Level I + Level III Monster (34 Shield Tokens)",
-            "Level I + Level III Monster (37 Shield Tokens)",
+            "Level II Monster\n28 Shield Tokens",
+            "Level I + Level II Monster\n31 Shield Tokens",
+            "Level I + Level III Monster\n34 Shield Tokens",
+            "Level I + Level III Monster\n37 Shield Tokens",
         ];
     } else if (numPlayers == 3) {
         ret = [
-            "Level II Monster (54 Shield Tokens)",
-            "Level I + Level II Monster (58 Shield Tokens)",
-            "Level I + Level III Monster (62 Shield Tokens)",
-            "Level I + Level III Monster (66 Shield Tokens)",
+            "Level II Monster\n54 Shield Tokens",
+            "Level I + Level II Monster\n58 Shield Tokens",
+            "Level I + Level III Monster\n62 Shield Tokens",
+            "Level I + Level III Monster\n66 Shield Tokens",
         ];
     } else if (numPlayers == 4) {
         ret = [
-            "2 × Level I Monster (77 Shield Tokens)",
-            "Level I + Level III Monster (82 Shield Tokens)",
-            "Level I + Level III Monster (87 Shield Tokens)",
-            "Level I + Level III Monster (92 Shield Tokens)",
+            "2 × Level I Monster\n77 Shield Tokens",
+            "Level I + Level III Monster\n82 Shield Tokens",
+            "Level I + Level III Monster\n87 Shield Tokens",
+            "Level I + Level III Monster\n92 Shield Tokens",
         ];
     } else {
         ret = [
-            "2 × Level I Monster (97 Shield Tokens)",
-            "Level I + Level III Monster (106 Shield Tokens)",
-            "Level I + Level III Monster (113 Shield Tokens)",
-            "Level I + Level III Monster (120 Shield Tokens)",
+            "2 × Level I Monster\n97 Shield Tokens",
+            "Level I + Level III Monster\n106 Shield Tokens",
+            "Level I + Level III Monster\n113 Shield Tokens",
+            "Level I + Level III Monster\n120 Shield Tokens",
         ];
     }
     return ret;
@@ -110,19 +110,19 @@ export function compileSteps(
         finalSteps.push(
             <>
                 Choose the game difficulty on the table below. This determines starting monsters and shields later.
-                <Table bordered hover responsive="lg">
+                <Table bordered hover className='lh-base'>
                     <thead>
-                        <th>Players</th>
-                        <th><strong>Just the Story!</strong> <em>(Easy)</em></th>
-                        <th>Story and Sword! <em>(Normal)</em></th>
-                        <th>Blood and Broken Bones! <em>(Hard)</em></th>
-                        <th>Death March! <em>(Very Hard)</em></th>
+                        <th>#</th>
+                        <th>Just the Story! <em className='p-0'>(Easy)</em></th>
+                        <th>Story and Sword! <em className='p-0'>(Normal)</em></th>
+                        <th>Blood and Broken Bones! <em className='p-0'>(Hard)</em></th>
+                        <th>Death March! <em className='p-0'>(Very Hard)</em></th>
                     </thead>
                     <tbody>
                         <tr>
                             <td>{numPlayers}</td>
                             {wildHuntDifficulty(numPlayers).map((text) => (
-                                <td>{text}</td>
+                                <td style={{whiteSpace: 'pre-wrap'}}>{text}</td>
                             ))}
                         </tr>
                     </tbody>
