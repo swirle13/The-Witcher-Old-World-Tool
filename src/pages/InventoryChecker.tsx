@@ -1,5 +1,7 @@
+import PageTitle from '../components/PageTitle';
+
 export default function inventoryChecker() {
     return (
-        <p>Page under construction!</p>
+        <PageTitle HeaderText='Inventory Checklist' />
     )
 }
