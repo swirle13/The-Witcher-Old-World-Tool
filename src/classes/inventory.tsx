@@ -67,7 +67,7 @@ const cards = {
         "Unique Action cards (witchers)": "7/7"
     },
     "TWOW(22) 1/1": {
-        "Expansion": "Monster Trail, Adventure Pack, Ciri",
+        "Expansion": "Monster Trail, Wild Hunt",
         "Big Monster cards": "29/29",
         "Difficulty Jumbo Reference cards": "3/3"
     },
@@ -87,7 +87,7 @@ const cards = {
         "Legendary Hunt Special Fight cards": "20/20"
     },
     "TWOW(46)": {
-        "Expansion": "Base Set",
+        "Expansion": "Legendary Hunt",
         "Big Monster cards": "7/?",
         "Big Fight Reference card": "1/1"
     },
