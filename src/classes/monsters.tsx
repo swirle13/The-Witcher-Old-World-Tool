@@ -58,7 +58,13 @@ Identify what monsters come in which expansions and set toggles for each
         * 29 large monster cards
         * 18 monster weakness tokens
     * Legendary Hunt: 7 monsters
-        * 
+        * Imperial Golem
+        * Cyclops
+        * Cave Troll
+        * Toad
+        * Frightener
+        * Unseen Elder
+        * Ice Giant
     * Skellige: 1 monster
         * level 3: Dagon
     * Mounted Eredin: 1 monster
