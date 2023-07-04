@@ -20,6 +20,12 @@ const links = [
         link: "https://youtu.be/Hj7oTXJOFfg",
     },
     {
+        title: "Official FAQ: Clarifying ambiguous rules/situations",
+        subtitle: "PDF",
+        desc: "Answers and clarification for potentially confusing or difficult situations.",
+        link: "https://www.dropbox.com/s/6fxx058x76kc9rn/FAQ_ENG_v01.pdf?dl=0",
+    },
+    {
         title: "BoardGameGeek Old World Files",
         subtitle: "Link",
         desc: "Another corner for the hobby where members upload their own creations, automata, guides, and more.",

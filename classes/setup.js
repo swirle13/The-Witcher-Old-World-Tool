@@ -45,42 +45,42 @@ function wildHuntDifficulty(numPlayers) {
     let ret = [""];
     if (numPlayers == 1) {
         ret = [
-            "Level I Monster (5 Shield Tokens)",
-            "Level I Monster (7 Shield Tokens)",
-            "Level II Monster (9 Shield Tokens)",
-            "Level II Monster (11 Shield Tokens)",
+            "Level I Monster\n5 Shield Tokens",
+            "Level I Monster\n7 Shield Tokens",
+            "Level II Monster\n9 Shield Tokens",
+            "Level II Monster\n11 Shield Tokens",
         ];
     }
     else if (numPlayers == 2) {
         ret = [
-            "Level II Monster (28 Shield Tokens)",
-            "Level I + Level II Monster (31 Shield Tokens)",
-            "Level I + Level III Monster (34 Shield Tokens)",
-            "Level I + Level III Monster (37 Shield Tokens)",
+            "Level II Monster\n28 Shield Tokens",
+            "Level I + Level II Monster\n31 Shield Tokens",
+            "Level I + Level III Monster\n34 Shield Tokens",
+            "Level I + Level III Monster\n37 Shield Tokens",
         ];
     }
     else if (numPlayers == 3) {
         ret = [
-            "Level II Monster (54 Shield Tokens)",
-            "Level I + Level II Monster (58 Shield Tokens)",
-            "Level I + Level III Monster (62 Shield Tokens)",
-            "Level I + Level III Monster (66 Shield Tokens)",
+            "Level II Monster\n54 Shield Tokens",
+            "Level I + Level II Monster\n58 Shield Tokens",
+            "Level I + Level III Monster\n62 Shield Tokens",
+            "Level I + Level III Monster\n66 Shield Tokens",
         ];
     }
     else if (numPlayers == 4) {
         ret = [
-            "2 × Level I Monster (77 Shield Tokens)",
-            "Level I + Level III Monster (82 Shield Tokens)",
-            "Level I + Level III Monster (87 Shield Tokens)",
-            "Level I + Level III Monster (92 Shield Tokens)",
+            "2 × Level I Monster\n77 Shield Tokens",
+            "Level I + Level III Monster\n82 Shield Tokens",
+            "Level I + Level III Monster\n87 Shield Tokens",
+            "Level I + Level III Monster\n92 Shield Tokens",
         ];
     }
     else {
         ret = [
-            "2 × Level I Monster (97 Shield Tokens)",
-            "Level I + Level III Monster (106 Shield Tokens)",
-            "Level I + Level III Monster (113 Shield Tokens)",
-            "Level I + Level III Monster (120 Shield Tokens)",
+            "2 × Level I Monster\n97 Shield Tokens",
+            "Level I + Level III Monster\n106 Shield Tokens",
+            "Level I + Level III Monster\n113 Shield Tokens",
+            "Level I + Level III Monster\n120 Shield Tokens",
         ];
     }
     return ret;
@@ -99,7 +99,7 @@ function compileSteps(legendaryHunt = false, mages = false, monsterPack = false,
         finalSteps.push('Put the large Legendary Hunt help near the board. Use Side B for a longer game.');
     if (wildHunt) {
         // step
-        finalSteps.push((0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: ["Choose the game difficulty on the table below. This determines starting monsters and shields later.", (0, jsx_runtime_1.jsxs)(react_bootstrap_1.Table, { bordered: true, hover: true, responsive: "lg", children: [(0, jsx_runtime_1.jsxs)("thead", { children: [(0, jsx_runtime_1.jsx)("th", { children: "Players" }), (0, jsx_runtime_1.jsxs)("th", { children: [(0, jsx_runtime_1.jsx)("strong", { children: "Just the Story!" }), " ", (0, jsx_runtime_1.jsx)("em", { children: "(Easy)" })] }), (0, jsx_runtime_1.jsxs)("th", { children: ["Story and Sword! ", (0, jsx_runtime_1.jsx)("em", { children: "(Normal)" })] }), (0, jsx_runtime_1.jsxs)("th", { children: ["Blood and Broken Bones! ", (0, jsx_runtime_1.jsx)("em", { children: "(Hard)" })] }), (0, jsx_runtime_1.jsxs)("th", { children: ["Death March! ", (0, jsx_runtime_1.jsx)("em", { children: "(Very Hard)" })] })] }), (0, jsx_runtime_1.jsx)("tbody", { children: (0, jsx_runtime_1.jsxs)("tr", { children: [(0, jsx_runtime_1.jsx)("td", { children: numPlayers }), wildHuntDifficulty(numPlayers).map((text) => ((0, jsx_runtime_1.jsx)("td", { children: text })))] }) })] })] }));
+        finalSteps.push((0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: ["Choose the game difficulty on the table below. This determines starting monsters and shields later.", (0, jsx_runtime_1.jsxs)(react_bootstrap_1.Table, { bordered: true, hover: true, className: 'lh-base', children: [(0, jsx_runtime_1.jsxs)("thead", { children: [(0, jsx_runtime_1.jsx)("th", { children: "#" }), (0, jsx_runtime_1.jsxs)("th", { children: ["Just the Story! ", (0, jsx_runtime_1.jsx)("em", { className: 'p-0', children: "(Easy)" })] }), (0, jsx_runtime_1.jsxs)("th", { children: ["Story and Sword! ", (0, jsx_runtime_1.jsx)("em", { className: 'p-0', children: "(Normal)" })] }), (0, jsx_runtime_1.jsxs)("th", { children: ["Blood and Broken Bones! ", (0, jsx_runtime_1.jsx)("em", { className: 'p-0', children: "(Hard)" })] }), (0, jsx_runtime_1.jsxs)("th", { children: ["Death March! ", (0, jsx_runtime_1.jsx)("em", { className: 'p-0', children: "(Very Hard)" })] })] }), (0, jsx_runtime_1.jsx)("tbody", { children: (0, jsx_runtime_1.jsxs)("tr", { children: [(0, jsx_runtime_1.jsx)("td", { children: numPlayers }), wildHuntDifficulty(numPlayers).map((text) => ((0, jsx_runtime_1.jsx)("td", { style: { whiteSpace: 'pre-wrap' }, children: text })))] }) })] })] }));
         // step
         finalSteps.push('Choose a player to mange the Round Tracking board. Hand them the board that matches the number of players. Place the Tracking Token on the "1" spot in the top-left corner.');
     }
