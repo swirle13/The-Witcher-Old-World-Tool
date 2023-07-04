@@ -29,12 +29,12 @@ export default function MonsterPicker({
     return (
         <Container fluid className="mx-auto min-h-screen">
             <PageTitle HeaderText={HeaderText} />
-            <Row id='tokensRow' className='py-2 mb-4'>
+            <Row id='tokensRow' className='py-2 mb-2'>
                 <Col className='d-flex justify-content-center'>
                     {displayedToken?.tokenImg()}
                 </Col>
             </Row>
-            <Row id='MonsterButtons' className='justify-content-center px-1 py-2'>
+            <Row id='MonsterButtons' className='justify-content-center px-1 py-2 mb-4'>
                 <Col xs="auto" className='p-1'>
                     <Button variant="secondary" size="lg"
                         onClick={() => setLevelOneMonster(localMonsterDeck.drawLevelOneMonster())}
