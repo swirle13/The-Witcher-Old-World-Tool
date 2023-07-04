@@ -105,7 +105,6 @@ abstract class monsterClass {
                             src={this.tokenImgStr}
                             width={150}
                             alt={this.name}
-                            roundedCircle
                         />
                     </Col>
                 </Row>
