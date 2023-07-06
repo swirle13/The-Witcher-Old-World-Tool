@@ -1,44 +1,6 @@
 import React from "react";
 import { ReadonlyDeck } from "./dataClasses";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import levelOneBackside from "../img/monsters/level1Monsters/level1Backside.png"
-import levelTwoBackside from "../img/monsters/level2Monsters/level2Backside.png"
-import levelThreeBackside from "../img/monsters/level3Monsters/level3Backside.png"
-
-// level 1 monster token imports
-import nekkersNest from "../img/monsters/level1Monsters/nekkersNest.png"
-import arachas from "../img/monsters/level1Monsters/arachas.png"
-import archespore from "../img/monsters/level1Monsters/archespore.png"
-import barghest from "../img/monsters/level1Monsters/barghest.png"
-import foglet from "../img/monsters/level1Monsters/foglet.png"
-import harpy from "../img/monsters/level1Monsters/harpy.png"
-import ghoulsNest from "../img/monsters/level1Monsters/ghoulsNest.png"
-import drownersNest from "../img/monsters/level1Monsters/drownersNest.png"
-import rotfiend from "../img/monsters/level1Monsters/rotfiend.png"
-import ekimmara from "../img/monsters/level1Monsters/ekimmara.png"
-
-// level 2 monster token imports
-import griffin from "../img/monsters/level2Monsters/griffin.png"
-import wyvern from "../img/monsters/level2Monsters/wyvern.png"
-import werewolf from "../img/monsters/level2Monsters/werewolf.png"
-import fiend from "../img/monsters/level2Monsters/fiend.png"
-import noonwraith from "../img/monsters/level2Monsters/noonwraith.png"
-import nightwraith from "../img/monsters/level2Monsters/nightwraith.png"
-import waterHag from "../img/monsters/level2Monsters/waterHag.png"
-import manticore from "../img/monsters/level2Monsters/manticore.png"
-import whispess from "../img/monsters/level2Monsters/whispess.png"
-import weavess from "../img/monsters/level2Monsters/weavess.png"
-import penitent from "../img/monsters/level2Monsters/penitent.png"
-import graveHag from "../img/monsters/level2Monsters/graveHag.png"
-
-// level 3 monster token imports
-import leshen from "../img/monsters/level3Monsters/leshen.png"
-import striga from "../img/monsters/level3Monsters/striga.png"
-import bruxa from "../img/monsters/level3Monsters/bruxa.png"
-import glustyworp from "../img/monsters/level3Monsters/glustyworp.png"
-import brewess from "../img/monsters/level3Monsters/brewess.png"
-import yghern from "../img/monsters/level3Monsters/yghern.png"
-import troll from "../img/monsters/level3Monsters/troll.png"
 
 /*
 Identify what monsters come in which expansions and set toggles for each
@@ -99,6 +61,7 @@ interface monsterToken {
 
 abstract class monsterClass {
     readonly name: string = "DefaultMonsterName";
+    readonly level: number = 1;
     readonly tokenImgStr: string = "";
     readonly miniImgStr: string = "";
     tokenImg(): React.ReactNode {
@@ -108,7 +71,7 @@ abstract class monsterClass {
                     <Col xs='auto'>
                         <Image
                             id={`${this.name}IconImage`}
-                            src={this.tokenImgStr}
+                            src={require(`../img/monsters/level${this.level}Monsters/${this.tokenImgStr}.png`)}
                             width={150}
                             alt={this.name}
                             loading='lazy'
@@ -144,8 +107,8 @@ abstract class monsterClass {
 export class levelOneMonster extends monsterClass implements monsterToken {
     readonly name: string = "DefaultLevelOneName";
     readonly level: number = 1;
-    readonly tokenImgStr: string = levelOneBackside;
-    readonly tokenBackImgStr: string = levelOneBackside;
+    readonly tokenImgStr: string = "level1Backside";
+    readonly tokenBackImgStr: string = "level1Backside";
     readonly miniImgStr: string = "";
 
     constructor(
@@ -163,8 +126,8 @@ export class levelOneMonster extends monsterClass implements monsterToken {
 export class levelTwoMonster extends monsterClass implements monsterToken {
     readonly name: string = "DefaultLevelTwoName";
     readonly level: number = 2;
-    readonly tokenImgStr: string = levelTwoBackside;
-    readonly tokenBackImgStr: string = levelTwoBackside;
+    readonly tokenImgStr: string = "level2Backside";
+    readonly tokenBackImgStr: string = "level2Backside";
     readonly miniImgStr: string = "";
 
     constructor(
@@ -181,9 +144,9 @@ export class levelTwoMonster extends monsterClass implements monsterToken {
 
 export class levelThreeMonster extends monsterClass implements monsterToken {
     readonly name: string = "DefaultLevelThreeName";
-    readonly level: number = 2;
-    readonly tokenImgStr: string = levelThreeBackside;
-    readonly tokenBackImgStr: string = levelThreeBackside;
+    readonly level: number = 3;
+    readonly tokenImgStr: string = "level3Backside";
+    readonly tokenBackImgStr: string = "level3Backside";
     readonly miniImgStr: string = "";
 
     constructor(
@@ -210,50 +173,50 @@ export const stretchGoalMonsters: Record<string, Array<string>> = {
 }
 
 const baseLevelOneMonsters: Array<levelOneMonster> = [
-    new levelOneMonster("Nekker's Nest", nekkersNest),
-    new levelOneMonster("Arachas", arachas),
-    new levelOneMonster("archespore", archespore),
-    new levelOneMonster("Barghest", barghest),
-    new levelOneMonster("Foglet", foglet),
-    new levelOneMonster("Harpy", harpy),
-    new levelOneMonster("Ghoul's Nest", ghoulsNest),
+    new levelOneMonster("Nekker's Nest", "nekkersNest"),
+    new levelOneMonster("Arachas", "arachas"),
+    new levelOneMonster("Archespore", "archespore"),
+    new levelOneMonster("Barghest", "barghest"),
+    new levelOneMonster("Foglet", "foglet"),
+    new levelOneMonster("Harpy", "harpy"),
+    new levelOneMonster("Ghoul's Nest", "ghoulsNest"),
 ]
 
 const stretchGoalLevelOneMonsters: Array<levelOneMonster> = [
-    new levelOneMonster("Drowner's Nest", drownersNest),
-    new levelOneMonster("Rotfiend", rotfiend),
-    new levelOneMonster("Ekimmara", ekimmara),
+    new levelOneMonster("Drowner's Nest", "drownersNest"),
+    new levelOneMonster("Rotfiend", "rotfiend"),
+    new levelOneMonster("Ekimmara", "ekimmara"),
 ]
 
 const baseLevelTwoMonsters: Array<levelTwoMonster> = [
-    new levelTwoMonster("Griffin", griffin),
-    new levelTwoMonster("Wyvern", wyvern),
-    new levelTwoMonster("Werewolf", werewolf),
-    new levelTwoMonster("Fiend", fiend),
-    new levelTwoMonster("Noonwraith", noonwraith)
+    new levelTwoMonster("Griffin", "griffin"),
+    new levelTwoMonster("Wyvern", "wyvern"),
+    new levelTwoMonster("Werewolf", "werewolf"),
+    new levelTwoMonster("Fiend", "fiend"),
+    new levelTwoMonster("Noonwraith", "noonwraith")
 ]
 
 const stretchGoalLevelTwoMonsters: Array<levelTwoMonster> = [
-    new levelTwoMonster("Nightwraith", nightwraith),
-    new levelTwoMonster("Water Hag", waterHag),
-    new levelTwoMonster("Manticore", manticore),
-    new levelTwoMonster("Whispess", whispess),
-    new levelTwoMonster("Weavess", weavess),
-    new levelTwoMonster("Penitent", penitent),
-    new levelTwoMonster("Grave Hag", graveHag),
+    new levelTwoMonster("Nightwraith", "nightwraith"),
+    new levelTwoMonster("Water Hag", "waterHag"),
+    new levelTwoMonster("Manticore", "manticore"),
+    new levelTwoMonster("Whispess", "whispess"),
+    new levelTwoMonster("Weavess", "weavess"),
+    new levelTwoMonster("Penitent", "penitent"),
+    new levelTwoMonster("Grave Hag", "graveHag"),
 ]
 
 const baseLevelThreeMonsters: Array<levelThreeMonster> = [
-    new levelThreeMonster("Leshen", leshen),
-    new levelThreeMonster("Striga", striga),
-    new levelThreeMonster("Bruxa", bruxa),
+    new levelThreeMonster("Leshen", "leshen"),
+    new levelThreeMonster("Striga", "striga"),
+    new levelThreeMonster("Bruxa", "bruxa"),
 ]
 
 const stretchGoalLevelThreeMonsters: Array<levelThreeMonster> = [
-    new levelThreeMonster("Glustyworp", glustyworp),
-    new levelThreeMonster("Brewess", brewess),
-    new levelThreeMonster("Yghern", yghern),
-    new levelThreeMonster("Troll", troll),
+    new levelThreeMonster("Glustyworp", "glustyworp"),
+    new levelThreeMonster("Brewess", "brewess"),
+    new levelThreeMonster("Yghern", "yghern"),
+    new levelThreeMonster("Troll", "troll"),
 ]
 
 export default class MonstersDeck {

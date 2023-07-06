@@ -3,31 +3,8 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from "react-bootstrap/Image";
 
-import Deck, { MutableDeck, ReadonlyDeck } from "./dataClasses";
-import DefaultMountainToken from "../img/tokens/terrainTokens/MountainBack.png";
-import DefaultForestToken from "../img/tokens/terrainTokens/ForestBack.png";
-import DefaultWaterToken from "../img/tokens/terrainTokens/WaterBack.png";
+import { ReadonlyDeck } from "./dataClasses";
 
-import Mountain2Hengfors from "../img/tokens/terrainTokens/Mountain2Hengfors.png";
-import Mountain3KaerMorhen from "../img/tokens/terrainTokens/Mountain3KaerMorhen.png";
-import Mountain9Cintra from "../img/tokens/terrainTokens/Mountain9Cintra.png";
-import Mountain11Beauclair from "../img/tokens/terrainTokens/Mountain11Beauclair.png";
-import Mountain13Doldeth from "../img/tokens/terrainTokens/Mountain13Doldeth.png";
-import Mountain18ArdModron from "../img/tokens/terrainTokens/Mountain18ArdModron.png";
-import Forest6Novigrad from "../img/tokens/terrainTokens/Forest6Novigrad.png";
-import Forest7Vizima from "../img/tokens/terrainTokens/Forest7Vizima.png";
-import Forest8Vengerberg from "../img/tokens/terrainTokens/Forest8Vengerberg.png";
-import Forest10HaernCaduch from "../img/tokens/terrainTokens/Forest10HaernCaduch.png";
-import Forest16Dhuwod from "../img/tokens/terrainTokens/Forest16Dhuwod.png";
-import Forest17Stygga from "../img/tokens/terrainTokens/Forest17Stygga.png";
-import Water1KaerSeren from "../img/tokens/terrainTokens/Water1KaerSeren.png";
-import Water4BanArd from "../img/tokens/terrainTokens/Water4BanArd.png";
-import Water5Cidaris from "../img/tokens/terrainTokens/Water5Cidaris.png";
-import Water12Glenmore from "../img/tokens/terrainTokens/Water12Glenmore.png";
-import Water14LocIchaer from "../img/tokens/terrainTokens/Water14LocIchaer.png";
-import Water15GorthurGuaed from "../img/tokens/terrainTokens/Water15GorthurGuaed.png";
-
-// https://dev.to/minompi/add-images-to-a-react-project-with-typescript-4gbm
 type TerrainType = "Mountain" | "Forest" | "Water" | "Any";
 type TerrainTokenType = [string, number, TerrainType];
 
@@ -48,7 +25,7 @@ abstract class TerrainTokenClass {
                     <Col xs='auto'>
                         <Image
                             id={`${this.name}IconImage`}
-                            src={this.imgStr}
+                            src={require(`../img/tokens/reducedTerrainTokens/${this.imgStr}.png`)}
                             width={150}
                             alt={this.name}
                             loading='lazy'
@@ -67,7 +44,7 @@ class MountainToken extends TerrainTokenClass implements TerrainToken {
     readonly type: TerrainType;
     readonly imgStr: string;
 
-    constructor(number = -1, name = "DefaultMountainToken", img: string = DefaultMountainToken) {
+    constructor(number = -1, name = "DefaultMountainToken", img = "MountainBack") {
         super();
         this.name = name;
         this.number = number;
@@ -82,7 +59,7 @@ class ForestToken extends TerrainTokenClass implements TerrainToken {
     readonly type: TerrainType;
     readonly imgStr: string;
 
-    constructor(number = -1, name = "DefaultForestToken", img: string = DefaultForestToken) {
+    constructor(number = -1, name = "DefaultForestToken", img = "ForestBack") {
         super();
         this.name = name;
         this.number = number;
@@ -97,7 +74,7 @@ class WaterToken extends TerrainTokenClass implements TerrainToken {
     readonly type: TerrainType;
     readonly imgStr: string;
 
-    constructor(number = -1, name = "DefaultWaterToken", img: string = DefaultWaterToken) {
+    constructor(number = -1, name = "DefaultWaterToken", img = "WaterBack") {
         super();
         this.name = name;
         this.number = number;
@@ -107,30 +84,30 @@ class WaterToken extends TerrainTokenClass implements TerrainToken {
 }
 
 const MountainTokens: Array<MountainToken> = [
-    new MountainToken(2, "Hengfors", Mountain2Hengfors),
-    new MountainToken(3, "Kaer Morhen", Mountain3KaerMorhen),
-    new MountainToken(9, "Cintra", Mountain9Cintra),
-    new MountainToken(11, "Beauclair", Mountain11Beauclair),
-    new MountainToken(13, "Doldeth", Mountain13Doldeth),
-    new MountainToken(18, "Ard Modron", Mountain18ArdModron),
+    new MountainToken(2, "Hengfors", "Mountain2Hengfors"),
+    new MountainToken(3, "Kaer Morhen", "Mountain3KaerMorhen"),
+    new MountainToken(9, "Cintra", "Mountain9Cintra"),
+    new MountainToken(11, "Beauclair", "Mountain11Beauclair"),
+    new MountainToken(13, "Doldeth", "Mountain13Doldeth"),
+    new MountainToken(18, "Ard Modron", "Mountain18ArdModron"),
 ];
 
 const ForestTokens: Array<ForestToken> = [
-    new ForestToken(6, "Novigrad", Forest6Novigrad),
-    new ForestToken(7, "Vizima", Forest7Vizima),
-    new ForestToken(8, "Vengerberg", Forest8Vengerberg),
-    new ForestToken(10, "Haern Caduch", Forest10HaernCaduch),
-    new ForestToken(16, "Dhuwod", Forest16Dhuwod),
-    new ForestToken(17, "Stygga", Forest17Stygga),
+    new ForestToken(6, "Novigrad", "Forest6Novigrad"),
+    new ForestToken(7, "Vizima", "Forest7Vizima"),
+    new ForestToken(8, "Vengerberg", "Forest8Vengerberg"),
+    new ForestToken(10, "Haern Caduch", "Forest10HaernCaduch"),
+    new ForestToken(16, "Dhuwod", "Forest16Dhuwod"),
+    new ForestToken(17, "Stygga", "Forest17Stygga"),
 ];
 
 const WaterTokens: Array<WaterToken> = [
-    new WaterToken(1, "Kaer Seren", Water1KaerSeren),
-    new WaterToken(4, "Ban Ard", Water4BanArd),
-    new WaterToken(5, "Cidaris", Water5Cidaris),
-    new WaterToken(12, "Glenmore", Water12Glenmore),
-    new WaterToken(14, "Loc Ichaer", Water14LocIchaer),
-    new WaterToken(15, "Gorthur Guaed", Water15GorthurGuaed),
+    new WaterToken(1, "Kaer Seren", "Water1KaerSeren"),
+    new WaterToken(4, "Ban Ard", "Water4BanArd"),
+    new WaterToken(5, "Cidaris", "Water5Cidaris"),
+    new WaterToken(12, "Glenmore", "Water12Glenmore"),
+    new WaterToken(14, "Loc Ichaer", "Water14LocIchaer"),
+    new WaterToken(15, "Gorthur Guaed", "Water15GorthurGuaed"),
 ];
 
 export default class TerrainTokenDeck {
