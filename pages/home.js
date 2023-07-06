@@ -4,7 +4,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const jsx_runtime_1 = require("react/jsx-runtime");
-// Use components from https://react-bootstrap.netlify.app/docs/getting-started/introduction
 const Container_1 = __importDefault(require("react-bootstrap/Container"));
 const react_bootstrap_1 = require("react-bootstrap");
 const linkedPages = [

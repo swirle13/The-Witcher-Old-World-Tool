@@ -10,32 +10,11 @@ const Col_1 = __importDefault(require("react-bootstrap/Col"));
 const Container_1 = __importDefault(require("react-bootstrap/Container"));
 const Image_1 = __importDefault(require("react-bootstrap/Image"));
 const dataClasses_1 = require("./dataClasses");
-const MountainBack_png_1 = __importDefault(require("../img/tokens/terrainTokens/MountainBack.png"));
-const ForestBack_png_1 = __importDefault(require("../img/tokens/terrainTokens/ForestBack.png"));
-const WaterBack_png_1 = __importDefault(require("../img/tokens/terrainTokens/WaterBack.png"));
-const Mountain2Hengfors_png_1 = __importDefault(require("../img/tokens/terrainTokens/Mountain2Hengfors.png"));
-const Mountain3KaerMorhen_png_1 = __importDefault(require("../img/tokens/terrainTokens/Mountain3KaerMorhen.png"));
-const Mountain9Cintra_png_1 = __importDefault(require("../img/tokens/terrainTokens/Mountain9Cintra.png"));
-const Mountain11Beauclair_png_1 = __importDefault(require("../img/tokens/terrainTokens/Mountain11Beauclair.png"));
-const Mountain13Doldeth_png_1 = __importDefault(require("../img/tokens/terrainTokens/Mountain13Doldeth.png"));
-const Mountain18ArdModron_png_1 = __importDefault(require("../img/tokens/terrainTokens/Mountain18ArdModron.png"));
-const Forest6Novigrad_png_1 = __importDefault(require("../img/tokens/terrainTokens/Forest6Novigrad.png"));
-const Forest7Vizima_png_1 = __importDefault(require("../img/tokens/terrainTokens/Forest7Vizima.png"));
-const Forest8Vengerberg_png_1 = __importDefault(require("../img/tokens/terrainTokens/Forest8Vengerberg.png"));
-const Forest10HaernCaduch_png_1 = __importDefault(require("../img/tokens/terrainTokens/Forest10HaernCaduch.png"));
-const Forest16Dhuwod_png_1 = __importDefault(require("../img/tokens/terrainTokens/Forest16Dhuwod.png"));
-const Forest17Stygga_png_1 = __importDefault(require("../img/tokens/terrainTokens/Forest17Stygga.png"));
-const Water1KaerSeren_png_1 = __importDefault(require("../img/tokens/terrainTokens/Water1KaerSeren.png"));
-const Water4BanArd_png_1 = __importDefault(require("../img/tokens/terrainTokens/Water4BanArd.png"));
-const Water5Cidaris_png_1 = __importDefault(require("../img/tokens/terrainTokens/Water5Cidaris.png"));
-const Water12Glenmore_png_1 = __importDefault(require("../img/tokens/terrainTokens/Water12Glenmore.png"));
-const Water14LocIchaer_png_1 = __importDefault(require("../img/tokens/terrainTokens/Water14LocIchaer.png"));
-const Water15GorthurGuaed_png_1 = __importDefault(require("../img/tokens/terrainTokens/Water15GorthurGuaed.png"));
 class TerrainTokenClass {
     name = "DefaultTokenName";
     imgStr = "";
     img() {
-        return ((0, jsx_runtime_1.jsx)(Container_1.default, { id: 'TokenContainer', className: 'px-4 py-2 m-2', children: (0, jsx_runtime_1.jsx)(Row_1.default, { className: "justify-content-center", children: (0, jsx_runtime_1.jsx)(Col_1.default, { xs: 'auto', children: (0, jsx_runtime_1.jsx)(Image_1.default, { id: `${this.name}IconImage`, src: this.imgStr, width: 150, alt: this.name, roundedCircle: true }) }) }) }));
+        return ((0, jsx_runtime_1.jsx)(Container_1.default, { id: 'TokenContainer', className: 'px-4 py-2 m-2', children: (0, jsx_runtime_1.jsx)(Row_1.default, { className: "justify-content-center", children: (0, jsx_runtime_1.jsx)(Col_1.default, { xs: 'auto', children: (0, jsx_runtime_1.jsx)(Image_1.default, { id: `${this.name}IconImage`, src: require(`../img/tokens/reducedTerrainTokens/${this.imgStr}.png`), width: 150, alt: this.name, loading: 'lazy', roundedCircle: true }) }) }) }));
     }
 }
 class MountainToken extends TerrainTokenClass {
@@ -43,7 +22,7 @@ class MountainToken extends TerrainTokenClass {
     number;
     type;
     imgStr;
-    constructor(number = -1, name = "DefaultMountainToken", img = MountainBack_png_1.default) {
+    constructor(number = -1, name = "DefaultMountainToken", img = "MountainBack") {
         super();
         this.name = name;
         this.number = number;
@@ -57,7 +36,7 @@ class ForestToken extends TerrainTokenClass {
     number;
     type;
     imgStr;
-    constructor(number = -1, name = "DefaultForestToken", img = ForestBack_png_1.default) {
+    constructor(number = -1, name = "DefaultForestToken", img = "ForestBack") {
         super();
         this.name = name;
         this.number = number;
@@ -71,7 +50,7 @@ class WaterToken extends TerrainTokenClass {
     number;
     type;
     imgStr;
-    constructor(number = -1, name = "DefaultWaterToken", img = WaterBack_png_1.default) {
+    constructor(number = -1, name = "DefaultWaterToken", img = "WaterBack") {
         super();
         this.name = name;
         this.number = number;
@@ -81,30 +60,30 @@ class WaterToken extends TerrainTokenClass {
 }
 exports.WaterToken = WaterToken;
 const MountainTokens = [
-    new MountainToken(2, "Hengfors", Mountain2Hengfors_png_1.default),
-    new MountainToken(3, "Kaer Morhen", Mountain3KaerMorhen_png_1.default),
-    new MountainToken(9, "Cintra", Mountain9Cintra_png_1.default),
-    new MountainToken(11, "Beauclair", Mountain11Beauclair_png_1.default),
-    new MountainToken(13, "Doldeth", Mountain13Doldeth_png_1.default),
-    new MountainToken(18, "Ard Modron", Mountain18ArdModron_png_1.default),
+    new MountainToken(2, "Hengfors", "Mountain2Hengfors"),
+    new MountainToken(3, "Kaer Morhen", "Mountain3KaerMorhen"),
+    new MountainToken(9, "Cintra", "Mountain9Cintra"),
+    new MountainToken(11, "Beauclair", "Mountain11Beauclair"),
+    new MountainToken(13, "Doldeth", "Mountain13Doldeth"),
+    new MountainToken(18, "Ard Modron", "Mountain18ArdModron"),
 ];
 exports.MountainTokens = MountainTokens;
 const ForestTokens = [
-    new ForestToken(6, "Novigrad", Forest6Novigrad_png_1.default),
-    new ForestToken(7, "Vizima", Forest7Vizima_png_1.default),
-    new ForestToken(8, "Vengerberg", Forest8Vengerberg_png_1.default),
-    new ForestToken(10, "Haern Caduch", Forest10HaernCaduch_png_1.default),
-    new ForestToken(16, "Dhuwod", Forest16Dhuwod_png_1.default),
-    new ForestToken(17, "Stygga", Forest17Stygga_png_1.default),
+    new ForestToken(6, "Novigrad", "Forest6Novigrad"),
+    new ForestToken(7, "Vizima", "Forest7Vizima"),
+    new ForestToken(8, "Vengerberg", "Forest8Vengerberg"),
+    new ForestToken(10, "Haern Caduch", "Forest10HaernCaduch"),
+    new ForestToken(16, "Dhuwod", "Forest16Dhuwod"),
+    new ForestToken(17, "Stygga", "Forest17Stygga"),
 ];
 exports.ForestTokens = ForestTokens;
 const WaterTokens = [
-    new WaterToken(1, "Kaer Seren", Water1KaerSeren_png_1.default),
-    new WaterToken(4, "Ban Ard", Water4BanArd_png_1.default),
-    new WaterToken(5, "Cidaris", Water5Cidaris_png_1.default),
-    new WaterToken(12, "Glenmore", Water12Glenmore_png_1.default),
-    new WaterToken(14, "Loc Ichaer", Water14LocIchaer_png_1.default),
-    new WaterToken(15, "Gorthur Guaed", Water15GorthurGuaed_png_1.default),
+    new WaterToken(1, "Kaer Seren", "Water1KaerSeren"),
+    new WaterToken(4, "Ban Ard", "Water4BanArd"),
+    new WaterToken(5, "Cidaris", "Water5Cidaris"),
+    new WaterToken(12, "Glenmore", "Water12Glenmore"),
+    new WaterToken(14, "Loc Ichaer", "Water14LocIchaer"),
+    new WaterToken(15, "Gorthur Guaed", "Water15GorthurGuaed"),
 ];
 exports.WaterTokens = WaterTokens;
 class TerrainTokenDeck {

@@ -32,12 +32,20 @@ const react_bootstrap_1 = require("react-bootstrap");
 const monsters_1 = __importStar(require("../classes/monsters"));
 const PageTitle_1 = __importDefault(require("./PageTitle"));
 require("../css/MonsterPicker.css");
-const localMonsterDeck = new monsters_1.default();
 function MonsterPicker({ HeaderText = "Randomly draw a token" }) {
+    const [localMonsterDeck, setLocalMonsterDeck] = (0, react_1.useState)(new monsters_1.default(true));
     const [displayedLevelOneMonster, setLevelOneMonster] = (0, react_1.useState)(new monsters_1.levelOneMonster(" "));
     const [displayedLevelTwoMonster, setLevelTwoMonster] = (0, react_1.useState)(new monsters_1.levelTwoMonster(" "));
     const [displayedLevelThreeMonster, setLevelThreeMonster] = (0, react_1.useState)(new monsters_1.levelThreeMonster(" "));
     const [displayedToken, setToken] = (0, react_1.useState)();
+    (0, react_1.useEffect)(() => {
+        const val = window.sessionStorage.getItem("localMonsterDeck");
+        if (val !== null)
+            setLocalMonsterDeck(JSON.parse(val));
+    }, []);
+    // useEffect(() => {
+    //     window.sessionStorage.setItem("localMonsterDeck", JSON.stringify(localMonsterDeck));
+    // }, [localMonsterDeck]);
     (0, react_1.useEffect)(() => {
         setToken(displayedLevelOneMonster);
     }, [displayedLevelOneMonster]);
