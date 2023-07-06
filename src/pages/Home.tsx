@@ -1,5 +1,3 @@
-// Use components from https://react-bootstrap.netlify.app/docs/getting-started/introduction
-
 import Container from 'react-bootstrap/Container';
 import { Button, Card, Col, Row } from 'react-bootstrap';
 
@@ -43,7 +41,7 @@ const linkedPages = [
     },
 ]
 
-export default function Home() {
+export default function Home(): JSX.Element {
     /*
         Breakpoints
         ============================

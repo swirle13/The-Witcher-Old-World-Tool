@@ -2,6 +2,7 @@ const prod = process.env.NODE_ENV === 'production';
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = {
   mode: prod ? 'production' : 'development',
@@ -24,11 +25,9 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
-        test: /\.(jpg|png)$/,
-        use: {
-          loader: 'url-loader',
-        }
-      }
+        test: /\.(jpe?g|png)$/i,
+        type: "asset",
+      },
     ]
   },
   devtool: prod ? undefined : 'source-map',
@@ -38,5 +37,21 @@ module.exports = {
     }),
     new MiniCssExtractPlugin(),
   ],
+  optimization: {
+    minimizer: [
+      "...",
+      new ImageMinimizerPlugin({
+        minimizer: {
+          implementation: ImageMinimizerPlugin.sharpMinify,
+          options: {
+            encodeOptions: {
+              // Your options for `sharp`
+              // https://sharp.pixelplumbing.com/api-output
+            },
+          },
+        },
+      }),
+    ],
+  },
 };
 

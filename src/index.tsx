@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import { createHashRouter, RouterProvider } from "react-router-dom";
-import { createRoot } from 'react-dom/client'
+import { createRoot } from 'react-dom/client';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css'
+import './index.css';
 
 import Home from './pages/Home';
 import ErrorPage from "./pages/ErrorPage";
@@ -14,46 +14,45 @@ import MonsterRoller from './pages/MonsterRoller';
 import SetupHelper from './pages/SetupHelper';
 import LocationTokens from './pages/LocationTokens';
 import InventoryChecker from './pages/InventoryChecker';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 // hashRouter vs browserRouter https://stackoverflow.com/a/74149347/6811686
 const router = createHashRouter([
     {
         path: "/",
-        element: <Root />,
+        element: <Home />,
         errorElement: <ErrorPage />,
-        children: [
-            {
-                path: "/",
-                element: <Home />,
-                errorElement: <ErrorPage />,
-                children: [
-                ],
-            },
-            {
-                path: "communityLinks",
-                element: <CommunityLinks />
-            },
-            {
-                path: "lostMount",
-                element: <LostMount />
-            },
-            {
-                path: "monsterRoller",
-                element: <MonsterRoller />
-            },
-            {
-                path: "setupHelper",
-                element: <SetupHelper />
-            },
-            {
-                path: "inventoryChecker",
-                element: <InventoryChecker />
-            },
-            {
-                path: "locationTokens",
-                element: <LocationTokens />
-            },
-        ],
+    },
+    {
+        path: "communityLinks",
+        element: <CommunityLinks />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "lostMount",
+        element: <LostMount />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "monsterRoller",
+        element: <MonsterRoller />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "setupHelper",
+        element: <SetupHelper />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "inventoryChecker",
+        element: <InventoryChecker />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "locationTokens",
+        element: <LocationTokens />,
+        errorElement: <ErrorPage />,
     },
     {
         // This should always be last
@@ -66,7 +65,19 @@ const container = document.getElementById('app-root') as HTMLElement;
 const root = createRoot(container);
 root.render(
     <React.StrictMode>
-        <RouterProvider router={router} />
+        <div
+            className='flex-wrapper mx-0 px-0'
+            style={{
+                display: 'flex',
+                minHeight: '100vh',
+                flexDirection: 'column',
+                justifyContent: 'flex-start'
+            }}
+        >
+            <Navbar />
+            <RouterProvider router={router} />
+            <Footer />
+        </div>
     </React.StrictMode>
 );
 

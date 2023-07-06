@@ -111,6 +111,7 @@ abstract class monsterClass {
                             src={this.tokenImgStr}
                             width={150}
                             alt={this.name}
+                            loading='lazy'
                         />
                     </Col>
                 </Row>
@@ -127,7 +128,12 @@ abstract class monsterClass {
             <Container fluid="md" className='MiniatureContainer container mx-auto px-4'>
                 <Row xs={6} md={4} lg={2} className='d-flex justify-content-center'>
                     <Col xs={8} md={4} lg={2}>
-                        <Image className="object-contain h-48" src={this.miniImgStr} fluid />
+                        <Image
+                            className="object-contain h-48"
+                            src={this.miniImgStr}
+                            fluid
+                            loading='lazy'
+                        />
                     </Col>
                 </Row>
             </Container>

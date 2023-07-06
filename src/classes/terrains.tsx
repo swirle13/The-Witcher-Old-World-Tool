@@ -51,6 +51,7 @@ abstract class TerrainTokenClass {
                             src={this.imgStr}
                             width={150}
                             alt={this.name}
+                            loading='lazy'
                             roundedCircle
                         />
                     </Col>
