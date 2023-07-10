@@ -68,6 +68,15 @@ const MountainTokens = [
     new MountainToken(18, "Ard Modron", "Mountain18ArdModron"),
 ];
 exports.MountainTokens = MountainTokens;
+const MountainTokensSkellige = [
+    new MountainToken(2, "Hengfors", "Mountain2Hengfors"),
+    new MountainToken(3, "Kaer Morhen", "Mountain3KaerMorhen"),
+    new MountainToken(9, "Cintra", "Mountain9Cintra"),
+    new MountainToken(11, "Beauclair", "Mountain11Beauclair"),
+    new MountainToken(13, "Doldeth", "Mountain13Doldeth"),
+    new MountainToken(18, "Ard Modron", "Mountain18ArdModron"),
+    new MountainToken(19, "Ard Skellig", "Mountain19ArdSkellig")
+];
 const ForestTokens = [
     new ForestToken(6, "Novigrad", "Forest6Novigrad"),
     new ForestToken(7, "Vizima", "Forest7Vizima"),
@@ -77,6 +86,15 @@ const ForestTokens = [
     new ForestToken(17, "Stygga", "Forest17Stygga"),
 ];
 exports.ForestTokens = ForestTokens;
+const ForestTokensSkellige = [
+    new ForestToken(6, "Novigrad", "Forest6Novigrad"),
+    new ForestToken(7, "Vizima", "Forest7Vizima"),
+    new ForestToken(8, "Vengerberg", "Forest8Vengerberg"),
+    new ForestToken(10, "Haern Caduch", "Forest10HaernCaduch"),
+    new ForestToken(16, "Dhuwod", "Forest16Dhuwod"),
+    new ForestToken(17, "Stygga", "Forest17Stygga"),
+    new ForestToken(21, "Enya", "Forest21Enya")
+];
 const WaterTokens = [
     new WaterToken(1, "Kaer Seren", "Water1KaerSeren"),
     new WaterToken(4, "Ban Ard", "Water4BanArd"),
@@ -86,16 +104,38 @@ const WaterTokens = [
     new WaterToken(15, "Gorthur Guaed", "Water15GorthurGuaed"),
 ];
 exports.WaterTokens = WaterTokens;
+const WaterTokensSkellige = [
+    new WaterToken(1, "Kaer Seren", "Water1KaerSeren"),
+    new WaterToken(4, "Ban Ard", "Water4BanArd"),
+    new WaterToken(5, "Cidaris", "Water5Cidaris"),
+    new WaterToken(12, "Glenmore", "Water12Glenmore"),
+    new WaterToken(14, "Loc Ichaer", "Water14LocIchaer"),
+    new WaterToken(15, "Gorthur Guaed", "Water15GorthurGuaed"),
+    new WaterToken(20, "Isle of Mists", "Water20IsleOfMists")
+];
 class TerrainTokenDeck {
     mountainDeck;
     forestDeck;
     waterDeck;
     allDeck;
-    constructor() {
-        this.mountainDeck = new dataClasses_1.ReadonlyDeck(MountainTokens);
-        this.forestDeck = new dataClasses_1.ReadonlyDeck(ForestTokens);
-        this.waterDeck = new dataClasses_1.ReadonlyDeck(WaterTokens);
-        this.allDeck = new dataClasses_1.ReadonlyDeck([...MountainTokens, ...ForestTokens, ...WaterTokens]);
+    skellige;
+    constructor(skellige = false) {
+        this.skellige = skellige;
+        if (skellige === true) {
+            this.mountainDeck = new dataClasses_1.ReadonlyDeck(MountainTokensSkellige);
+            this.forestDeck = new dataClasses_1.ReadonlyDeck(ForestTokensSkellige);
+            this.waterDeck = new dataClasses_1.ReadonlyDeck(WaterTokensSkellige);
+            this.allDeck = new dataClasses_1.ReadonlyDeck([...MountainTokensSkellige, ...ForestTokensSkellige, ...WaterTokensSkellige]);
+        }
+        else {
+            this.mountainDeck = new dataClasses_1.ReadonlyDeck(MountainTokens);
+            this.forestDeck = new dataClasses_1.ReadonlyDeck(ForestTokens);
+            this.waterDeck = new dataClasses_1.ReadonlyDeck(WaterTokens);
+            this.allDeck = new dataClasses_1.ReadonlyDeck([...MountainTokens, ...ForestTokens, ...WaterTokens]);
+        }
+        this.mountainDeck.shuffle();
+        this.forestDeck.shuffle();
+        this.waterDeck.shuffle();
     }
     drawMountainToken() {
         try {

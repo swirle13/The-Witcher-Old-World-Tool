@@ -24,8 +24,8 @@ function SetupHelper() {
     const [steps, setSteps] = (0, react_1.useState)((0, setup_1.compileSteps)());
     const handleExpansionOnChange = (position) => {
         const updatedExpansionsState = expansionsState.map((item, index) => index === position ? !item : item);
+        // if Wild Hunt is toggled
         if (position === 6) {
-            // if Wild Hunt is toggled
             updatedExpansionsState[0] = !updatedExpansionsState[0]; // Legendary Hunt
             updatedExpansionsState[2] = !updatedExpansionsState[2]; // Monster Pack
             updatedExpansionsState[5] = !updatedExpansionsState[5]; // Adventure Pack

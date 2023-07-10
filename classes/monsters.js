@@ -122,7 +122,7 @@ class MonstersDeck {
     levelOneMonstersDeck = new dataClasses_1.ReadonlyDeck(baseLevelOneMonsters);
     levelTwoMonstersDeck = new dataClasses_1.ReadonlyDeck(baseLevelTwoMonsters);
     levelThreeMonstersDeck = new dataClasses_1.ReadonlyDeck(baseLevelThreeMonsters);
-    constructor(stretchGoalMonsters = false) {
+    constructor(stretchGoalMonsters = false, skellige = false) {
         if (stretchGoalMonsters) {
             this.levelOneMonstersDeck = new dataClasses_1.ReadonlyDeck([...baseLevelOneMonsters, ...stretchGoalLevelOneMonsters]);
             this.levelTwoMonstersDeck = new dataClasses_1.ReadonlyDeck([...baseLevelTwoMonsters, ...stretchGoalLevelTwoMonsters]);
