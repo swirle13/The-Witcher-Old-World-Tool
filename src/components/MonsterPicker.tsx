@@ -1,30 +1,36 @@
-import { useState, useEffect } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import MonstersDeck, { levelOneMonster, levelTwoMonster, levelThreeMonster } from "../classes/monsters";
 import PageTitle from './PageTitle';
 import "../css/MonsterPicker.css";
 
-const localMonsterDeck = new MonstersDeck();
 
 export default function MonsterPicker({
     HeaderText = "Randomly draw a token"
 }: {
     HeaderText: string;
 }) {
-    const [displayedLevelOneMonster, setLevelOneMonster] = useState<levelOneMonster>(new levelOneMonster(" "));
-    const [displayedLevelTwoMonster, setLevelTwoMonster] = useState<levelTwoMonster>(new levelTwoMonster(" "));
-    const [displayedLevelThreeMonster, setLevelThreeMonster] = useState<levelThreeMonster>(new levelThreeMonster(" "));
-    const [displayedToken, setToken] = useState<levelOneMonster | levelTwoMonster | levelThreeMonster>();
+    const expansionsNames = ["Skellige", "Legendary Hunt", "Wild Hunt", "Monster Pack"];
+    const [localMonsterDeck, setLocalMonsterDeck] = useState(new MonstersDeck());
+    const [displayedToken, setToken] = useState<levelOneMonster | levelTwoMonster | levelThreeMonster>(new levelOneMonster(" "));
+    const [expansions, setExpansions] = useState(new Array(expansionsNames.length).fill(false));
 
+    const handleToggleExpansions = (position: number) => {
+        const updatedExpansions = expansions.map((item, index) => index === position ? !item : item);
+        setExpansions(updatedExpansions);
+    };
+    
     useEffect(() => {
-        setToken(displayedLevelOneMonster);
-    }, [displayedLevelOneMonster]);
-    useEffect(() => {
-        setToken(displayedLevelTwoMonster);
-    }, [displayedLevelTwoMonster]);
-    useEffect(() => {
-        setToken(displayedLevelThreeMonster);
-    }, [displayedLevelThreeMonster]);
+        setLocalMonsterDeck(new MonstersDeck(...expansions));
+    }, [expansions]);
+
+    // useEffect(() => {
+    //     const val = window.sessionStorage.getItem("localMonsterDeck");
+    //     if (val !== null) setLocalMonsterDeck(JSON.parse(val));
+    // }, []);
+    // useEffect(() => {
+    //     window.sessionStorage.setItem("localMonsterDeck", JSON.stringify(localMonsterDeck));
+    // }, [localMonsterDeck]);
 
     return (
         <Container fluid className="mx-auto min-h-screen">
@@ -37,25 +43,44 @@ export default function MonsterPicker({
             <Row id='MonsterButtons' className='justify-content-center px-1 py-2 mb-4'>
                 <Col xs="auto" className='p-1'>
                     <Button variant="secondary" size="lg"
-                        onClick={() => setLevelOneMonster(localMonsterDeck.drawLevelOneMonster())}
+                        onClick={() => setToken(localMonsterDeck.drawLevelOneMonster())}
                     >
                         Level I
                     </Button>
                 </Col>
                 <Col xs="auto" className='p-1'>
                     <Button variant="warning" size="lg"
-                        onClick={() => setLevelTwoMonster(localMonsterDeck.drawLevelTwoMonster())}
+                        onClick={() => setToken(localMonsterDeck.drawLevelTwoMonster())}
                     >
                         Level II
                     </Button>
                 </Col>
                 <Col xs="auto" className='p-1'>
                     <Button variant="danger" size="lg"
-                        onClick={() => setLevelThreeMonster(localMonsterDeck.drawLevelThreeMonster())}
+                        onClick={() => setToken(localMonsterDeck.drawLevelThreeMonster())}
                     >
                         Level III
                     </Button>
                 </Col>
+                {expansions[1] || expansions[2] ?
+                    <Col xs="auto" className='p-1'>
+                        <Button variant="danger" size="lg"
+                            onClick={() => setToken(localMonsterDeck.drawLegendaryMonster())}
+                        >
+                            Legendary
+                        </Button>
+                    </Col>
+                    : <></>}
+            </Row>
+            <Row id='expansionToggleRow' className='justify-content-center p-2'>
+                {expansionsNames.map((name, index) => (
+                    <Form.Switch
+                        checked={expansions[index]}
+                        onChange={() => handleToggleExpansions(index)}
+                        label={name}
+                        key={name}
+                    />
+                ))}
             </Row>
         </Container>
     );

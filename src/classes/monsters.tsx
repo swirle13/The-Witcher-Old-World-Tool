@@ -27,6 +27,7 @@ Identify what monsters come in which expansions and set toggles for each
         * Frightener
         * Unseen Elder
         * Ice Giant
+        * Gaunter O'Dimm
     * Skellige: 1 monster
         * level 3: Dagon
     * Mounted Eredin: 1 monster
@@ -161,16 +162,63 @@ export class levelThreeMonster extends monsterClass implements monsterToken {
     }
 }
 
+export class legendaryMonster extends monsterClass implements monsterToken {
+    readonly name: string = "DefaultLegendaryName";
+    readonly level: number = 4;
+    readonly tokenImgStr: string = "level3Backside";
+    readonly tokenBackImgStr: string = "level3Backside";
+    readonly miniImgStr: string = "";
+
+    constructor(
+        name?: string,
+        tokenImgStr?: string,
+        miniImgStr?: string,
+    ) {
+        super();
+        if (name) this.name = name;
+        if (tokenImgStr) this.tokenImgStr = tokenImgStr;
+        if (miniImgStr) this.miniImgStr = miniImgStr;
+    }
+
+    private __isWildHunt(): boolean {
+        const wildHuntNames = ['Eredin', 'Nithral', 'Imlerith', 'Caranthir'];
+        return wildHuntNames.includes(this.name);
+    }
+
+    tokenImg(): React.ReactNode {
+        return (
+            <Container id='TokenContainer' className='mx-auto px-4 py-2'>
+                <Row className='justify-content-center'>
+                    <Col xs='auto'>
+                        <Image
+                            id={`${this.name}IconImage`}
+                            src={require(`../img/monsters/${this.__isWildHunt() ? 'wildHunt' : 'legendaryHunt'}/${this.tokenImgStr}.png`)}
+                            width={150}
+                            alt={this.name}
+                            loading='lazy'
+                        />
+                    </Col>
+                </Row>
+                <Row className='justify-content-center'>
+                    <Col>
+                        <h2 className="text-center">{this.name}</h2>
+                    </Col>
+                </Row>
+            </Container>
+        );
+    }
+}
+
 export const baseMonsters: Record<string, Array<string>> = {
     "levelOne": ["Nekker's Nest", "Arachas", "Archespore", "Barghest", "Foglet", "Harpy", "Ghoul's Nest"],
     "levelTwo": ["Griffin", "Wyvern", "Werewolf", "Fiend", "Noonwraith"],
     "levelThree": ["Leshen", "Striga", "Bruxa"]
-}
+};
 export const stretchGoalMonsters: Record<string, Array<string>> = {
     "levelOne": ["Drowner's Nest", "Rotfiend", "Ekimmara"],
     "levelTwo": ["Nightwraith", "Water Hag", "Manticore", "Whispess", "Weavess", "Penitent", "Grave Hag"],
     "levelThree": ["Glustyworp", "Brewess", "Yghern", "Troll"]
-}
+};
 
 const baseLevelOneMonsters: Array<levelOneMonster> = [
     new levelOneMonster("Nekker's Nest", "nekkersNest"),
@@ -180,23 +228,17 @@ const baseLevelOneMonsters: Array<levelOneMonster> = [
     new levelOneMonster("Foglet", "foglet"),
     new levelOneMonster("Harpy", "harpy"),
     new levelOneMonster("Ghoul's Nest", "ghoulsNest"),
-]
-
-const stretchGoalLevelOneMonsters: Array<levelOneMonster> = [
     new levelOneMonster("Drowner's Nest", "drownersNest"),
     new levelOneMonster("Rotfiend", "rotfiend"),
     new levelOneMonster("Ekimmara", "ekimmara"),
-]
+];
 
 const baseLevelTwoMonsters: Array<levelTwoMonster> = [
     new levelTwoMonster("Griffin", "griffin"),
     new levelTwoMonster("Wyvern", "wyvern"),
     new levelTwoMonster("Werewolf", "werewolf"),
     new levelTwoMonster("Fiend", "fiend"),
-    new levelTwoMonster("Noonwraith", "noonwraith")
-]
-
-const stretchGoalLevelTwoMonsters: Array<levelTwoMonster> = [
+    new levelTwoMonster("Noonwraith", "noonwraith"),
     new levelTwoMonster("Nightwraith", "nightwraith"),
     new levelTwoMonster("Water Hag", "waterHag"),
     new levelTwoMonster("Manticore", "manticore"),
@@ -204,32 +246,79 @@ const stretchGoalLevelTwoMonsters: Array<levelTwoMonster> = [
     new levelTwoMonster("Weavess", "weavess"),
     new levelTwoMonster("Penitent", "penitent"),
     new levelTwoMonster("Grave Hag", "graveHag"),
-]
+];
 
 const baseLevelThreeMonsters: Array<levelThreeMonster> = [
     new levelThreeMonster("Leshen", "leshen"),
     new levelThreeMonster("Striga", "striga"),
     new levelThreeMonster("Bruxa", "bruxa"),
-]
-
-const stretchGoalLevelThreeMonsters: Array<levelThreeMonster> = [
     new levelThreeMonster("Glustyworp", "glustyworp"),
     new levelThreeMonster("Brewess", "brewess"),
     new levelThreeMonster("Yghern", "yghern"),
     new levelThreeMonster("Troll", "troll"),
-]
+];
+
+const legendaryHuntLegendaryMonsters: Array<legendaryMonster> = [
+    new legendaryMonster("Imperial Golem", "imperialGolem"),
+    new legendaryMonster("Cyclops", "cyclops"),
+    new legendaryMonster("Cave Troll", "cyclops"),
+    new legendaryMonster("Toad", "toad"),
+    new legendaryMonster("Frightener", "frightener"),
+    new legendaryMonster("Unseen Elder", "unseenElder"),
+    new legendaryMonster("Ice Giant", "iceGiant"),
+    new legendaryMonster("Gaunter O'Dimm", "gaunterODimm"),
+];
+
+const wildHuntLegendaryMonsters: Array<legendaryMonster> = [
+    new legendaryMonster("Eredin", "eredinMini"),
+    new legendaryMonster("Nithral", "nithralMini"),
+    new legendaryMonster("Imlerith", "imlerithMini"),
+    new legendaryMonster("Caranthir", "caranthirMini"),
+];
 
 export default class MonstersDeck {
-    levelOneMonstersDeck: ReadonlyDeck<levelOneMonster> = new ReadonlyDeck(baseLevelOneMonsters);
-    levelTwoMonstersDeck: ReadonlyDeck<levelTwoMonster> = new ReadonlyDeck(baseLevelTwoMonsters);
-    levelThreeMonstersDeck: ReadonlyDeck<levelThreeMonster> = new ReadonlyDeck(baseLevelThreeMonsters);
+    levelOneMonstersDeck: ReadonlyDeck<levelOneMonster>;
+    levelTwoMonstersDeck: ReadonlyDeck<levelTwoMonster>;
+    levelThreeMonstersDeck: ReadonlyDeck<levelThreeMonster>;
+    legendaryMonstersDeck: ReadonlyDeck<legendaryMonster>;
 
-    constructor(stretchGoalMonsters = false,) {
-        if (stretchGoalMonsters) {
-            this.levelOneMonstersDeck = new ReadonlyDeck([...baseLevelOneMonsters, ...stretchGoalLevelOneMonsters]);
-            this.levelTwoMonstersDeck = new ReadonlyDeck([...baseLevelTwoMonsters, ...stretchGoalLevelTwoMonsters]);
-            this.levelThreeMonstersDeck = new ReadonlyDeck([...baseLevelThreeMonsters, ...stretchGoalLevelThreeMonsters]);
+    constructor(
+        skellige = false,
+        legendaryHunt = false,
+        wildHunt = false,
+        monsterPack = false
+    ) {
+        const tempLevelOneMonstersDeck: levelOneMonster[] = [...baseLevelOneMonsters];
+        const tempLevelTwoMonstersDeck: levelTwoMonster[] = [...baseLevelTwoMonsters];
+        const tempLevelThreeMonstersDeck: levelThreeMonster[] = [...baseLevelThreeMonsters];
+        const tempLegendaryMonstersDeck: legendaryMonster[] = [];
+
+        if (skellige) {
+            tempLevelThreeMonstersDeck.push(new levelThreeMonster("Dagon", "dagon"));
         }
+        if (legendaryHunt && !wildHunt) {
+            tempLegendaryMonstersDeck.push(...legendaryHuntLegendaryMonsters);
+        }
+        if (wildHunt && !legendaryHunt) {
+            tempLevelOneMonstersDeck.push(new levelOneMonster("Hound", "hound1"));
+            tempLevelTwoMonstersDeck.push(new levelTwoMonster("Hound", "hound2"));
+            tempLevelThreeMonstersDeck.push(new levelThreeMonster("Hound", "hound3"));
+            tempLegendaryMonstersDeck.push(...wildHuntLegendaryMonsters);
+        }
+        if (monsterPack) {
+            if (skellige) {tempLevelOneMonstersDeck.push(new levelOneMonster("Siren", "siren"));}
+            tempLevelTwoMonstersDeck.push(new levelTwoMonster("Koshchey", "koshchey"));
+            tempLevelThreeMonstersDeck.push(new levelThreeMonster("Kayran", "kayran"));
+        }
+        this.levelOneMonstersDeck = new ReadonlyDeck(tempLevelOneMonstersDeck);
+        this.levelTwoMonstersDeck = new ReadonlyDeck(tempLevelTwoMonstersDeck);
+        this.levelThreeMonstersDeck = new ReadonlyDeck(tempLevelThreeMonstersDeck);
+        this.legendaryMonstersDeck = new ReadonlyDeck(tempLegendaryMonstersDeck);
+
+        this.levelOneMonstersDeck.shuffle();
+        this.levelTwoMonstersDeck.shuffle();
+        this.levelThreeMonstersDeck.shuffle();
+        this.legendaryMonstersDeck.shuffle();
     }
 
     drawLevelOneMonster(): levelOneMonster {
@@ -255,5 +344,13 @@ export default class MonstersDeck {
             this.levelThreeMonstersDeck.repopulate();
         }
         return this.levelThreeMonstersDeck.draw();
+    }
+    drawLegendaryMonster(): legendaryMonster {
+        try {
+            return this.legendaryMonstersDeck.draw();
+        } catch (error) {
+            this.legendaryMonstersDeck.repopulate();
+        }
+        return this.legendaryMonstersDeck.draw();
     }
 }
