@@ -230,6 +230,7 @@ export function compileSteps(
     );
     finalSteps.push(tempElem);
     tempElem = "";
+    tempArr = [];
 
     // step
     if (monsterTrail) finalSteps.push('Remove 8 Monster Fight cards from the deck. Put 4 back in the box and set 4 aside for later (when a Level III monster appears). Add the Special Attack cards to the Monster Fight deck.');
