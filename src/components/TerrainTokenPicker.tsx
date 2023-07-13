@@ -22,10 +22,6 @@ export default function TerrainTokenPicker({
         setLocalTerrainDeck(new TerrainTokenDeck(!skellige));
     };
 
-    console.log("MountainDeck:", localTerrainDeck.mountainDeck.lookAtQueue());
-    console.log("ForestDeck:", localTerrainDeck.forestDeck.lookAtQueue());
-    console.log("WaterDeck:", localTerrainDeck.waterDeck.lookAtQueue());
-
     return (
         <Container fluid className="mx-auto min-h-screen">
             <PageTitle HeaderText={HeaderText} />
@@ -62,7 +58,7 @@ export default function TerrainTokenPicker({
                     checked={skellige}
                     onChange={() => handleSkellige()}
                     label="Skellige"
-                    />
+                />
             </Row>
         </Container>
     );
