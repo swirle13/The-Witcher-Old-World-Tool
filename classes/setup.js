@@ -192,6 +192,7 @@ function compileSteps(legendaryHunt = false, mages = false, monsterPack = false,
     tempElem = ((0, jsx_runtime_1.jsxs)("div", { children: ["Set up Monsters:", (0, jsx_runtime_1.jsx)("ol", { type: 'a', children: tempArr.map((text, id) => ((0, jsx_runtime_1.jsx)("li", { children: text }, id))) })] }));
     finalSteps.push(tempElem);
     tempElem = "";
+    tempArr = [];
     // step
     if (monsterTrail)
         finalSteps.push('Remove 8 Monster Fight cards from the deck. Put 4 back in the box and set 4 aside for later (when a Level III monster appears). Add the Special Attack cards to the Monster Fight deck.');
