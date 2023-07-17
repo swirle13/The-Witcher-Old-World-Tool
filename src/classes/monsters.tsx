@@ -19,7 +19,7 @@ Identify what monsters come in which expansions and set toggles for each
     * Monster trail: 0 monsters
         * 29 large monster cards
         * 18 monster weakness tokens
-    * Legendary Hunt: 7 monsters
+    * Legendary Hunt: 8 monsters
         * Imperial Golem
         * Cyclops
         * Cave Troll
@@ -33,9 +33,10 @@ Identify what monsters come in which expansions and set toggles for each
     * Mounted Eredin: 1 monster
         * level 3: Mounted Eredin
     * Monster Pack (KS Exclusive):
-        * level 1: Siren(?)
-        * level 2: Koshchey
-        * level 3: Kayran
+        * level 1: Siren (Skellige)
+        * level 3: Koshchey (Mages)
+        * level Legendary: Kayran (Legendary Hunt)
+        * "[Koshchey] can only be used when playing with Mages." - https://www.kickstarter.com/projects/goonboard/the-witcher/posts/3212946
 
 Gameplay all-in is comprised of the following expansions:
     * Base set
@@ -283,19 +284,16 @@ export default class MonstersDeck {
     legendaryMonstersDeck: ReadonlyDeck<legendaryMonster>;
 
     constructor(
-        skellige = false,
         legendaryHunt = false,
         wildHunt = false,
-        monsterPack = false
+        monsterPack = false,
+        mages = false
     ) {
         const tempLevelOneMonstersDeck: levelOneMonster[] = [...baseLevelOneMonsters];
         const tempLevelTwoMonstersDeck: levelTwoMonster[] = [...baseLevelTwoMonsters];
         const tempLevelThreeMonstersDeck: levelThreeMonster[] = [...baseLevelThreeMonsters];
         const tempLegendaryMonstersDeck: legendaryMonster[] = [];
 
-        if (skellige) {
-            tempLevelThreeMonstersDeck.push(new levelThreeMonster("Dagon", "dagon"));
-        }
         if (legendaryHunt && !wildHunt) {
             tempLegendaryMonstersDeck.push(...legendaryHuntLegendaryMonsters);
         }
@@ -306,9 +304,8 @@ export default class MonstersDeck {
             tempLegendaryMonstersDeck.push(...wildHuntLegendaryMonsters);
         }
         if (monsterPack) {
-            if (skellige) {tempLevelOneMonstersDeck.push(new levelOneMonster("Siren", "siren"));}
-            tempLevelTwoMonstersDeck.push(new levelTwoMonster("Koshchey", "koshchey"));
-            tempLevelThreeMonstersDeck.push(new levelThreeMonster("Kayran", "kayran"));
+            if (mages) tempLevelThreeMonstersDeck.push(new levelThreeMonster("Koshchey", "koshchey"));
+            if (legendaryHunt) tempLegendaryMonstersDeck.push(new legendaryMonster("Kayran", "kayran"));
         }
         this.levelOneMonstersDeck = new ReadonlyDeck(tempLevelOneMonstersDeck);
         this.levelTwoMonstersDeck = new ReadonlyDeck(tempLevelTwoMonstersDeck);

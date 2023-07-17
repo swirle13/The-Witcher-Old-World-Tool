@@ -10,27 +10,26 @@ export default function MonsterPicker({
 }: {
     HeaderText: string;
 }) {
-    const expansionsNames = ["Skellige", "Legendary Hunt", "Wild Hunt", "Monster Pack"];
+    const expansionsNames = ["Legendary Hunt", "Wild Hunt", "Monster Pack", "Mages"];
     const [localMonsterDeck, setLocalMonsterDeck] = useState(new MonstersDeck());
     const [displayedToken, setToken] = useState<levelOneMonster | levelTwoMonster | levelThreeMonster>(new levelOneMonster(" "));
     const [expansions, setExpansions] = useState(new Array(expansionsNames.length).fill(false));
 
     const handleToggleExpansions = (position: number) => {
-        const updatedExpansions = expansions.map((item, index) => index === position ? !item : item);
+        let updatedExpansions = expansions.map((item, index) => index === position ? !item : item);
+        if (position === 0 && !expansions[0] && expansions[1]) {
+            // if turning on Legendary Hunt and Wild Hunt is already on
+            updatedExpansions = updatedExpansions.map((item, index) => index === 1 ? !item : item);
+        } else if (position === 1 && !expansions[1] && expansions[0]) {
+            // if turning on Wild Hunt and Legendary Hunt is already on
+            updatedExpansions = updatedExpansions.map((item, index) => index === 0 ? !item : item);
+        }
         setExpansions(updatedExpansions);
     };
     
     useEffect(() => {
         setLocalMonsterDeck(new MonstersDeck(...expansions));
     }, [expansions]);
-
-    // useEffect(() => {
-    //     const val = window.sessionStorage.getItem("localMonsterDeck");
-    //     if (val !== null) setLocalMonsterDeck(JSON.parse(val));
-    // }, []);
-    // useEffect(() => {
-    //     window.sessionStorage.setItem("localMonsterDeck", JSON.stringify(localMonsterDeck));
-    // }, [localMonsterDeck]);
 
     return (
         <Container fluid className="mx-auto min-h-screen">
@@ -62,7 +61,7 @@ export default function MonsterPicker({
                         Level III
                     </Button>
                 </Col>
-                {expansions[1] || expansions[2] ?
+                {expansions[0] || expansions[1] ?
                     <Col xs="auto" className='p-1'>
                         <Button variant="danger" size="lg"
                             onClick={() => setToken(localMonsterDeck.drawLegendaryMonster())}
