@@ -118,7 +118,7 @@ const ForestTokensSkellige: Array<ForestToken> = [
     new ForestToken(10, "Haern Caduch", "Forest10HaernCaduch"),
     new ForestToken(16, "Dhuwod", "Forest16Dhuwod"),
     new ForestToken(17, "Stygga", "Forest17Stygga"),
-    new ForestToken(21, "Enya", "Forest21Enya")
+    new ForestToken(21, "Eyna", "Forest21Eyna")
 ];
 
 const WaterTokens: Array<WaterToken> = [
