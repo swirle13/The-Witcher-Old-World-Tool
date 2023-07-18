@@ -65,6 +65,7 @@
         "react-router-dom": "^6.13.0",
         "redux-persist": "^6.0.0",
         "save-dev": "^0.0.1-security",
-        "three": "^0.153.0"
+        "three": "^0.153.0",
+        "zustand": "^4.3.9"
     }
 }
