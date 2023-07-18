@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Accordion, Col, Container, Form, FormCheck, Image, Row, Stack } from "react-bootstrap";
+import { Accordion, Button, Col, Container, Form, FormCheck, Image, Row, Stack } from "react-bootstrap";
 import { compileSteps } from "../classes/setup";
 import legendaryHunt from "../img/expansionHeaders/legendaryHunt.png";
 import mages from "../img/expansionHeaders/mages.png";
@@ -10,9 +10,19 @@ import adventurePack from "../img/expansionHeaders/adventurePack.png";
 import wildHunt from "../img/expansionHeaders/wildHunt.png";
 import "../css/SetupHelper.css";
 import PageTitle from '../components/PageTitle';
+import { AccordionEventKey } from 'react-bootstrap/esm/AccordionContext';
 
 const expansions = ["Legendary Hunt", "Mages", "Monster Pack", "Monster Trail", "Skellige", "Adventure Pack", "Wild Hunt"];
 const expansionsImages = [legendaryHunt, mages, monsterPack, monsterTrail, skellige, adventurePack, wildHunt];
+
+/**
+ * Produces an array of strings for 0 to obj.length, e.g. my_arr.length = 3, produces ['0', '1', '2'].
+ * @param obj Array of strings
+ * @returns Array of strings of the stringified length of obj
+ */
+function lenToStrArr(obj: Array<string>): string[] {
+    return [...Array(obj.length).keys()].map(a => String(a));
+}
 
 export default function SetupHelper() {
     const [players, setPlayers] = useState<number>(1);
@@ -20,6 +30,7 @@ export default function SetupHelper() {
         new Array(expansions.length).fill(false)
     );
     const [steps, setSteps] = useState<Array<string>>(compileSteps());
+    const [stepsKeys, setStepsKeys] = useState<Array<string>>(lenToStrArr(steps));
     const handleExpansionOnChange = (position: number) => {
         const updatedExpansionsState = expansionsState.map((item, index) => index === position ? !item : item);
         // if Wild Hunt is toggled
@@ -35,6 +46,11 @@ export default function SetupHelper() {
         const tempArr = [...expansionsState, players] as [boolean, boolean, boolean, boolean, boolean, boolean, boolean, number];
         setSteps(compileSteps(...tempArr));
     }, [players, expansionsState]);
+    
+    useEffect(() => {
+        setStepsKeys(lenToStrArr(steps));
+        console.log(`stepsKeys: ${stepsKeys}`);
+    }, [steps])
 
     return (
         <Container>
@@ -63,7 +79,7 @@ export default function SetupHelper() {
                                 </div>
                             </Col>
                         </Row>
-                        <Row className='justify-content-center' lg={1}>
+                        <Row className='justify-content-center mb-3' lg={1}>
                             <Col id="expansionsCol">
                                 <h4 className='text-center mb-3'>Expansions</h4>
                                 <Row key="inlineExpansions" className="text-center justify-content-center" xl={1}>
@@ -83,6 +99,30 @@ export default function SetupHelper() {
                                 </Row>
                             </Col>
                         </Row>
+                        <Row className='justify-content-center' lg={1}>
+                            <Col id="collapseButtonsCol">
+                                <Row className='text-center justify-content-center'>
+                                    <Col>
+                                        <Button id="collapseAllButton" variant="secondary"
+                                            onClick={() => {
+                                                setStepsKeys([]);
+                                                console.log(`stepsKeys: ${stepsKeys}`);
+                                            }}>
+                                            Collapse All Steps
+                                        </Button>
+                                    </Col>
+                                    <Col>
+                                        <Button id="expandAllButton" variant="secondary"
+                                            onClick={() => {
+                                                setStepsKeys(lenToStrArr(steps));
+                                                console.log(`stepsKeys: ${stepsKeys}`);
+                                            }}>
+                                            Expand All Steps
+                                        </Button>
+                                    </Col>
+                                </Row>
+                            </Col>
+                        </Row>
                     </Form>
                 </Col>
                 <div className="vr p-0 mx-2 d-none d-lg-block" />
@@ -90,7 +130,7 @@ export default function SetupHelper() {
                 <Col id="setupInstructions">
                     <Stack gap={3}>
                         <Accordion
-                            defaultActiveKey={[...Array(steps.length).keys()].map(a => String(a))}
+                            activeKey={stepsKeys}
                             alwaysOpen
                             flush
                         >
