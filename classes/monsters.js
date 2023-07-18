@@ -157,14 +157,11 @@ class MonstersDeck {
     levelTwoMonstersDeck;
     levelThreeMonstersDeck;
     legendaryMonstersDeck;
-    constructor(skellige = false, legendaryHunt = false, wildHunt = false, monsterPack = false) {
+    constructor(legendaryHunt = false, wildHunt = false, monsterPack = false, mages = false) {
         const tempLevelOneMonstersDeck = [...baseLevelOneMonsters];
         const tempLevelTwoMonstersDeck = [...baseLevelTwoMonsters];
         const tempLevelThreeMonstersDeck = [...baseLevelThreeMonsters];
         const tempLegendaryMonstersDeck = [];
-        if (skellige) {
-            tempLevelThreeMonstersDeck.push(new levelThreeMonster("Dagon", "dagon"));
-        }
         if (legendaryHunt && !wildHunt) {
             tempLegendaryMonstersDeck.push(...legendaryHuntLegendaryMonsters);
         }
@@ -175,11 +172,10 @@ class MonstersDeck {
             tempLegendaryMonstersDeck.push(...wildHuntLegendaryMonsters);
         }
         if (monsterPack) {
-            if (skellige) {
-                tempLevelOneMonstersDeck.push(new levelOneMonster("Siren", "siren"));
-            }
-            tempLevelTwoMonstersDeck.push(new levelTwoMonster("Koshchey", "koshchey"));
-            tempLevelThreeMonstersDeck.push(new levelThreeMonster("Kayran", "kayran"));
+            if (mages)
+                tempLevelThreeMonstersDeck.push(new levelThreeMonster("Koshchey", "koshchey"));
+            if (legendaryHunt)
+                tempLegendaryMonstersDeck.push(new legendaryMonster("Kayran", "kayran"));
         }
         this.levelOneMonstersDeck = new dataClasses_1.ReadonlyDeck(tempLevelOneMonstersDeck);
         this.levelTwoMonstersDeck = new dataClasses_1.ReadonlyDeck(tempLevelTwoMonstersDeck);

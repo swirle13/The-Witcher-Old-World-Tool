@@ -235,7 +235,7 @@ function compileSteps(legendaryHunt = false, mages = false, monsterPack = false,
     finalSteps.push(tempElem);
     tempElem = {}, tempArr = [];
     // step Wild Hunt
-    if (numPlayers > 1)
+    if (numPlayers > 1 && wildHunt)
         finalSteps.push("Create a Wild Hunt Movement pool by combining every player's scoring token and the Closed Tavern token. Shuffle these face down.");
     if (monsterTrail)
         finalSteps.push('Draw 3 Location Tokens (1 of each terrain). If a Witcher is in that location, draw again. Place a random, face-down Monster Weakness token matching that terrain type at each location. Shuffle these location tokens back into their stacks.');
