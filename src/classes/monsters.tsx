@@ -288,7 +288,7 @@ export default class MonstersDeck {
         legendaryHunt = false,
         wildHunt = false,
         monsterPack = false,
-        mages = false
+        mountedEredin = false
     ) {
         const tempLevelOneMonstersDeck: levelOneMonster[] = [...baseLevelOneMonsters];
         const tempLevelTwoMonstersDeck: levelTwoMonster[] = [...baseLevelTwoMonsters];
@@ -305,9 +305,11 @@ export default class MonstersDeck {
             tempLegendaryMonstersDeck.push(...wildHuntLegendaryMonsters);
         }
         if (monsterPack) {
-            if (mages) tempLevelThreeMonstersDeck.push(new levelThreeMonster("Koshchey", "koshchey"));
+            tempLevelThreeMonstersDeck.push(new levelThreeMonster("Koshchey", "koshchey"));
             if (legendaryHunt) tempLegendaryMonstersDeck.push(new legendaryMonster("Kayran", "kayran"));
         }
+        if (mountedEredin) tempLevelThreeMonstersDeck.push(new levelThreeMonster("Mounted Eredin", "mountedEredin"));
+
         this.levelOneMonstersDeck = new ReadonlyDeck(tempLevelOneMonstersDeck);
         this.levelTwoMonstersDeck = new ReadonlyDeck(tempLevelTwoMonstersDeck);
         this.levelThreeMonstersDeck = new ReadonlyDeck(tempLevelThreeMonstersDeck);

@@ -10,7 +10,7 @@ export default function MonsterPicker({
 }: {
     HeaderText: string;
 }) {
-    const expansionsNames = ["Legendary Hunt", "Wild Hunt", "Monster Pack", "Mages"];
+    const expansionsNames = ["Legendary Hunt", "Wild Hunt", "Monster Pack", "Mounted Eredin"];
     const [localMonsterDeck, setLocalMonsterDeck] = useState(new MonstersDeck());
     const [displayedToken, setToken] = useState<levelOneMonster | levelTwoMonster | levelThreeMonster>(
         new levelOneMonster(".")
@@ -84,6 +84,21 @@ export default function MonsterPicker({
                         key={name}
                     />
                 ))}
+            </Row>
+            <Row className='justify-content-center p-2 m-4' id="ToggleTooltip">
+                <Col className='mx-3' style={{ maxWidth: "550px" }}>
+                    <strong className="fw-light text-center">Toggle changes</strong>
+                    <ul className='fw-lighter'>
+                        <li>Legendary Hunt: Imperial Golem, Cyclops, Cave Troll, Toad, Frightener, Unseen Elder,
+                            Ice Giant, Gaunter O'Dimm (All Legendary)
+                        </li>
+                        <li>Wild Hunt: Eredin, Nithral, Imlerith, Caranthir (All Legendary)</li>
+                        <li>Monster Pack: Koshchey (Level III), Kayran (Legendary). Siren excluded as it can't be
+                            randomly selected.
+                        </li>
+                        <li>Mounted Eredin: Mounted Eredin (Level III)</li>
+                    </ul>
+                </Col>
             </Row>
         </Container>
     );
