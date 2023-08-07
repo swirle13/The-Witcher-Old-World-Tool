@@ -177,7 +177,7 @@ export function compileSteps(
         if (monsterTrail) tempStr = "and the large Dagon card ";
         if (skellige && !wildHunt) finalSteps.push(`Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus deck and place it ${tempStr}near this track.`);
         // step
-        if (monsterPack) finalSteps.push('Place the Siren miniature on the Dagon location, with its Monster Card nearby.');
+        if (monsterPack && skellige) finalSteps.push('Place the Siren miniature on the Dagon location, with its Monster Card nearby.');
         tempElem = '';
     }
 
