@@ -12,7 +12,9 @@ export default function MonsterPicker({
 }) {
     const expansionsNames = ["Legendary Hunt", "Wild Hunt", "Monster Pack", "Mages"];
     const [localMonsterDeck, setLocalMonsterDeck] = useState(new MonstersDeck());
-    const [displayedToken, setToken] = useState<levelOneMonster | levelTwoMonster | levelThreeMonster>(new levelOneMonster(" "));
+    const [displayedToken, setToken] = useState<levelOneMonster | levelTwoMonster | levelThreeMonster>(
+        new levelOneMonster(".")
+    );
     const [expansions, setExpansions] = useState(new Array(expansionsNames.length).fill(false));
 
     const handleToggleExpansions = (position: number) => {
@@ -35,7 +37,7 @@ export default function MonsterPicker({
         <Container fluid className="mx-auto min-h-screen">
             <PageTitle HeaderText={HeaderText} />
             <Row id='tokensRow' className='py-2 mb-2'>
-                <Col className='d-flex justify-content-center'>
+                <Col className='justify-content-center'>
                     {displayedToken?.tokenImg()}
                 </Col>
             </Row>
@@ -63,10 +65,12 @@ export default function MonsterPicker({
                 </Col>
                 {expansions[0] || expansions[1] ?
                     <Col xs="auto" className='p-1'>
-                        <Button variant="danger" size="lg"
+                        <Button size="lg" variant="custom" style={{
+                            backgroundColor:"#960a0a", color:"#ffffff", /* tint on cursor hover: "#640a0a" */
+                        }}
                             onClick={() => setToken(localMonsterDeck.drawLegendaryMonster())}
                         >
-                            Legendary
+                            {expansions[0] ? "Legendary" : "Wild Hunt"}
                         </Button>
                     </Col>
                     : <></>}

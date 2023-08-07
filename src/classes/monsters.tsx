@@ -74,7 +74,7 @@ abstract class monsterClass {
                         <Image
                             id={`${this.name}IconImage`}
                             src={require(`../img/monsters/level${this.level}Monsters/${this.tokenImgStr}.png`)}
-                            width={150}
+                            height={150}
                             alt={this.name}
                             loading='lazy'
                         />
@@ -96,7 +96,8 @@ abstract class monsterClass {
                         <Image
                             className="object-contain h-48"
                             src={this.miniImgStr}
-                            fluid
+                            height={150}
+                            alt={this.name}
                             loading='lazy'
                         />
                     </Col>
@@ -194,7 +195,7 @@ export class legendaryMonster extends monsterClass implements monsterToken {
                         <Image
                             id={`${this.name}IconImage`}
                             src={require(`../img/monsters/${this.__isWildHunt() ? 'wildHunt' : 'legendaryHunt'}/${this.tokenImgStr}.png`)}
-                            width={150}
+                            height={150}
                             alt={this.name}
                             loading='lazy'
                         />
