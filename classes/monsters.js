@@ -165,12 +165,6 @@ class MonstersDeck {
         if (legendaryHunt && !wildHunt) {
             tempLegendaryMonstersDeck.push(...legendaryHuntLegendaryMonsters);
         }
-        if (wildHunt && !legendaryHunt) {
-            tempLevelOneMonstersDeck.push(new levelOneMonster("Hound", "hound1"));
-            tempLevelTwoMonstersDeck.push(new levelTwoMonster("Hound", "hound2"));
-            tempLevelThreeMonstersDeck.push(new levelThreeMonster("Hound", "hound3"));
-            tempLegendaryMonstersDeck.push(...wildHuntLegendaryMonsters);
-        }
         if (monsterPack) {
             tempLevelThreeMonstersDeck.push(new levelThreeMonster("Koshchey", "koshchey"));
             if (legendaryHunt)
