@@ -298,6 +298,9 @@ export default class MonstersDeck {
         if (legendaryHunt && !wildHunt) {
             tempLegendaryMonstersDeck.push(...legendaryHuntLegendaryMonsters);
         }
+        if (wildHunt && !legendaryHunt) {
+            tempLegendaryMonstersDeck.push(...wildHuntLegendaryMonsters);
+        }
         if (monsterPack) {
             tempLevelThreeMonstersDeck.push(new levelThreeMonster("Koshchey", "koshchey"));
             if (legendaryHunt) tempLegendaryMonstersDeck.push(new legendaryMonster("Kayran", "kayran"));
