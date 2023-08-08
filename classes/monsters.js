@@ -10,10 +10,10 @@ class monsterClass {
     tokenImgStr = "";
     miniImgStr = "";
     tokenImg() {
-        return ((0, jsx_runtime_1.jsxs)(react_bootstrap_1.Container, { id: 'TokenContainer', className: 'mx-auto px-4 py-2', children: [(0, jsx_runtime_1.jsx)(react_bootstrap_1.Row, { className: 'justify-content-center', children: (0, jsx_runtime_1.jsx)(react_bootstrap_1.Col, { xs: 'auto', children: (0, jsx_runtime_1.jsx)(react_bootstrap_1.Image, { id: `${this.name}IconImage`, src: require(`../img/monsters/level${this.level}Monsters/${this.tokenImgStr}.png`), width: 150, alt: this.name, loading: 'lazy' }) }) }), (0, jsx_runtime_1.jsx)(react_bootstrap_1.Row, { className: 'justify-content-center', children: (0, jsx_runtime_1.jsx)(react_bootstrap_1.Col, { children: (0, jsx_runtime_1.jsx)("h2", { className: "text-center", children: this.name }) }) })] }));
+        return ((0, jsx_runtime_1.jsxs)(react_bootstrap_1.Container, { id: 'TokenContainer', className: 'mx-auto px-4 py-2', children: [(0, jsx_runtime_1.jsx)(react_bootstrap_1.Row, { className: 'justify-content-center', children: (0, jsx_runtime_1.jsx)(react_bootstrap_1.Col, { xs: 'auto', children: (0, jsx_runtime_1.jsx)(react_bootstrap_1.Image, { id: `${this.name}IconImage`, src: require(`../img/monsters/level${this.level}Monsters/${this.tokenImgStr}.png`), height: 150, alt: this.name, loading: 'lazy' }) }) }), (0, jsx_runtime_1.jsx)(react_bootstrap_1.Row, { className: 'justify-content-center', children: (0, jsx_runtime_1.jsx)(react_bootstrap_1.Col, { children: (0, jsx_runtime_1.jsx)("h2", { className: "text-center", children: this.name }) }) })] }));
     }
     miniImg() {
-        return ((0, jsx_runtime_1.jsx)(react_bootstrap_1.Container, { fluid: "md", className: 'MiniatureContainer container mx-auto px-4', children: (0, jsx_runtime_1.jsx)(react_bootstrap_1.Row, { xs: 6, md: 4, lg: 2, className: 'd-flex justify-content-center', children: (0, jsx_runtime_1.jsx)(react_bootstrap_1.Col, { xs: 8, md: 4, lg: 2, children: (0, jsx_runtime_1.jsx)(react_bootstrap_1.Image, { className: "object-contain h-48", src: this.miniImgStr, fluid: true, loading: 'lazy' }) }) }) }));
+        return ((0, jsx_runtime_1.jsx)(react_bootstrap_1.Container, { fluid: "md", className: 'MiniatureContainer container mx-auto px-4', children: (0, jsx_runtime_1.jsx)(react_bootstrap_1.Row, { xs: 6, md: 4, lg: 2, className: 'd-flex justify-content-center', children: (0, jsx_runtime_1.jsx)(react_bootstrap_1.Col, { xs: 8, md: 4, lg: 2, children: (0, jsx_runtime_1.jsx)(react_bootstrap_1.Image, { className: "object-contain h-48", src: this.miniImgStr, height: 150, alt: this.name, loading: 'lazy' }) }) }) }));
     }
 }
 class levelOneMonster extends monsterClass {
@@ -87,7 +87,7 @@ class legendaryMonster extends monsterClass {
         return wildHuntNames.includes(this.name);
     }
     tokenImg() {
-        return ((0, jsx_runtime_1.jsxs)(react_bootstrap_1.Container, { id: 'TokenContainer', className: 'mx-auto px-4 py-2', children: [(0, jsx_runtime_1.jsx)(react_bootstrap_1.Row, { className: 'justify-content-center', children: (0, jsx_runtime_1.jsx)(react_bootstrap_1.Col, { xs: 'auto', children: (0, jsx_runtime_1.jsx)(react_bootstrap_1.Image, { id: `${this.name}IconImage`, src: require(`../img/monsters/${this.__isWildHunt() ? 'wildHunt' : 'legendaryHunt'}/${this.tokenImgStr}.png`), width: 150, alt: this.name, loading: 'lazy' }) }) }), (0, jsx_runtime_1.jsx)(react_bootstrap_1.Row, { className: 'justify-content-center', children: (0, jsx_runtime_1.jsx)(react_bootstrap_1.Col, { children: (0, jsx_runtime_1.jsx)("h2", { className: "text-center", children: this.name }) }) })] }));
+        return ((0, jsx_runtime_1.jsxs)(react_bootstrap_1.Container, { id: 'TokenContainer', className: 'mx-auto px-4 py-2', children: [(0, jsx_runtime_1.jsx)(react_bootstrap_1.Row, { className: 'justify-content-center', children: (0, jsx_runtime_1.jsx)(react_bootstrap_1.Col, { xs: 'auto', children: (0, jsx_runtime_1.jsx)(react_bootstrap_1.Image, { id: `${this.name}IconImage`, src: require(`../img/monsters/${this.__isWildHunt() ? 'wildHunt' : 'legendaryHunt'}/${this.tokenImgStr}.png`), height: 150, alt: this.name, loading: 'lazy' }) }) }), (0, jsx_runtime_1.jsx)(react_bootstrap_1.Row, { className: 'justify-content-center', children: (0, jsx_runtime_1.jsx)(react_bootstrap_1.Col, { children: (0, jsx_runtime_1.jsx)("h2", { className: "text-center", children: this.name }) }) })] }));
     }
 }
 exports.legendaryMonster = legendaryMonster;
@@ -157,7 +157,7 @@ class MonstersDeck {
     levelTwoMonstersDeck;
     levelThreeMonstersDeck;
     legendaryMonstersDeck;
-    constructor(legendaryHunt = false, wildHunt = false, monsterPack = false, mages = false) {
+    constructor(legendaryHunt = false, wildHunt = false, monsterPack = false, mountedEredin = false) {
         const tempLevelOneMonstersDeck = [...baseLevelOneMonsters];
         const tempLevelTwoMonstersDeck = [...baseLevelTwoMonsters];
         const tempLevelThreeMonstersDeck = [...baseLevelThreeMonsters];
@@ -172,11 +172,12 @@ class MonstersDeck {
             tempLegendaryMonstersDeck.push(...wildHuntLegendaryMonsters);
         }
         if (monsterPack) {
-            if (mages)
-                tempLevelThreeMonstersDeck.push(new levelThreeMonster("Koshchey", "koshchey"));
+            tempLevelThreeMonstersDeck.push(new levelThreeMonster("Koshchey", "koshchey"));
             if (legendaryHunt)
                 tempLegendaryMonstersDeck.push(new legendaryMonster("Kayran", "kayran"));
         }
+        if (mountedEredin)
+            tempLevelThreeMonstersDeck.push(new levelThreeMonster("Mounted Eredin", "mountedEredin"));
         this.levelOneMonstersDeck = new dataClasses_1.ReadonlyDeck(tempLevelOneMonstersDeck);
         this.levelTwoMonstersDeck = new dataClasses_1.ReadonlyDeck(tempLevelTwoMonstersDeck);
         this.levelThreeMonstersDeck = new dataClasses_1.ReadonlyDeck(tempLevelThreeMonstersDeck);
