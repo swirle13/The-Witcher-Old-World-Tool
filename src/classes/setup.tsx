@@ -53,30 +53,30 @@ export function wildHuntDifficulty(numPlayers: number): Array<string> {
     } else if (numPlayers == 2) {
         ret = [
             "Level II Monster\n28 Shield Tokens",
-            "Level I + Level II Monster\n31 Shield Tokens",
-            "Level I + Level III Monster\n34 Shield Tokens",
-            "Level I + Level III Monster\n37 Shield Tokens",
+            "Level I Monster + Level II Monster\n31 Shield Tokens",
+            "Level I Monster + Level III Monster\n34 Shield Tokens",
+            "Level I Monster + Level III Monster\n37 Shield Tokens",
         ];
     } else if (numPlayers == 3) {
         ret = [
             "Level II Monster\n54 Shield Tokens",
-            "Level I + Level II Monster\n58 Shield Tokens",
-            "Level I + Level III Monster\n62 Shield Tokens",
-            "Level I + Level III Monster\n66 Shield Tokens",
+            "Level I Monster + Level II Monster\n58 Shield Tokens",
+            "Level I Monster + Level III Monster\n62 Shield Tokens",
+            "Level I Monster + Level III Monster\n66 Shield Tokens",
         ];
     } else if (numPlayers == 4) {
         ret = [
             "2 × Level I Monster\n77 Shield Tokens",
-            "Level I + Level III Monster\n82 Shield Tokens",
-            "Level I + Level III Monster\n87 Shield Tokens",
-            "Level I + Level III Monster\n92 Shield Tokens",
+            "Level I Monster + Level III Monster\n82 Shield Tokens",
+            "Level I Monster + Level III Monster\n87 Shield Tokens",
+            "Level I Monster + Level III Monster\n92 Shield Tokens",
         ];
     } else {
         ret = [
             "2 × Level I Monster\n97 Shield Tokens",
-            "Level I + Level III Monster\n106 Shield Tokens",
-            "Level I + Level III Monster\n113 Shield Tokens",
-            "Level I + Level III Monster\n120 Shield Tokens",
+            "Level I Monster + Level III Monster\n106 Shield Tokens",
+            "Level I Monster + Level III Monster\n113 Shield Tokens",
+            "Level I Monster + Level III Monster\n120 Shield Tokens",
         ];
     }
     return ret;
@@ -110,9 +110,8 @@ export function compileSteps(
         finalSteps.push(
             <>
                 Choose the game difficulty on the table below. This determines starting monsters and shields later.
-                <Table bordered hover className='lh-base'>
+                <Table className='lh-base' style={{ tableLayout: 'fixed' }}>
                     <thead>
-                        <th>#</th>
                         <th>Just the Story! <em className='p-0'>(Easy)</em></th>
                         <th>Story and Sword! <em className='p-0'>(Normal)</em></th>
                         <th>Blood and Broken Bones! <em className='p-0'>(Hard)</em></th>
@@ -120,9 +119,8 @@ export function compileSteps(
                     </thead>
                     <tbody>
                         <tr>
-                            <td>{numPlayers}</td>
                             {wildHuntDifficulty(numPlayers).map((text) => (
-                                <td style={{whiteSpace: 'pre-wrap'}}>{text}</td>
+                                <td style={{whiteSpace: 'pre-wrap', borderBottom: 'none'}}>{text}</td>
                             ))}
                         </tr>
                     </tbody>

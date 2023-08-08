@@ -16,7 +16,7 @@ const expansions = ["Legendary Hunt", "Mages", "Monster Pack", "Monster Trail", 
 const expansionsImages = [legendaryHunt, mages, monsterPack, monsterTrail, skellige, adventurePack, wildHunt];
 
 /**
- * Produces an array of strings for 0 to obj.length, e.g. my_arr.length = 3, produces ['0', '1', '2'].
+ * Produces an array of strings, starting at '0' through to 'obj.length', e.g. `my_arr.length = 3`, produces `['0', '1', '2']`.
  * @param obj Array of strings
  * @returns Array of strings of the stringified length of obj
  */
@@ -30,14 +30,19 @@ export default function SetupHelper() {
         new Array(expansions.length).fill(false)
     );
     const [steps, setSteps] = useState<Array<string>>(compileSteps());
-    const [stepsKeys, setStepsKeys] = useState<Array<string>>(lenToStrArr(steps));
+    const [stepsKeys, setStepsKeys] = useState<Array<string>>(steps as string[]);
+    const handleSelect = (eventKey: AccordionEventKey) => setStepsKeys(eventKey as string[]);
+
     const handleExpansionOnChange = (position: number) => {
-        const updatedExpansionsState = expansionsState.map((item, index) => index === position ? !item : item);
+        let updatedExpansionsState = expansionsState.map((item, index) => index === position ? !item : item);
         // if Wild Hunt is toggled
         if (position === 6) {
-            updatedExpansionsState[0] = !updatedExpansionsState[0];  // Legendary Hunt
-            updatedExpansionsState[2] = !updatedExpansionsState[2];  // Monster Pack
-            updatedExpansionsState[5] = !updatedExpansionsState[5];  // Adventure Pack
+            // Legendary Hunt
+            if (updatedExpansionsState[0]) updatedExpansionsState = updatedExpansionsState.map((item, index) => index === 0 ? !item : item);
+            // Monster Pack
+            if (updatedExpansionsState[2]) updatedExpansionsState = updatedExpansionsState.map((item, index) => index === 2 ? !item : item);
+            // Adventure Pack
+            if (updatedExpansionsState[5]) updatedExpansionsState = updatedExpansionsState.map((item, index) => index === 5 ? !item : item);
         }
         setExpansionsState(updatedExpansionsState);
     };
@@ -46,11 +51,14 @@ export default function SetupHelper() {
         const tempArr = [...expansionsState, players] as [boolean, boolean, boolean, boolean, boolean, boolean, boolean, number];
         setSteps(compileSteps(...tempArr));
     }, [players, expansionsState]);
-    
+
     useEffect(() => {
         setStepsKeys(lenToStrArr(steps));
+    }, [steps]);
+
+    useEffect(() => {
         console.log(`stepsKeys: ${stepsKeys}`);
-    }, [steps])
+    });
 
     return (
         <Container>
@@ -88,6 +96,7 @@ export default function SetupHelper() {
                                             <FormCheck
                                                 name="group2"
                                                 id={exp}
+                                                checked={expansionsState[index]}
                                                 label={<Image src={expansionsImages[index]} width={150} />}
                                                 key={exp}
                                                 onChange={() => handleExpansionOnChange(index)}
@@ -99,25 +108,19 @@ export default function SetupHelper() {
                                 </Row>
                             </Col>
                         </Row>
-                        <Row className='justify-content-center' lg={1}>
+                        <Row className='justify-content-center mt-4' lg={1}>
                             <Col id="collapseButtonsCol">
-                                <Row className='text-center justify-content-center'>
+                                <Row className='text-center justify-content-center' xs="auto">
                                     <Col>
-                                        <Button id="collapseAllButton" variant="secondary"
-                                            onClick={() => {
-                                                setStepsKeys([]);
-                                                console.log(`stepsKeys: ${stepsKeys}`);
-                                            }}>
-                                            Collapse All Steps
+                                        <Button id="collapseAllButton" variant="outline-secondary"
+                                            onClick={() => { setStepsKeys([]); }}>
+                                            Collapse All
                                         </Button>
                                     </Col>
                                     <Col>
-                                        <Button id="expandAllButton" variant="secondary"
-                                            onClick={() => {
-                                                setStepsKeys(lenToStrArr(steps));
-                                                console.log(`stepsKeys: ${stepsKeys}`);
-                                            }}>
-                                            Expand All Steps
+                                        <Button id="expandAllButton" variant="outline-secondary"
+                                            onClick={() => { setStepsKeys(lenToStrArr(steps)); }}>
+                                            Expand All
                                         </Button>
                                     </Col>
                                 </Row>
@@ -129,11 +132,7 @@ export default function SetupHelper() {
                 <div className="d-lg-none my-3 px-5"><hr className='my-0' /></div>
                 <Col id="setupInstructions">
                     <Stack gap={3}>
-                        <Accordion
-                            activeKey={stepsKeys}
-                            alwaysOpen
-                            flush
-                        >
+                        <Accordion alwaysOpen flush activeKey={stepsKeys} onSelect={handleSelect}>
                             {steps.map((body, index) => (
                                 <Accordion.Item eventKey={`${index}`}>
                                     <Accordion.Header>
