@@ -1,14 +1,14 @@
 import { Col, Container, Row } from "react-bootstrap";
 
-export default function Footer() {
+export default function Footer({ t }) {
     return (
-        <footer className='footer bg-body-tertiary mt-auto' style={{padding: '2rem'}}>
+        <footer className='footer bg-body-tertiary mt-auto' style={{ padding: '2rem' }}>
             <Container fluid className='text-md-left'>
                 <Row className='footerLinks'>
                     <Col className='col-md-6 mt-md-0 mt-3'>
                         <h5 className="text-uppercase">About me</h5>
                         <p>
-                            I am a one-man team and I work on this unofficial fan website in my spare time. If you 
+                            I am a one-man team and I work on this unofficial fan website in my spare time. If you
                             appreciate the work I do, consider buying me a coffee!
                         </p>
                         <p>
@@ -47,7 +47,7 @@ export default function Footer() {
                     </Col>
                 </Row>
                 <Row className='footerBottom text-center py-3'>
-                    
+
                 </Row>
             </Container>
         </footer>

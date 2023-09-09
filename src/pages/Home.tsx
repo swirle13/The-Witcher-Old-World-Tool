@@ -1,47 +1,47 @@
 import Container from 'react-bootstrap/Container';
 import { Button, Card, Col, Row } from 'react-bootstrap';
 
-const linkedPages = [
-    {
-        name: "Setup Helper",
-        link: "#/setupHelper",
-        desc: "A dynamically updated set of consolidated instructions for any expansion and player combination.",
-        btn: "Wind's howling.."
-    },
-    {
-        name: "Location Tokens",
-        link: "#/locationTokens",
-        desc: "Easily draw any terrain token type. Always randomized. No shuffling of cardboard tokens.",
-        btn: "Explore the Continent"
-    },
-    {
-        name: "Monster Roller",
-        link: "#/monsterRoller",
-        desc: "Tired of shuffling your tokens, monster cards, and hunting down the mini?",
-        btn: "Damn, you're ugly"
-    },
-    {
-        name: "Community Links",
-        link: "#/communityLinks",
-        desc: "A collection of neat and awesome links from the community. Always growing!",
-        btn: "Show me"
-    },
-    {
-        name: "Inventory Checker",
-        link: "#/inventoryChecker",
-        desc: "To help those just receiving their The Witcher: Old World game, here's an in-depth guide on what " +
-        "you (hopefully) received.",
-        btn: "Medallion's humming.."
-    },
-    {
-        name: "Lost Mount",
-        link: "#/lostMount",
-        desc: "A more specific variant of the Location Token page with two tokens to choose from.",
-        btn: "Come, Roach"
-    },
-]
 
-export default function Home(): JSX.Element {
+export default function Home({ t }): JSX.Element {
+    const linkedPages = [
+        {
+            name: t("Setup Helper"),
+            link: "#/setupHelper",
+            desc: t("A dynamically updated set of consolidated instructions for any expansion and player combination."),
+            btn: t("Wind's howling..")
+        },
+        {
+            name: t("Location Tokens"),
+            link: "#/locationTokens",
+            desc: t("Easily draw any terrain token type. Always randomized. No shuffling of cardboard tokens."),
+            btn: t("Explore the Continent")
+        },
+        {
+            name: t("Monster Roller"),
+            link: "#/monsterRoller",
+            desc: t("Tired of shuffling your tokens, monster cards, and hunting down the mini?"),
+            btn: t("Damn, you're ugly")
+        },
+        {
+            name: t("Community Links"),
+            link: "#/communityLinks",
+            desc: t("A collection of neat and awesome links from the community. Always growing!"),
+            btn: t("Show me")
+        },
+        {
+            name: t("Inventory Checker"),
+            link: "#/inventoryChecker",
+            desc: t("To help those just receiving their The Witcher: Old World game, here's an in-depth guide on what "+
+                "you (hopefully) received."),
+            btn: t("Medallion's humming..")
+        },
+        {
+            name: t("Lost Mount"),
+            link: "#/lostMount",
+            desc: t("A more specific variant of the Location Token page with two tokens to choose from."),
+            btn: t("Come, Roach")
+        },
+    ];
     /*
         Breakpoints
         ============================

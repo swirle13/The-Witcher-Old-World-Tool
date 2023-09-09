@@ -4,10 +4,12 @@ export default function PageTitle({
     HeaderText = "Page Title",
     HeaderUnderline = true,
     ConditionalRender = "",
+    t
 }: {
     HeaderText: string;
     HeaderUnderline?: boolean;
     ConditionalRender?: string;
+    t
 }) {
     return (
         <Row className='py-2 mt-4 justify-content-center' id="headerRow" xs={1}>

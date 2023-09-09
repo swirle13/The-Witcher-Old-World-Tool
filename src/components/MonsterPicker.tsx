@@ -6,9 +6,11 @@ import "../css/MonsterPicker.css";
 
 
 export default function MonsterPicker({
-    HeaderText = "Randomly draw a token"
+    HeaderText = "Randomly draw a token",
+    t
 }: {
     HeaderText: string;
+    t;
 }) {
     const expansionsNames = ["Legendary Hunt", "Wild Hunt", "Monster Pack", "Mounted Eredin"];
     const [localMonsterDeck, setLocalMonsterDeck] = useState(new MonstersDeck());
@@ -35,7 +37,7 @@ export default function MonsterPicker({
 
     return (
         <Container fluid className="mx-auto min-h-screen">
-            <PageTitle HeaderText={HeaderText} />
+            <PageTitle HeaderText={HeaderText} t={t}/>
             <Row id='tokensRow' className='py-2 mb-2'>
                 <Col className='justify-content-center'>
                     {displayedToken?.tokenImg()}

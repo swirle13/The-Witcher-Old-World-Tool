@@ -24,7 +24,7 @@ function lenToStrArr(obj: Array<string>): string[] {
     return [...Array(obj.length).keys()].map(a => String(a));
 }
 
-export default function SetupHelper() {
+export default function SetupHelper({ t }) {
     const [players, setPlayers] = useState<number>(1);
     const [expansionsState, setExpansionsState] = useState<Array<boolean>>(
         new Array(expansions.length).fill(false)
@@ -62,13 +62,13 @@ export default function SetupHelper() {
 
     return (
         <Container>
-            <PageTitle HeaderText='Setup Helper' ConditionalRender='d-lg-none' />
+            <PageTitle HeaderText={t('Setup Helper')} ConditionalRender='d-lg-none' t={t} />
             <Row className="gap-2 mb-4 pb-4">
                 <Col id="setupConfiguration" lg="4">
                     <Form>
                         <Row className='justify-content-center' lg={1}>
                             <Col id="playersCol">
-                                <h4 className='text-center mb-3'>Players</h4>
+                                <h4 className='text-center mb-3'>{t('Players')}</h4>
                                 <div key="inlinePlayers" className="mb-3 pl-1 text-center">
                                     {[1, 2, 3, 4, 5].map((num) => (
                                         <FormCheck
@@ -89,7 +89,7 @@ export default function SetupHelper() {
                         </Row>
                         <Row className='justify-content-center mb-3' lg={1}>
                             <Col id="expansionsCol">
-                                <h4 className='text-center mb-3'>Expansions</h4>
+                                <h4 className='text-center mb-3'>{t('Expansions')}</h4>
                                 <Row key="inlineExpansions" className="text-center justify-content-center" xl={1}>
                                     {expansions.map((exp, index) => (
                                         <Col className={"d-flex justify-content-center " + (index === 6 ? '' : 'mb-2')} xs="auto">

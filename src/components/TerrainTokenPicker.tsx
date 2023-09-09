@@ -9,13 +9,20 @@ import { Form } from 'react-bootstrap';
 
 
 export default function TerrainTokenPicker({
-    HeaderText = "Draw a token"
+    HeaderText = "Draw a token",
+    NumTokens = 1,
+    t
 }: {
-    HeaderText: string;
+    HeaderText?: string;
+    NumTokens?: number;
+    t;
 }) {
     const [skellige, setSkellige] = useState(false);
     const [localTerrainDeck, setLocalTerrainDeck] = useState(new TerrainTokenDeck());
     const [displayedToken, setToken] = useState<MountainToken | ForestToken | WaterToken>(new ForestToken());
+    if (NumTokens > 1) {
+        print()
+    }
 
     const handleSkellige = () => {
         setSkellige(!skellige);
@@ -24,7 +31,7 @@ export default function TerrainTokenPicker({
 
     return (
         <Container fluid className="mx-auto min-h-screen">
-            <PageTitle HeaderText={HeaderText} />
+            <PageTitle HeaderText={HeaderText} t={t}/>
             <Row id='tokensRow' className='p-2 mb-2'>
                 <Col className='d-flex justify-content-center'>
                     {displayedToken?.img()}
