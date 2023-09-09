@@ -114,13 +114,13 @@ export default function SetupHelper({ t }) {
                                     <Col>
                                         <Button id="collapseAllButton" variant="outline-secondary"
                                             onClick={() => { setStepsKeys([]); }}>
-                                            Collapse All
+                                            {t('Collapse All')}
                                         </Button>
                                     </Col>
                                     <Col>
                                         <Button id="expandAllButton" variant="outline-secondary"
                                             onClick={() => { setStepsKeys(lenToStrArr(steps)); }}>
-                                            Expand All
+                                            {t('Expand All')}
                                         </Button>
                                     </Col>
                                 </Row>
