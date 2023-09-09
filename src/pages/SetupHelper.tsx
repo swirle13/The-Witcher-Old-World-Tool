@@ -136,7 +136,7 @@ export default function SetupHelper({ t }) {
                             {steps.map((body, index) => (
                                 <Accordion.Item eventKey={`${index}`}>
                                     <Accordion.Header>
-                                        Step {index + 1}
+                                        {t('Step')} {index + 1}
                                     </Accordion.Header>
                                     <Accordion.Body className='lh-lg'>{body}</Accordion.Body>
                                 </Accordion.Item>
