@@ -35,14 +35,17 @@ const terrains_1 = __importStar(require("../classes/terrains"));
 const react_1 = require("react");
 const PageTitle_1 = __importDefault(require("./PageTitle"));
 const react_bootstrap_1 = require("react-bootstrap");
-function TerrainTokenPicker({ HeaderText = "Draw a token" }) {
+function TerrainTokenPicker({ HeaderText = "Draw a token", NumTokens = 1, t }) {
     const [skellige, setSkellige] = (0, react_1.useState)(false);
     const [localTerrainDeck, setLocalTerrainDeck] = (0, react_1.useState)(new terrains_1.default());
     const [displayedToken, setToken] = (0, react_1.useState)(new terrains_1.ForestToken());
+    if (NumTokens > 1) {
+        print();
+    }
     const handleSkellige = () => {
         setSkellige(!skellige);
         setLocalTerrainDeck(new terrains_1.default(!skellige));
     };
-    return ((0, jsx_runtime_1.jsxs)(Container_1.default, { fluid: true, className: "mx-auto min-h-screen", children: [(0, jsx_runtime_1.jsx)(PageTitle_1.default, { HeaderText: HeaderText }), (0, jsx_runtime_1.jsx)(Row_1.default, { id: 'tokensRow', className: 'p-2 mb-2', children: (0, jsx_runtime_1.jsx)(Col_1.default, { className: 'd-flex justify-content-center', children: displayedToken?.img() }) }), (0, jsx_runtime_1.jsxs)(Row_1.default, { id: 'TerrainTokenButtons', className: 'justify-content-center p-2 mb-2', children: [(0, jsx_runtime_1.jsx)(Col_1.default, { xs: "auto", className: 'p-1', children: (0, jsx_runtime_1.jsx)(Button_1.default, { variant: "secondary", size: "lg", className: 'px-1', onClick: () => setToken(localTerrainDeck.drawMountainToken()), children: "Mountain" }) }), (0, jsx_runtime_1.jsx)(Col_1.default, { xs: "auto", className: 'p-1', children: (0, jsx_runtime_1.jsx)(Button_1.default, { variant: "success", size: "lg", onClick: () => setToken(localTerrainDeck.drawForestToken()), children: "Forest" }) }), (0, jsx_runtime_1.jsx)(Col_1.default, { xs: "auto", className: 'p-1', children: (0, jsx_runtime_1.jsx)(Button_1.default, { variant: "primary", size: "lg", className: 'px-3', onClick: () => setToken(localTerrainDeck.drawWaterToken()), children: "Water" }) })] }), (0, jsx_runtime_1.jsx)(Row_1.default, { id: 'skelligeToggleRow', className: 'justify-content-center p-2', children: (0, jsx_runtime_1.jsx)(react_bootstrap_1.Form.Switch, { checked: skellige, onChange: () => handleSkellige(), label: "Skellige" }) })] }));
+    return ((0, jsx_runtime_1.jsxs)(Container_1.default, { fluid: true, className: "mx-auto min-h-screen", children: [(0, jsx_runtime_1.jsx)(PageTitle_1.default, { HeaderText: HeaderText, t: t }), (0, jsx_runtime_1.jsx)(Row_1.default, { id: 'tokensRow', className: 'p-2 mb-2', children: (0, jsx_runtime_1.jsx)(Col_1.default, { className: 'd-flex justify-content-center', children: displayedToken?.img() }) }), (0, jsx_runtime_1.jsxs)(Row_1.default, { id: 'TerrainTokenButtons', className: 'justify-content-center p-2 mb-2', children: [(0, jsx_runtime_1.jsx)(Col_1.default, { xs: "auto", className: 'p-1', children: (0, jsx_runtime_1.jsx)(Button_1.default, { variant: "secondary", size: "lg", className: 'px-1', onClick: () => setToken(localTerrainDeck.drawMountainToken()), children: "Mountain" }) }), (0, jsx_runtime_1.jsx)(Col_1.default, { xs: "auto", className: 'p-1', children: (0, jsx_runtime_1.jsx)(Button_1.default, { variant: "success", size: "lg", onClick: () => setToken(localTerrainDeck.drawForestToken()), children: "Forest" }) }), (0, jsx_runtime_1.jsx)(Col_1.default, { xs: "auto", className: 'p-1', children: (0, jsx_runtime_1.jsx)(Button_1.default, { variant: "primary", size: "lg", className: 'px-3', onClick: () => setToken(localTerrainDeck.drawWaterToken()), children: "Water" }) })] }), (0, jsx_runtime_1.jsx)(Row_1.default, { id: 'skelligeToggleRow', className: 'justify-content-center p-2', children: (0, jsx_runtime_1.jsx)(react_bootstrap_1.Form.Switch, { checked: skellige, onChange: () => handleSkellige(), label: "Skellige" }) })] }));
 }
 exports.default = TerrainTokenPicker;
