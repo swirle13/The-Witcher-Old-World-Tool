@@ -42,21 +42,21 @@ export default function TerrainTokenPicker({
                     <Button variant="secondary" size="lg" className='px-1'
                         onClick={() => setToken(localTerrainDeck.drawMountainToken())}
                     >
-                        Mountain
+                        {t('Mountain')}
                     </Button>
                 </Col>
                 <Col xs="auto" className='p-1'>
                     <Button variant="success" size="lg"
                         onClick={() => setToken(localTerrainDeck.drawForestToken())}
                     >
-                        Forest
+                        {t('Forest')}
                     </Button>
                 </Col>
                 <Col xs="auto" className='p-1'>
                     <Button variant="primary" size="lg" className='px-3'
                         onClick={() => setToken(localTerrainDeck.drawWaterToken())}
                     >
-                        Water
+                        {t('Water')}
                     </Button>
                 </Col>
             </Row>

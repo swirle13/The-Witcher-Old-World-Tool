@@ -41,10 +41,10 @@ export default function CommunityLinks({ t }) {
             link: "https://thingiverse.com/thing:6078120",
         },
     ];
-    
+
     return (
         <Container id="CommunityLinksBaseContainer">
-            <PageTitle HeaderText='Community Links' t={t}/>
+            <PageTitle HeaderText={t('Community Links')} t={t}/>
             <Row xs={1} md={2} lg={4} className="g-4 p-2">
                 {links.map((_, idx) => (
                     <Col key={idx}>

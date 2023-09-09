@@ -48,21 +48,21 @@ export default function MonsterPicker({
                     <Button variant="secondary" size="lg"
                         onClick={() => setToken(localMonsterDeck.drawLevelOneMonster())}
                     >
-                        Level I
+                        {t('Level') + ' I'}
                     </Button>
                 </Col>
                 <Col xs="auto" className='p-1'>
                     <Button variant="warning" size="lg"
                         onClick={() => setToken(localMonsterDeck.drawLevelTwoMonster())}
                     >
-                        Level II
+                        {t('Level') + ' II'}
                     </Button>
                 </Col>
                 <Col xs="auto" className='p-1'>
                     <Button variant="danger" size="lg"
                         onClick={() => setToken(localMonsterDeck.drawLevelThreeMonster())}
                     >
-                        Level III
+                        {t('Level') + ' III'}
                     </Button>
                 </Col>
                 {expansions[0] || expansions[1] ?
