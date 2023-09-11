@@ -1,35 +1,38 @@
 import { ReactElement } from 'react';
 import { Table } from 'react-bootstrap';
 
-export function startingResources(numPlayers: number): ReactElement<any, any> {
+export function startingResources(numPlayers: number, t): ReactElement {
     let ret: Array<string> = [""];
+    const p = t("player")
+    const c = t("cards")
+    const g = t("gold")
     if (numPlayers == 1) {
-        ret = ["player 1: 5 cards, 3 gold"];
+        ret = [`${p} 1: 5 ${c}, 3 ${g}`];
     } else if (numPlayers == 2) {
         ret = [
-            "player 1: 3 cards, 2 gold",
-            "player 2: 5 cards, 4 gold"
+            `${p} 1: 3 ${c}, 2 ${g}`,
+            `${p} 2: 5 ${c}, 4 ${g}`
         ];
     } else if (numPlayers == 3) {
         ret = [
-            "player 1: 3 cards, 2 gold",
-            "player 2: 4 cards, 4 gold",
-            "player 3: 5 cards, 6 gold"
+            `${p} 1: 3 ${c}, 2 ${g}`,
+            `${p} 2: 4 ${c}, 4 ${g}`,
+            `${p} 3: 5 ${c}, 6 ${g}`
         ];
     } else if (numPlayers == 4) {
         ret = [
-            "player 1: 2 cards, 4 gold",
-            "player 2: 3 cards, 5 gold",
-            "player 3: 4 cards, 6 gold",
-            "player 4: 5 cards, 7 gold"
+            `${p} 1: 2 ${c}, 4 ${g}`,
+            `${p} 2: 3 ${c}, 5 ${g}`,
+            `${p} 3: 4 ${c}, 6 ${g}`,
+            `${p} 4: 5 ${c}, 7 ${g}`
         ];
     } else {
         ret = [
-            "player 1: 2 cards, 5 gold",
-            "player 2: 3 cards, 5 gold",
-            "player 3: 4 cards, 5 gold",
-            "player 4: 4 cards, 7 gold",
-            "player 5: 5 cards, 7 gold"
+            `${p} 1: 2 ${c}, 5 ${g}`,
+            `${p} 2: 3 ${c}, 5 ${g}`,
+            `${p} 3: 4 ${c}, 5 ${g}`,
+            `${p} 4: 4 ${c}, 7 ${g}`,
+            `${p} 5: 5 ${c}, 7 ${g}`
         ];
     }
     return (
@@ -41,7 +44,7 @@ export function startingResources(numPlayers: number): ReactElement<any, any> {
     );
 }
 
-export function wildHuntDifficulty(numPlayers: number): Array<string> {
+export function wildHuntDifficulty(numPlayers: number, t): Array<string> {
     let ret: Array<string> = [""];
     if (numPlayers == 1) {
         ret = [
@@ -83,6 +86,7 @@ export function wildHuntDifficulty(numPlayers: number): Array<string> {
 }
 
 export function compileSteps(
+    t,
     legendaryHunt = false,
     mages = false,
     monsterPack = false,
@@ -119,7 +123,7 @@ export function compileSteps(
                     </thead>
                     <tbody>
                         <tr>
-                            {wildHuntDifficulty(numPlayers).map((text) => (
+                            {wildHuntDifficulty(numPlayers, t).map((text) => (
                                 <td style={{whiteSpace: 'pre-wrap', borderBottom: 'none'}}>{text}</td>
                             ))}
                         </tr>
@@ -267,7 +271,7 @@ export function compileSteps(
     if (wildHunt) {
         tempArr.push('Draw 5 cards and take 3 Gold.');
     } else {
-        tempArr.push(<p>Draw the following cards and gold based on player position: {startingResources(numPlayers)}</p>);
+        tempArr.push(<p>Draw the following cards and gold based on player position: {startingResources(numPlayers, t)}</p>);
     }
     tempElem = (
         <div>

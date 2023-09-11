@@ -29,7 +29,7 @@ export default function SetupHelper({ t }) {
     const [expansionsState, setExpansionsState] = useState<Array<boolean>>(
         new Array(expansions.length).fill(false)
     );
-    const [steps, setSteps] = useState<Array<string>>(compileSteps());
+    const [steps, setSteps] = useState<Array<string>>(compileSteps(t));
     const [stepsKeys, setStepsKeys] = useState<Array<string>>(steps as string[]);
     const handleSelect = (eventKey: AccordionEventKey) => setStepsKeys(eventKey as string[]);
 
@@ -49,8 +49,8 @@ export default function SetupHelper({ t }) {
 
     useEffect(() => {
         const tempArr = [...expansionsState, players] as [boolean, boolean, boolean, boolean, boolean, boolean, boolean, number];
-        setSteps(compileSteps(...tempArr));
-    }, [players, expansionsState]);
+        setSteps(compileSteps(t, ...tempArr));
+    }, [players, expansionsState, t]);
 
     useEffect(() => {
         setStepsKeys(lenToStrArr(steps));
