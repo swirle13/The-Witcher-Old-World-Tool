@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-import { RouterProvider, RouterProviderProps, createHashRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 import Home from '../pages/Home';
 import ErrorPage from '../pages/ErrorPage';
 import LostMount from '../pages/LostMount';
@@ -15,7 +15,6 @@ import { useTranslation } from 'react-i18next';
 
 export default function App() {
     const { t, i18n } = useTranslation();
-    // hashRouter vs browserRouter https://stackoverflow.com/a/74149347/6811686
     const router = createHashRouter([
         {
             path: "/",

@@ -31,8 +31,7 @@ export default function Home({ t }): JSX.Element {
         {
             name: t("Inventory Checker"),
             link: "#/inventoryChecker",
-            desc: t("To help those just receiving their The Witcher: Old World game, here's an in-depth guide on what "+
-                "you (hopefully) received."),
+            desc: t("To help those just receiving their The Witcher: Old World game, here's an in-depth guide on what you (hopefully) received."),
             btn: t("Medallion's humming..")
         },
         {

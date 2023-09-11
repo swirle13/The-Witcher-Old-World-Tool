@@ -51,13 +51,14 @@ List which packs of the game are mutually exclusive
 Decks:
     * Monster Trail weakness tokens
 */
+
 interface monsterToken {
     readonly name: string;
     readonly level: number;
     readonly tokenImgStr: string;
     readonly tokenBackImgStr: string;
     readonly miniImgStr: string;
-    tokenImg(): React.ReactNode;
+    tokenImg(t): React.ReactNode;
     miniImg(): React.ReactNode;
 }
 
@@ -66,7 +67,7 @@ abstract class monsterClass {
     readonly level: number = 1;
     readonly tokenImgStr: string = "";
     readonly miniImgStr: string = "";
-    tokenImg(): React.ReactNode {
+    tokenImg(t): React.ReactNode {
         return (
             <Container id='TokenContainer' className='mx-auto px-4 py-2'>
                 <Row className='justify-content-center'>
@@ -82,7 +83,7 @@ abstract class monsterClass {
                 </Row>
                 <Row className='justify-content-center'>
                     <Col>
-                        <h2 className="text-center">{this.name}</h2>
+                        <h2 className="text-center">{t(this.name)}</h2>
                     </Col>
                 </Row>
             </Container>
@@ -187,14 +188,17 @@ export class legendaryMonster extends monsterClass implements monsterToken {
         return wildHuntNames.includes(this.name);
     }
 
-    tokenImg(): React.ReactNode {
+    tokenImg({t}): React.ReactNode {
         return (
             <Container id='TokenContainer' className='mx-auto px-4 py-2'>
                 <Row className='justify-content-center'>
                     <Col xs='auto'>
                         <Image
                             id={`${this.name}IconImage`}
-                            src={require(`../img/monsters/${this.__isWildHunt() ? 'wildHunt' : 'legendaryHunt'}/${this.tokenImgStr}.png`)}
+                            src={require(
+                                `../img/monsters/${this.__isWildHunt() ?
+                                    'wildHunt' : 'legendaryHunt'}/${this.tokenImgStr}.png`
+                            )}
                             height={150}
                             alt={this.name}
                             loading='lazy'
@@ -203,7 +207,7 @@ export class legendaryMonster extends monsterClass implements monsterToken {
                 </Row>
                 <Row className='justify-content-center'>
                     <Col>
-                        <h2 className="text-center">{this.name}</h2>
+                        <h2 className="text-center">{t(this.name)}</h2>
                     </Col>
                 </Row>
             </Container>
@@ -288,7 +292,7 @@ export default class MonstersDeck {
         legendaryHunt = false,
         wildHunt = false,
         monsterPack = false,
-        mountedEredin = false
+        mountedEredin = false,
     ) {
         const tempLevelOneMonstersDeck: levelOneMonster[] = [...baseLevelOneMonsters];
         const tempLevelTwoMonstersDeck: levelTwoMonster[] = [...baseLevelTwoMonsters];

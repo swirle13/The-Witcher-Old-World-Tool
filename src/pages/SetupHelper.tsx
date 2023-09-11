@@ -144,10 +144,7 @@ export default function SetupHelper({ t }) {
                         </Accordion>
                         <p className="fw-lighter">
                             Credit to <a href='https://boardgamegeek.com/user/pkitty'>pkitty</a> from BoardGameGeek
-                            Forums for their work on <a
-                                href='https://boardgamegeek.com/filepage/254182/witcher-old-world-setup-summary-combined'>
-                                Witcher: Old World - Setup Summary (combined)
-                            </a> which provided the foundation for this page.
+                            Forums for their work on <a href='https://boardgamegeek.com/filepage/254182/witcher-old-world-setup-summary-combined'>Witcher: Old World - Setup Summary (combined)</a> which provided the foundation for this page.
                         </p>
                     </Stack>
                 </Col>

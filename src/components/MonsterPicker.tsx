@@ -40,7 +40,7 @@ export default function MonsterPicker({
             <PageTitle HeaderText={HeaderText} t={t}/>
             <Row id='tokensRow' className='py-2 mb-2'>
                 <Col className='justify-content-center'>
-                    {displayedToken?.tokenImg()}
+                    {displayedToken?.tokenImg(t)}
                 </Col>
             </Row>
             <Row id='MonsterButtons' className='justify-content-center px-1 py-2 mb-4'>
@@ -82,23 +82,20 @@ export default function MonsterPicker({
                     <Form.Switch
                         checked={expansions[index]}
                         onChange={() => handleToggleExpansions(index)}
-                        label={name}
+                        label={t("name")}
                         key={name}
                     />
                 ))}
             </Row>
             <Row className='justify-content-center p-2 m-4' id="ToggleTooltip">
                 <Col className='mx-3' style={{ maxWidth: "550px" }}>
-                    <strong className="fw-light text-center">Toggle changes</strong>
+                    <strong className="fw-light text-center">{t("Toggle changes")}</strong>
                     <ul className='fw-lighter'>
-                        <li>Legendary Hunt: Imperial Golem, Cyclops, Cave Troll, Toad, Frightener, Unseen Elder,
-                            Ice Giant, Gaunter O'Dimm (All Legendary)
+                        <li>{t("Legendary Hunt")}: {t("Imperial Golem")}, {t("Cyclops")}, {t("Cave Troll")}, {t("Toad")}, {t("Frightener")}, {t("Unseen Elder")}, {t("Ice Giant")}, {t("Gaunter O'Dimm")} ({t("All Legendary")})</li>
+                        <li>{t("Wild Hunt")}: {t("Eredin")}, {t("Nithral")}, {t("Imlerith")}, {t("Caranthir")} ({t("All Legendary")})</li>
+                        <li>{t("Monster Pack")}: {t("Koshchey")} ({t("Level")} III), {t("Kayran")} ({t("Legendary")}). {t("Siren")} {t("Siren excluded as it can't be randomly selected")}.
                         </li>
-                        <li>Wild Hunt: Eredin, Nithral, Imlerith, Caranthir (All Legendary)</li>
-                        <li>Monster Pack: Koshchey (Level III), Kayran (Legendary). Siren excluded as it can't be
-                            randomly selected.
-                        </li>
-                        <li>Mounted Eredin: Mounted Eredin (Level III)</li>
+                        <li>{t("Mounted Eredin")}: {t("Mounted Eredin")} ({t("Level")} III)</li>
                     </ul>
                 </Col>
             </Row>
