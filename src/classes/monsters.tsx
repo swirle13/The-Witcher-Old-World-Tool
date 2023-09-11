@@ -188,7 +188,7 @@ export class legendaryMonster extends monsterClass implements monsterToken {
         return wildHuntNames.includes(this.name);
     }
 
-    tokenImg({t}): React.ReactNode {
+    tokenImg(t): React.ReactNode {
         return (
             <Container id='TokenContainer' className='mx-auto px-4 py-2'>
                 <Row className='justify-content-center'>

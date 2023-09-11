@@ -72,7 +72,7 @@ export default function MonsterPicker({
                         }}
                             onClick={() => setToken(localMonsterDeck.drawLegendaryMonster())}
                         >
-                            {expansions[0] ? "Legendary" : "Wild Hunt"}
+                            {expansions[0] ? t("Legendary") : t("Wild Hunt")}
                         </Button>
                     </Col>
                     : <></>}
@@ -82,7 +82,7 @@ export default function MonsterPicker({
                     <Form.Switch
                         checked={expansions[index]}
                         onChange={() => handleToggleExpansions(index)}
-                        label={t("name")}
+                        label={t(name)}
                         key={name}
                     />
                 ))}
