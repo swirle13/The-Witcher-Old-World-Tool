@@ -1,7 +1,7 @@
 {
     "player": "player",
-    "cards": "",
-    "gold": "",
+    "cards": "cards",
+    "gold": "cards",
     "Level": "Level",
     "Legendary": "Legendary",
     "Wild Hunt": "Wild Hunt",
@@ -26,8 +26,10 @@
     "Siren": "Siren",
     "Siren excluded as it can't be randomly selected": "Siren excluded as it can't be randomly selected",
     "Mounted Eredin": "Mounted Eredin",
+    "The Witcher": "The Witcher",
+    "The Witcher Old World": "The Witcher: Old World",
+    "The Witcher Old World Helper": "The Witcher: Old World Helper",
     "Old World Helper": "Old World Helper",
-    "The Witcher: Old World Helper": "The Witcher: Old World Helper",
     "Community Links": "Community Links",
     "Gameplay Tools": "Gameplay Tools",
     "Setup Helper": "Setup Helper",
@@ -40,9 +42,9 @@
     "Mountain": "Mountain",
     "Forest": "Forest",
     "Water": "Water",
-    "A dynamically updated set of consolidated instructions for any expansion and player combination.": "",
+    "A dynamically updated set of consolidated instructions for any expansion and player combination.": "A dynamically updated set of consolidated instructions for any expansion and player combination.",
     "Wind's howling..": "Wind's howling..",
-    "Easily draw any terrain token type. Always randomized. No shuffling of cardboard tokens.": "",
+    "Easily draw any terrain token type. Always randomized. No shuffling of cardboard tokens.": "Easily draw any terrain token type. Always randomized. No shuffling of cardboard tokens.",
     "Explore the Continent": "Explore the Continent",
     "Tired of shuffling your tokens, monster cards, and hunting down the mini?": "Tired of shuffling your tokens, monster cards, and hunting down the mini?",
     "Damn, you're ugly": "Damn, you're ugly",
@@ -52,7 +54,7 @@
     "To help those just receiving their The Witcher: Old World game, here's an in-depth guide on what you (hopefully) received.": "To help those just receiving their The Witcher: Old World game, here's an in-depth guide on what you (hopefully) received.",
     "Medallion's humming..": "Medallion's humming..",
     "Lost Mount": "Lost Mount",
-    "A more specific variant of the Location Token page with two tokens to choose from.": "",
+    "A more specific variant of the Location Token page with two tokens to choose from.": "A more specific variant of the Location Token page with two tokens to choose from.",
     "Come, Roach": "Come, Roach",
     "Under Construction!": "Under Construction!",
     "Roll A New Monster": "Roll A New Monster",
@@ -64,8 +66,6 @@
     "setup": "setup",
     "Player": "Player",
     "players": "players",
-    "The Witcher": "The Witcher",
-    "The Witcher: Old World": "The Witcher: Old World",
     "Witcher": "Witcher",
     "witcher": "witcher",
     "Mage": "Mage",
@@ -105,5 +105,27 @@
     "Hound": "Hound",
     "Hounds": "Hounds",
     "name": "name",
+    "__setup": {
+        "error": "Error, number of players is invalid. Must be between 1 and 5.",
+        "base": {
+            "1": "Set out the playmat or game boards."
+        },
+        "legendaryHunt": {
+            "1": "Put the large Legendary Hunt help near the board. Use Side B for a longer game."
+        },
+        "wildHunt": {
+            "difficultyTitle": "Choose the game difficulty on the table below. This determines starting monsters and shields later.",
+            "easy": "Just the Story!",
+            "medium": "Story and Sword!",
+            "hard": "Blood and Broken Bones!",
+            "veryHard": "Death March!",
+            "manage": "Choose a player to manage the Round Tracking board. Hand them the board that matches the number of players. Place the Tracking Token on the \"1\" spot in the top-left corner."
+        },
+        "skellige": {
+            "harborTokens": ""
+        }
+    },
+    "Monster": "Monster",
+    "Shield Tokens": "Shield Tokens",
     "": ""
 }
