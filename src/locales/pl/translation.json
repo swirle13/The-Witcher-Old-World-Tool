@@ -1,69 +1,69 @@
 {
     "common": {
-        "expansions": "expansions",
-        "Step": "Step",
-        "player1": "Player 1",
-        "player2": "Player 2",
-        "player3": "Player 3",
-        "player4": "Player 4",
-        "player5": "Player 5",
-        "goldWithCount_one": "{{count}} gold",
-        "goldWithCount_few": "{{count}} gold",
-        "goldWithCount_many": "{{count}} gold",
-        "goldWithCount_other": "{{count}} gold",
-        "card_one": "card",
-        "card_few": "cards",
-        "card_many": "cards",
-        "card_other": "cards",
-        "cardWithCount_one": "{{count}} card",
-        "cardWithCount_few": "{{count}} cards",
-        "cardWithCount_many": "{{count}} cards",
-        "cardWithCount_other": "{{count}} cards",
-        "underConstruction": "Under Construction!"
+        "expansions": "Rozszerzenia",
+        "Step": "Krok",
+        "player1": "Gracz 1",
+        "player2": "Gracz 2",
+        "player3": "Gracz 3",
+        "player4": "Gracz 4",
+        "player5": "Gracz 5",
+        "goldWithCount_one": "{{count}} żeton złota",
+        "goldWithCount_few": "{{count}} żetony złota",
+        "goldWithCount_many": "{{count}} żetonów złota",
+        "goldWithCount_other": "{{count}} żetonów złota",
+        "card_one": "karta",
+        "card_few": "karty",
+        "card_many": "kart",
+        "card_other": "kart",
+        "cardWithCount_one": "{{count}} karta",
+        "cardWithCount_few": "{{count}} karty",
+        "cardWithCount_many": "{{count}} kart",
+        "cardWithCount_other": "{{count}} kart",
+        "underConstruction": "W budowie!"
     },
     "navbar": {
-        "titleLong": "The Witcher: Old World Helper",
-        "titleShort": "Old World Helper",
-        "communityLinks": "Community Links",
-        "gameplayTools": "Gameplay Tools",
+        "titleLong": "Pomocnik do Wiedźmina: Starego Świata",
+        "titleShort": "Pomocnik Starego Świata",
+        "communityLinks": "$t(communityLinks.title)",
+        "gameplayTools": "Narzędzia rozgrywki",
         "setupHelper": "$t(setupHelper.title)",
         "locationTokens": "$t(locationTokens.title)",
         "monsterRoller": "$t(monsterRoller.title)",
         "lostMount": "$t(lostMount.title)",
-        "browseAllTools": "Browse All Tools",
-        "projectHelp": "Project Help",
-        "githubIssues": "Github Issues",
-        "githubDiscussions": "Github Discussions",
+        "browseAllTools": "Zobacz wszystkie narzędzia",
+        "projectHelp": "Pomoc projektu",
+        "githubIssues": "GitHub Issues",
+        "githubDiscussions": "GitHub Discussions",
         "projectTimeline": "Project Timeline",
         "__flag": "🇵🇱"
     },
     "monsterPicker": {
-        "toggle": "Toggle changes:",
-        "sirenExplain": "Siren excluded as it can't be randomly selected",
-        "legendary": "Legendary",
-        "allLegendary": "All Legendary",
-        "title": "Roll A New Monster"
+        "toggle": "Przełącz zmiany",
+        "sirenExplain": "Syrenę wykluczono, ponieważ nie może być wybrana losowo",
+        "legendary": "Legendarne Łowy",
+        "allLegendary": "wszystko Legendarne Łowy",
+        "title": "Losuj nowego potwora"
     },
     "monsterRoller": {
-        "title": "Monster Roller"
+        "title": "Losowanie potwora"
     },
     "exps": {
-        "adventurePack": "Adventure Pack",
-        "lostMount": "Lost Mount",
+        "adventurePack": "Zestaw Przygód",
+        "lostMount": "Zagubiony Wierzchowiec",
         "ciri": "Ciri",
-        "wildHunt": "Wild Hunt",
-        "monsterTrail": "Monster Trail",
-        "mages": "Mages",
-        "legendaryHunt": "Legendary Hunt",
+        "wildHunt": "Dziki Gon",
+        "monsterTrail": "Na Tropie Potworów",
+        "mages": "Magowie",
+        "legendaryHunt": "Legendarne Łowy",
         "skellige": "Skellige",
-        "monsterPack": "Monster Pack",
-        "mountedEredin": "Mounted Eredin"
+        "monsterPack": "Zestaw potworów",
+        "mountedEredin": "$t(monsters.Mounted Eredin)"
     },
     "locationTokens": {
-        "title": "Location Tokens",
-        "mountain": "Mountain",
-        "forest": "Forest",
-        "water": "Water",
+        "title": "Żetony obszarów",
+        "mountain": "Góry",
+        "forest": "Las",
+        "water": "Woda",
         "Behelt Nar": "Behelt Nar",
         "Kaer Seren": "Kaer Seren",
         "Hengfors": "Hengfors",
@@ -92,93 +92,93 @@
             {
                 "name": "$t(setupHelper.title)",
                 "link": "#/setupHelper",
-                "desc": "A dynamically updated set of consolidated instructions for any expansion and player combination.",
-                "btn": "Wind's howling.."
+                "desc": "Dynamicznie aktualizowany i skonsolidowany zestaw instrukcji dla dowolnej kombinacji rozszerzeń i liczby graczy.",
+                "btn": "Wiatr wyje.."
             },
             {
                 "name": "$t(locationTokens.title)",
                 "link": "#/locationTokens",
-                "desc": "Easily draw any terrain token type. Always randomized. No shuffling of cardboard tokens.",
-                "btn": "Explore the Continent"
+                "desc": "Łatwo dobierz dowolny typ żetonu obszaru. Zawsze losowo. Bez tasowania kartonowych żetonów.",
+                "btn": "Eksploruj Kontynent"
             },
             {
                 "name": "$t(monsterRoller.title)",
                 "link": "#/monsterRoller",
-                "desc": "Tired of shuffling your tokens, monster cards, and hunting down the mini?",
-                "btn": "Damn, you're ugly"
+                "desc": "Masz dość tasowania żetonów, kart potworów i tropienia figurki?",
+                "btn": "Cholera, aleś ty brzydki"
             },
             {
                 "name": "$t(communityLinks.title)",
                 "link": "#/communityLinks",
-                "desc": "A collection of neat and awesome links from the community. Always growing!",
-                "btn": "Show me"
+                "desc": "Zbiór ciekawych i przydatnych linków od społeczności. Wciąż ich przybywa!",
+                "btn": "Pokaż mi"
             },
             {
-                "name": "Inventory Checker",
+                "name": "$t(inventoryChecker.title)",
                 "link": "#/inventoryChecker",
-                "desc": "To help those just receiving their The Witcher: Old World game, here's an in-depth guide on what you (hopefully) received.",
-                "btn": "Medallion's humming.."
+                "desc": "Aby pomóc tym, którzy właśnie otrzymali grę Wiedźmin: Stary Świat, przedstawiamy szczegółowy przewodnik po tym, co (miejmy nadzieję) otrzymaliście.",
+                "btn": "Medalion wibruje.."
             },
             {
                 "name": "$t(lostMount.title)",
                 "link": "#/lostMount",
-                "desc": "A more specific variant of the Location Token page with two tokens to choose from.",
-                "btn": "Come, Roach"
+                "desc": "Bardziej szczegółowy wariant strony Żetony obszarów – z dwoma żetonami do wyboru.",
+                "btn": "Chodź, Płotko"
             }
         ]
     },
     "monsters": {
-        "Nekker's Nest": "Nekker's Nest",
-        "Arachas": "Arachas",
-        "Archespore": "Archespore",
+        "Nekker's Nest": "Gniazdo nekkerów",
+        "Arachas": "Krabopająk",
+        "Archespore": "Archespor",
         "Barghest": "Barghest",
-        "Foglet": "Foglet",
-        "Harpy": "Harpy",
-        "Ghoul's Nest": "Ghoul's Nest",
-        "Griffin": "Griffin",
-        "Wyvern": "Wyvern",
-        "Werewolf": "Werewolf",
-        "Fiend": "Fiend",
-        "Noonwraith": "Noonwraith",
-        "Leshen": "Leshen",
-        "Striga": "Striga",
+        "Foglet": "Mglak",
+        "Harpy": "Harpia",
+        "Ghoul's Nest": "Gniazdo ghuli",
+        "Griffin": "Gryf",
+        "Wyvern": "Wiwerna",
+        "Werewolf": "Wilkołak",
+        "Fiend": "Bies",
+        "Noonwraith": "Południca",
+        "Leshen": "Leszy",
+        "Striga": "Strzyga",
         "Bruxa": "Bruxa",
-        "Drowner's Nest": "Drowner's Nest",
-        "Rotfiend": "Rotfiend",
-        "Ekimmara": "Ekimmara",
-        "Nightwraith": "Nightwraith",
-        "Water Hag": "Water Hag",
-        "Manticore": "Manticore",
-        "Whispess": "Whispess",
-        "Weavess": "Weavess",
-        "Penitent": "Penitent",
-        "Grave Hag": "Grave Hag",
-        "Glustyworp": "Glustyworp",
-        "Brewess": "Brewess",
-        "Yghern": "Yghern",
+        "Drowner's Nest": "Gniazdo utopców",
+        "Rotfiend": "Zgnilec",
+        "Ekimmara": "Ekimma",
+        "Nightwraith": "Północnica",
+        "Water Hag": "Baba wodna",
+        "Manticore": "Mantikora",
+        "Whispess": "Szepciucha",
+        "Weavess": "Prządka",
+        "Penitent": "Pokutnik",
+        "Grave Hag": "Baba cmentarna",
+        "Glustyworp": "Żagnica",
+        "Brewess": "Kuchta",
+        "Yghern": "Skolopendromorf",
         "Troll": "Troll",
         "Dagon": "Dagon",
-        "Hound": "Hound",
-        "Hounds": "Hounds",
-        "Imperial Golem": "Imperial Golem",
-        "Cyclops": "Cyclops",
-        "Cave Troll": "Cave Troll",
-        "Toad": "Toad",
-        "Frightener": "Frightener",
-        "Unseen Elder": "Unseen Elder",
-        "Ice Giant": "Ice Giant",
+        "Hound": "Ogar",
+        "Hounds": "Ogary",
+        "Imperial Golem": "Cesarski Golem",
+        "Cyclops": "Cyklop",
+        "Cave Troll": "Troll Jaskiniowy",
+        "Toad": "Ropuch",
+        "Frightener": "Przeraza",
+        "Unseen Elder": "Ukryty",
+        "Ice Giant": "Lodowy Gigant",
         "Gaunter O'Dimm": "Gaunter O'Dimm",
         "Eredin": "Eredin",
         "Nithral": "Nithral",
         "Imlerith": "Imlerith",
         "Caranthir": "Caranthir",
-        "Koshchey": "Koshchey",
-        "Kayran": "Kayran",
-        "Siren": "Siren",
-        "Mounted Eredin": "Mounted Eredin",
-        "lvl1": "Level I Monster",
-        "lvl2": "Level II Monster",
-        "lvl3": "Level III Monster",
+        "Koshchey": "Kościej",
+        "Kayran": "Kejran",
+        "Siren": "Syrena",
+        "Mounted Eredin": "Eredin na wierzchowcu",
+        "lvl1": "potwór poziomu I",
+        "lvl2": "potwór poziomu II",
+        "lvl3": "potwór poziomu III",
         "legendaryHunt": [
             "$t(monsters.Imperial Golem)",
             "$t(monsters.Cyclops)",
@@ -191,66 +191,66 @@
         ]
     },
     "setupHelper": {
-        "title": "Setup Helper",
-        "error": "Error, number of players is invalid. Must be between 1 and 5.",
-        "collapse": "Collapse All",
-        "expand": "Expand All",
+        "title": "Asystent przygotowania rozgrywki",
+        "error": "Błąd. Nieprawidłowa liczba graczy (powinna być w zakresie 1-5).",
+        "collapse": "Zwiń wszystkie",
+        "expand": "Rozwiń wszystkie",
         "base": {
-            "1": "Set out the playmat or game boards.",
-            "actionCards": "Shuffle the Action Card deck and place it above the Action Card slots. Reveal cards until you have 3 “0-cost” cards, which go in the 3 lowest spaces (face up). Reshuffle any other revealed cards, then reveal 3 more cards for the remaining spaces (face up).",
+            "1": "Rozłóż matę lub planszę.",
+            "actionCards": "Potasuj talię akcji. Odkrywaj karty z wierzchu aż odkryją się 3 karty o koszcie 0, które należy położyć na 3 najniższych polach po prawej stronie planszy. Pozostałe karty wtasuj, odkryj jeszcze 3 karty na pozostałe miejsca a talię połóż zakrytą w górnym prawym rogu planszy.",
             "attrTrophies": [
-                "Draw 1 random Attribute Trophy and place it on the edge of the board, below the Exploration Card slots, face up.",
-                "Draw 1 random Attribute Trophy and place it on the edge of the board, below the Exploration Card slots, face up.",
-                "Draw 4 Attribute Trophies, one for each attribute, and place them on the edge of the board, below the Exploration Card slots, face up.",
-                "Draw 4 Attribute Trophies, one for each attribute, and place them on the edge of the board, below the Exploration Card slots, face up.",
-                "Place all 8 Attribute Trophies on the edge of the board, below the Exploration Card slots, face up.",
-                "Place all 8 Attribute Trophies on the edge of the board, below the Exploration Card slots, face up."
+                "Wylosuj 1 trofeum przypisane atrybutom i połóż odkrytą na brzegu planszy, poniżej miejsca na karty eksploracji.",
+                "Wylosuj 1 trofeum przypisane atrybutom i połóż odkrytą na brzegu planszy, poniżej miejsca na karty eksploracji.",
+                "Weź 4 karty trofeum przypisane atrybutom (po 1 dla każdego atrybutu) i połóż odkryte na brzegu planszy, poniżej miejsca na karty eksploracji.",
+                "Weź 4 karty trofeum przypisane atrybutom (po 1 dla każdego atrybutu) i połóż odkryte na brzegu planszy, poniżej miejsca na karty eksploracji.",
+                "Weź wszystkie 8 kart trofeum przypisanych atrybutom i połóż odkryte na brzegu planszy, poniżej miejsca na karty eksploracji.",
+                "Weź wszystkie 8 kart trofeum przypisanych atrybutom i połóż odkryte na brzegu planszy, poniżej miejsca na karty eksploracji."
             ],
-            "potions": "Shuffle the Potion deck and place it on the edge of the board, below the Action Cards.",
-            "decks": "Shuffle the City Exploration deck and Wilds Exploration deck. Do not shuffle the Event deck! Place each in the appropriate slot on the game board.",
-            "tokens": "Place Gold Tokens, Poker Dice, and Closed Tavern token or mini near the game board.",
-            "locationTokens": "Sort Location Tokens into 3 piles by terrain type. Shuffle each pile and place them (face down) near the game board. Draw 1 token from each pile and place them (face up) on their slots on the game board (to the right of the Monster slots).",
+            "potions": "Talię eliksirów potasowaną połóż na brzegu planszy poniżej kart akcji.",
+            "decks": "Talie eksploracji miast i dzikich ostępów potasuj. Talii zdarzeń nie tasuj! Połóż talie na planszy.",
+            "tokens": "Obok planszy połóż żetony złota (lub monety), kości do pokera i żeton/figurkę zamkniętej tawerny.",
+            "locationTokens": "Żetony obszarów rozdziel na 3 stosy wg typów terenu, potasuj i połóż obok planszy rewersem do góry. Przełóż po 1 z każdego typu na odpowiednie pola w sekcji potworów.",
             "monsterSetup": {
-                "0": "Sort Monster Cards and Monster Tokens by level (I, II, and III). Place the cards near the game board (face up). Shuffle the tokens and place them near the game board (face down).",
-                "1": "Move {{numTokens}} Level I tokens into a separate “additional monsters” stack. See p. 26 of core rules for how these are used.",
+                "0": "Karty i żetony potworów rozdziel na 3 stosy wg poziomów (I, II, III) i połóż obok planszy – karty odkryte a żetony potasowane i zakryte.",
+                "1": "Połóż {{numTokens}} żetony potworów poziomu I stwórz z nich dodatkowy stos. Zob. str. 26 instrukcji do czego służy.",
                 "2": [
-                    "Draw 3 Monster Tokens: One of each level.",
-                    "Draw 3 Monster Tokens: One of each level.",
-                    "Draw 3 Monster Tokens: 2 × Level I and 1 × Level II.",
-                    "Draw 3 Monster Tokens: 3 × Level I.",
-                    "Draw 3 Monster Tokens: 3 × Level I.",
-                    "Draw 3 Monster Tokens: 3 × Level I."
+                    "Wylosuj 3 żetony potworów, po 1 z każdego poziomu.",
+                    "Wylosuj 3 żetony potworów, po 1 z każdego poziomu.",
+                    "Wylosuj 3 żetony potworów: 2× poziomu I + 1 poziomu II.",
+                    "Wylosuj 3 żetony potworów poziomu I.",
+                    "Wylosuj 3 żetony potworów poziomu I.",
+                    "Wylosuj 3 żetony potworów poziomu I."
                 ],
-                "3": "Place the three Monster Tokens (randomly) in locations on the map matching the 3 face-up Location Tokens.",
-                "4": "Turn the 3 Monster Tokens face up and place their corresponding Monster Cards in the slots on the game board matching the corresponding Location Tokens. Replace the tokens with miniatures if you have them.",
-                "5": "Set up Monsters:"
+                "3": "Losowo rozłóż wylosowane żetony potworów zakryte w obszarach wylosowanych wcześniej.",
+                "4": "Odwróć żetony potworów i umieść ich karty potworów w miejscach na planszy pod odpowiadającymi im żetonami obszarów. Jeśli masz figurki potworów to użyj ich w miejscu żetonów potworów.",
+                "5": "Rozłóż potwory:"
             },
-            "monsterFightDeck": "Shuffle the Monster Fight deck and place it (face down) near the game board.",
-            "startingPlayer": "Determine the starting player randomly, or it is whoever most recently read a Witcher book. Players choose Player Boards via any method they wish; see p. 7 of core rules for a fair drafting method.",
+            "monsterFightDeck": "Talię kart walki potworów połóż potasowaną i zakrytą obok planszy.",
+            "startingPlayer": "Graczem rozpoczynającym jest osoba, która ostatnio przeczytała książkę o Wiedźminie; może też zostać wylosowany lub wyłoniony w dowolny inny sposób. Gracze wybierają planszetki gracza dowolną metodą, np. opisaną na str. 7 instrukcji.",
             "playerSetup": {
-                "base": "Take a Help Card, player board, and matching miniature (with colored ring), cubes, Shield marker, scoring token, and starting deck of 10 cards. (Starting cards have a School icon in the top right corner.)",
-                "baseMages": "Take a Help Card, player board, and matching miniature (with colored ring), cubes, Shield or Energy marker, scoring token, and starting deck of 10 cards. (Starting cards have a School icon in the top right corner.)",
-                "baseMonsterTrail": "Take a Help Card, player board, and matching miniature (with colored ring), cubes, Shield marker, scoring token, and starting deck of 11 cards. (Starting cards have a School icon in the top right corner.)",
-                "baseMagesMonsterTrail": "Take a Help Card, player board, and matching miniature (with colored ring), cubes, Shield or Energy marker, scoring token, and starting deck of 11 cards. (Starting cards have a School icon in the top right corner.)",
-                "wildHunt": "Take a Wild Hunt Help Card, player board, and matching miniature (with colored ring), cubes, Shield marker, scoring token, and starting deck of 10 cards. (Starting cards have a School icon in the top right corner.)",
-                "wildHuntMages": "Take a Wild Hunt Help Card, player board, and matching miniature (with colored ring), cubes, Shield or Energy marker, scoring token, and starting deck of 10 cards. (Starting cards have a School icon in the top right corner.)",
-                "wildHuntMonsterTrail": "Take a Wild Hunt Help Card, player board, and matching miniature (with colored ring), cubes, Shield marker, scoring token, and starting deck of 11 cards. (Starting cards have a School icon in the top right corner.)",
-                "wildHuntMagesMonsterTrail": "Take a Wild Hunt Help Card, player board, and matching miniature (with colored ring), cubes, Shield or Energy marker, scoring token, and starting deck of 11 cards. (Starting cards have a School icon in the top right corner.)",
-                "trophyCards": "Take {{num}} of their Witcher Trophy Cards (equal to the other players).",
-                "trophyCardsMages": "Take {{num}} of their Witcher/Mage Trophy Cards (equal to the other players).",
-                "ifMage": "If a mage, place their School and Specialty tokens on the map, covering those of an unused Witcher School.",
-                "markers": "Place the 5 cubes and Shield marker on the lowest (“level 1”) spot of each player board track.",
-                "markersMages": "Place the 5 cubes and Shield or Energy marker on the lowest (“level 1”) spot of each player board track.",
-                "raiseAttr": "Choose one Attribute to raise to level 2.",
-                "token": "Place the scoring token on the lowest spot of the Trophy Track.",
-                "cards": "Shuffle their starting cards and set the deck to the left of their board.",
-                "miniature": "Place their miniature on their School location on the map.",
-                "drawBaseHeader": "Draw the following cards and gold based on player position: ",
-                "drawWildHunt": "Draw 5 cards and take 3 Gold.",
-                "title": "Each player must:",
+                "base": "Bierze kartę pomocy, planszetkę i figurkę postaci (z kolorową podstawką), znaczniki (atrybutów i tarczy), żeton reputacji i talię 10 startowych kart akcji (karty z symbolem szkoły w górnym prawym rogu).",
+                "baseMages": "Bierze kartę pomocy, planszetkę i figurkę postaci (z kolorową podstawką), znaczniki (atrybutów i tarczy/energii), żeton reputacji i talię 10 startowych kart akcji (karty z symbolem szkoły w górnym prawym rogu).",
+                "baseMonsterTrail": "Bierze kartę pomocy, planszetkę i figurkę postaci (z kolorową podstawką), znaczniki (atrybutów i tarczy), żeton reputacji i talię 11 startowych kart akcji (karty z symbolem szkoły w górnym prawym rogu).",
+                "baseMagesMonsterTrail": "Bierze kartę pomocy, planszetkę i figurkę postaci (z kolorową podstawką), znaczniki (atrybutów i tarczy/energii), żeton reputacji i talię 11 startowych kart akcji (karty z symbolem szkoły w górnym prawym rogu).",
+                "wildHunt": "Bierze kartę pomocy Dzikiego Gonu, planszetkę i figurkę postaci (z kolorową podstawką), znaczniki (atrybutów i tarczy), żeton reputacji i talię 10 startowych kart akcji (karty z symbolem szkoły w górnym prawym rogu).",
+                "wildHuntMages": "Bierze kartę pomocy Dzikiego Gonu, planszetkę i figurkę postaci (z kolorową podstawką), znaczniki (atrybutów i tarczy/energii), żeton reputacji i talię 10 startowych kart akcji (karty z symbolem szkoły w górnym prawym rogu).",
+                "wildHuntMonsterTrail": "Bierze kartę pomocy Dzikiego Gonu, planszetkę i figurkę postaci (z kolorową podstawką), znaczniki (atrybutów i tarczy), żeton reputacji i talię 11 startowych kart akcji (karty z symbolem szkoły w górnym prawym rogu).",
+                "wildHuntMagesMonsterTrail": "Bierze kartę pomocy Dzikiego Gonu, planszetkę i figurkę postaci (z kolorową podstawką), znaczniki (atrybutów i tarczy/energii), żeton reputacji i talię 11 startowych kart akcji (karty z symbolem szkoły w górnym prawym rogu).",
+                "trophyCards": "Bierze {{num}} swoich kart trofeów przypisanych szkole wiedźmińskiej (tyle ilu jest pozostałych graczy).",
+                "trophyCardsMages": "Bierze {{num}} swoich kart trofeów przypisanych szkole wiedźmińskiej/magowi (tyle ilu jest pozostałych graczy).",
+                "ifMage": "Jeśli gra magiem: kładzie swoje żetony szkoły i zdolności specjalnej na mapie zakrywając te należące do nieużywanej szkoły wiedźmińskiej.",
+                "markers": "Umieszcza 5 znaczników atrybutów i tarczy w polach „1” na planszetce",
+                "markersMages": "Umieszcza 5 znaczników atrybutów i tarczy/energii w polach „1” na planszetce",
+                "raiseAttr": "Wybiera 1 atrybut i podnosi go do poziomu 2.",
+                "token": "Kładzie żeton reputacji na najniższym polu toru reputacji.",
+                "cards": "Tasuje talię startowych kart akcji i kładzie po lewej stronie planszetki.",
+                "miniature": "Kładzie figurkę na mapie na swojej szkole.",
+                "drawBaseHeader": "Bierze następującą liczbę kart i żetonów złota/monet w zależności od kolejności graczy:",
+                "drawWildHunt": "Bierze 5 kart i 3 żetony złota/monety.",
+                "title": "Każdy gracz:",
                 "drawBaseResources": [
                     [
-                        "placeholder for 0 players"
+                        "symbol zastępczy dla 0 graczy"
                     ],
                     [
                         "$t(common.player1): $t(common.cardWithCount, {\"count\": 5}), $t(common.goldWithCount, {\"count\": 3})"
@@ -281,16 +281,16 @@
             }
         },
         "legendaryHunt": {
-            "help": "Put the large Legendary Hunt help near the board. Use Side B for a longer game.",
-            "choose": "Choose a Legendary Monster. Place its large card and the Special Fight cards (shuffled) near the game board. Place its miniature on the location shown on its card. Shuffle the Destruction Tokens and keep them (face-down) near the board.",
-            "movementDeck": "The last player in turn order takes the Legendary Monster Movement deck (shuffled, face down)."
+            "1": "Połóż dużą kartę pomocy Legendarnych Łowów obok planszy (stroną B, jeśli chcesz dłuższą rozgrywkę).",
+            "2": "Wybierz legendarnego potwora. Połóż jego dużą kartę i specjalne karty walki (potasowane) obok planszy. Figurkę potwora połóż na mapie w miejscu wskazanym na jego karcie. Żetony zniszczenia potasowane i zakryte połóż obok planszy.",
+            "movementDeck": "Gracz ostatni w kolejności bierze potasowaną i zakrytą talię kart ruchu legendarnego potwora."
         },
         "wildHunt": {
-            "shieldTokens": "{{num}} Shield Tokens",
-            "difficultyTitle": "Choose the game difficulty on the table below. This determines starting monsters and shields later.",
+            "shieldTokens": "{{num}} żetonów tarczy",
+            "difficultyTitle": "Wybierz poziom trudności w poniższej tabeli – od tego zależy później poziom początkowych potworów i liczba żetonów tarczy.",
             "difficultyValues": [
                 [
-                    "placeholder for 0 players"
+                    "symbol zastępczy dla 0 graczy"
                 ],
                 [
                     "$t(monsters.lvl1)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 5 })",
@@ -323,106 +323,106 @@
                     "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 120 })"
                 ]
             ],
-            "easy": "Just the Story!",
-            "medium": "Story and Sword!",
-            "hard": "Blood and Broken Bones!",
-            "veryHard": "Death March!",
-            "manage": "Choose a player to manage the Round Tracking board. Hand them the board that matches the number of players. Place the Tracking Token on the \"1\" spot in the top-left corner.",
-            "createExplorationDeck": "Create the Wild Hunt Exploration deck by placing 3 random, face-down \"Stage II\" cards and then placing {{num}} random, face-down \"Stage I\" cards atop them.",
-            "decks": "Without shuffling, place the Wild Hunt Exploration and Wild Hunt Event decks on their slots on the game board. (Standard City and Wilds Exploration decks are not used in Wild Hunt).",
-            "tokens": "Place Gold Tokens, Blue Quest Tokens, Poker Dice, and Closed Tavern token or mini near the game board.",
+            "easy": "Tylko fabuła!",
+            "medium": "Opowieść i miecz!",
+            "hard": "Krew i połamane kości!",
+            "veryHard": "Marsz Śmierci!",
+            "manage": "Wybierz gracza obsługującego kartę rund. Podaj mu kartę dotyczącą odpowiedniej liczby graczy i połóż żeton na polu „1” w górnym lewym rogu.",
+            "createExplorationDeck": "Stwórz talię eksploracji Dzikiego Gonu biorąc 3 losowe (i zakryte) karty poziomu 2 oraz kładąc na nich 3 karty poziomu 1.",
+            "decks": "Połóż talie eksploracji i zdarzeń Dzikiego Gonu bez tasowania na odpowiednich polach na planszy. (Standardowych talii eksploracji miast i dzikich ostępów nie używa się grając z Dzikim Gonem).",
+            "tokens": "Obok planszy połóż żetony złota (lub monety), niebieskie żetony zadań, kości do pokera i żeton/figurkę zamkniętej tawerny.",
             "monsterSetup": [
-                "Draw a Monster Token of level based on the game difficulty. Draw a Forest Location Token. Place the monster token or miniature on the map there an place its Monster Card and the Location Token in the matching space on the game board.",
-                "If the game difficulty indicates a second monster, repeat the above step but with a Water location."
+                "Wylosuj żeton potwora zależnie od poziomu trudności. Wylosuj żeton obszaru leśnego. Połóż żeton/figurkę potwora na tym obszarze na mapie, a jego kartę i wylosowany żeton obszaru na odpowiednim polu na planszy.",
+                "Jeśli poziom trudności wskazuje dwa potwory, powtórz powyższy krok z obszarem wodnym."
             ],
-            "monsterFightDeck": "Shuffle the Monster Fight deck and place it (face down) near the game board. Place the Charge/Bite token near the deck.",
+            "monsterFightDeck": "Talię kart walki potworów połóż potasowaną i zakrytą obok planszy razem z żetonem szarży/gryzienia.",
             "enemies": [
-                "Choose a member of the Wild Hunt to face this game. Place its card (Side A up) and its 4 Special Attack cards near the board.",
-                "Place Shield Tokens on the Wild Hunt member based on the difficulty.",
-                "Draw a Mountain Location Token, place the Wild Hunt miniature there, and shuffle that token back in.",
-                "Place the 6 Hound tokens or miniatures and the Hound card matching the player count nearby."
+                "Wybierz członka Dzikiego Gonu, któremu stawicie czoła. Jego kartę (stroną A do góry) i jego 4 karty specjalnego ataku połóż obok planszy.",
+                "Połóż na nim odpowiednią liczbę żetonów tarczy.",
+                "Wylosuj żeton obszaru górskiego, umieść tam figurkę Dzikiego Gonu i wtasuj żeton z powrotem do stosu.",
+                "Połóż obok planszy 6 żetonów/figurek Ogarów i kartę Ogarów odpowiednią do liczby graczy."
             ],
-            "movementPool": "Create a Wild Hunt Movement pool by combining every player's scoring token and the Closed Tavern token. Shuffle these face down."
+            "movementPool": "Stwórz stos ruchu Dzikiego Gonu z potasowanych i zakrytych żetonów reputacji graczy i zamkniętej tawerny."
         },
         "skellige": {
             "playmat": [
-                "If using the playmat:",
-                "Ignore tokens, Harbor tokens are printed on the map",
-                "Place ship miniatures at the following randomized locations:"
+                "Jeśli używasz maty:",
+                "Zignoruj żetony przystani, są nadrukowane na matę",
+                "Połóż figurki statków w następujących (losowo wybranych) miejscach:"
             ],
             "board": [
-                "If using the board",
-                "Shuffle the Harbor tokens, anchor side up",
-                "Place them on the coastal locations (1, 5, 6, 9, 12, 13) and flip them over",
-                "Place a ship miniature on the three locations with a ship symbol",
-                "Flip them back to the anchor side, as a reminder"
+                "Jeśli używasz planszy:",
+                "Potasuj żetony przystani (kotwicą do góry)",
+                "Połóż je na wybrzeżu (obszary: 1, 5, 6, 9, 12, 13) i odwróć",
+                "Figurki statków połóż tych w miejscach, które mają symbol statku.",
+                "Odwróć żetony ponownie kotwicą do góry."
             ],
-            "decks": "Shuffle the Skellige Exploration deck. Do not shuffle the Skellige Event deck! Place both in their slots above the islands on the game board.",
-            "dagon": "Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus deck and place it near its track.",
-            "dagonMT": "Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus deck and place it and the large Dagon card near its track.",
-            "siren": "Place the Siren miniature on the Dagon location, with its Monster Card nearby."
+            "decks": "Talię eksploracji Skellige potasuj. Talii zdarzeń Skellige nie tasuj! Połóż talie na planszy nad wyspami.",
+            "dagon": "Figurkę Dagona połóż na torze Dagona na pozycji startowej zależnej od liczby graczy. Obok toru połóż potasowaną talię kart bonusów Dagona, żetony tropów Dagona i dużą kartę Dagona (stroną ze zdolnością specjalną potwora do góry).",
+            "dagonMT": "Figurkę Dagona połóż na torze Dagona na pozycji startowej zależnej od liczby graczy. Obok toru połóż potasowaną talię kart bonusów Dagona, żetony tropów Dagona i dużą kartę Dagona (stroną z 4 atakami specjalnymi do góry).",
+            "siren": "Figurkę Syreny połóż na pozycji Dagona razem z jej kartą potwora."
         },
         "magesExp": {
-            "actionCards": "Repeat the above step for the Mage Action Cards. (Or replace that step if everyone is playing a mage.)"
+            "actionCards": "Powtórz powyższy krok z talią akcji magów. (Jeśli wszyscy grają magami, po prostu pomiń poprzedni krok)."
         },
         "monsterTrail": {
-            "mutagen": "Shuffle the Mutagen Deck and place it below the Attribute Trophy deck.",
-            "bomb": "Shuffle the Bomb deck and place it below the Potion deck.",
-            "lgCards": "Place the corresponding large Monster Cards near the board.",
-            "spFightCards": "Remove 8 Monster Fight cards from the deck. Put 4 back in the box and set 4 aside for later (when a Level III monster appears). Add the Special Attack cards to the Monster Fight deck.",
-            "weaknessTokens": "Draw 3 Location Tokens (1 of each terrain). If a Witcher is in that location, draw again. Place a random, face-down Monster Weakness token matching that terrain type at each location. Shuffle these location tokens back into their stacks."
+            "mutagen": "Talię mutagenów umieść potasowaną poniżej talii trofeów przypisanych atrybutom.",
+            "bomb": "Talię petard umieść potasowaną poniżej talii eliksirów.",
+            "lgCards": "Odpowiednie duże karty potworów połóż obok planszy.",
+            "spFightCards": "Z talii walki potworów wyciągnij 8 kart – 4 włóż do pudełka a 4 odłóż na później (kiedy pojawi się potwór poziomu III). Dołóż do talii 4 specjalne karty walki potworów.",
+            "weaknessTokens": "Wylosuj 3 żetony obszarów (po 1 z każdego typu) – jeśli na którymś obszarze jest wiedźmin, wylosuj ponownie. Na tych obszarach połóż losowe zakryte żetony słabości potworów o odpowiadających typach obszarów. Żetony obszarów wtasuj z powrotem w stosy."
         },
         "adventurePack": {
-            "tokens": "Place Gold Tokens, Green Quest Tokens, Poker Dice, and Closed Tavern token or mini near the game board.",
-            "lostMount": "Then they draw two Location Tokens (of any terrain), choose one to put the Lost Mount miniature at, and shuffle the tokens back in."
+            "tokens": "Obok planszy połóż żetony złota (lub monety), zielone żetony zadań, kości do pokera i żeton/figurkę zamkniętej tawerny.",
+            "lostMount": "Wylosuj dwa żetony obszarów (dowolnego typu), wybierz jeden, w którym ma się znaleźć figurka Zagubionego Wierzchowca, i wtasuj żetony z powrotem w stos(y)."
         }
     },
     "inventoryChecker": {
-        "title": "Inventory Checklist",
-        "cardSubtitle": "Cards",
-        "noteTitle": "Notes",
+        "title": "Zawartość inwentarza",
+        "cardSubtitle": "Karty",
+        "noteTitle": "Notatki",
         "noteText": [
-            "This is currently a first pass to get this inventory checker into the hands of the second wave of shipments as fast as possible, and as such, will be minimal and (probably) lacking translation.",
-            "I aim to add different sections for the tokens and miniatures shortly after this goes live.",
-            "Currently, the check boxes are not persistent. If you refresh or navigate away from this page, you will lose your progress. Apologies for the inconvenience while I sort this out."
+            "Jest to obecnie pierwsza wersja tego narzędzia, aby tak szybko jak to możliwe dotarło do rąk odbiorców drugiej fali przesyłek, więc będzie minimalistyczne i (prawdopodobnie) pozbawione tłumaczenia.",
+            "Sekcje dotyczące tokenów i figurek zamierzam dodać niedługo później.",
+            "Obecnie pola wyboru nie są trwałe. Jeśli odświeżysz tę stronę lub ją opuścisz, utracisz swoje dane. Dopóki tego nie rozwiążę przepraszam za niedogodności."
         ],
-        "legendHeader": "Legend",
+        "legendHeader": "Legenda",
         "legendBody": {
-            "header": "If two columns: read left to right, top to bottom. This will ensure the running totals of cards spread across multiple packs (e.g. \"Monster cards: 11 (11/29)\") are read properly.",
+            "header": "Jeśli wyświetlane są 2 kolumny – czytaj od lewej do prawej, rzędami od góry do dołu. W ten sposób prawidłowo odczytasz podsumy kart podzielonych na różne paczki (e.g. \"karty potworów: 11 (11/29)\").",
             "body": [
                 {
                     "title": "TWOW(XX) Y/Z",
                     "details": [
-                        "This is the title of the gray card for each pack of cards. This is how I refer to each pack.",
-                        "XX is the arbitrary code that the supplier used to identify the groups of cards.",
-                        "Y is the current number of the pack out of total packs for code XX.",
-                        "Z is the total number of packs for value XX."
+                        "To jest tytuł szarej karty na wierzchu paczki. W ten sposób odnoszę się do całej paczki.",
+                        "XX – kod nadany przez wydawcę dla tej grupy kart.",
+                        "Y – numer paczki wśród wszystkich paczek kart z grupy XX.",
+                        "Z – liczba paczek kart z grupy XX."
                     ]
                 },
                 {
-                    "title": "Expansions",
+                    "title": "$t(common.expansions)",
                     "details": [
-                        "These are the expansions that the cards belong to in this pack."
+                        "Lista rozszerzeń, do których należą karty z tej paczki."
                     ]
                 },
                 {
-                    "title": "Example Type Cards: X (Y/Z) OR X/Z",
+                    "title": "karty (rodzaj): X (Y/Z) lub X/Z",
                     "details": [
-                        "Example Type is the type of card, as referred to in Go On Board's \"Components\" lists.",
-                        "X is how many of the cards are found in this pack.",
-                        "Y is the current running total of this type of card across all packs. If excluded, all cards of this type were included in this pack",
-                        "Z is the total number of these cards you should have."
+                        "(rodzaj) to typ karty, o którym mowa na liście komponentów Go On Board.",
+                        "X – liczba tych kart w danej paczce",
+                        "Y – podsuma tego typu kart z wszystkich ww paczek. Jeśli pominięto to w danej paczce są wszystkie karty tego typu.",
+                        "Z – całkowita suma kart tego typu, które powinieneś mieć."
                     ]
                 },
                 {
-                    "title": "(AP)",
+                    "title": "(ZP)",
                     "details": [
-                        "This is a disambiguation for Adventure Pack cards. These are distinguished by the star symbol in the top center of the card face."
+                        "Jest to ujednoznacznienie dotyczące kart Zestawu Przygód. Można je rozpoznać po symbolu gwiazdy w górnej części awersu karty."
                     ]
                 }
             ]
         },
-        "Base Set": "Base Set",
+        "Base Set": "Podstawa",
         "Adventure Pack, Wild Hunt, Monster Trail": "$t(exps.adventurePack), $t(exps.wildHunt), $t(exps.monsterTrail)",
         "Adventure Pack": "$t(exps.adventurePack)",
         "Wild Hunt, Mages, Adventure Pack": "$t(exps.wildHunt), $t(exps.mages), $t(exps.adventurePack)",
@@ -431,153 +431,153 @@
         "Mages": "$t(exps.mages)",
         "Legendary Hunt": "$t(exps.legendaryHunt)",
         "Skellige": "$t(exps.skellige)",
-        "cardsInPack": "Cards in pack",
-        "Starting Action cards": "Starting Action cards",
-        "Action cards": "Action cards",
-        "Help cards": "Help cards",
-        "Solo Help card": "Solo Help card",
-        "Monster cards": "Monster cards",
-        "City Exploration cards": "City Exploration cards",
-        "Attribute Trophy cards": "Attribute Trophy cards",
-        "Monster Fight cards": "Monster Fight cards",
-        "Event cards": "Event cards",
-        "Potion cards": "Potion cards",
-        "Witcher Trophy cards": "Witcher Trophy cards",
-        "Wilds Exploration cards": "Wilds Exploration cards",
-        "(AP) Wilds Exploration cards": "(AP) Wilds Exploration cards",
-        "Wild Hunt Monster Fight cards": "Wild Hunt Monster Fight cards",
-        "Special Monster Fight cards": "Special Monster Fight cards",
-        "(AP) City Exploration cards": "(AP) City Exploration cards",
-        "(AP) Event cards": "(AP) Event cards",
-        "Mutagens": "Mutagens",
-        "Wild Hunt Help": "Wild Hunt Help",
-        "Hounds": "Hounds",
-        "Wild Hunt Monsters": "Wild Hunt Monsters",
-        "Wild Hunt Exploration - Stage 1": "Wild Hunt Exploration - Stage 1",
-        "Wild Hunt Exploration - Stage 2": "Wild Hunt Exploration - Stage 2",
-        "Wild Hunt Event": "Wild Hunt Event",
-        "Mage Special Action": "Mage Special Action",
-        "Lost Mount": "Lost Mount",
-        "Monster card (Troll)": "Monster card (Troll)",
-        "Trophy cards": "Trophy cards",
-        "Bomb cards": "Bomb cards",
-        "Starting Action cards (Manticore)": "Starting Action cards (Manticore)",
-        "Advanced Action cards": "Advanced Action cards",
-        "Starting Action cards (Ciri)": "Starting Action cards (Ciri)",
-        "Unique Action cards (witchers)": "Unique Action cards (witchers)",
-        "Large Monster cards": "Large Monster cards",
-        "Difficulty Jumbo Reference cards": "Difficulty Jumbo Reference cards",
-        "Mage Unique Action cards": "Mage Unique Action cards",
-        "Mage Trophy cards": "Mage Trophy cards",
-        "Mage Action cards": "Mage Action cards",
-        "Legendary Monster movement cards": "Legendary Monster movement cards",
-        "Legendary Hunt Special Fight cards": "Legendary Hunt Special Fight cards",
-        "Large Legendary Monster cards": "Large Legendary Monster cards",
-        "Large Fight Reference card": "Large Fight Reference card",
-        "Dagon Bonus Monster cards": "Dagon Bonus Monster cards",
-        "Skellige Event cards": "Skellige Event cards",
-        "Skellige Exploration cards": "Skellige Exploration cards"
+        "cardsInPack": "kart w paczce",
+        "Starting Action cards": "startowe karty akcji",
+        "Action cards": "karty akcji",
+        "Help cards": "karty pomocy",
+        "Solo Help card": "karta pomocy solo",
+        "Monster cards": "karty potworów",
+        "City Exploration cards": "karty eksploracji miast",
+        "Attribute Trophy cards": "karty trofeów atrybutów",
+        "Monster Fight cards": "karty walki potworów",
+        "Event cards": "karty zdarzeń",
+        "Potion cards": "karty eliksirów",
+        "Witcher Trophy cards": "karty trofeów szkół wiedźmińskich",
+        "Wilds Exploration cards": "karty eksploracji dzikich ostępów",
+        "(AP) Wilds Exploration cards": "(ZP) karty eksploracji dzikich ostępów",
+        "Wild Hunt Monster Fight cards": "Dziki Gon karty walki potworów",
+        "Special Monster Fight cards": "specjalne karty walki potworów",
+        "(AP) City Exploration cards": "(ZP) karty eksploracji miast",
+        "(AP) Event cards": "(ZP) karty zdarzeń",
+        "Mutagens": "mutageny",
+        "Wild Hunt Help": "Dziki Gon karty pomocy",
+        "Hounds": "Ogary",
+        "Wild Hunt Monsters": "Dziki Gon karty potworów",
+        "Wild Hunt Exploration - Stage 1": "Dziki Gon karty eksploracji poziomu 1",
+        "Wild Hunt Exploration - Stage 2": "Dziki Gon karty eksploracji poziomu 2",
+        "Wild Hunt Event": "Dziki Gon karty wydarzeń",
+        "Mage Special Action": "karty akcji specjalnych (magowie)",
+        "Lost Mount": "Zagubiony Wierzchowiec",
+        "Monster card (Troll)": "karta potwora (Troll)",
+        "Trophy cards": "karty trofeów",
+        "Bomb cards": "petardy",
+        "Starting Action cards (Manticore)": "startowe karty akcji (Mantikora)",
+        "Advanced Action cards": "zaawansowane karty akcji",
+        "Starting Action cards (Ciri)": "startowe karty akcji (Ciri)",
+        "Unique Action cards (witchers)": "karty akcji specjalnych (wiedźmini)",
+        "Large Monster cards": "duże karty potworów",
+        "Difficulty Jumbo Reference cards": "duże referencyjne karty trudności",
+        "Mage Unique Action cards": "karty akcji specjalnej Magów",
+        "Mage Trophy cards": "karty trofeów magów",
+        "Mage Action cards": "karty akcji magów",
+        "Legendary Monster movement cards": "karty ruchu legendarnego potwora",
+        "Legendary Hunt Special Fight cards": "specjalne karty walki legendarnego potwora",
+        "Large Legendary Monster cards": "duże karty legendarnych potworów",
+        "Large Fight Reference card": "duża karta pomocy",
+        "Dagon Bonus Monster cards": "karty bonusów Dagona",
+        "Skellige Event cards": "karty zdarzeń Skellige",
+        "Skellige Exploration cards": "karty eksploracji Skellige"
     },
     "communityLinks": {
-        "title": "Community Links",
+        "title": "Linki społecznościowe",
         "contentType": {
             "link": "Link",
-            "video": "Video",
+            "video": "Wideo",
             "pdf": "PDF",
-            "member": "Community member created"
+            "member": "Utworzone przez graczy"
         },
-        "officialDiscord": "Official Discord",
+        "officialDiscord": "Oficjalny kanał na Discordzie",
         "links": [
             {
-                "title": "Official Discord",
-                "subtitle": "Link",
-                "desc": "The Go On Board official discord. Discuss rules, share your painted minis, or just chat about the game.",
+                "title": "$t(communityLinks.officialDiscord)",
+                "subtitle": "$t(communityLinks.contentType.link)",
+                "desc": "Oficjalny kanał Go On Board na Dicordzie. Dyskutuj o zasadach, udostępniaj swoje pomalowane figurki lub po prostu porozmawiaj o grze.",
                 "link": "https://discord.com/invite/mX8yvYQTuq"
             },
             {
-                "title": "Official Guide: Organizing All Cards in Big Box",
-                "subtitle": "Video",
-                "desc": "A more in-depth guide on how to fit all the cards inside the Big Box.",
+                "title": "Oficjalny poradnik: organizacja kart w Big Box-ie",
+                "subtitle": "$t(communityLinks.contentType.video)",
+                "desc": "Bardziej szczegółowy przewodnik na temat tego, jak zmieścić wszystkie karty w Big Boxie.",
                 "link": "https://youtu.be/Hj7oTXJOFfg"
             },
             {
-                "title": "Official FAQ: Clarifying ambiguous rules/situations",
-                "subtitle": "PDF",
-                "desc": "Answers and clarification for potentially confusing or difficult situations.",
+                "title": "Oficjalne FAQ: uściślenie niejasnych zasad/sytuacji",
+                "subtitle": "$t(communityLinks.contentType.pdf)",
+                "desc": "Odpowiedzi i wyjaśnienia dotyczące potencjalnie mylących lub trudnych sytuacji.",
                 "link": "https://www.dropbox.com/s/6fxx058x76kc9rn/FAQ_ENG_v01.pdf?dl=0"
             },
             {
-                "title": "BoardGameGeek Old World Files",
-                "subtitle": "Link",
-                "desc": "Another corner for the hobby where members upload their own creations, automata, guides, and more.",
+                "title": "Pliki na BoardGameGeeku",
+                "subtitle": "$t(communityLinks.contentType.link)",
+                "desc": "Kolejna społeczność, której członkowie przesyłają własne dzieła, automaty, przewodniki i nie tylko.",
                 "link": "https://boardgamegeek.com/boardgame/331106/witcher-old-world/files"
             },
             {
-                "title": "Witcher Monster Tray Position",
-                "subtitle": "Community member created",
-                "desc": "A detailed guide on locations of all the monster minis and their locations in their respective trays.",
+                "title": "Organizacja wypraski potworów",
+                "subtitle": "$t(communityLinks.contentType.member)",
+                "desc": "Szczegółowy spis wszystkich figurek potworów i ich położenia w odpowiednich wypraskach Big Boxa.",
                 "link": "https://boardgamegeek.com/filepage/259976/witcher-monster-tray-position"
             },
             {
-                "title": "Card and Token Organizers",
-                "subtitle": "Community member created",
-                "desc": "3D printer files for card organizers to better fit in the Big Box, as well as token organizers.",
+                "title": "Organizery na karty i żetony",
+                "subtitle": "$t(communityLinks.contentType.member)",
+                "desc": "Pliki do druku 3D z organizerami do kart, aby lepiej pasowały w Big Boxie, a także organizerami do żetonów.",
                 "link": "https://thingiverse.com/thing:6078120"
             }
         ]
     },
     "lostMount": {
-        "title": "Lost Mount Locations"
+        "title": "Położenie Zagubionego Wierzchowca"
     },
     "footer": {
-        "aboutTitle": "About me",
+        "aboutTitle": "O mnie",
         "aboutBody": [
-            "I am a one-man team and I work on this unofficial fan website in my spare time. If you appreciate the work I do, consider buying me a coffee!",
-            "Updates to this site will continuously roll out. If you're interested in participating in the improvement of this tool, please check out the Github links to fill out bug reports, enhancement suggestions, see my current tasks and ideas, participate in polls for the next major improvement/feature I work on, and more!"
+            "„Jestem „jednoosobowym zespołem” i tę nieoficjalną fanowską stronę tworzę w swoim wolnym czasie. Jeśli doceniasz moją pracę, rozważ zafundowanie mi kawy!",
+            "Aktualizacje tej witryny będą wprowadzane na bieżąco. Jeśli jesteś zainteresowany udziałem w ulepszaniu tego narzędzia, użyj linków GitHub, aby zgłosić błędy, sugestie, zobaczyć moje bieżące zadania i pomysły, wziąć udział w ankietach na temat kolejnego ważnego ulepszenia/funkcji, nad którym pracuję, i wiele więcej!"
         ],
-        "github": "Github",
+        "github": "GitHub ",
         "githubLinks": [
             {
-                "text": "Find a bug?",
+                "text": "Widzisz błąd?",
                 "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBUG%5D+"
             },
             {
-                "text": "Enhancement idea?",
+                "text": "Pomysł na ulepszenie?",
                 "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=%5BENHANCEMENT%5D+"
             },
             {
-                "text": "Discussions",
+                "text": "Dyskusje",
                 "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/discussions"
             },
             {
-                "text": "Project timeline",
+                "text": "Harmonogram projektu",
                 "link": "https://github.com/users/swirle13/projects/2/views/3"
             },
             {
-                "text": "Task Board",
+                "text": "Lista zadań",
                 "link": "https://github.com/users/swirle13/projects/2/views/1"
             },
             {
-                "text": "All open bugs/enhancements",
+                "text": "Lista zgłoszonych błędów i propozycji",
                 "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
             },
             {
-                "text": "Source code",
+                "text": "Kod źródłowy",
                 "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool"
             }
         ],
-        "communities": "Communities",
+        "communities": "Społeczności",
         "communitiesLinks": [
             {
-                "text": "Official Discord",
+                "text": "$t(communityLinks.officialDiscord)",
                 "link": "https://discord.com/invite/mX8yvYQTuq"
             },
             {
-                "text": "Official Twitter",
+                "text": "Oficjalny profil na Twitterze",
                 "link": "https://twitter.com/board_go26242"
             },
             {
-                "text": "Official Instagram",
+                "text": "Oficjalny profil na Instagramie",
                 "link": "https://www.instagram.com/go.on.board"
             },
             {
@@ -585,14 +585,14 @@
                 "link": "https://www.kickstarter.com/projects/goonboard/the-witcher"
             },
             {
-                "text": "Board Game Geek",
+                "text": "BoardGameGeek",
                 "link": "https://boardgamegeek.com/boardgame/331106/witcher-old-world"
             }
         ],
-        "supportTitle": "Support Me",
+        "supportTitle": "Wesprzyj mnie",
         "supportLinks": [
             {
-                "text": "Buy me a coffee ☕️",
+                "text": "Kup mi kawę ☕️",
                 "link": "https://bmc.link/swirle13"
             }
         ]
