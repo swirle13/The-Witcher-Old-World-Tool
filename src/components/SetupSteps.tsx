@@ -11,13 +11,20 @@ import wildHunt from "../img/expansionHeaders/wildHunt.png";
 import "../css/SetupHelper.css";
 import PageTitle from '../components/PageTitle';
 import { AccordionEventKey } from 'react-bootstrap/esm/AccordionContext';
-import { lenToStrArr } from '../util/generic';
 
 const expansions = ["Legendary Hunt", "Mages", "Monster Pack", "Monster Trail", "Skellige", "Adventure Pack", "Wild Hunt"];
 const expansionsImages = [legendaryHunt, mages, monsterPack, monsterTrail, skellige, adventurePack, wildHunt];
 
+/**
+ * Produces an array of strings, starting at '0' through to 'obj.length', e.g. `my_arr.length = 3`, produces `['0', '1', '2']`.
+ * @param obj Array of strings
+ * @returns Array of strings of the stringified length of obj
+ */
+function lenToStrArr(obj: Array<string>): string[] {
+    return [...Array(obj.length).keys()].map(a => String(a));
+}
 
-export default function SetupHelper({ t }) {
+export default function SetupSteps({ t }) {
     const [players, setPlayers] = useState<number>(1);
     const [expansionsState, setExpansionsState] = useState<Array<boolean>>(
         new Array(expansions.length).fill(false)

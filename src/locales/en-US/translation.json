@@ -105,10 +105,21 @@
     "Hound": "Hound",
     "Hounds": "Hounds",
     "name": "name",
-    "__setup": {
+    "setupHelper": {
         "error": "Error, number of players is invalid. Must be between 1 and 5.",
         "base": {
-            "1": "Set out the playmat or game boards."
+            "1": "Set out the playmat or game boards.",
+            "actionCards": "Shuffle the Action Card deck and place it above the Action Card slots. Reveal cards until you have 3 “0-cost” cards, which go in the 3 lowest spaces (face up). Reshuffle any other revealed cards, then reveal 3 more cards for the remaining spaces (face up).",
+            "attrTrophies": [
+                "Draw 1 random Attribute Trophy and place it on the edge of the board, below the Exploration Card slots, face up.",
+                "Draw 1 random Attribute Trophy and place it on the edge of the board, below the Exploration Card slots, face up.",
+                "Draw 4 Attribute Trophies, one for each attribute, and place them on the edge of the board, below the Exploration Card slots, face up.",
+                "Draw 4 Attribute Trophies, one for each attribute, and place them on the edge of the board, below the Exploration Card slots, face up.",
+                "Place all 8 Attribute Trophies on the edge of the board, below the Exploration Card slots, face up.",
+                "Place all 8 Attribute Trophies on the edge of the board, below the Exploration Card slots, face up."
+            ],
+            "potions": "Shuffle the Potion deck and place it on the edge of the board, below the Action Cards.",
+            "decks": "Shuffle the City Exploration deck and Wilds Exploration deck. Do not shuffle the Event deck! Place each in the appropriate slot on the game board."
         },
         "legendaryHunt": {
             "1": "Put the large Legendary Hunt help near the board. Use Side B for a longer game."
@@ -119,10 +130,34 @@
             "medium": "Story and Sword!",
             "hard": "Blood and Broken Bones!",
             "veryHard": "Death March!",
-            "manage": "Choose a player to manage the Round Tracking board. Hand them the board that matches the number of players. Place the Tracking Token on the \"1\" spot in the top-left corner."
+            "manage": "Choose a player to manage the Round Tracking board. Hand them the board that matches the number of players. Place the Tracking Token on the \"1\" spot in the top-left corner.",
+            "createExplorationDeck": "Create the Wild Hunt Exploration deck by placing 3 random, face-down \"Stage II\" cards and then placing {{num}} random, face-down \"Stage I\" cards atop them.",
+            "decks": "Without shuffling, place the Wild Hunt Exploration and Wild Hunt Event decks on their slots on the game board. (Standard City and Wilds Exploration decks are not used in Wild Hunt)."
         },
         "skellige": {
-            "harborTokens": ""
+            "playmat": [
+                "If using the playmat",
+                "Ignore tokens, Harbor tokens are printed on the map",
+                "Place ship miniatures at the following randomized locations"
+            ],
+            "board": [
+                "If using the board",
+                "Shuffle the Harbor tokens, anchor side up",
+                "Place them on the coastal locations (1, 5, 6, 9, 12, 13) and flip them over",
+                "Place a ship miniature on the three locations with a ship symbol",
+                "Flip them back to the anchor side, as a reminder"
+            ],
+            "decks": "Shuffle the Skellige Exploration deck. Do not shuffle the Skellige Event deck! Place both in their slots above the islands on the game board.",
+            "dagon": "Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus deck and place it {{val}}near its track.",
+            "siren": "Place the Siren miniature on the Dagon location, with its Monster Card nearby."
+        },
+        "magesExp": {
+            "actionCards": "Repeat the above step for the Mage Action Cards. (Or replace that step if everyone is playing a mage.)",
+            "": ""
+        },
+        "monsterTrail": {
+            "mutagen": "Shuffle the Mutagen Deck and place it below the Attribute Trophy deck.",
+            "bomb": "Shuffle the Bomb deck and place it below the Potion deck."
         }
     },
     "Monster": "Monster",

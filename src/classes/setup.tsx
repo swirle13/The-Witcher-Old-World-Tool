@@ -1,11 +1,13 @@
-import { ReactElement } from 'react';
-import { Table } from 'react-bootstrap';
+import { ReactElement, useState } from 'react';
+import { Button, Col, Row, Table } from 'react-bootstrap';
+import { TerrainLocation, getTerrainLocations } from './terrains';
+import { shuffle } from '../util/generic';
 
 export function startingResources(numPlayers: number, t): ReactElement {
     let ret: Array<string> = [""];
-    const p = t("player")
-    const c = t("cards")
-    const g = t("gold")
+    const p = t("player");
+    const c = t("cards");
+    const g = t("gold");
     if (numPlayers == 1) {
         ret = [`${p} 1: 5 ${c}, 3 ${g}`];
     } else if (numPlayers == 2) {
@@ -46,45 +48,94 @@ export function startingResources(numPlayers: number, t): ReactElement {
 
 export function wildHuntDifficulty(numPlayers: number, t): Array<string> {
     let ret: Array<string> = [""];
+    const l = t('Level');
+    const m = t('Monster');
+    const s = t('Shield Tokens');
+
     if (numPlayers == 1) {
         ret = [
-            "Level I Monster\n5 Shield Tokens",
-            "Level I Monster\n7 Shield Tokens",
-            "Level II Monster\n9 Shield Tokens",
-            "Level II Monster\n11 Shield Tokens",
+            `${l} I ${m}\n5 ${s}`,
+            `${l} I ${m}\n7 ${s}`,
+            `${l} II ${m}\n9 ${s}`,
+            `${l} II ${m}\n11 ${s}`,
         ];
     } else if (numPlayers == 2) {
         ret = [
-            "Level II Monster\n28 Shield Tokens",
-            "Level I Monster + Level II Monster\n31 Shield Tokens",
-            "Level I Monster + Level III Monster\n34 Shield Tokens",
-            "Level I Monster + Level III Monster\n37 Shield Tokens",
+            `${l} II ${m}\n28 ${s}`,
+            `${l} I ${m} + ${l} II ${m}\n31 ${s}`,
+            `${l} I ${m} + ${l} III ${m}\n34 ${s}`,
+            `${l} I ${m} + ${l} III ${m}\n37 ${s}`,
         ];
     } else if (numPlayers == 3) {
         ret = [
-            "Level II Monster\n54 Shield Tokens",
-            "Level I Monster + Level II Monster\n58 Shield Tokens",
-            "Level I Monster + Level III Monster\n62 Shield Tokens",
-            "Level I Monster + Level III Monster\n66 Shield Tokens",
+            `${l} II ${m}\n54 ${s}`,
+            `${l} I ${m} + ${l} II ${m}\n58 ${s}`,
+            `${l} I ${m} + ${l} III ${m}\n62 ${s}`,
+            `${l} I ${m} + ${l} III ${m}\n66 ${s}`,
         ];
     } else if (numPlayers == 4) {
         ret = [
-            "2 × Level I Monster\n77 Shield Tokens",
-            "Level I Monster + Level III Monster\n82 Shield Tokens",
-            "Level I Monster + Level III Monster\n87 Shield Tokens",
-            "Level I Monster + Level III Monster\n92 Shield Tokens",
+            `2 × ${l} I ${m}\n77 ${s}`,
+            `${l} I ${m} + ${l} III ${m}\n82 ${s}`,
+            `${l} I ${m} + ${l} III ${m}\n87 ${s}`,
+            `${l} I ${m} + ${l} III ${m}\n92 ${s}`,
         ];
     } else {
         ret = [
-            "2 × Level I Monster\n97 Shield Tokens",
-            "Level I Monster + Level III Monster\n106 Shield Tokens",
-            "Level I Monster + Level III Monster\n113 Shield Tokens",
-            "Level I Monster + Level III Monster\n120 Shield Tokens",
+            `2 × ${l} I ${m}\n97 ${s}`,
+            `${l} I ${m} + ${l} III ${m}\n106 ${s}`,
+            `${l} I ${m} + ${l} III ${m}\n113 ${s}`,
+            `${l} I ${m} + ${l} III ${m}\n120 ${s}`,
         ];
     }
     return ret;
 }
 
+const coastalLocations = getTerrainLocations({ coastal: true });
+
+/**
+ * Gets all coastal TerrainLocations, shuffles them, and returns 3. For boat
+ * placement in Setup.
+ * @returns Three random TerrainLocations that are valid locations for boats.
+ */
+function randomizeSkelligeBoatStartingLocations(allCoastalLocations: TerrainLocation[]): TerrainLocation[] {
+    const locs = shuffle(allCoastalLocations).slice(0, 3);
+    return locs.slice(0, 3);
+}
+
+function skelligeBoatStep(t) {
+    const locations = randomizeSkelligeBoatStartingLocations(coastalLocations);
+    // const updateLocations = () => {
+    //     setLocations(randomizeSkelligeBoatStartingLocations());
+    // };
+
+    return (
+        <>
+            {t('setupHelper.skellige.playmat.0')}
+            <ul>
+                <li>{t('setupHelper.skellige.playmat.1')}</li>
+                <li>{t('setupHelper.skellige.playmat.2')}
+                    <ul>
+                        {locations.map((loc) => (
+                            <li>{t(loc.name)}, {loc.num}</li>
+                        ))}
+                    </ul>
+                </li>
+            </ul>
+
+            {t('setupHelper.skellige.board.0')}
+            <ul>
+                <li>{t('setupHelper.skellige.board.1')}</li>
+                <li>{t('setupHelper.skellige.board.2')}</li>
+                <li>{t('setupHelper.skellige.board.3')}</li>
+                <li>{t('setupHelper.skellige.board.4')}</li>
+            </ul>
+        </>
+    );
+}
+
+
+// TODO: update this to a functional component
 export function compileSteps(
     t,
     legendaryHunt = false,
@@ -97,34 +148,34 @@ export function compileSteps(
     numPlayers = 1,
 ): Array<string> {
     if (numPlayers < 1 || numPlayers > 5) {
-        throw new Error("Error, number of players is invalid. Must be between 1 and 5.");
+        throw new Error(t("setupHelper.error"));
     }
 
     const finalSteps: Array<any> = [];
     let tempElem = {}, tempStr = "", tempStr2 = "", tempArr: Array<any> = [];
 
     // step 1
-    finalSteps.push('Set out the playmat or game boards.');
+    finalSteps.push(t('setupHelper.base.1'));
 
     // step
-    if (legendaryHunt) finalSteps.push('Put the large Legendary Hunt help near the board. Use Side B for a longer game.');
+    if (legendaryHunt) finalSteps.push(t('setupHelper.legendaryHunt.1'));
 
     if (wildHunt) {
         // step
         finalSteps.push(
             <>
-                Choose the game difficulty on the table below. This determines starting monsters and shields later.
+                {t("setupHelper.wildHunt.difficultyTitle")}
                 <Table className='lh-base' style={{ tableLayout: 'fixed' }}>
                     <thead>
-                        <th>Just the Story! <em className='p-0'>(Easy)</em></th>
-                        <th>Story and Sword! <em className='p-0'>(Normal)</em></th>
-                        <th>Blood and Broken Bones! <em className='p-0'>(Hard)</em></th>
-                        <th>Death March! <em className='p-0'>(Very Hard)</em></th>
+                        <th>{t("setupHelper.wildHunt.easy")}</th>
+                        <th>{t("setupHelper.wildHunt.medium")}</th>
+                        <th>{t("setupHelper.wildHunt.hard")}</th>
+                        <th>{t("setupHelper.wildHunt.veryHard")}</th>
                     </thead>
                     <tbody>
                         <tr>
                             {wildHuntDifficulty(numPlayers, t).map((text) => (
-                                <td style={{whiteSpace: 'pre-wrap', borderBottom: 'none'}}>{text}</td>
+                                <td style={{ whiteSpace: 'pre-wrap', borderBottom: 'none' }}>{text}</td>
                             ))}
                         </tr>
                     </tbody>
@@ -133,53 +184,73 @@ export function compileSteps(
         );
 
         // step
-        finalSteps.push('Choose a player to mange the Round Tracking board. Hand them the board that matches the number of players. Place the Tracking Token on the "1" spot in the top-left corner.');
+        finalSteps.push(t('setupHelper.wildHunt.manage'));
+    }
+
+    // TODO: Automatically roll these three tokens and provide locations for the boats
+    // step
+    const locations = randomizeSkelligeBoatStartingLocations(coastalLocations);
+    if (skellige) {
+        finalSteps.push(
+            <>
+                {t("setupHelper.skellige.playmat.0") + ":"}
+                <ul>
+                    <li>{t("setupHelper.skellige.playmat.1")}</li>
+                    <li>{t("setupHelper.skellige.playmat.2") + ":"}
+                        <ul>
+                            {locations.map((loc) => (
+                                <li>{t(loc.name)}, {loc.num}</li>
+                            ))}
+                        </ul>
+                    </li>
+                </ul>
+
+                {t("setupHelper.skellige.board.0") + ":"}
+                <ul>
+                    <li>{t("setupHelper.skellige.board.1")}</li>
+                    <li>{t("setupHelper.skellige.board.2")}</li>
+                    <li>{t("setupHelper.skellige.board.3")}</li>
+                    <li>{t("setupHelper.skellige.board.4")}</li>
+                </ul>
+            </>
+        );
     }
 
     // step
-    if (skellige) finalSteps.push('Shuffle the Harbor tokens (anchor side up) and place them on the coastal locations (1, 5, 6, 9, 12, 13). Flip them over, place a Ship miniature on the three locations with a ship symbol, then flip them back to the anchor side (as a reminder).');
+    finalSteps.push(t('setupHelper.base.actionCards'));
 
     // step
-    finalSteps.push('Shuffle the Action Card deck and place it above the Action Card slots. Reveal cards until you have 3 “0-cost” cards, which go in the 3 lowest spaces (face up). Reshuffle any other revealed cards, then reveal 3 more cards for the remaining spaces (face up).');
+    if (mages) finalSteps.push(t('setupHelper.magesExp.actionCards'));
 
     // step
-    if (mages) finalSteps.push('Repeat the above step for the Mage Action Cards. (Or replace that step if everyone is playing a mage.)');
-
-    // step
-    if (numPlayers == 1) {
-        tempElem = 'Draw 1 random Attribute Trophy and place it on the edge of the board, below the Exploration Card slots, face up.';
-    } else if (numPlayers == 2 || numPlayers == 3) {
-        tempElem = 'Draw 4 Attribute Trophies, one for each attribute, and place them on the edge of the board, below the Exploration Card slots, face up.';
-    } else if (numPlayers > 3) {
-        tempElem = 'Place all 8 Attribute Trophies on the edge of the board, below the Exploration Card slots, face up.';
-    }
-    finalSteps.push(tempElem);
+    finalSteps.push(t(`setupHelper.base.attrTrophies.${numPlayers}`));
     tempElem = '';
 
     // step
-    if (monsterTrail) finalSteps.push('Shuffle the Mutagen Deck and place it below the Attribute Trophy deck.');
-    
+    if (monsterTrail) finalSteps.push(t('setupHelper.monsterTrail.mutagen'));
+
     // step
-    finalSteps.push('Shuffle the Potion deck and place it on the edge of the board, below the Action Cards.');
-    
+    finalSteps.push(t('setupHelper.base.potions'));
+
     // step
-    if (monsterTrail) finalSteps.push('Shuffle the Bomb deck and place it below the Potion deck.');
-    
+    if (monsterTrail) finalSteps.push(t('setupHelper.monsterTrail.bomb'));
+
     if (wildHunt) {
-        finalSteps.push(`Create the Wild Hunt Exploration deck by placing 3 random, face-down "Stage II" cards and then placing ${numPlayers > 3 ? '3' : '4'} random, face-down "Stage I" cards atop them.`);
-        finalSteps.push('Without shuffling, place the Wild Hunt Exploration and Wild Hunt Event decks on their slots on the game board. (Standard City and Wilds Exploration decks are not used in Wild Hunt).');
+        finalSteps.push(t("setupHelper.wildHunt.createExplorationDeck", { num: numPlayers > 3 ? 3 : 4 }));
+        finalSteps.push(t("setupHelper.wildHunt.decks"));
     } else {
         // step
-        finalSteps.push('Shuffle the City Exploration deck and Wilds Exploration deck. Do not shuffle the Event deck! Place each in the appropriate slot on the game board.');
-        
+        finalSteps.push(t("setupHelper.base.decks"));
+
         // step
-        if (skellige) finalSteps.push('Shuffle the Skellige Exploration deck. Do not shuffle the Skellige Event deck! Place both in their slots above the islands on the game board.');
-        
+        if (skellige) finalSteps.push(t("setupHelper.skellige.decks"));
+
         // step
         if (monsterTrail) tempStr = "and the large Dagon card ";
-        if (skellige && !wildHunt) finalSteps.push(`Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus deck and place it ${tempStr}near this track.`);
+        if (skellige && !wildHunt) finalSteps.push(t("setupHelper.skellige.dagon", { val: tempStr }));
+        tempStr = '';
         // step
-        if (monsterPack && skellige) finalSteps.push('Place the Siren miniature on the Dagon location, with its Monster Card nearby.');
+        if (monsterPack && skellige) finalSteps.push(t("setupHelper.skellige.siren"));
         tempElem = '';
     }
 
@@ -194,7 +265,7 @@ export function compileSteps(
     // create array of string list items to generate ordered list
     tempArr = [];
     tempArr.push("Sort Monster Cards and Monster Tokens by level (I, II, and III). Place the cards near the game board (face up). Shuffle the tokens and place them near the game board (face down).");
-    
+
     if (wildHunt) {
         tempArr.push('Draw a Monster Token of level based on the game difficulty. Draw a <em>Forest</em> Location Token. Place the monster token or miniature on the map there an place its Monster Card and the Location Token in the matching space on the game board.');
         tempArr.push('If the game difficulty indicates a second monster, repeat the above step but with a <em>Water</em> location.');
@@ -258,7 +329,7 @@ export function compileSteps(
     if (mages) tempStr = "or Energy ";
     monsterTrail ? tempStr2 = "11" : tempStr2 = "10";
 
-    tempArr.push(`Take a ${wildHunt? 'Wild Hunt ' : '' }Help Card, player board, and matching miniature (with colored ring), cubes, Shield ${tempStr}marker, scoring token, and starting deck of ${tempStr2} cards. (Starting cards have a School icon in the top right corner.)`);
+    tempArr.push(`Take a ${wildHunt ? 'Wild Hunt ' : ''}Help Card, player board, and matching miniature (with colored ring), cubes, Shield ${tempStr}marker, scoring token, and starting deck of ${tempStr2} cards. (Starting cards have a School icon in the top right corner.)`);
     tempStr = "", tempStr2 = "";
     tempArr.push(`Take ${numPlayers - 1} of their Witcher${mages ? "/Mage" : ""} Trophy Cards (equal to the other players).`);
     if (mages) tempArr.push("If a mage, place their School and Specialty tokens on the map, covering those of an unused Witcher School.");

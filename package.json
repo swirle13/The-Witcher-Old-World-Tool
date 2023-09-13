@@ -10,7 +10,9 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "lint": "eslint '*/**/*.ts*'",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d dist"
+        "deploy": "gh-pages -d dist",
+        "i18n": "i18next-locales-sync -p en-US -s cz de en-GB es fr it pl -l src/locales --spaces 4",
+        "check-i18n": "npm run i18n -- --check"
     },
     "repository": {
         "type": "git",
@@ -39,6 +41,7 @@
         "eslint-config-xo-typescript": "^0.57.0",
         "eslint-plugin-react": "^7.32.2",
         "html-webpack-plugin": "^5.5.3",
+        "i18next-locales-sync": "^2.0.1",
         "image-minimizer-webpack-plugin": "^3.8.3",
         "mini-css-extract-plugin": "^2.7.6",
         "sharp": "^0.32.1",
@@ -59,6 +62,7 @@
         "gh-pages": "^5.0.0",
         "i18next": "^23.4.6",
         "i18next-browser-languagedetector": "^7.1.0",
+        "i18next-localstorage-backend": "^4.1.1",
         "i18next-resources-for-ts": "^1.3.3",
         "localforage": "^1.10.0",
         "match-sorter": "^6.3.1",

@@ -1,5 +1,6 @@
 import i18next from "i18next";
 import LanguageDetector from 'i18next-browser-languagedetector';
+import LocalStorageBackend from 'i18next-localstorage-backend';
 import { initReactI18next } from "react-i18next";
 
 import translationEN_US from '../locales/en-US/translation.json';
@@ -30,7 +31,7 @@ export const myLangs: object = {
     en_GB: "GB",
     fr: "FR",
     pl: "PL",
-}
+};
 
 i18next
     .use(LanguageDetector)
@@ -43,11 +44,23 @@ i18next
             escapeValue: false
         },
         ns: "translation", // namespaces help to divide huge translations into multiple small files.
-        defaultNS: "translation"
+        defaultNS: "translation",
+        keySeparator: ".",
+        saveMissing: true,
+        backend: {
+            backends: [
+                LocalStorageBackend,
+            ],
+            backendOptions: [{
+                expirationTime: 7 * 24 * 60 * 60 * 1000 // 7 days
+            }, {
+                loadPath: '/locales/{{lng}}/{{ns}}.json'
+            }]
+        }
     });
 
 i18next.services.formatter?.add('lowercase', (value, lng, options) => {
     return value.toLowerCase();
-})
+});
 
 export default i18next;
