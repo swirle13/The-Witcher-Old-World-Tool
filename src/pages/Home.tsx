@@ -8,7 +8,7 @@ export default function Home({ t }): JSX.Element {
             name: t("Setup Helper"),
             link: "#/setupHelper",
             desc: t("A dynamically updated set of consolidated instructions for any expansion and player combination."),
-            btn: t("Wind's howling..")
+            btn: t("Wind's howling…")
         },
         {
             name: t("Location Tokens"),
@@ -32,7 +32,7 @@ export default function Home({ t }): JSX.Element {
             name: t("Inventory Checker"),
             link: "#/inventoryChecker",
             desc: t("To help those just receiving their The Witcher: Old World game, here's an in-depth guide on what you (hopefully) received."),
-            btn: t("Medallion's humming..")
+            btn: t("Medallion's humming…")
         },
         {
             name: t("Lost Mount"),
