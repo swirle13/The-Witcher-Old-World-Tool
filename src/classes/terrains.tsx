@@ -159,14 +159,10 @@ export const terrainLocations: ReadonlyArray<TerrainLocation> = [
  */
 export function getTerrainLocations(reqAttrs: { num?: number, type?: TerrainType, coastal?: boolean; }): Array<TerrainLocation> {
     let retArray: Array<TerrainLocation> = [];
-    console.log("terrainLocations array:", terrainLocations);
-    console.log("reqAttrs:", reqAttrs);
     retArray = terrainLocations.filter((loc) => {
-        console.log("loc.coastal == reqAttrs.coastal?", loc.coastal == reqAttrs.coastal)
         return loc.num === reqAttrs.num || loc.type === reqAttrs.type || loc.coastal === reqAttrs.coastal ;
     });
 
-    console.log("retArray[]:", retArray);
     return retArray;
 }
 

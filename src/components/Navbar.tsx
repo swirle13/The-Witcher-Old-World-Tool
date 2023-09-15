@@ -57,8 +57,8 @@ export default function Navbar({ t, i18n }) {
                             </NavDropdown.Item>
                         </NavDropdown>
                         <NavDropdown title={t("__flag")} id="lang-nav-dropdown" align={"end"}>
-                            {Object.entries(myLangs).map(([code, val]): ReactNode =>
-                                <NavDropdown.Item onClick={() => i18n.changeLanguage(code)}>
+                            {Object.entries(myLangs).map(([code, val], index): ReactNode =>
+                                <NavDropdown.Item key={index} onClick={() => i18n.changeLanguage(code)}>
                                     {val}
                                 </NavDropdown.Item>
                             )}

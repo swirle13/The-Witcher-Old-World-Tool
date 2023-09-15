@@ -34,19 +34,18 @@ export const myLangs: object = {
 };
 
 i18next
+    // .use(LocalStorageBackend)
     .use(LanguageDetector)
     .use(initReactI18next) // passes i18n down to react-i18next
     .init({
+        partialBundledLanguages: true,
         resources: resources,
         fallbackLng: "en_US",
         debug: true,
         interpolation: {
             escapeValue: false
         },
-        ns: "translation", // namespaces help to divide huge translations into multiple small files.
-        defaultNS: "translation",
         keySeparator: ".",
-        saveMissing: true,
         backend: {
             backends: [
                 LocalStorageBackend,
@@ -59,6 +58,7 @@ i18next
         }
     });
 
+i18next.loadLanguages(['cz', 'de', 'en-GB', 'es', 'fr', 'it', 'pl'])
 i18next.services.formatter?.add('lowercase', (value, lng, options) => {
     return value.toLowerCase();
 });

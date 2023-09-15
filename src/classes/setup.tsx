@@ -39,14 +39,14 @@ export function startingResources(numPlayers: number, t): ReactElement {
     }
     return (
         <ul>
-            {ret.map((text) => (
-                <li>{text}</li>
+            {ret.map((text, index) => (
+                <li key={numPlayers + "-" + index}>{text}</li>
             ))}
         </ul>
     );
 }
 
-export function wildHuntDifficulty(numPlayers: number, t): Array<string> {
+export function wildHuntDifficulty(numPlayers: number, t): string[] {
     let ret: Array<string> = [""];
     const l = t('Level');
     const m = t('Monster');
@@ -112,24 +112,29 @@ function skelligeBoatStep(t) {
     return (
         <>
             {t('setupHelper.skellige.playmat.0')}
-            <ul>
-                <li>{t('setupHelper.skellige.playmat.1')}</li>
-                <li>{t('setupHelper.skellige.playmat.2')}
+            <ol>
+                <li key={'1'}>{t('setupHelper.skellige.playmat.1')}</li>
+                <li key={'2'}>{t('setupHelper.skellige.playmat.2')}
                     <ul>
-                        {locations.map((loc) => (
-                            <li>{t(loc.name)}, {loc.num}</li>
+                        {locations.map((loc, index) => (
+                            <li key={index}>{t(loc.name)}, {loc.num}</li>
                         ))}
                     </ul>
                 </li>
-            </ul>
+            </ol>
 
             {t('setupHelper.skellige.board.0')}
-            <ul>
-                <li>{t('setupHelper.skellige.board.1')}</li>
-                <li>{t('setupHelper.skellige.board.2')}</li>
+            <ol>
+                {[1, 2, 3, 4].map((val, index) => (
+                    <li key={index}>
+                        {t(`setupHelper.skellige.board.${val}`)}
+                    </li>
+
+                ))}
+                {/* <li>{t('setupHelper.skellige.board.2')}</li>
                 <li>{t('setupHelper.skellige.board.3')}</li>
-                <li>{t('setupHelper.skellige.board.4')}</li>
-            </ul>
+                <li>{t('setupHelper.skellige.board.4')}</li> */}
+            </ol>
         </>
     );
 }
@@ -166,16 +171,22 @@ export function compileSteps(
             <>
                 {t("setupHelper.wildHunt.difficultyTitle")}
                 <Table className='lh-base' style={{ tableLayout: 'fixed' }}>
-                    <thead>
-                        <th>{t("setupHelper.wildHunt.easy")}</th>
-                        <th>{t("setupHelper.wildHunt.medium")}</th>
-                        <th>{t("setupHelper.wildHunt.hard")}</th>
-                        <th>{t("setupHelper.wildHunt.veryHard")}</th>
-                    </thead>
-                    <tbody>
+                    <thead style={{textAlign: 'center', verticalAlign: 'middle'}}>
                         <tr>
-                            {wildHuntDifficulty(numPlayers, t).map((text) => (
-                                <td style={{ whiteSpace: 'pre-wrap', borderBottom: 'none' }}>{text}</td>
+                            <th>{t("setupHelper.wildHunt.easy")}</th>
+                            <th>{t("setupHelper.wildHunt.medium")}</th>
+                            <th>{t("setupHelper.wildHunt.hard")}</th>
+                            <th>{t("setupHelper.wildHunt.veryHard")}</th>
+                        </tr>
+                    </thead>
+                    <tbody style={{textAlign: 'center', verticalAlign: 'middle'}}>
+                        <tr>
+                            {wildHuntDifficulty(numPlayers, t).map((text, index) => (
+                                <td key={index} style={{
+                                    whiteSpace: 'pre-wrap', borderBottom: 'none'
+                                }}>
+                                    {text}
+                                </td>
                             ))}
                         </tr>
                     </tbody>
@@ -254,46 +265,38 @@ export function compileSteps(
         tempElem = '';
     }
 
-    // step All
-    if (adventurePack) tempStr = "Green Quest Tokens, ";
-    if (wildHunt) tempStr = "Blue Quest Tokens, ";
-    finalSteps.push(`Place Gold Tokens, ${tempStr}Poker Dice, and Closed Tavern token or mini near the game board.`);
+    // step base
+    // Adventure Pack and Wild Hunt are mutually exclusive
+    let expansion = "base";
+    if (adventurePack) expansion = "adventurePack";
+    if (wildHunt) expansion = "wildHunt";
+    finalSteps.push(t(`setupHelper.${expansion}.tokens`));
 
-    // step All
-    finalSteps.push('Sort Location Tokens into 3 piles by terrain type. Shuffle each pile and place them (face down) near the game board. Draw 1 token from each pile and place them (face up) on their slots on the game board (to the right of the Monster slots).');
+    // step base
+    finalSteps.push(t("setupHelper.base.locationTokens"));
 
     // create array of string list items to generate ordered list
     tempArr = [];
-    tempArr.push("Sort Monster Cards and Monster Tokens by level (I, II, and III). Place the cards near the game board (face up). Shuffle the tokens and place them near the game board (face down).");
+    tempArr.push(t("setupHelper.base.monsterSetup.0"));
 
     if (wildHunt) {
-        tempArr.push('Draw a Monster Token of level based on the game difficulty. Draw a <em>Forest</em> Location Token. Place the monster token or miniature on the map there an place its Monster Card and the Location Token in the matching space on the game board.');
-        tempArr.push('If the game difficulty indicates a second monster, repeat the above step but with a <em>Water</em> location.');
-        if (monsterTrail) tempArr.push("Place the corresponding large Monster Cards near the board.");
+        tempArr.push(t("setupHelper.wildHunt.monsterSetup.0"));
+        tempArr.push(t('setupHelper.wildHunt.monsterSetup.1'));
     } else {
         if (numPlayers > 3) {
-            tempArr.push(`Move ${numPlayers - 3} Level I tokens into a separate “additional monsters” stack. See p. 26 of core rules for how these are used.`);
+            tempArr.push(t('setupHelper.base.monsterSetup.1', {numTokens: numPlayers > 3 ? numPlayers - 3 : 3 }))
         }
-        tempStr = "Draw 3 Monster Tokens: ";
-
-        if (numPlayers == 1) {
-            tempStr += "One of each level.";
-        } else if (numPlayers == 2) {
-            tempStr += "2 × Level I and 1 × Level II.";
-        } else {
-            tempStr += "3 × Level I.";
-        }
-        tempArr.push(tempStr);
+        tempArr.push(t(`setupHelper.base.monsterSetup.2.${numPlayers}`));
         tempStr = "";
 
-        tempArr.push("Place the three Monster Tokens (randomly) in locations on the map matching the 3 face-up Location Tokens.");
-        tempArr.push("Turn the 3 Monster Tokens face up and place their corresponding Monster Cards in the slots on the game board matching the corresponding Location Tokens. Replace the tokens with miniatures if you have them.");
-        if (monsterTrail) tempArr.push("Place the 3 corresponding large Monster Cards near the board.");
+        tempArr.push(t("setupHelper.base.monsterSetup.3"));
+        tempArr.push(t('setupHelper.base.monsterSetup.4'));
     }
+    if (monsterTrail) tempArr.push(t('setupHelper.monsterTrail.lgCards'));
 
     tempElem = (
         <div>
-            Set up Monsters:
+            {t('setupHelper.base.monsterSetup.5')}
             <ol type='a'>
                 {tempArr.map((text, id) => (
                     <li key={id}>{text}</li>
@@ -306,10 +309,11 @@ export function compileSteps(
     tempArr = [];
 
     // step
-    if (monsterTrail) finalSteps.push('Remove 8 Monster Fight cards from the deck. Put 4 back in the box and set 4 aside for later (when a Level III monster appears). Add the Special Attack cards to the Monster Fight deck.');
+    if (monsterTrail) finalSteps.push(t('setupHelper.monsterTrail.spFightCards'));
 
     // step
-    finalSteps.push(`Shuffle the Monster Fight deck and place it (face down) near the game board.${wildHunt ? ' Place the Charge/Bite token near the deck.' : ''}`);
+    wildHunt ? expansion = "wildHunt" : expansion = "base"
+    finalSteps.push(t(`setupHelper.${expansion}.monsterFightDeck`));
 
     // step
     if (legendaryHunt) finalSteps.push('Choose a Legendary Monster. Place its large card and the Special Fight cards (shuffled) near the game board. Place its miniature on the location shown on its card. Shuffle the Destruction Tokens and keep them (face-down) near the board.');
@@ -342,7 +346,7 @@ export function compileSteps(
     if (wildHunt) {
         tempArr.push('Draw 5 cards and take 3 Gold.');
     } else {
-        tempArr.push(<p>Draw the following cards and gold based on player position: {startingResources(numPlayers, t)}</p>);
+        tempArr.push(<>Draw the following cards and gold based on player position: {startingResources(numPlayers, t)}</>);
     }
     tempElem = (
         <div>

@@ -119,7 +119,25 @@
                 "Place all 8 Attribute Trophies on the edge of the board, below the Exploration Card slots, face up."
             ],
             "potions": "Shuffle the Potion deck and place it on the edge of the board, below the Action Cards.",
-            "decks": "Shuffle the City Exploration deck and Wilds Exploration deck. Do not shuffle the Event deck! Place each in the appropriate slot on the game board."
+            "decks": "Shuffle the City Exploration deck and Wilds Exploration deck. Do not shuffle the Event deck! Place each in the appropriate slot on the game board.",
+            "tokens": "Place Gold Tokens, Poker Dice, and Closed Tavern token or mini near the game board.",
+            "locationTokens": "Sort Location Tokens into 3 piles by terrain type. Shuffle each pile and place them (face down) near the game board. Draw 1 token from each pile and place them (face up) on their slots on the game board (to the right of the Monster slots).",
+            "monsterSetup": {
+                "0": "Sort Monster Cards and Monster Tokens by level (I, II, and III). Place the cards near the game board (face up). Shuffle the tokens and place them near the game board (face down).",
+                "1": "Move {{numTokens}} Level I tokens into a separate “additional monsters” stack. See p. 26 of core rules for how these are used.",
+                "2": [
+                    "Draw 3 Monster Tokens: One of each level.",
+                    "Draw 3 Monster Tokens: One of each level.",
+                    "Draw 3 Monster Tokens: 2 × Level I and 1 × Level II.",
+                    "Draw 3 Monster Tokens: 3 × Level I.",
+                    "Draw 3 Monster Tokens: 3 × Level I.",
+                    "Draw 3 Monster Tokens: 3 × Level I."
+                ],
+                "3": "Place the three Monster Tokens (randomly) in locations on the map matching the 3 face-up Location Tokens.",
+                "4": "Turn the 3 Monster Tokens face up and place their corresponding Monster Cards in the slots on the game board matching the corresponding Location Tokens. Replace the tokens with miniatures if you have them.",
+                "5": "Set up Monsters:"
+            },
+            "monsterFightDeck": "Shuffle the Monster Fight deck and place it (face down) near the game board."
         },
         "legendaryHunt": {
             "1": "Put the large Legendary Hunt help near the board. Use Side B for a longer game."
@@ -132,7 +150,14 @@
             "veryHard": "Death March!",
             "manage": "Choose a player to manage the Round Tracking board. Hand them the board that matches the number of players. Place the Tracking Token on the \"1\" spot in the top-left corner.",
             "createExplorationDeck": "Create the Wild Hunt Exploration deck by placing 3 random, face-down \"Stage II\" cards and then placing {{num}} random, face-down \"Stage I\" cards atop them.",
-            "decks": "Without shuffling, place the Wild Hunt Exploration and Wild Hunt Event decks on their slots on the game board. (Standard City and Wilds Exploration decks are not used in Wild Hunt)."
+            "decks": "Without shuffling, place the Wild Hunt Exploration and Wild Hunt Event decks on their slots on the game board. (Standard City and Wilds Exploration decks are not used in Wild Hunt).",
+            "tokens": "Place Gold Tokens, Blue Quest Tokens, Poker Dice, and Closed Tavern token or mini near the game board.",
+            "monsterSetup": [
+                "Draw a Monster Token of level based on the game difficulty. Draw a Forest Location Token. Place the monster token or miniature on the map there an place its Monster Card and the Location Token in the matching space on the game board.",
+                "If the game difficulty indicates a second monster, repeat the above step but with a Water location."
+            ],
+            "monsterFightDeck": "Shuffle the Monster Fight deck and place it (face down) near the game board. Place the Charge/Bite token near the deck."
+            
         },
         "skellige": {
             "playmat": [
@@ -157,7 +182,12 @@
         },
         "monsterTrail": {
             "mutagen": "Shuffle the Mutagen Deck and place it below the Attribute Trophy deck.",
-            "bomb": "Shuffle the Bomb deck and place it below the Potion deck."
+            "bomb": "Shuffle the Bomb deck and place it below the Potion deck.",
+            "lgCards": "Place the corresponding large Monster Cards near the board.",
+            "spFightCards": "Remove 8 Monster Fight cards from the deck. Put 4 back in the box and set 4 aside for later (when a Level III monster appears). Add the Special Attack cards to the Monster Fight deck."
+        },
+        "adventurePack": {
+            "tokens": "Place Gold Tokens, Green Quest Tokens, Poker Dice, and Closed Tavern token or mini near the game board."
         }
     },
     "Monster": "Monster",
