@@ -15,7 +15,7 @@ Custom Formatting for lowercasing all new words added: https://www.i18next.com/t
     * Github issue asking: https://github.com/i18next/i18next/issues/765
 Automatically translate i18next JSON: https://translate.i18next.com/
 Interpolation (most used functionalities - dynamic values): https://www.i18next.com/translation-function/interpolation
-
+ 
 Use i18next-parser to locate and generate locales JSON files: https://github.com/i18next/i18next-parser
 */
 
@@ -34,7 +34,7 @@ export const myLangs: object = {
 };
 
 i18next
-    // .use(LocalStorageBackend)
+    .use(LocalStorageBackend)
     .use(LanguageDetector)
     .use(initReactI18next) // passes i18n down to react-i18next
     .init({
@@ -46,6 +46,7 @@ i18next
             escapeValue: false
         },
         keySeparator: ".",
+        returnObjects: true,
         backend: {
             backends: [
                 LocalStorageBackend,
@@ -53,12 +54,12 @@ i18next
             backendOptions: [{
                 expirationTime: 7 * 24 * 60 * 60 * 1000 // 7 days
             }, {
-                loadPath: '/locales/{{lng}}/{{ns}}.json'
+                loadPath: '../locales/{{lng}}/{{ns}}.json'
             }]
         }
     });
 
-i18next.loadLanguages(['cz', 'de', 'en-GB', 'es', 'fr', 'it', 'pl'])
+i18next.loadLanguages(['cz', 'de', 'en-GB', 'es', 'fr', 'it', 'pl']);
 i18next.services.formatter?.add('lowercase', (value, lng, options) => {
     return value.toLowerCase();
 });

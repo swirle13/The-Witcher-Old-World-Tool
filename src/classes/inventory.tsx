@@ -80,7 +80,7 @@ export const simplifiedCards = [
         "cards": {
             "Monster cards": "11 (11/29)",
             "City Exploration cards": "36/36",
-            "Action Cards": "14 (52/90)"
+            "Action cards": "14 (52/90)"
         },
         "cardsInPack": 61,
     },

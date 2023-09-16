@@ -5,9 +5,9 @@ import { shuffle } from '../util/generic';
 
 export function startingResources(numPlayers: number, t): ReactElement {
     let ret: Array<string> = [""];
-    const p = t("player");
-    const c = t("cards");
-    const g = t("gold");
+    const p = t('player');
+    const c = t('cards');
+    const g = t('gold');
     if (numPlayers == 1) {
         ret = [`${p} 1: 5 ${c}, 3 ${g}`];
     } else if (numPlayers == 2) {
@@ -140,6 +140,23 @@ function skelligeBoatStep(t) {
 }
 
 
+/**
+ * Generates a string composed of the expansion names in order to access the translation key in
+ * locales/**\/Translation.json
+ * @param w Wild Hunt expansion boolean
+ * @param m Mages expansion boolean
+ * @param mT Monster Trail expansion boolean
+ * @returns Constructed string composed of the expansions used for translation key
+ */
+function playerSetup(w: boolean, m: boolean, mT: boolean) {
+    let name = "base";
+    if (w) name = "wildHunt";
+    if (m) name += "Mages";
+    if (mT) name += "MonsterTrail";
+    return "setupHelper.base.playerSetup." + name;
+}
+
+
 // TODO: update this to a functional component
 export function compileSteps(
     t,
@@ -151,35 +168,31 @@ export function compileSteps(
     adventurePack = false,
     wildHunt = false,
     numPlayers = 1,
-): Array<string> {
+): string[] {
     if (numPlayers < 1 || numPlayers > 5) {
-        throw new Error(t("setupHelper.error"));
+        throw new Error(t('setupHelper.error'));
     }
 
-    const finalSteps: Array<any> = [];
-    let tempElem = {}, tempStr = "", tempStr2 = "", tempArr: Array<any> = [];
+    const finalSteps: any[] = [];
+    let tempElem = {}, tempArr: any[] = [];
 
-    // step 1
     finalSteps.push(t('setupHelper.base.1'));
-
-    // step
     if (legendaryHunt) finalSteps.push(t('setupHelper.legendaryHunt.1'));
 
     if (wildHunt) {
-        // step
         finalSteps.push(
             <>
-                {t("setupHelper.wildHunt.difficultyTitle")}
+                {t('setupHelper.wildHunt.difficultyTitle')}
                 <Table className='lh-base' style={{ tableLayout: 'fixed' }}>
-                    <thead style={{textAlign: 'center', verticalAlign: 'middle'}}>
+                    <thead style={{ textAlign: 'center', verticalAlign: 'middle' }}>
                         <tr>
-                            <th>{t("setupHelper.wildHunt.easy")}</th>
-                            <th>{t("setupHelper.wildHunt.medium")}</th>
-                            <th>{t("setupHelper.wildHunt.hard")}</th>
-                            <th>{t("setupHelper.wildHunt.veryHard")}</th>
+                            <th>{t('setupHelper.wildHunt.easy')}</th>
+                            <th>{t('setupHelper.wildHunt.medium')}</th>
+                            <th>{t('setupHelper.wildHunt.hard')}</th>
+                            <th>{t('setupHelper.wildHunt.veryHard')}</th>
                         </tr>
                     </thead>
-                    <tbody style={{textAlign: 'center', verticalAlign: 'middle'}}>
+                    <tbody style={{ textAlign: 'center', verticalAlign: 'middle' }}>
                         <tr>
                             {wildHuntDifficulty(numPlayers, t).map((text, index) => (
                                 <td key={index} style={{
@@ -194,20 +207,17 @@ export function compileSteps(
             </>
         );
 
-        // step
         finalSteps.push(t('setupHelper.wildHunt.manage'));
     }
 
-    // TODO: Automatically roll these three tokens and provide locations for the boats
-    // step
     const locations = randomizeSkelligeBoatStartingLocations(coastalLocations);
     if (skellige) {
         finalSteps.push(
             <>
-                {t("setupHelper.skellige.playmat.0") + ":"}
+                {t('setupHelper.skellige.playmat.0')}
                 <ul>
-                    <li>{t("setupHelper.skellige.playmat.1")}</li>
-                    <li>{t("setupHelper.skellige.playmat.2") + ":"}
+                    <li>{t('setupHelper.skellige.playmat.1')}</li>
+                    <li>{t('setupHelper.skellige.playmat.2')}
                         <ul>
                             {locations.map((loc) => (
                                 <li>{t(loc.name)}, {loc.num}</li>
@@ -216,12 +226,12 @@ export function compileSteps(
                     </li>
                 </ul>
 
-                {t("setupHelper.skellige.board.0") + ":"}
+                {t('setupHelper.skellige.board.0') + ":"}
                 <ul>
-                    <li>{t("setupHelper.skellige.board.1")}</li>
-                    <li>{t("setupHelper.skellige.board.2")}</li>
-                    <li>{t("setupHelper.skellige.board.3")}</li>
-                    <li>{t("setupHelper.skellige.board.4")}</li>
+                    <li>{t('setupHelper.skellige.board.1')}</li>
+                    <li>{t('setupHelper.skellige.board.2')}</li>
+                    <li>{t('setupHelper.skellige.board.3')}</li>
+                    <li>{t('setupHelper.skellige.board.4')}</li>
                 </ul>
             </>
         );
@@ -235,7 +245,7 @@ export function compileSteps(
 
     // step
     finalSteps.push(t(`setupHelper.base.attrTrophies.${numPlayers}`));
-    tempElem = '';
+    tempElem = {};
 
     // step
     if (monsterTrail) finalSteps.push(t('setupHelper.monsterTrail.mutagen'));
@@ -247,49 +257,35 @@ export function compileSteps(
     if (monsterTrail) finalSteps.push(t('setupHelper.monsterTrail.bomb'));
 
     if (wildHunt) {
-        finalSteps.push(t("setupHelper.wildHunt.createExplorationDeck", { num: numPlayers > 3 ? 3 : 4 }));
-        finalSteps.push(t("setupHelper.wildHunt.decks"));
+        finalSteps.push(t('setupHelper.wildHunt.createExplorationDeck', { num: numPlayers > 3 ? 3 : 4 }));
+        finalSteps.push(t('setupHelper.wildHunt.decks'));
     } else {
-        // step
-        finalSteps.push(t("setupHelper.base.decks"));
-
-        // step
-        if (skellige) finalSteps.push(t("setupHelper.skellige.decks"));
-
-        // step
-        if (monsterTrail) tempStr = "and the large Dagon card ";
-        if (skellige && !wildHunt) finalSteps.push(t("setupHelper.skellige.dagon", { val: tempStr }));
-        tempStr = '';
-        // step
-        if (monsterPack && skellige) finalSteps.push(t("setupHelper.skellige.siren"));
-        tempElem = '';
+        finalSteps.push(t('setupHelper.base.decks'));
+        if (skellige) finalSteps.push(t('setupHelper.skellige.decks'));
+        if (skellige && !wildHunt) finalSteps.push(t(`setupHelper.skellige.${monsterTrail ? 'dagonMT' : 'dagon'}`));
+        if (monsterPack && skellige) finalSteps.push(t('setupHelper.skellige.siren'));
+        tempElem = {};
     }
 
-    // step base
     // Adventure Pack and Wild Hunt are mutually exclusive
     let expansion = "base";
     if (adventurePack) expansion = "adventurePack";
     if (wildHunt) expansion = "wildHunt";
     finalSteps.push(t(`setupHelper.${expansion}.tokens`));
-
-    // step base
-    finalSteps.push(t("setupHelper.base.locationTokens"));
+    finalSteps.push(t('setupHelper.base.locationTokens'));
 
     // create array of string list items to generate ordered list
     tempArr = [];
-    tempArr.push(t("setupHelper.base.monsterSetup.0"));
+    tempArr.push(t('setupHelper.base.monsterSetup.0'));
 
     if (wildHunt) {
-        tempArr.push(t("setupHelper.wildHunt.monsterSetup.0"));
+        tempArr.push(t('setupHelper.wildHunt.monsterSetup.0'));
         tempArr.push(t('setupHelper.wildHunt.monsterSetup.1'));
     } else {
-        if (numPlayers > 3) {
-            tempArr.push(t('setupHelper.base.monsterSetup.1', {numTokens: numPlayers > 3 ? numPlayers - 3 : 3 }))
-        }
+        if (numPlayers > 3)
+            tempArr.push(t('setupHelper.base.monsterSetup.1', { numTokens: numPlayers > 3 ? numPlayers - 3 : 3 }));
         tempArr.push(t(`setupHelper.base.monsterSetup.2.${numPlayers}`));
-        tempStr = "";
-
-        tempArr.push(t("setupHelper.base.monsterSetup.3"));
+        tempArr.push(t('setupHelper.base.monsterSetup.3'));
         tempArr.push(t('setupHelper.base.monsterSetup.4'));
     }
     if (monsterTrail) tempArr.push(t('setupHelper.monsterTrail.lgCards'));
@@ -305,52 +301,35 @@ export function compileSteps(
         </div>
     );
     finalSteps.push(tempElem);
-    tempElem = "";
-    tempArr = [];
+    tempElem = {}, tempArr = [];
 
-    // step
     if (monsterTrail) finalSteps.push(t('setupHelper.monsterTrail.spFightCards'));
 
-    // step
-    wildHunt ? expansion = "wildHunt" : expansion = "base"
+    wildHunt ? expansion = "wildHunt" : expansion = "base";
     finalSteps.push(t(`setupHelper.${expansion}.monsterFightDeck`));
 
-    // step
-    if (legendaryHunt) finalSteps.push('Choose a Legendary Monster. Place its large card and the Special Fight cards (shuffled) near the game board. Place its miniature on the location shown on its card. Shuffle the Destruction Tokens and keep them (face-down) near the board.');
+    if (legendaryHunt) finalSteps.push(t('setupHelper.legendaryHunt.2'));
+    if (wildHunt) finalSteps.push(...t('setupHelper.wildHunt.enemies'));
 
-    // step wild hunt
-    if (wildHunt) {
-        finalSteps.push('Choose a member of the Wild Hunt to face this game. Place its card (Side A up) and its 4 Special Attack cards near the board.');
-        finalSteps.push('Place Shield Tokens on the Wild Hunt member based on the difficulty.');
-        finalSteps.push('Draw a <em>Mountain</em> Location Token, place the Wild Hunt miniature there, and shuffle that token back in.');
-        finalSteps.push('Place the 6 Hound tokens or miniatures and the Hound card matching the player count nearby.');
-    }
+    finalSteps.push(t('setupHelper.base.startingPlayer'));
 
-    // step
-    finalSteps.push('Determine the starting player randomly, or it is whoever most recently read a Witcher book. Players choose Player Boards via any method they wish; see p. 7 of core rules for a fair drafting method.');
-
-    // step
-    if (mages) tempStr = "or Energy ";
-    monsterTrail ? tempStr2 = "11" : tempStr2 = "10";
-
-    tempArr.push(`Take a ${wildHunt ? 'Wild Hunt ' : ''}Help Card, player board, and matching miniature (with colored ring), cubes, Shield ${tempStr}marker, scoring token, and starting deck of ${tempStr2} cards. (Starting cards have a School icon in the top right corner.)`);
-    tempStr = "", tempStr2 = "";
-    tempArr.push(`Take ${numPlayers - 1} of their Witcher${mages ? "/Mage" : ""} Trophy Cards (equal to the other players).`);
-    if (mages) tempArr.push("If a mage, place their School and Specialty tokens on the map, covering those of an unused Witcher School.");
-    tempArr.push(`Place the 5 cubes and Shield ${mages ? "or Energy " : ""}marker on the lowest (“level 1”) spot of each player board track.`);
-    if (numPlayers > 3) tempArr.push("Choose one Attribute to raise to level 2.");
-    tempArr.push("Place the scoring token on the lowest spot of the Trophy Track.");
-    tempArr.push("Shuffle their starting cards and set the deck to the left of their board.");
-    tempArr.push("Place their miniature on their School location on the map.");
+    tempArr.push(t(playerSetup(wildHunt, mages, monsterTrail)));
+    if (numPlayers > 1) tempArr.push(t(`setupHelper.base.playerSetup.${mages ? "trophyCardsMages" : "trophyCards"}`, { num: numPlayers - 1 }));
+    if (mages) tempArr.push(t('setupHelper.base.playerSetup.ifMage'));
+    tempArr.push(t(`setupHelper.base.playerSetup.${mages ? 'markersMages' : 'markers'}`));
+    if (numPlayers > 3) tempArr.push(t('setupHelper.base.playerSetup.raiseAttr'));
+    tempArr.push(t('setupHelper.base.playerSetup.token'));
+    tempArr.push(t('setupHelper.base.playerSetup.cards'));
+    tempArr.push(t('setupHelper.base.playerSetup.miniature'));
 
     if (wildHunt) {
-        tempArr.push('Draw 5 cards and take 3 Gold.');
+        tempArr.push(t('setupHelper.base.playerSetup.drawWildHunt'));
     } else {
-        tempArr.push(<>Draw the following cards and gold based on player position: {startingResources(numPlayers, t)}</>);
+        tempArr.push(<>{t('setupHelper.base.playerSetup.drawBase')} {startingResources(numPlayers, t)}</>);
     }
     tempElem = (
         <div>
-            Each player must:
+            {t('setupHelper.base.playerSetup.title')}
             <ol type='a'>
                 {tempArr.map((text, id) => (
                     <li key={id}>{text}</li>
@@ -361,11 +340,10 @@ export function compileSteps(
     finalSteps.push(tempElem);
     tempElem = {}, tempArr = [];
 
-    // step Wild Hunt
-    if (numPlayers > 1 && wildHunt) finalSteps.push("Create a Wild Hunt Movement pool by combining every player's scoring token and the Closed Tavern token. Shuffle these face down.");
-    if (monsterTrail) finalSteps.push('Draw 3 Location Tokens (1 of each terrain). If a Witcher is in that location, draw again. Place a random, face-down Monster Weakness token matching that terrain type at each location. Shuffle these location tokens back into their stacks.');
-    if (legendaryHunt) finalSteps.push('The last player in turn order takes the Legendary Monster Movement deck (shuffled, face down).');
-    if (adventurePack) finalSteps.push('Then they draw two Location Tokens (of any terrain), choose one to put the Lost Mount miniature at, and shuffle the tokens back in.');
+    if (numPlayers > 1 && wildHunt) finalSteps.push(t('setupHelper.wildHunt.movementPool'));
+    if (monsterTrail) finalSteps.push(t('setupHelper.monsterTrail.weaknessTokens'));
+    if (legendaryHunt) finalSteps.push(t('setupHelper.legendaryHunt.movementDeck'));
+    if (adventurePack) finalSteps.push(t('setupHelper.adventurePack.lostMount'));
 
     return finalSteps;
 }
