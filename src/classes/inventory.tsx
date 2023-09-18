@@ -80,7 +80,7 @@ export const simplifiedCards = [
         "cards": {
             "Monster cards": "11 (11/29)",
             "City Exploration cards": "36/36",
-            "Action Cards": "14 (52/90)"
+            "Action cards": "14 (52/90)"
         },
         "cardsInPack": 61,
     },
@@ -282,17 +282,18 @@ const tokens = {
  *     1 Unique Action Card (NO icon top right, art is the Witcher)
  * Wild Hunt
  *   4 Wild Hunt Miniatures
- *   4 Wild Hunt Cards
- *   16 Special Fight Cards
+ *   4 Wild Hunt Cards - 1 per wild hunt member
+ *   16 Special Fight Cards - 4 per wild hunt member
  *   35 Event Cards
- *   35 Exploration Cards
- *   2 Hound Cards
- *   6 Hound Tokens
+ *   35 Exploration Cards - 20 Stage I and 15 Stage II cards
+ *   2 Hound Cards - two-sided
+ *   6 Hound Tokens (2 for each level of 1, 2, and 3)
  *   6 Hound Miniatures (2 for each level of 1, 2, and 3)
- *   10 Quest Tokens (blue)
- *   3 Round Boards (track rounds)
- *   1 Round Token
- *   10 Shield Tokens
+ *   12 Quest Tokens (blue)
+ *   1 Charge/Bite Token
+ *   3 Double-sided Round Boards (to track rounds)
+ *   1 Round Tracking Token
+ *   20 Shield Tokens - values 1, 5, 10, or 20
  *   5 Wild Hunt Help Cards
  * Monster Trail
  *   1 Player Board (Manticore)

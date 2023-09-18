@@ -6,27 +6,28 @@ import logo from '../../public/logo192.png';
 import useResize from '../util/useResize';
 import { myLangs } from "../i18n";
 import { ReactNode } from 'react';
+import './Navbar.css';
 
 export default function Navbar({ t, i18n }) {
     const size = useResize();
 
     return (
-        <BSNavbar collapseOnSelect id='Navbar' expand="md" className="bg-body-secondary">
-            <Container>
-                <BSNavbar.Brand href="#/">
+        <BSNavbar collapseOnSelect id='Navbar' expand="lg" className="bg-body-secondary">
+            <Container className="p-6">
+                <BSNavbar.Brand href="#/" className='ps-3'>
                     <img
                         src={logo}
                         width="30"
                         height="30"
                         className="d-inline-block align-top"
                     />{" "}
-                    {size.width < 401 ? t("Old World Helper") : t("The Witcher: Old World Helper")}
+                    {size.width < 401 ? t("Old World Helper") : t("The Witcher Old World Helper")}
                 </BSNavbar.Brand>
                 <BSNavbar.Toggle aria-controls="basic-navbar-nav" />
                 <BSNavbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
+                    <Nav className="ms-auto">
                         <Nav.Link href="#/communityLinks">{t('Community Links')}</Nav.Link>
-                        <NavDropdown title={t("Gameplay Tools")} id="basic-nav-dropdown">
+                        <NavDropdown title={t("Gameplay Tools")} id="basic-nav-dropdown" className='text-wrap'>
                             <NavDropdown.Item href="#/setupHelper">
                                 {t('Setup Helper')}
                             </NavDropdown.Item>
@@ -55,9 +56,11 @@ export default function Navbar({ t, i18n }) {
                                 Project Timeline
                             </NavDropdown.Item>
                         </NavDropdown>
-                        <NavDropdown title={t("__flag")} id="lang-nav-dropdown">
-                            {Object.entries(myLangs).map(([code, val]): ReactNode =>
-                                (<NavDropdown.Item onClick={() => i18n.changeLanguage(code)}>{val}</NavDropdown.Item>)
+                        <NavDropdown title={t("__flag")} id="lang-nav-dropdown" align={"end"}>
+                            {Object.entries(myLangs).map(([code, val], index): ReactNode =>
+                                <NavDropdown.Item key={index} onClick={() => i18n.changeLanguage(code)}>
+                                    {val}
+                                </NavDropdown.Item>
                             )}
                         </NavDropdown>
                     </Nav>
