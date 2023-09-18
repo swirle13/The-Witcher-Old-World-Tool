@@ -22,7 +22,6 @@
     "All Legendary": "Tous les Légendaires",
     "Monster Pack": "Monster Pack",
     "The Witcher": "The Witcher",
-	"---------------------------------  MENUS & TITLES  ---------------------------------------": "",
     "The Witcher Old World": "The Witcher: L'Ancien Monde",
     "The Witcher Old World Helper": "Assistant pour The Witcher: L'Ancien Monde",
     "Old World Helper": "Assistant pour L'Ancien Monde",
@@ -42,16 +41,16 @@
     "Easily draw any terrain token type. Always randomized. No shuffling of cardboard tokens.": "Piocher facilement n’importe quel type de jeton de terrain. Toujours aléatoire. Pas besoin de mélanger les jetons cartonnés.",
     "Explore the Continent": "Explorez le Continent",
     "Tired of shuffling your tokens, monster cards, and hunting down the mini?": "Fatigué de mélanger vos jetons, vos cartes monstres et de chercher les figurines ?",
-    "Damn, you're ugly": "Merde, qu'est ce que t'es moche",
+    "Damn, you're ugly": "Merde, qu'est ce que t'es moche !",
     "A collection of neat and awesome links from the community. Always growing!": "Une collection de liens géniaux de la Communauté. Liste en constante évolution !",
     "Show me": "Montre moi",
-    "Inventory Checker": "Inventaire du matériel de jeu",
-    "To help those just receiving their The Witcher: Old World game, here's an in-depth guide on what you (hopefully) received.": "Pour aider celles et ceux qui viennent de recevoir leur jeu The Witcher: L'Ancien Monde, voici un guide détaillé sur ce que vous avez (espérons-le) reçu.",
+    "Inventory Checker": "Inventaire du matériel du jeu",
+    "To help those just receiving their The Witcher: Old World game, here's an in-depth guide on what you (hopefully) received.": "Pour aider celles et ceux qui viennent de recevoir leur jeu The Witcher: L'Ancien Monde, voici un guide détaillé pour vérifier ce que vous avez (espérons-le) reçu.",
     "Medallion's humming..": "Le médaillon vibre..",
     "A more specific variant of the Location Token page with two tokens to choose from.": "Une variante plus spécifique de la page Jetons Lieu, avec deux jetons au choix, pour l'extension Lost Mount.",
     "Come, Roach": "Viens, Ablette",
-    "Under Construction!": "Under Construction!",
-    "Roll A New Monster": "Roll A New Monster",
+    "Under Construction!": "En construction !",
+    "Roll A New Monster": "Piocher un nouveau Monstre",
     "Expansion": "Extension",
     "Expansions": "Extensions",
     "expansion": "extension",
@@ -137,7 +136,7 @@
             ],
             "potions": "Mélanger la pioche des Potions et la placer face cachée sur son emplacement au bord du plateau, près des cartes Action.",
             "decks": "Mélanger la pioche Exploration Cité et la pioche Exploration Nature. Ne PAS mélanger la pioche Événements ! Placer les 3 pioches face cachée sur leur emplacement respectif.",
-            "tokens": "Placer les dés, les jetons/pièces d'or et le jeton/figurine Taverne Fermée près du plateau. Si vous avez les dés additionnels, chaque joueur en prend un jeu.",
+            "tokens": "Placer les dés, les jetons/pièces d'or et le jeton/figurine Taverne Fermée près du plateau. Si vous avez les dés additionnels, chaque joueur peut en prendre un jeu.",
             "locationTokens": "Trier les jetons Lieu en 3 piles séparées, par type de Terrain. Mélanger chacune de ces 3 piles, et les placer face cachée près du plateau. Piocher un jeton de chaque pile et les placer face visible sur leur emplacement (à droite de l'emplacement des cartes Monstres).",
             "monsterSetup": {
                 "0": "Sort Monster Cards and Monster Tokens by level (I, II, and III). Place the cards near the game board (face up). Shuffle the tokens and place them near the game board (face down).",
@@ -196,7 +195,7 @@
             "createExplorationDeck": "Créer la pioche Exploration de Wild Hunt, en plaçant 3 cartes “Phase II“ au hasard et face cachée, puis {{num}} cartes “Phase I“ au hasard et face cachée par dessus.",
             "decks": "Without shuffling, place the Wild Hunt Exploration and Wild Hunt Event decks on their slots on the game board. (Standard City and Wilds Exploration decks are not used in Wild Hunt).",
             "decks": "Sans les mélanger, placer les pioches Exploration et Evénement de Wild Hunt sur leurs emplacement sur le plateau. (les cartes Exploration Cité et Nature du jeu de base ne sont pas utilisées avec l'extension Wild Hunt)",
-            "tokens": "Placer les jetons/pièces d'or, les jetons Quête bleus, les dés et le jeton/figurine Taverne Fermée près du plateau de jeu. Si vous avez les dés additionnels, chaque joueur en prend un jeu.",
+            "tokens": "Placer les jetons/pièces d'or, les jetons Quête bleus, les dés et le jeton/figurine Taverne Fermée près du plateau de jeu. Si vous avez les dés additionnels, chaque joueur peut en prendre un jeu.",
             "monsterSetup": [
                 "Piocher un jeton Monstre, du niveau indiqué par la difficulté de jeu choisie. Piocher un jeton Lieu Forêt. Placer le jeton ou la figurine du Monstre sur ce Lieu sur la carte du Continent, et sa carte Monstre et le jeton Lieu sur l'emplacement correspondant sur le plateau.",
                 "Si la difficulté choisie indique un second monstre, répéter l'étape ci-dessus mais avec un Lieu Eau."
@@ -210,98 +209,86 @@
             ],
             "movementPool": "Créer une pioche Mouvement de la Chasse Sauvage en combinant les jetons Trophée de chaque joueur et le jeton Taverne Fermée. Les mélanger en une pile et la placer face cachée."
         },
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
         "skellige": {
             "playmat": [
-                "If using the playmat:",
-                "Ignore tokens, Harbor tokens are printed on the map",
-                "Place ship miniatures at the following randomized locations:"
+                "Si vous utilisez le tapis de jeu :",
+                "Ignorer les jetons, car les Ports sont imprimés sur le tapis",
+                "Placer les figurines des bâteaux sur les emplacements tirés au hasard suivants :"
             ],
             "board": [
-                "If using the board",
-                "Shuffle the Harbor tokens, anchor side up",
-                "Place them on the coastal locations (1, 5, 6, 9, 12, 13) and flip them over",
-                "Place a ship miniature on the three locations with a ship symbol",
-                "Flip them back to the anchor side, as a reminder"
+                "Si vous utilisez le plateau de jeu cartonné :",
+                "Mélanger les jetons Ports, face Ancre visible",
+                "Les placer sur les emplacements côtiers (1, 5, 6, 9, 12, 13) puis les retourner",
+                "Placer une figurine de bâteau sur les 3 lieux avec un symbol de bâteau",
+                "Les retourner sur la face Ancre, pour s'en rappeler"
             ],
-            "decks": "Shuffle the Skellige Exploration deck. Do not shuffle the Skellige Event deck! Place both in their slots above the islands on the game board.",
-            "dagon": "Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus deck and place it near its track.",
-            "dagonMT": "Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus deck and place it and the large Dagon card near its track.",
-            "siren": "Place the Siren miniature on the Dagon location, with its Monster Card nearby."
+            "decks": "Mélanger la pioche Exploration Skellige. Ne PAS mélanger la pioche Événements Skellige ! Placer les deux pioches sur leurs emplacements, au bord du plateau près des îles.",
+            "dagon": "Placer la figurine Dagon sur l'emplacement de départ correspond au nombre de joueurs. Mélanger la pioche Bonus Dagon et la placer près de sa piste.",
+            "dagonMT": "Placer la figurine Dagon sur l'emplacement de départ correspond au nombre de joueurs. Mélanger la pioche Bonus Dagon et la placer avec la grande carte Dagon près de sa piste.",
+            "siren": "Placer la figurine de la Sirène sur l'emplacement Dagon, avec sa carte Monstre à proximité."
         },
         "magesExp": {
-            "actionCards": "Repeat the above step for the Mage Action Cards. (Or replace that step if everyone is playing a mage.)",
+            "actionCards": "répéter les étapes précédentes pour les cartes Action Mage. (Ou refaire cette étape si tout le monde joue un Mage.)",
             "": ""
         },
         "monsterTrail": {
-            "mutagen": "Shuffle the Mutagen Deck and place it below the Attribute Trophy deck.",
-            "bomb": "Shuffle the Bomb deck and place it below the Potion deck.",
-            "lgCards": "Place the corresponding large Monster Cards near the board.",
-            "spFightCards": "Remove 8 Monster Fight cards from the deck. Put 4 back in the box and set 4 aside for later (when a Level III monster appears). Add the Special Attack cards to the Monster Fight deck.",
-            "weaknessTokens": "Draw 3 Location Tokens (1 of each terrain). If a Witcher is in that location, draw again. Place a random, face-down Monster Weakness token matching that terrain type at each location. Shuffle these location tokens back into their stacks."
+            "mutagen": "Mélanger la pioche Mutagène et la placer près de la pioche Trophée Attribut.",
+            "bomb": "Mélanger la pioche Bombe et la placer près de la pioche Potion.",
+            "lgCards": "Placer les grandes cartes Monstre près du plateau.",
+            "spFightCards": "Retirer 8 cartes Combat Monstre de la pioche. En remettre 4 dans la boîte et réserver les 4 autres pour plus tard (quand un Monstre de niveau III apparaitra). Ajouter les cartes Attaque Spéciale à la pioche Attaque Monstre.",
+            "weaknessTokens": "Piocher 3 jetons Lion (1 pour chaque type de terrain). Si un Sorceleur est sur ce Lieu, piocher à nouveau. Piocher et placer face cachée un jeton Faiblesse Monstre correspondant à ce type de terrain, sur chaque Lieu. Remettre ces jetons Lieu dans leurs piles et les remélanger."
         },
         "adventurePack": {
-            "tokens": "Place Gold Tokens, Green Quest Tokens, Poker Dice, and Closed Tavern token or mini near the game board.",
-            "lostMount": "Then they draw two Location Tokens (of any terrain), choose one to put the Lost Mount miniature at, and shuffle the tokens back in."
+            "tokens": "Placer les jetons/pièces d'or, les jetons Quête verts, les dés et le jeton/figurine Taverne Fermée près du plateau de jeu. Si vous avez les dés additionnels, chaque joueur peut en prendre un jeu.",
+            "lostMount": "Puis ils piochent deux jetons Lieu (de n'importe quel terrain), en choisissent un sur lequel placer la figurine Monture Perdue, et remélanger les jetons dans leur pile."
         }
     },
-    "Monster": "Monster",
-    "Shield Tokens": "Shield Tokens",
+    "Monster": "Monstre",
+    "Shield Tokens": "Jetons Bouclier",
     "inventory": {
         "Notes": "Notes",
         "noteText": [
-            "This is currently a first pass to get this inventory checker into the hands of the second wave of shipments as fast as possible, and as such, will be minimal and (probably) lacking translation.",
-            "I aim to add different sections for the tokens and miniatures shortly after this goes live.",
-            "Currently, the check boxes are not persistent. If you refresh or navigate away from this page, you will lose your progress. Apologies for the inconvenience while I sort this out."
+            "Ceci est un premier jet de cet outil d'inventaire, afin qu'il soit mis le plus rapidement possible à disposition des Backers de la seconde vague. De ce fait cette première version est pour l'instant minimaliste.",
+            "J'ai pour but d'ajouter différentes sections pour les jetons et les figurines d'ici peu. Note du traducteur : dans la version française du jeu, le nom officiel des extensions est leur nom en anglais. Tandis qu'elles sont parfois traduites dans les livres de règles. Cet outil a été traduit dans ce sens afin de correspondre le plus possible aux textes officiels : nom de l'extension en anglais mais matériel traduit en français (par exemple cartes Chasse Sauvage de l'extension Wild Hunt).",
+            "Pour le moment, les cases à cocher ne sont pas persistées. Si vous rafraîchissez ou quittez cette page, vous perdrez votre progression. Toutes mes excuses en attendant que je trouve une solution."
         ],
-        "legendHeader": "Legend",
+        "legendHeader": "Légende",
         "legendBody": {
-            "header": "If two columns: read left to right, top to bottom. This will ensure the running totals of cards spread across multiple packs (e.g. \"Monster cards: 11 (11/29)\") are read properly.",
+            "header": "Si affiché en deux colonnes : lire de gauche à droite et de haut en bas. Cela vous assurera de parcourir l'intégralité des cartes, qui sont réparties dans plusieurs paquets sous blister. (Exemple “Cartes Monstre: 11 (11/29)“ indique que ce paquet contient 11 cartes sur les 29.)",
             "body": [
                 {
                     "title": "TWOW(XX) Y/Z",
                     "details": [
-                        "This is the title of the gray card for each pack of cards. This is how I refer to each pack.",
-                        "XX is the arbitrary code that the supplier used to identify the groups of cards.",
-                        "Y is the current number of the pack out of total packs for code XX.",
-                        "Z is the total number of packs for value XX."
+                        "Ceci est le titre des cartes grises indiquant la référence des paquets sous blister. C'est ainsi que chaque paquet est référencé ici.",
+                        "XX est le code donné arbitrairement par le fournisseur pour identifier les groupes de cartes sous blister.",
+                        "Y est le numéro du paquet concerné parmi le total de paquets correspondant au code XX.",
+                        "Z est le nombre total de paquets correspondant au code XX."
                     ]
                 },
                 {
-                    "title": "Expansions",
+                    "title": "Extensions",
                     "details": [
-                        "These are the expansions that the cards belong to in this pack."
+                        "Ceci sont les extensions auxquelles appartiennent les cartes dans ce paquet."
                     ]
                 },
                 {
-                    "title": "Example Type Cards: X (Y/Z) OR X/Z",
+                    "title": "Exemple Type de cartes: X (Y/Z) OU X/Z",
                     "details": [
-                        "Example Type is the type of card, as referred to in Go On Board's \"Components\" lists.",
-                        "X is how many of the cards are found in this pack.",
-                        "Y is the current running total of this type of card across all packs. If excluded, all cards of this type were included in this pack",
-                        "Z is the total number of these cards you should have."
+                        "Type de cartes est le type ou nom de carte, tel que l'éditeur Go On Board l'a référencé dans les pages “Matériel“ des livres de règles",
+                        "X est le nombre de cartes contenues dans ce paquet.",
+                        "Y est le nombre total de cartes de ce type réparties dans tous les paquets. S'il n'est pas présent, c'est que toutes les cartes de ce type sont présentes dans ce paquet.",
+                        "Z est le nombre total de ces cartes que vous êtes censé avoir."
                     ]
                 },
                 {
                     "title": "(AP)",
                     "details": [
-                        "This is a disambiguation for Adventure Pack cards. These are distinguished by the star symbol in the top center of the card face."
+                        "Cette abréviation a pour but de préciser qu'il s'agit de cartes de l'extension Adventure Pack. Les cartes concernées sont repérables par un symbole d'étoile en haut et au centre du recto de la carte."
                     ]
                 }
             ]
         },
-        "Base Set": "Base Set",
+        "Base Set": "Jeu de base",
         "Adventure Pack, Wild Hunt, Monster Trail": "$t(exps.adventurePack), $t(exps.wildHunt), $t(exps.monsterTrail)",
         "Adventure Pack": "$t(exps.adventurePack)",
         "Wild Hunt, Mages, Adventure Pack": "$t(exps.wildHunt), $t(exps.mages), $t(exps.adventurePack)",
@@ -310,52 +297,52 @@
         "Mages": "$t(exps.mages)",
         "Legendary Hunt": "$t(exps.legendaryHunt)",
         "Skellige": "$t(exps.skellige)",
-        "cardsInPack": "Cards in pack",
-        "Starting Action cards": "Starting Action cards",
-        "Action cards": "Action cards",
-        "Help cards": "Help cards",
-        "Solo Help card": "Solo Help card",
-        "Monster cards": "Monster cards",
-        "City Exploration cards": "City Exploration cards",
-        "Attribute Trophy cards": "Attribute Trophy cards",
-        "Monster Fight cards": "Monster Fight cards",
-        "Event cards": "Event cards",
-        "Potion cards": "Potion cards",
-        "Witcher Trophy cards": "Witcher Trophy cards",
-        "Wilds Exploration cards": "Wilds Exploration cards",
-        "(AP) Wilds Exploration cards": "(AP) Wilds Exploration cards",
-        "Wild Hunt Monster Fight cards": "Wild Hunt Monster Fight cards",
-        "Special Monster Fight cards": "Special Monster Fight cards",
-        "(AP) City Exploration cards": "(AP) City Exploration cards",
-        "(AP) Event cards": "(AP) Event cards",
-        "Mutagens": "Mutagens",
-        "Wild Hunt Help": "Wild Hunt Help",
-        "Hounds": "Hounds",
-        "Wild Hunt Monsters": "Wild Hunt Monsters",
-        "Wild Hunt Exploration - Stage 1": "Wild Hunt Exploration - Stage 1",
-        "Wild Hunt Exploration - Stage 2": "Wild Hunt Exploration - Stage 2",
-        "Wild Hunt Event": "Wild Hunt Event",
-        "Mage Special Action": "Mage Special Action",
-        "Lost Mount": "Lost Mount",
-        "Monster card (Troll)": "Monster card (Troll)",
-        "Trophy cards": "Trophy cards",
-        "Bomb cards": "Bomb cards",
-        "Starting Action cards (Manticore)": "Starting Action cards (Manticore)",
-        "Advanced Action cards": "Advanced Action cards",
-        "Starting Action cards (Ciri)": "Starting Action cards (Ciri)",
-        "Unique Action cards (witchers)": "Unique Action cards (witchers)",
-        "Large Monster cards": "Large Monster cards",
-        "Difficulty Jumbo Reference cards": "Difficulty Jumbo Reference cards",
-        "Mage Unique Action cards": "Mage Unique Action cards",
-        "Mage Trophy cards": "Mage Trophy cards",
-        "Mage Action cards": "Mage Action cards",
-        "Legendary Monster movement cards": "Legendary Monster movement cards",
-        "Legendary Hunt Special Fight cards": "Legendary Hunt Special Fight cards",
-        "Large Legendary Monster cards": "Large Legendary Monster cards",
-        "Large Fight Reference card": "Large Fight Reference card",
-        "Dagon Bonus Monster cards": "Dagon Bonus Monster cards",
-        "Skellige Event cards": "Skellige Event cards",
-        "Skellige Exploration cards": "Skellige Exploration cards",
+        "cardsInPack": "Cartes dans le paquet",
+        "Starting Action cards": "Cartes Action de Départ",
+        "Action cards": "Cartes Action",
+        "Help cards": "Cartes Aide de jeu",
+        "Solo Help card": "Cartes Aide de jeu Solo",
+        "Monster cards": "Cartes Monstre",
+        "City Exploration cards": "Cartes Exploration Cité",
+        "Attribute Trophy cards": "Cartes Attribut Trophée",
+        "Monster Fight cards": "Cartes Combat Monstre",
+        "Event cards": "Cartes Événement",
+        "Potion cards": "Cartes Potion",
+        "Witcher Trophy cards": "Cartes Trophée Sorceleur",
+        "Wilds Exploration cards": "Cartes Exploration Nature",
+        "(AP) Wilds Exploration cards": "(AP) Cartes Exploration Nature",
+        "Wild Hunt Monster Fight cards": "Cartes Combat Monstre Wild Hunt",
+        "Special Monster Fight cards": "Cartes Combat Spécial Monstre",
+        "(AP) City Exploration cards": "(AP) Cartes Exploration Cité",
+        "(AP) Event cards": "(AP) Cartes Événements",
+        "Mutagens": "Mutagènes",
+        "Wild Hunt Help": "Aide de jeu Wild Hunt",
+        "Hounds": "Molosses",
+        "Wild Hunt Monsters": "Monstres de Wild Hunt",
+		"Wild Hunt Exploration - Stage 1": "Cartes Exploration Chasse Sauvage - Phase 1",
+		"Wild Hunt Exploration - Stage 2": "Cartes Exploration Chasse Sauvage - Phase 2",
+        "Wild Hunt Event": "Événement Chasse Sauvage",
+		"Mage Special Action": "Action Spéciale Mage",
+        "Lost Mount": "Monture Perdue",
+        "Monster card (Troll)": "Carte Monstre (Troll)",
+		"Trophy cards": "Cartes Trophée",
+		"Bomb cards": "Cartes Bombes",
+		"Advanced Action cards": "Cartes Action Avancée",
+		"Starting Action cards (Manticore)": "Cartes Action de Départ (Manticore)",
+		"Starting Action cards (Ciri)": "Cartes Action de Départ (Ciri)",
+		"Unique Action cards (witchers)": "Cartes Action Unique (Sorceleurs)",
+		"Large Monster cards": "Grandes cartes Monstre",
+        "Difficulty Jumbo Reference cards": "Cartes Progression et difficulté",
+        "Mage Unique Action cards": "Cartes Action Unique Mage",
+        "Mage Trophy cards": "Cartes Trophée Mage",
+        "Mage Action cards": "Cartes Action Mage",
+        "Legendary Monster movement cards": "Cartes Mouvement Monstre Légendaire",
+        "Legendary Hunt Special Fight cards": "Cartes Combat Spécial Monstre Légendaire",
+        "Large Legendary Monster cards": "Grandes cartes Monstre Légendaire",
+        "Large Fight Reference card": "Grande carte Aide de combat pour Legendary Hunt",
+        "Dagon Bonus Monster cards": "Cartes Monstre Bonus Dagon",
+        "Skellige Event cards": "Cartes Événement Skellige",
+        "Skellige Exploration cards": "Cartes Exploration Skellige",
         "": ""
     },
     "": ""
