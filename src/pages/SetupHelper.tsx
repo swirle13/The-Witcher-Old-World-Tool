@@ -61,7 +61,7 @@ export default function SetupHelper({ t }) {
                     <Form>
                         <Row className='justify-content-center' lg={1}>
                             <Col id="playersCol">
-                                <h4 className='text-center mb-3'>{t('Players')}</h4>
+                                <h4 className='text-center mb-3'>{t('common.Players')}</h4>
                                 <div key="inlinePlayers" className="mb-3 pl-1 text-center">
                                     {[1, 2, 3, 4, 5].map((num) => (
                                         <FormCheck
@@ -82,7 +82,7 @@ export default function SetupHelper({ t }) {
                         </Row>
                         <Row className='justify-content-center mb-3' lg={1}>
                             <Col id="expansionsCol">
-                                <h4 className='text-center mb-3'>{t('Expansions')}</h4>
+                                <h4 className='text-center mb-3'>{t('common.Expansions')}</h4>
                                 <Row key="inlineExpansions" className="text-center justify-content-center" xl={1}>
                                     {expansions.map((exp, index) => (
                                         <Col key={index} className={"d-flex justify-content-center " + (index === 6 ? '' : 'mb-2')} xs="auto">
@@ -107,13 +107,13 @@ export default function SetupHelper({ t }) {
                                     <Col>
                                         <Button id="collapseAllButton" variant="outline-secondary"
                                             onClick={() => { setStepsKeys([]); }}>
-                                            {t('Collapse All')}
+                                            {t('setupHelper.collapse')}
                                         </Button>
                                     </Col>
                                     <Col>
                                         <Button id="expandAllButton" variant="outline-secondary"
                                             onClick={() => { setStepsKeys(lenToStrArr(steps)); }}>
-                                            {t('Expand All')}
+                                            {t('setupHelper.expand')}
                                         </Button>
                                     </Col>
                                 </Row>
@@ -129,7 +129,7 @@ export default function SetupHelper({ t }) {
                             {steps.map((body, index) => (
                                 <Accordion.Item eventKey={`${index}`} key={index}>
                                     <Accordion.Header>
-                                        {t('Step')} {index + 1}
+                                        {t('common.Step')} {index + 1}
                                     </Accordion.Header>
                                     <Accordion.Body className='lh-lg'>{body}</Accordion.Body>
                                 </Accordion.Item>

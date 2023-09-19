@@ -1,12 +1,45 @@
 {
-    "card": "card",
-    "cards": "cards",
-    "Card": "Card",
-    "Cards": "Cards",
-    "gold": "gold",
-    "Level": "Level",
-    "Legendary": "Legendary",
-    "Toggle changes": "Toggle changes",
+    "common": {
+        "Level": "Level",
+        "Expansion": "Expansion",
+        "Expansions": "Expansions",
+        "expansion": "expansion",
+        "expansions": "expansions",
+        "Step": "Step",
+        "setup": "setup",
+        "Player": "Player",
+        "Players": "Players",
+        "player": "player",
+        "players": "players",
+        "Witcher": "Witcher",
+        "witcher": "witcher",
+        "Mage": "Mage",
+        "Mages": "Mages",
+        "mage": "mage",
+        "mages": "mages",
+        "name": "name",
+        "player1": "Player 1",
+        "player2": "Player 2",
+        "player3": "Player 3",
+        "player4": "Player 4",
+        "player5": "Player 5",
+        "gold_other": "gold",
+        "goldWithCount_other": "{{count}} gold",
+        "card_one": "card",
+        "card_other": "cards",
+        "cardWithCount_one": "{{count}} card",
+        "cardWithCount_other": "{{count}} cards",
+        "Under Construction!": "Under Construction!"
+    },
+    "navbar": {},
+    "monsterPicker": {
+        "toggle": "Toggle changes:",
+        "sirenExplain": "Siren excluded as it can't be randomly selected",
+        "legendary": "Legendary",
+        "allLegendary": "All Legendary",
+        "title": "Roll A New Monster",
+        "": ""
+    },
     "exps": {
         "adventurePack": "Adventure Pack",
         "lostMount": "Lost Mount",
@@ -16,19 +49,15 @@
         "mages": "Mages",
         "legendaryHunt": "Legendary Hunt",
         "skellige": "Skellige",
-        "monsterPack": "Monster Pack"
+        "monsterPack": "Monster Pack",
+        "mountedEredin": "Mounted Eredin"
     },
-    "All Legendary": "All Legendary",
     "Monster Pack": "Monster Pack",
     "The Witcher": "The Witcher",
     "The Witcher Old World": "The Witcher: Old World",
     "The Witcher Old World Helper": "The Witcher: Old World Helper",
     "Old World Helper": "Old World Helper",
-    "Community Links": "Community Links",
     "Gameplay Tools": "Gameplay Tools",
-    "Setup Helper": "Setup Helper",
-    "Location Tokens": "Location Tokens",
-    "Monster Roller": "Monster Roller",
     "Lost Mount Locations": "Lost Mount Locations",
     "Browse All Tools": "Browse All Tools",
     "Project Help": "Project Help",
@@ -36,39 +65,38 @@
     "Mountain": "Mountain",
     "Forest": "Forest",
     "Water": "Water",
-    "A dynamically updated set of consolidated instructions for any expansion and player combination.": "A dynamically updated set of consolidated instructions for any expansion and player combination.",
-    "Wind's howling..": "Wind's howling..",
-    "Easily draw any terrain token type. Always randomized. No shuffling of cardboard tokens.": "Easily draw any terrain token type. Always randomized. No shuffling of cardboard tokens.",
-    "Explore the Continent": "Explore the Continent",
-    "Tired of shuffling your tokens, monster cards, and hunting down the mini?": "Tired of shuffling your tokens, monster cards, and hunting down the mini?",
-    "Damn, you're ugly": "Damn, you're ugly",
-    "A collection of neat and awesome links from the community. Always growing!": "A collection of neat and awesome links from the community. Always growing!",
-    "Show me": "Show me",
-    "Inventory Checker": "Inventory Checker",
-    "To help those just receiving their The Witcher: Old World game, here's an in-depth guide on what you (hopefully) received.": "To help those just receiving their The Witcher: Old World game, here's an in-depth guide on what you (hopefully) received.",
-    "Medallion's humming..": "Medallion's humming..",
-    "A more specific variant of the Location Token page with two tokens to choose from.": "A more specific variant of the Location Token page with two tokens to choose from.",
-    "Come, Roach": "Come, Roach",
-    "Under Construction!": "Under Construction!",
-    "Roll A New Monster": "Roll A New Monster",
-    "Expansion": "Expansion",
-    "Expansions": "Expansions",
-    "expansion": "expansion",
-    "expansions": "expansions",
-    "Collapse All": "Collapse All",
-    "Expand All": "Expand All",
-    "Step": "Step",
-    "setup": "setup",
-    "Player": "Player",
-    "Players": "Players",
-    "player": "player",
-    "players": "players",
-    "Witcher": "Witcher",
-    "witcher": "witcher",
-    "Mage": "Mage",
-    "Mages": "Mages",
-    "mage": "mage",
-    "mages": "mages",
+    "home": {
+        "Setup Helper": {
+            "name": "Setup Helper",
+            "desc": "A dynamically updated set of consolidated instructions for any expansion and player combination.",
+            "btn": "Wind's howling.."
+        },
+        "Location Tokens": {
+            "name": "Location Tokens",
+            "desc": "Easily draw any terrain token type. Always randomized. No shuffling of cardboard tokens.",
+            "btn": "Explore the Continent"
+        },
+        "Monster Roller": {
+            "name": "Monster Roller",
+            "desc": "Tired of shuffling your tokens, monster cards, and hunting down the mini?",
+            "btn": "Damn, you're ugly"
+        },
+        "Community Links": {
+            "name": "Community Links",
+            "desc": "A collection of neat and awesome links from the community. Always growing!",
+            "btn": "Show me"
+        },
+        "Inventory Checker": {
+            "name": "Inventory Checker",
+            "desc": "To help those just receiving their The Witcher: Old World game, here's an in-depth guide on what you (hopefully) received.",
+            "btn": "Medallion's humming.."
+        },
+        "Lost Mount": {
+            "name": "Lost Mount",
+            "desc": "A more specific variant of the Location Token page with two tokens to choose from.",
+            "btn": "Come, Roach"
+        }
+    },
     "monsters": {
         "Nekker's Nest": "Nekker's Nest",
         "Arachas": "Arachas",
@@ -117,12 +145,25 @@
         "Koshchey": "Koshchey",
         "Kayran": "Kayran",
         "Siren": "Siren",
-        "Siren excluded as it can't be randomly selected": "Siren excluded as it can't be randomly selected",
-        "Mounted Eredin": "Mounted Eredin"
+        "Mounted Eredin": "Mounted Eredin",
+        "lvl1": "Level I Monster",
+        "lvl2": "Level II Monster",
+        "lvl3": "Level III Monster",
+        "legendaryHunt": [
+            "$t(monsters.Imperial Golem)",
+            "$t(monsters.Cyclops)",
+            "$t(monsters.Cave Troll)",
+            "$t(monsters.Toad)",
+            "$t(monsters.Frightener)",
+            "$t(monsters.Unseen Elder)",
+            "$t(monsters.Ice Giant)",
+            "$t(monsters.Gaunter O'Dimm)"
+        ]
     },
-    "name": "name",
     "setupHelper": {
         "error": "Error, number of players is invalid. Must be between 1 and 5.",
+        "collapse": "Collapse All",
+        "expand": "Expand All",
         "base": {
             "1": "Set out the playmat or game boards.",
             "actionCards": "Shuffle the Action Card deck and place it above the Action Card slots. Reveal cards until you have 3 “0-cost” cards, which go in the 3 lowest spaces (face up). Reshuffle any other revealed cards, then reveal 3 more cards for the remaining spaces (face up).",
@@ -173,9 +214,39 @@
                 "token": "Place the scoring token on the lowest spot of the Trophy Track.",
                 "cards": "Shuffle their starting cards and set the deck to the left of their board.",
                 "miniature": "Place their miniature on their School location on the map.",
-                "drawBase": "Draw the following cards and gold based on player position: ",
+                "drawBaseHeader": "Draw the following cards and gold based on player position: ",
                 "drawWildHunt": "Draw 5 cards and take 3 Gold.",
-                "title": "Each player must:"
+                "title": "Each player must:",
+                "drawBaseResources": [
+                    [
+                        "placeholder for 0 players"
+                    ],
+                    [
+                        "$t(common.player1): $t(common.cardWithCount, {\"count\": 5}), $t(common.goldWithCount, {\"count\": 3})"
+                    ],
+                    [
+                        "$t(common.player1): $t(common.cardWithCount, {\"count\": 3}), $t(common.goldWithCount, {\"count\": 2})",
+                        "$t(common.player2): $t(common.cardWithCount, {\"count\": 5}), $t(common.goldWithCount, {\"count\": 4})"
+                    ],
+                    [
+                        "$t(common.player1): $t(common.cardWithCount, {\"count\": 3}), $t(common.goldWithCount, {\"count\": 2})",
+                        "$t(common.player2): $t(common.cardWithCount, {\"count\": 4}), $t(common.goldWithCount, {\"count\": 4})",
+                        "$t(common.player3): $t(common.cardWithCount, {\"count\": 5}), $t(common.goldWithCount, {\"count\": 6})"
+                    ],
+                    [
+                        "$t(common.player1): $t(common.cardWithCount, {\"count\": 2}), $t(common.goldWithCount, {\"count\": 4})",
+                        "$t(common.player2): $t(common.cardWithCount, {\"count\": 3}), $t(common.goldWithCount, {\"count\": 5})",
+                        "$t(common.player3): $t(common.cardWithCount, {\"count\": 4}), $t(common.goldWithCount, {\"count\": 6})",
+                        "$t(common.player4): $t(common.cardWithCount, {\"count\": 5}), $t(common.goldWithCount, {\"count\": 7})"
+                    ],
+                    [
+                        "$t(common.player1): $t(common.cardWithCount, {\"count\": 2}), $t(common.goldWithCount, {\"count\": 5})",
+                        "$t(common.player2): $t(common.cardWithCount, {\"count\": 3}), $t(common.goldWithCount, {\"count\": 5})",
+                        "$t(common.player3): $t(common.cardWithCount, {\"count\": 4}), $t(common.goldWithCount, {\"count\": 7})",
+                        "$t(common.player4): $t(common.cardWithCount, {\"count\": 4}), $t(common.goldWithCount, {\"count\": 7})",
+                        "$t(common.player5): $t(common.cardWithCount, {\"count\": 5}), $t(common.goldWithCount, {\"count\": 7})"
+                    ]
+                ]
             }
         },
         "legendaryHunt": {
@@ -184,7 +255,43 @@
             "movementDeck": "The last player in turn order takes the Legendary Monster Movement deck (shuffled, face down)."
         },
         "wildHunt": {
+            "shieldTokens": "{{num}} Shield Tokens",
             "difficultyTitle": "Choose the game difficulty on the table below. This determines starting monsters and shields later.",
+            "difficultyValues": [
+                [
+                    "placeholder for 0 players"
+                ],
+                [
+                    "$t(monsters.lvl1)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 5 })",
+                    "$t(monsters.lvl1)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 7 })",
+                    "$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 9 })",
+                    "$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 11 })"
+                ],
+                [
+                    "$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 28 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 31 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 34 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 37 })"
+                ],
+                [
+                    "$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 54 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 58 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 62 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 66 })"
+                ],
+                [
+                    "2 × $t(monsters.lvl1)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 77 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 82 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 87 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 92 })"
+                ],
+                [
+                    "2 × $t(monsters.lvl1)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 97 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 106 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 113 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 120 })"
+                ]
+            ],
             "easy": "Just the Story!",
             "medium": "Story and Sword!",
             "hard": "Blood and Broken Bones!",
@@ -241,7 +348,6 @@
         }
     },
     "Monster": "Monster",
-    "Shield Tokens": "Shield Tokens",
     "inventory": {
         "Notes": "Notes",
         "noteText": [

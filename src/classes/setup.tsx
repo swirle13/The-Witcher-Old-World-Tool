@@ -1,95 +1,7 @@
-import { ReactElement, useState } from 'react';
-import { Button, Col, Row, Table } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 import { TerrainLocation, getTerrainLocations } from './terrains';
 import { shuffle } from '../util/generic';
 
-export function startingResources(numPlayers: number, t): ReactElement {
-    let ret: Array<string> = [""];
-    const p = t('player');
-    const c = t('cards');
-    const g = t('gold');
-    if (numPlayers == 1) {
-        ret = [`${p} 1: 5 ${c}, 3 ${g}`];
-    } else if (numPlayers == 2) {
-        ret = [
-            `${p} 1: 3 ${c}, 2 ${g}`,
-            `${p} 2: 5 ${c}, 4 ${g}`
-        ];
-    } else if (numPlayers == 3) {
-        ret = [
-            `${p} 1: 3 ${c}, 2 ${g}`,
-            `${p} 2: 4 ${c}, 4 ${g}`,
-            `${p} 3: 5 ${c}, 6 ${g}`
-        ];
-    } else if (numPlayers == 4) {
-        ret = [
-            `${p} 1: 2 ${c}, 4 ${g}`,
-            `${p} 2: 3 ${c}, 5 ${g}`,
-            `${p} 3: 4 ${c}, 6 ${g}`,
-            `${p} 4: 5 ${c}, 7 ${g}`
-        ];
-    } else {
-        ret = [
-            `${p} 1: 2 ${c}, 5 ${g}`,
-            `${p} 2: 3 ${c}, 5 ${g}`,
-            `${p} 3: 4 ${c}, 5 ${g}`,
-            `${p} 4: 4 ${c}, 7 ${g}`,
-            `${p} 5: 5 ${c}, 7 ${g}`
-        ];
-    }
-    return (
-        <ul>
-            {ret.map((text, index) => (
-                <li key={numPlayers + "-" + index}>{text}</li>
-            ))}
-        </ul>
-    );
-}
-
-export function wildHuntDifficulty(numPlayers: number, t): string[] {
-    let ret: Array<string> = [""];
-    const l = t('Level');
-    const m = t('Monster');
-    const s = t('Shield Tokens');
-
-    if (numPlayers == 1) {
-        ret = [
-            `${l} I ${m}\n5 ${s}`,
-            `${l} I ${m}\n7 ${s}`,
-            `${l} II ${m}\n9 ${s}`,
-            `${l} II ${m}\n11 ${s}`,
-        ];
-    } else if (numPlayers == 2) {
-        ret = [
-            `${l} II ${m}\n28 ${s}`,
-            `${l} I ${m} + ${l} II ${m}\n31 ${s}`,
-            `${l} I ${m} + ${l} III ${m}\n34 ${s}`,
-            `${l} I ${m} + ${l} III ${m}\n37 ${s}`,
-        ];
-    } else if (numPlayers == 3) {
-        ret = [
-            `${l} II ${m}\n54 ${s}`,
-            `${l} I ${m} + ${l} II ${m}\n58 ${s}`,
-            `${l} I ${m} + ${l} III ${m}\n62 ${s}`,
-            `${l} I ${m} + ${l} III ${m}\n66 ${s}`,
-        ];
-    } else if (numPlayers == 4) {
-        ret = [
-            `2 × ${l} I ${m}\n77 ${s}`,
-            `${l} I ${m} + ${l} III ${m}\n82 ${s}`,
-            `${l} I ${m} + ${l} III ${m}\n87 ${s}`,
-            `${l} I ${m} + ${l} III ${m}\n92 ${s}`,
-        ];
-    } else {
-        ret = [
-            `2 × ${l} I ${m}\n97 ${s}`,
-            `${l} I ${m} + ${l} III ${m}\n106 ${s}`,
-            `${l} I ${m} + ${l} III ${m}\n113 ${s}`,
-            `${l} I ${m} + ${l} III ${m}\n120 ${s}`,
-        ];
-    }
-    return ret;
-}
 
 const coastalLocations = getTerrainLocations({ coastal: true });
 
@@ -194,7 +106,7 @@ export function compileSteps(
                     </thead>
                     <tbody style={{ textAlign: 'center', verticalAlign: 'middle' }}>
                         <tr>
-                            {wildHuntDifficulty(numPlayers, t).map((text, index) => (
+                            {t(`setupHelper.wildHunt.difficultyValues.${numPlayers}`).map((text, index) => (
                                 <td key={index} style={{
                                     whiteSpace: 'pre-wrap', borderBottom: 'none'
                                 }}>
@@ -325,7 +237,16 @@ export function compileSteps(
     if (wildHunt) {
         tempArr.push(t('setupHelper.base.playerSetup.drawWildHunt'));
     } else {
-        tempArr.push(<>{t('setupHelper.base.playerSetup.drawBase')} {startingResources(numPlayers, t)}</>);
+        tempArr.push(
+            <>
+                {t('setupHelper.base.playerSetup.drawBaseHeader')}
+                <ul>
+                    {t(`setupHelper.base.playerSetup.drawBaseResources.${numPlayers}`).map((text, index) => (
+                        <li key={numPlayers + "-" + index}>{text}</li>
+                    ))}
+                </ul>
+            </>
+        );
     }
     tempElem = (
         <div>
