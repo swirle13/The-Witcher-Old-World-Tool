@@ -11,13 +11,20 @@ import wildHunt from "../img/expansionHeaders/wildHunt.png";
 import "../css/SetupHelper.css";
 import PageTitle from '../components/PageTitle';
 import { AccordionEventKey } from 'react-bootstrap/esm/AccordionContext';
-import { lenToStrArr } from '../util/generic';
 
 const expansions = ["Legendary Hunt", "Mages", "Monster Pack", "Monster Trail", "Skellige", "Adventure Pack", "Wild Hunt"];
 const expansionsImages = [legendaryHunt, mages, monsterPack, monsterTrail, skellige, adventurePack, wildHunt];
 
+/**
+ * Produces an array of strings, starting at '0' through to 'obj.length', e.g. `my_arr.length = 3`, produces `['0', '1', '2']`.
+ * @param obj Array of strings
+ * @returns Array of strings of the stringified length of obj
+ */
+function lenToStrArr(obj: Array<string>): string[] {
+    return [...Array(obj.length).keys()].map(a => String(a));
+}
 
-export default function SetupHelper({ t }) {
+export default function SetupSteps({ t }) {
     const [players, setPlayers] = useState<number>(1);
     const [expansionsState, setExpansionsState] = useState<Array<boolean>>(
         new Array(expansions.length).fill(false)
@@ -85,7 +92,7 @@ export default function SetupHelper({ t }) {
                                 <h4 className='text-center mb-3'>{t('Expansions')}</h4>
                                 <Row key="inlineExpansions" className="text-center justify-content-center" xl={1}>
                                     {expansions.map((exp, index) => (
-                                        <Col key={index} className={"d-flex justify-content-center " + (index === 6 ? '' : 'mb-2')} xs="auto">
+                                        <Col className={"d-flex justify-content-center " + (index === 6 ? '' : 'mb-2')} xs="auto">
                                             <FormCheck
                                                 name="group2"
                                                 id={exp}
@@ -127,7 +134,7 @@ export default function SetupHelper({ t }) {
                     <Stack gap={3}>
                         <Accordion alwaysOpen flush activeKey={stepsKeys} onSelect={handleSelect}>
                             {steps.map((body, index) => (
-                                <Accordion.Item eventKey={`${index}`} key={index}>
+                                <Accordion.Item eventKey={`${index}`}>
                                     <Accordion.Header>
                                         {t('Step')} {index + 1}
                                     </Accordion.Header>
