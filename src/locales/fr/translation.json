@@ -214,7 +214,7 @@
                 "token": "Placer le jeton Trophée sur le plus petit niveau de la piste Trophée.",
                 "cards": "Mélanger la pioche Action de Départ et la placer à gauche du plateau Joueur.",
                 "miniature": "Placer sa figurine sur l'emplacement de son école de Sorceleur, sur la carte du Continent.",
-                "drawBase": "Piocher le nombre de cartes et d'or, basé sur l'ordre des joueurs : ",
+                "drawBaseHeader": "Piocher le nombre de cartes et d'or, basé sur l'ordre des joueurs : ",
                 "drawWildHunt": "Piocher 5 cartes et prendre 3 or.",
                 "title": "Chaque joueur doit :",
                 "drawBaseResources": [
