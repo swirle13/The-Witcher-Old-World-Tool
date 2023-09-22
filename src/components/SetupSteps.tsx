@@ -56,10 +56,6 @@ export default function SetupSteps({ t }) {
         setStepsKeys(lenToStrArr(steps));
     }, [steps]);
 
-    useEffect(() => {
-        // console.log(`stepsKeys: ${stepsKeys}`);
-    });
-
     return (
         <Container>
             <PageTitle HeaderText={t('Setup Helper')} ConditionalRender='d-lg-none' t={t} />

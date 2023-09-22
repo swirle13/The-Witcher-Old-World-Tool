@@ -55,7 +55,7 @@ export default function SetupHelper({ t }) {
 
     return (
         <Container>
-            <PageTitle HeaderText={t('Setup Helper')} ConditionalRender='d-lg-none' t={t} />
+            <PageTitle HeaderText={t('setupHelper.title')} ConditionalRender='d-lg-none' t={t} />
             <Row className="gap-2 mb-4 pb-4">
                 <Col id="setupConfiguration" lg="4">
                     <Form>

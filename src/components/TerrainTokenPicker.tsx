@@ -42,21 +42,21 @@ export default function TerrainTokenPicker({
                     <Button variant="secondary" size="lg" className='px-1'
                         onClick={() => setToken(localTerrainDeck.drawMountainToken())}
                     >
-                        {t('Mountain')}
+                        {t('locationTokens.mountain')}
                     </Button>
                 </Col>
                 <Col xs="auto" className='p-1'>
                     <Button variant="success" size="lg"
                         onClick={() => setToken(localTerrainDeck.drawForestToken())}
                     >
-                        {t('Forest')}
+                        {t('locationTokens.forest')}
                     </Button>
                 </Col>
                 <Col xs="auto" className='p-1'>
                     <Button variant="primary" size="lg" className='px-3'
                         onClick={() => setToken(localTerrainDeck.drawWaterToken())}
                     >
-                        {t('Water')}
+                        {t('locationTokens.water')}
                     </Button>
                 </Col>
             </Row>
@@ -64,7 +64,7 @@ export default function TerrainTokenPicker({
                 <Form.Switch
                     checked={skellige}
                     onChange={() => handleSkellige()}
-                    label="Skellige"
+                    label={t("exps.skellige")}
                 />
             </Row>
         </Container>

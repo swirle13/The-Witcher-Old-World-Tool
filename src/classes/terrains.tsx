@@ -157,10 +157,10 @@ export const terrainLocations: ReadonlyArray<TerrainLocation> = [
  * 
  * TODO: Add support for equations for number, e.g. '> 15' or '5 < x < 20'
  */
-export function getTerrainLocations(reqAttrs: { num?: number, type?: TerrainType, coastal?: boolean; }): Array<TerrainLocation> {
-    let retArray: Array<TerrainLocation> = [];
+export function getTerrainLocations(reqAttrs: { num?: number, type?: TerrainType, coastal?: boolean; }): TerrainLocation[] {
+    let retArray: TerrainLocation[] = [];
     retArray = terrainLocations.filter((loc) => {
-        return loc.num === reqAttrs.num || loc.type === reqAttrs.type || loc.coastal === reqAttrs.coastal ;
+        return loc.num === reqAttrs.num || loc.type === reqAttrs.type || loc.coastal === reqAttrs.coastal;
     });
 
     return retArray;
