@@ -11,7 +11,7 @@
         "lint": "eslint '*/**/*.ts*'",
         "predeploy": "npm run build",
         "deploy": "gh-pages -d dist",
-        "i18n": "i18next-locales-sync -p en-US -s cz de en-GB es fr it pl -l src/locales --spaces 4",
+        "i18n": "i18next-locales-sync -p en -s cz de es fr it pl -l src/locales --spaces 4",
         "check-i18n": "npm run i18n -- --check"
     },
     "repository": {

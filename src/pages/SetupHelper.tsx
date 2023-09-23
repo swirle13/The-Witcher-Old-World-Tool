@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Accordion, Button, Col, Container, Form, FormCheck, Image, Row, Stack } from "react-bootstrap";
+import { Accordion, Button, Col, Container, FormCheck, Image, Row, Stack } from "react-bootstrap";
 import { compileSteps } from "../classes/setup";
 import legendaryHunt from "../img/expansionHeaders/legendaryHunt.png";
 import mages from "../img/expansionHeaders/mages.png";
@@ -49,77 +49,73 @@ export default function SetupHelper({ t }) {
         setStepsKeys(lenToStrArr(steps));
     }, [steps]);
 
-    useEffect(() => {
-        // console.log(`stepsKeys: ${stepsKeys}`);
-    });
-
     return (
         <Container>
             <PageTitle HeaderText={t('setupHelper.title')} ConditionalRender='d-lg-none' t={t} />
             <Row className="gap-2 mb-4 pb-4">
                 <Col id="setupConfiguration" lg="4">
-                    <Form>
-                        <Row className='justify-content-center' lg={1}>
-                            <Col id="playersCol">
-                                <h4 className='text-center mb-3'>{t('common.Players')}</h4>
-                                <div key="inlinePlayers" className="mb-3 pl-1 text-center">
-                                    {[1, 2, 3, 4, 5].map((num) => (
+                    <Row className='justify-content-center' lg={1}>
+                        <Col id="playersCol">
+                            <h4 className='text-center mb-3'>{t('common.Players')}</h4>
+                            <div key="inlinePlayers" className="mb-3 pl-1 text-center">
+                                {[1, 2, 3, 4, 5].map((num) => (
+                                    <FormCheck
+                                        defaultChecked={num === 1}
+                                        inline
+                                        type="radio"
+                                        name="group1"
+                                        id={`${num}Player`}
+                                        label={num}
+                                        key={num}
+                                        onChange={() => { setPlayers(num); }}
+                                        className={'align-items-center ' + (num === 5 ? 'mr-0 !important' : '')}
+                                        style={{ textAlign: 'center' }}
+                                    />
+                                ))}
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row className='justify-content-center mb-3' lg={1}>
+                        <Col id="expansionsCol">
+                            <h4 className='text-center mb-3'>{t('common.Expansions')}</h4>
+                            <Row key="inlineExpansions" className="text-center justify-content-center" xl={1}>
+                                {expansions.map((exp, index) => (
+                                    <Col key={index} className={"d-flex justify-content-center " + (index === 6 ? '' : 'mb-2')} xs="auto">
                                         <FormCheck
-                                            defaultChecked={num === 1}
-                                            inline
-                                            type="radio"
-                                            name="group1"
-                                            id={`${num}Player`}
-                                            label={num}
-                                            key={num}
-                                            onChange={() => { setPlayers(num); }}
-                                            className={'align-items-center ' + (num === 5 ? 'mr-0 !important' : '')}
-                                            style={{ textAlign: 'center' }}
+                                            name="group2"
+                                            id={exp}
+                                            checked={expansionsState[index]}
+                                            label={<Image src={expansionsImages[index]} width={150} />}
+                                            key={exp}
+                                            onChange={() => handleExpansionOnChange(index)}
+                                            className='d-flex align-items-center'
+                                            disabled={expansionsState[6] && ["Legendary Hunt", "Monster Pack", "Adventure Pack"].includes(exp)}
                                         />
-                                    ))}
-                                </div>
-                            </Col>
-                        </Row>
-                        <Row className='justify-content-center mb-3' lg={1}>
-                            <Col id="expansionsCol">
-                                <h4 className='text-center mb-3'>{t('common.Expansions')}</h4>
-                                <Row key="inlineExpansions" className="text-center justify-content-center" xl={1}>
-                                    {expansions.map((exp, index) => (
-                                        <Col key={index} className={"d-flex justify-content-center " + (index === 6 ? '' : 'mb-2')} xs="auto">
-                                            <FormCheck
-                                                name="group2"
-                                                id={exp}
-                                                checked={expansionsState[index]}
-                                                label={<Image src={expansionsImages[index]} width={150} />}
-                                                key={exp}
-                                                onChange={() => handleExpansionOnChange(index)}
-                                                className='d-flex align-items-center'
-                                                disabled={expansionsState[6] && ["Legendary Hunt", "Monster Pack", "Adventure Pack"].includes(exp)}
-                                            />
-                                        </Col>
-                                    ))}
-                                </Row>
-                            </Col>
-                        </Row>
-                        <Row className='justify-content-center mt-4' lg={1}>
-                            <Col id="collapseButtonsCol">
-                                <Row className='text-center justify-content-center' xs="auto">
-                                    <Col>
-                                        <Button id="collapseAllButton" variant="outline-secondary"
-                                            onClick={() => { setStepsKeys([]); }}>
-                                            {t('setupHelper.collapse')}
-                                        </Button>
                                     </Col>
-                                    <Col>
-                                        <Button id="expandAllButton" variant="outline-secondary"
-                                            onClick={() => { setStepsKeys(lenToStrArr(steps)); }}>
-                                            {t('setupHelper.expand')}
-                                        </Button>
-                                    </Col>
-                                </Row>
-                            </Col>
-                        </Row>
-                    </Form>
+                                ))}
+                            </Row>
+                        </Col>
+                    </Row>
+                    <Row className='justify-content-center mt-4' lg={1}>
+                        <Col id="collapseButtonsCol">
+                            <Row className='text-center justify-content-center' xs="auto">
+                                <Col>
+                                    <Button id="collapseAllButton" variant="outline-secondary"
+                                        onClick={() => { setStepsKeys([]); }}
+                                    >
+                                        {t('setupHelper.collapse')}
+                                    </Button>
+                                </Col>
+                                <Col>
+                                    <Button id="expandAllButton" variant="outline-secondary"
+                                        onClick={() => { setStepsKeys(lenToStrArr(steps)); }}
+                                    >
+                                        {t('setupHelper.expand')}
+                                    </Button>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
                 </Col>
                 <div className="vr p-0 mx-2 d-none d-lg-block" />
                 <div className="d-lg-none my-3 px-5"><hr className='my-0' /></div>
