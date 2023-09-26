@@ -40,13 +40,13 @@
     "navbar": {
         "titleLong": "Assistant The Witcher: L'Ancien Monde",
         "titleShort": "Assistant L'Ancien Monde",
-        "communityLinks": "Community Links",
-        "gameplayTools": "Gameplay Tools",
+        "communityLinks": "Liens communautaires",
+        "gameplayTools": "Outils de jeu",
         "setupHelper": "$t(setupHelper.title)",
         "locationTokens": "$t(locationTokens.title)",
         "monsterRoller": "$t(monsterRoller.title)",
         "lostMount": "$t(lostMount.title)",
-        "browseAllTools": "Browse All Tools",
+        "browseAllTools": "Parcourir tous les outils",
         "projectHelp": "Project Help",
         "githubIssues": "Github Issues",
         "githubDiscussions": "Github Discussions",
@@ -61,7 +61,7 @@
         "title": "Piocher un nouveau Monstre"
     },
     "monsterRoller": {
-        "title": "Monster Roller"
+        "title": "Piocher un Monstre"
     },
     "exps": {
         "adventurePack": "Adventure Pack",
@@ -76,10 +76,10 @@
         "mountedEredin": "Mounted Eredin"
     },
     "locationTokens": {
-        "title": "Location Tokens",
-        "mountain": "Mountain",
-        "forest": "Forest",
-        "water": "Water",
+        "title": "Jetons Lieu",
+        "mountain": "Montagne",
+        "forest": "Forêt",
+        "water": "Eau",
         "Behelt Nar": "Behelt Nar",
         "Kaer Seren": "Kaer Seren",
         "Hengfors": "Hengfors",
@@ -495,48 +495,48 @@
         "Skellige Exploration cards": "Cartes Exploration Skellige"
     },
     "communityLinks": {
-        "title": "Community Links",
+        "title": "Liens de la Communauté",
         "links": [
             {
-                "title": "Official Discord",
-                "subtitle": "Link",
-                "desc": "The Go On Board official discord. Discuss rules, share your painted minis, or just chat about the game.",
+                "title": "Discord Officielle",
+                "subtitle": "Lien",
+                "desc": "Le discord officiel de Go On Board. Discutez des règles, partagez vos figurines peintes ou discutez simplement du jeu.",
                 "link": "https://discord.com/invite/mX8yvYQTuq"
             },
             {
-                "title": "Official Guide: Organizing All Cards in Big Box",
-                "subtitle": "Video",
-                "desc": "A more in-depth guide on how to fit all the cards inside the Big Box.",
+                "title": "Guide officiel : Organiser toutes les cartes dans la Big Box",
+                "subtitle": "Vidéo",
+                "desc": "Un guide plus approfondi sur la façon de faire entrer toutes les cartes dans la Big Box.",
                 "link": "https://youtu.be/Hj7oTXJOFfg"
             },
             {
-                "title": "Official FAQ: Clarifying ambiguous rules/situations",
+                "title": "FAQ officiel: Clarifier les règles/situations ambiguës",
                 "subtitle": "PDF",
-                "desc": "Answers and clarification for potentially confusing or difficult situations.",
+                "desc": "Des réponses et des éclaircissements sur des situations potentiellement confuses ou difficiles.",
                 "link": "https://www.dropbox.com/s/6fxx058x76kc9rn/FAQ_ENG_v01.pdf?dl=0"
             },
             {
-                "title": "BoardGameGeek Old World Files",
-                "subtitle": "Link",
-                "desc": "Another corner for the hobby where members upload their own creations, automata, guides, and more.",
+                "title": "BoardGameGeek Fichiers de L'Ancien Monde",
+                "subtitle": "Lien",
+                "desc": "Un autre coin pour le hobby où les membres téléchargent leurs propres créations, automates, guides, et plus encore.",
                 "link": "https://boardgamegeek.com/boardgame/331106/witcher-old-world/files"
             },
             {
                 "title": "Witcher Monster Tray Position",
-                "subtitle": "Community member created",
-                "desc": "A detailed guide on locations of all the monster minis and their locations in their respective trays.",
+                "subtitle": "Création d'un membre de la communauté",
+                "desc": "Un guide détaillé sur les emplacements de toutes les figurines de monstres et leurs emplacements dans leurs rangement respectifs.",
                 "link": "https://boardgamegeek.com/filepage/259976/witcher-monster-tray-position"
             },
             {
-                "title": "Card and Token Organizers",
-                "subtitle": "Community member created",
-                "desc": "3D printer files for card organizers to better fit in the Big Box, as well as token organizers.",
+                "title": "Organiseurs de Cartes et Tokens",
+                "subtitle": "Création d'un membre de la communauté",
+                "desc": "Fichiers d'imprimante 3D pour des organiseurs de cartes pour mieux s'adapter à la Big Box, ainsi que des organiseurs de jetons.",
                 "link": "https://thingiverse.com/thing:6078120"
             }
         ]
     },
     "lostMount": {
-        "title": "Lost Mount Locations"
+        "title": "Emplacements pour la Monture Perdue"
     },
     "footer": {
         "aboutTitle": "About me",
