@@ -23,14 +23,15 @@
         "player3": "Joueur 3",
         "player4": "Joueur 4",
         "player5": "Joueur 5",
-        "gold_other": "or",
-        "goldWithCount": "{{count}} or",
-        "goldWithCount_other": "{{count}} or",
+        "goldWithCount_one": "{{count}} or",
+        "goldWithCount_many": "{{count}} ors",
+        "goldWithCount_other": "{{count}} or(s)",
         "card_one": "carte",
-        "card_other": "cartes",
-        "cardWithCount": "{{count}} carte(s)",
+        "card_many": "cartes",
+        "card_other": "carte(s)",
         "cardWithCount_one": "{{count}} carte",
-        "cardWithCount_other": "{{count}} cartes",
+        "cardWithCount_many": "{{count}} cartes",
+        "cardWithCount_other": "{{count}} carte(s)",
         "Under Construction!": "En construction !"
     },
     "navbar": {
@@ -47,7 +48,7 @@
         "githubIssues": "Bugs sur Github",
         "githubDiscussions": "Discussions sur Github",
         "projectTimeline": "Historique du projet",
-        "__flag": "🥖"
+        "__flag": "🇫🇷"
     },
     "monsterPicker": {
         "toggle": "Activer/désactiver les modifications:",
@@ -293,8 +294,8 @@
             }
         },
         "legendaryHunt": {
-            "1": "Placer la grande carte d'Aide de jeu Legendary Hunt près du plateau. Utiliser la face B pour une partie plus longue.",
-            "2": "Choisir un Monstre Légendaire. Placer sa grande carte et la pioche de cartes Combat Spécial mélangée près du plateau. Placer sa figurine sur le lieu indiqué par sa carte. Mélanger les jetons Destruction et les placer face cachée près du plateau.",
+            "help": "Placer la grande carte d'Aide de jeu Legendary Hunt près du plateau. Utiliser la face B pour une partie plus longue.",
+            "choose": "Choisir un Monstre Légendaire. Placer sa grande carte et la pioche de cartes Combat Spécial mélangée près du plateau. Placer sa figurine sur le lieu indiqué par sa carte. Mélanger les jetons Destruction et les placer face cachée près du plateau.",
             "movementDeck": "Le dernier joueur dans l'ordre de jeu prend la pioche Mouvement du Monstre Légendaire (mélangée et placée face cachée)."
         },
         "wildHunt": {
@@ -375,8 +376,7 @@
             "siren": "Placer la figurine de la Sirène sur l'emplacement Dagon, avec sa carte Monstre à proximité."
         },
         "magesExp": {
-            "actionCards": "répéter les étapes précédentes pour les cartes Action Mage. (Ou refaire cette étape si tout le monde joue un Mage.)",
-            "": ""
+            "actionCards": "répéter les étapes précédentes pour les cartes Action Mage. (Ou refaire cette étape si tout le monde joue un Mage.)"
         },
         "monsterTrail": {
             "mutagen": "Mélanger la pioche Mutagène et la placer près de la pioche Trophée Attribut.",
@@ -401,7 +401,7 @@
         ],
         "legendHeader": "Légende",
         "legendBody": {
-            "Si affiché en deux colonnes : lire de gauche à droite et de haut en bas. Cela vous assurera de parcourir l'intégralité des cartes, qui sont réparties dans plusieurs paquets sous blister. (Exemple “Cartes Monstre: 11 (11/29)“ indique que ce paquet contient 11 cartes sur les 29.)",
+            "header": "Si affiché en deux colonnes : lire de gauche à droite et de haut en bas. Cela vous assurera de parcourir l'intégralité des cartes, qui sont réparties dans plusieurs paquets sous blister. (Exemple “Cartes Monstre: 11 (11/29)“ indique que ce paquet contient 11 cartes sur les 29.)",
             "body": [
                 {
                     "title": "TWOW(XX) Y/Z",
@@ -493,6 +493,13 @@
     },
     "communityLinks": {
         "title": "Liens de la Communauté",
+        "contentType": {
+            "link": "Lien",
+            "video": "Vidéo",
+            "pdf": "PDF",
+            "member": "Création d'un membre de la Communauté"
+        },
+        "officialDiscord": "Discord Officiel",
         "links": [
             {
                 "title": "Discord officiel",
