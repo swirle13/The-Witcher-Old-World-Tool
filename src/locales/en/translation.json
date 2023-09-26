@@ -2,16 +2,23 @@
     "common": {
         "expansions": "Expansions",
         "Step": "Step",
+        "players": "Players",
         "player1": "Player 1",
         "player2": "Player 2",
         "player3": "Player 3",
         "player4": "Player 4",
         "player5": "Player 5",
-        "goldWithCount_other": "{{count}} gold",
-        "card_one": "card",
-        "card_other": "cards",
-        "cardWithCount_one": "{{count}} card",
-        "cardWithCount_other": "{{count}} cards",
+        "gold_other": "{{count}} gold",
+        "card_one": "{{count}} card",
+        "card_other": "{{count}} cards",
+        "card_witchertrophy_one": "{{count}} Witcher Trophy Card",
+        "card_witchertrophy_other": "{{count}} Witcher Trophy Cards",
+        "card_witchermagetrophy_one": "{{count}} Witcher/Mage Trophy Card",
+        "card_witchermagetrophy_other": "{{count}} Witcher/Mage Trophy Cards",
+        "token_level1_one": "{{count}} Level I token",
+        "token_level1_other": "{{count}} Level I tokens",
+        "token_shield_one": "{{count}} Shield Token",
+        "token_shield_other": "{{count}} Shield Tokens",
         "underConstruction": "Under Construction!"
     },
     "navbar": {
@@ -205,7 +212,7 @@
             "locationTokens": "Sort Location Tokens into 3 piles by terrain type. Shuffle each pile and place them (face down) near the game board. Draw 1 token from each pile and place them (face up) on their slots on the game board (to the right of the Monster slots).",
             "monsterSetup": {
                 "0": "Sort Monster Cards and Monster Tokens by level (I, II, and III). Place the cards near the game board (face up). Shuffle the tokens and place them near the game board (face down).",
-                "1": "Move {{numTokens}} Level I tokens into a separate “additional monsters” stack. See p. 26 of core rules for how these are used.",
+                "1": "Move $t(common.token, { 'context': 'level1', 'count': {{count}}}) into a separate “additional monsters” stack. See p. 26 of core rules for how these are used.",
                 "2": [
                     "Draw 3 Monster Tokens: One of each level.",
                     "Draw 3 Monster Tokens: One of each level.",
@@ -214,8 +221,8 @@
                     "Draw 3 Monster Tokens: 3 × Level I.",
                     "Draw 3 Monster Tokens: 3 × Level I."
                 ],
-                "3": "Place the three Monster Tokens (randomly) in locations on the map matching the 3 face-up Location Tokens.",
-                "4": "Turn the 3 Monster Tokens face up and place their corresponding Monster Cards in the slots on the game board matching the corresponding Location Tokens. Replace the tokens with miniatures if you have them.",
+                "3": "Place the three Monster Tokens (randomly) in locations on the map matching the three face-up Location Tokens.",
+                "4": "Turn the three Monster Tokens face up and place their corresponding Monster Cards in the slots on the game board matching the corresponding Location Tokens. Replace the tokens with miniatures if you have them.",
                 "5": "Set up Monsters:"
             },
             "monsterFightDeck": "Shuffle the Monster Fight deck and place it (face down) near the game board.",
@@ -229,8 +236,7 @@
                 "wildHuntMages": "Take a Wild Hunt Help Card, player board, and matching miniature (with colored ring), cubes, Shield or Energy marker, scoring token, and starting deck of 10 cards. (Starting cards have a School icon in the top right corner.)",
                 "wildHuntMonsterTrail": "Take a Wild Hunt Help Card, player board, and matching miniature (with colored ring), cubes, Shield marker, scoring token, and starting deck of 11 cards. (Starting cards have a School icon in the top right corner.)",
                 "wildHuntMagesMonsterTrail": "Take a Wild Hunt Help Card, player board, and matching miniature (with colored ring), cubes, Shield or Energy marker, scoring token, and starting deck of 11 cards. (Starting cards have a School icon in the top right corner.)",
-                "trophyCards": "Take {{num}} of their Witcher Trophy Cards (equal to the other players).",
-                "trophyCardsMages": "Take {{num}} of their Witcher/Mage Trophy Cards (equal to the other players).",
+                "trophyCards": "Take $t(common.card, {'count': {{count}}, 'context': '{{context}}'}) (equal to the other players).",
                 "ifMage": "If a mage, place their School and Specialty tokens on the map, covering those of an unused Witcher School.",
                 "markers": "Place the 5 cubes and Shield marker on the “level 1” spots of each player board track.",
                 "markersMages": "Place the 5 cubes and Shield or Energy marker on the “level 1” spots of each player board track.",
@@ -246,29 +252,29 @@
                         "placeholder for 0 players"
                     ],
                     [
-                        "$t(common.player1): $t(common.cardWithCount, {\"count\": 5}), $t(common.goldWithCount, {\"count\": 3})"
+                        "$t(common.player1): $t(common.card, {'count': 5}), $t(common.gold, {'count': 3})"
                     ],
                     [
-                        "$t(common.player1): $t(common.cardWithCount, {\"count\": 3}), $t(common.goldWithCount, {\"count\": 2})",
-                        "$t(common.player2): $t(common.cardWithCount, {\"count\": 5}), $t(common.goldWithCount, {\"count\": 4})"
+                        "$t(common.player1): $t(common.card, {'count': 3}), $t(common.gold, {'count': 2})",
+                        "$t(common.player2): $t(common.card, {'count': 5}), $t(common.gold, {'count': 4})"
                     ],
                     [
-                        "$t(common.player1): $t(common.cardWithCount, {\"count\": 3}), $t(common.goldWithCount, {\"count\": 2})",
-                        "$t(common.player2): $t(common.cardWithCount, {\"count\": 4}), $t(common.goldWithCount, {\"count\": 4})",
-                        "$t(common.player3): $t(common.cardWithCount, {\"count\": 5}), $t(common.goldWithCount, {\"count\": 6})"
+                        "$t(common.player1): $t(common.card, {'count': 3}), $t(common.gold, {'count': 2})",
+                        "$t(common.player2): $t(common.card, {'count': 4}), $t(common.gold, {'count': 4})",
+                        "$t(common.player3): $t(common.card, {'count': 5}), $t(common.gold, {'count': 6})"
                     ],
                     [
-                        "$t(common.player1): $t(common.cardWithCount, {\"count\": 2}), $t(common.goldWithCount, {\"count\": 4})",
-                        "$t(common.player2): $t(common.cardWithCount, {\"count\": 3}), $t(common.goldWithCount, {\"count\": 5})",
-                        "$t(common.player3): $t(common.cardWithCount, {\"count\": 4}), $t(common.goldWithCount, {\"count\": 6})",
-                        "$t(common.player4): $t(common.cardWithCount, {\"count\": 5}), $t(common.goldWithCount, {\"count\": 7})"
+                        "$t(common.player1): $t(common.card, {'count': 2}), $t(common.gold, {'count': 4})",
+                        "$t(common.player2): $t(common.card, {'count': 3}), $t(common.gold, {'count': 5})",
+                        "$t(common.player3): $t(common.card, {'count': 4}), $t(common.gold, {'count': 6})",
+                        "$t(common.player4): $t(common.card, {'count': 5}), $t(common.gold, {'count': 7})"
                     ],
                     [
-                        "$t(common.player1): $t(common.cardWithCount, {\"count\": 2}), $t(common.goldWithCount, {\"count\": 5})",
-                        "$t(common.player2): $t(common.cardWithCount, {\"count\": 3}), $t(common.goldWithCount, {\"count\": 5})",
-                        "$t(common.player3): $t(common.cardWithCount, {\"count\": 4}), $t(common.goldWithCount, {\"count\": 7})",
-                        "$t(common.player4): $t(common.cardWithCount, {\"count\": 4}), $t(common.goldWithCount, {\"count\": 7})",
-                        "$t(common.player5): $t(common.cardWithCount, {\"count\": 5}), $t(common.goldWithCount, {\"count\": 7})"
+                        "$t(common.player1): $t(common.card, {'count': 2}), $t(common.gold, {'count': 5})",
+                        "$t(common.player2): $t(common.card, {'count': 3}), $t(common.gold, {'count': 5})",
+                        "$t(common.player3): $t(common.card, {'count': 4}), $t(common.gold, {'count': 7})",
+                        "$t(common.player4): $t(common.card, {'count': 4}), $t(common.gold, {'count': 7})",
+                        "$t(common.player5): $t(common.card, {'count': 5}), $t(common.gold, {'count': 7})"
                     ]
                 ]
             }
@@ -279,41 +285,40 @@
             "movementDeck": "The last player in turn order takes the Legendary Monster Movement deck (shuffled, face down)."
         },
         "wildHunt": {
-            "shieldTokens": "{{num}} Shield Tokens",
             "difficultyTitle": "Choose the game difficulty on the table below. This determines starting monsters and shields later.",
             "difficultyValues": [
                 [
                     "placeholder for 0 players"
                 ],
                 [
-                    "$t(monsters.lvl1)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 5 })",
-                    "$t(monsters.lvl1)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 7 })",
-                    "$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 9 })",
-                    "$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 11 })"
+                    "$t(monsters.lvl1)\n$t(common.token, { 'context': 'shield', 'count': 5 })",
+                    "$t(monsters.lvl1)\n$t(common.token, { 'context': 'shield', 'count': 7 })",
+                    "$t(monsters.lvl2)\n$t(common.token, { 'context': 'shield', 'count': 9 })",
+                    "$t(monsters.lvl2)\n$t(common.token, { 'context': 'shield', 'count': 11 })"
                 ],
                 [
-                    "$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 28 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 31 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 34 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 37 })"
+                    "$t(monsters.lvl2)\n$t(common.token, { 'context': 'shield', 'count': 28 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl2)\n$t(common.token, { 'context': 'shield', 'count': 31 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(common.token, { 'context': 'shield', 'count': 34 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(common.token, { 'context': 'shield', 'count': 37 })"
                 ],
                 [
-                    "$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 54 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 58 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 62 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 66 })"
+                    "$t(monsters.lvl2)\n$t(common.token, { 'context': 'shield', 'count': 54 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl2)\n$t(common.token, { 'context': 'shield', 'count': 58 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(common.token, { 'context': 'shield', 'count': 62 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(common.token, { 'context': 'shield', 'count': 66 })"
                 ],
                 [
-                    "2 × $t(monsters.lvl1)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 77 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 82 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 87 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 92 })"
+                    "2 × $t(monsters.lvl1)\n$t(common.token, { 'context': 'shield', 'count': 77 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(common.token, { 'context': 'shield', 'count': 82 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(common.token, { 'context': 'shield', 'count': 87 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(common.token, { 'context': 'shield', 'count': 92 })"
                 ],
                 [
-                    "2 × $t(monsters.lvl1)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 97 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 106 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 113 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 120 })"
+                    "2 × $t(monsters.lvl1)\n$t(common.token, { 'context': 'shield', 'count': 97 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(common.token, { 'context': 'shield', 'count': 106 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(common.token, { 'context': 'shield', 'count': 113 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(common.token, { 'context': 'shield', 'count': 120 })"
                 ]
             ],
             "easy": "Just the Story!",
