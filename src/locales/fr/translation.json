@@ -23,7 +23,6 @@
         "player3": "Joueur 3",
         "player4": "Joueur 4",
         "player5": "Joueur 5",
-        "Under Construction!": "En construction !",
         "gold_one": "or",
         "gold_many": "or",
         "gold_other": "or",
@@ -35,16 +34,34 @@
         "card_other": "cartes",
         "cardWithCount_one": "{{count}} carte",
         "cardWithCount_many": "{{count}} cartes",
-        "cardWithCount_other": "{{count}} cartes"
+        "cardWithCount_other": "{{count}} cartes",
+        "Under Construction!": "En construction !"
     },
-    "navbar": {},
+    "navbar": {
+        "titleLong": "Assistant The Witcher: L'Ancien Monde",
+        "titleShort": "Assistant L'Ancien Monde",
+        "communityLinks": "Community Links",
+        "gameplayTools": "Gameplay Tools",
+        "setupHelper": "$t(setupHelper.title)",
+        "locationTokens": "$t(locationTokens.title)",
+        "monsterRoller": "$t(monsterRoller.title)",
+        "lostMount": "$t(lostMount.title)",
+        "browseAllTools": "Browse All Tools",
+        "projectHelp": "Project Help",
+        "githubIssues": "Github Issues",
+        "githubDiscussions": "Github Discussions",
+        "projectTimeline": "Project Timeline",
+        "__flag": "🇫🇷"
+    },
     "monsterPicker": {
         "toggle": "Activer/désactiver les modifications:",
         "sirenExplain": "Sirène exclue car elle ne peut pas être sélectionnée au hasard",
         "legendary": "Légendaire",
         "allLegendary": "Tous les Légendaires",
-        "title": "Piocher un nouveau Monstre",
-        "": ""
+        "title": "Piocher un nouveau Monstre"
+    },
+    "monsterRoller": {
+        "title": "Monster Roller"
     },
     "exps": {
         "adventurePack": "Adventure Pack",
@@ -58,50 +75,73 @@
         "monsterPack": "Monster Pack",
         "mountedEredin": "Mounted Eredin"
     },
-    "Monster Pack": "Monster Pack",
-    "The Witcher": "The Witcher",
-    "The Witcher Old World": "The Witcher: L'Ancien Monde",
-    "The Witcher Old World Helper": "Assistant pour The Witcher: L'Ancien Monde",
-    "Old World Helper": "Assistant pour L'Ancien Monde",
-    "Gameplay Tools": "Outils de jeu",
-    "Lost Mount Locations": "Emplacements pour la Monture Perdue",
-    "Browse All Tools": "Parcourir tous les outils",
-    "Project Help": "Aide du projet",
-    "__flag": "🥖",
-    "Mountain": "Montagne",
-    "Forest": "Forêt",
-    "Water": "Eau",
+    "locationTokens": {
+        "title": "Location Tokens",
+        "mountain": "Mountain",
+        "forest": "Forest",
+        "water": "Water",
+        "Behelt Nar": "Behelt Nar",
+        "Kaer Seren": "Kaer Seren",
+        "Hengfors": "Hengfors",
+        "Kaer Morhen": "Kaer Morhen",
+        "Ban Ard": "Ban Ard",
+        "Cidaris": "Cidaris",
+        "Novigrad": "Novigrad",
+        "Vizima": "Vizima",
+        "Vengerberg": "Vengerberg",
+        "Cintra": "Cintra",
+        "Haern Caduch": "Haern Caduch",
+        "Beauclair": "Beauclair",
+        "Glenmore": "Glenmore",
+        "Doldeth": "Doldeth",
+        "Loc Ichaer": "Loc Ichaer",
+        "Gorthur Guaed": "Gorthur Guaed",
+        "Dhuwod": "Dhuwod",
+        "Stygga": "Stygga",
+        "Ard Modron": "Ard Modron",
+        "Ard Skellig": "Ard Skellig",
+        "Isle of Mists": "Isle of Mists",
+        "Eyna": "Eyna"
+    },
     "home": {
-        "Setup Helper": {
-            "name": "Aide à la mise en place du jeu",
-            "desc": "Un ensemble d'instructions aggrégées, calculées dynamiquement pour toute combinaison d'extension et de nombre de joueurs.",
-            "btn": "Le vent hurle.."
-        },
-        "Location Tokens": {
-            "name": "Jetons Lieu",
-            "desc": "Piocher facilement n’importe quel type de jeton de terrain. Toujours aléatoire. Pas besoin de mélanger les jetons cartonnés.",
-            "btn": "Explorez le Continent"
-        },
-        "Monster Roller": {
-            "name": "Piocher un monstre aléatoire",
-            "desc": "Fatigué de mélanger vos jetons, vos cartes monstres et de chercher les figurines ?",
-            "btn": "Merde, qu'est ce que t'es moche !"
-        },
-        "Community Links": {
-            "name": "Liens de la Communauté",
-            "desc": "Une collection de liens géniaux de la Communauté. Liste en constante évolution !",
-            "btn": "Montre moi"
-        },
-        "Inventory Checker": {
-            "name": "Inventaire du matériel du jeu",
-            "desc": "Pour aider celles et ceux qui viennent de recevoir leur jeu The Witcher: L'Ancien Monde, voici un guide détaillé pour vérifier ce que vous avez (espérons-le) reçu.",
-            "btn": "Le médaillon vibre.."
-        },
-        "Lost Mount": {
-            "name": "Monture Perdue",
-            "desc": "Une variante plus spécifique de la page Jetons Lieu, avec deux jetons au choix, pour l'extension Lost Mount.",
-            "btn": "Viens, Ablette"
-        }
+        "linkedPages": [
+            {
+                "name": "$t(setupHelper.title)",
+                "link": "#/setupHelper",
+                "desc": "Un ensemble d'instructions aggrégées, calculées dynamiquement pour toute combinaison d'extension et de nombre de joueurs.",
+                "btn": "Le vent hurle.."
+            },
+            {
+                "name": "$t(locationTokens.title)",
+                "link": "#/locationTokens",
+                "desc": "Piocher facilement n’importe quel type de jeton de terrain. Toujours aléatoire. Pas besoin de mélanger les jetons cartonnés.",
+                "btn": "Explorez le Continent"
+            },
+            {
+                "name": "$t(monsterRoller.title)",
+                "link": "#/monsterRoller",
+                "desc": "Fatigué de mélanger vos jetons, vos cartes monstres et de chercher les figurines ?",
+                "btn": "Merde, qu'est ce que t'es moche !"
+            },
+            {
+                "name": "$t(communityLinks.title)",
+                "link": "#/communityLinks",
+                "desc": "Une collection de liens géniaux de la Communauté. Liste en constante évolution !",
+                "btn": "Montre moi"
+            },
+            {
+                "name": "Inventory Checker",
+                "link": "#/inventoryChecker",
+                "desc": "Pour aider celles et ceux qui viennent de recevoir leur jeu The Witcher: L'Ancien Monde, voici un guide détaillé pour vérifier ce que vous avez (espérons-le) reçu.",
+                "btn": "Le médaillon vibre.."
+            },
+            {
+                "name": "$t(lostMount.title)",
+                "link": "#/lostMount",
+                "desc": "Une variante plus spécifique de la page Jetons Lieu, avec deux jetons au choix, pour l'extension Lost Mount.",
+                "btn": "Viens, Ablette"
+            }
+        ]
     },
     "monsters": {
         "Nekker's Nest": "Nid de Nekkers",
@@ -167,6 +207,7 @@
         ]
     },
     "setupHelper": {
+		"title": "Aide à la mise en place",
         "error": "Erreur, le nombre de joueurs est invalide. Il doit être compris entre 1 et 5.",
         "collapse": "Tout réduire",
         "expand": "Tout développer",
@@ -338,8 +379,7 @@
             "siren": "Placer la figurine de la Sirène sur l'emplacement Dagon, avec sa carte Monstre à proximité."
         },
         "magesExp": {
-            "actionCards": "répéter les étapes précédentes pour les cartes Action Mage. (Ou refaire cette étape si tout le monde joue un Mage.)",
-            "": ""
+            "actionCards": "répéter les étapes précédentes pour les cartes Action Mage. (Ou refaire cette étape si tout le monde joue un Mage.)"
         },
         "monsterTrail": {
             "mutagen": "Mélanger la pioche Mutagène et la placer près de la pioche Trophée Attribut.",
@@ -353,9 +393,10 @@
             "lostMount": "Puis ils piochent deux jetons Lieu (de n'importe quel terrain), en choisissent un sur lequel placer la figurine Monture Perdue, et remélanger les jetons dans leur pile."
         }
     },
-    "Monster": "Monstre",
-    "inventory": {
-        "Notes": "Notes",
+    "inventoryChecker": {
+        "title": "Vérifier le contenu du jeu",
+        "cardSubtitle": "Cartes",
+        "noteTitle": "Notes",
         "noteText": [
             "Ceci est un premier jet de cet outil d'inventaire, afin qu'il soit mis le plus rapidement possible à disposition des Backers de la seconde vague. De ce fait cette première version est pour l'instant minimaliste.",
             "J'ai pour but d'ajouter différentes sections pour les jetons et les figurines d'ici peu. Note du traducteur : dans la version française du jeu, le nom officiel des extensions est leur nom en anglais. Tandis qu'elles sont parfois traduites dans les livres de règles. Cet outil a été traduit dans ce sens afin de correspondre le plus possible aux textes officiels : nom de l'extension en anglais mais matériel traduit en français (par exemple cartes Chasse Sauvage de l'extension Wild Hunt).",
@@ -451,8 +492,118 @@
         "Large Fight Reference card": "Grande carte Aide de combat pour Legendary Hunt",
         "Dagon Bonus Monster cards": "Cartes Monstre Bonus Dagon",
         "Skellige Event cards": "Cartes Événement Skellige",
-        "Skellige Exploration cards": "Cartes Exploration Skellige",
-        "": ""
+        "Skellige Exploration cards": "Cartes Exploration Skellige"
     },
-    "": ""
+    "communityLinks": {
+        "title": "Community Links",
+        "links": [
+            {
+                "title": "Official Discord",
+                "subtitle": "Link",
+                "desc": "The Go On Board official discord. Discuss rules, share your painted minis, or just chat about the game.",
+                "link": "https://discord.com/invite/mX8yvYQTuq"
+            },
+            {
+                "title": "Official Guide: Organizing All Cards in Big Box",
+                "subtitle": "Video",
+                "desc": "A more in-depth guide on how to fit all the cards inside the Big Box.",
+                "link": "https://youtu.be/Hj7oTXJOFfg"
+            },
+            {
+                "title": "Official FAQ: Clarifying ambiguous rules/situations",
+                "subtitle": "PDF",
+                "desc": "Answers and clarification for potentially confusing or difficult situations.",
+                "link": "https://www.dropbox.com/s/6fxx058x76kc9rn/FAQ_ENG_v01.pdf?dl=0"
+            },
+            {
+                "title": "BoardGameGeek Old World Files",
+                "subtitle": "Link",
+                "desc": "Another corner for the hobby where members upload their own creations, automata, guides, and more.",
+                "link": "https://boardgamegeek.com/boardgame/331106/witcher-old-world/files"
+            },
+            {
+                "title": "Witcher Monster Tray Position",
+                "subtitle": "Community member created",
+                "desc": "A detailed guide on locations of all the monster minis and their locations in their respective trays.",
+                "link": "https://boardgamegeek.com/filepage/259976/witcher-monster-tray-position"
+            },
+            {
+                "title": "Card and Token Organizers",
+                "subtitle": "Community member created",
+                "desc": "3D printer files for card organizers to better fit in the Big Box, as well as token organizers.",
+                "link": "https://thingiverse.com/thing:6078120"
+            }
+        ]
+    },
+    "lostMount": {
+        "title": "Lost Mount Locations"
+    },
+    "footer": {
+        "aboutTitle": "About me",
+        "aboutBody": [
+            "I am a one-man team and I work on this unofficial fan website in my spare time. If you appreciate the work I do, consider buying me a coffee!",
+            "Updates to this site will continuously roll out. If you're interested in participating in the improvement of this tool, please check out the Github links to fill out bug reports, enhancement suggestions, see my current tasks and ideas, participate in polls for the next major improvement/feature I work on, and more!"
+        ],
+        "github": "Github",
+        "githubLinks": [
+            {
+                "text": "Find a bug?",
+                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBUG%5D+"
+            },
+            {
+                "text": "Enhancement idea?",
+                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=%5BENHANCEMENT%5D+"
+            },
+            {
+                "text": "Discussions",
+                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/discussions"
+            },
+            {
+                "text": "Project timeline",
+                "link": "https://github.com/users/swirle13/projects/2/views/3"
+            },
+            {
+                "text": "Task Board",
+                "link": "https://github.com/users/swirle13/projects/2/views/1"
+            },
+            {
+                "text": "All open bugs/enhancements",
+                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
+            },
+            {
+                "text": "Source code",
+                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool"
+            }
+        ],
+        "communities": "Communities",
+        "communitiesLinks": [
+            {
+                "text": "Official Discord",
+                "link": "https://discord.com/invite/mX8yvYQTuq"
+            },
+            {
+                "text": "Official Twitter",
+                "link": "https://twitter.com/board_go26242"
+            },
+            {
+                "text": "Official Instagram",
+                "link": "https://www.instagram.com/go.on.board"
+            },
+            {
+                "text": "Kickstarter",
+                "link": "https://www.kickstarter.com/projects/goonboard/the-witcher"
+            },
+            {
+                "text": "Board Game Geek",
+                "link": "https://boardgamegeek.com/boardgame/331106/witcher-old-world"
+            }
+        ],
+        "supportTitle": "Support Me",
+        "supportLinks": [
+            {
+                "text": "Buy me a coffee ☕️",
+                "link": "https://bmc.link/swirle13"
+            }
+        ]
+    }
 }

@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 export default function LocationTokens({t}) {
     return (
         <Container id="LocationTokens">
-            <TerrainTokenPicker HeaderText={t("Location Tokens")} t={t}/>
+            <TerrainTokenPicker HeaderText={t("locationTokens.title")} t={t}/>
         </Container>
     )
 }

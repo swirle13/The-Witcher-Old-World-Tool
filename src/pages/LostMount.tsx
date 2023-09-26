@@ -4,8 +4,8 @@ import { Container } from "react-bootstrap";
 export default function LostMount({ t }) {
     return (
         <Container id="LostMountLocationTokens">
-            <h3 className='text-center'>{t("Under Construction!")}</h3>
-            <TerrainTokenPicker HeaderText={t("Lost Mount Locations")} t={t} />
+            <h3 className='text-center'>{t("common.underConstruction")}</h3>
+            <TerrainTokenPicker HeaderText={t("lostMount.title")} t={t} />
         </Container>
     );
 }

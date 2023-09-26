@@ -3,9 +3,12 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import LocalStorageBackend from 'i18next-localstorage-backend';
 import { initReactI18next } from "react-i18next";
 
-import translationEN_US from '../locales/en-US/translation.json';
-import translationEN_GB from '../locales/en-GB/translation.json';
+import translationCZ from '../locales/cz/translation.json';
+import translationDE from '../locales/de/translation.json';
+import translationEN from '../locales/en/translation.json';
+import translationES from '../locales/es/translation.json';
 import translationFR from '../locales/fr/translation.json';
+import translationIT from '../locales/it/translation.json';
 import translationPL from '../locales/pl/translation.json';
 
 /*
@@ -19,19 +22,28 @@ Interpolation (most used functionalities - dynamic values): https://www.i18next.
 Use i18next-parser to locate and generate locales JSON files: https://github.com/i18next/i18next-parser
 */
 
-const resources = {
-    en_US: { translation: translationEN_US },
-    en_GB: { translation: translationEN_GB },
+export const defaultNS = "translation";
+export const resources = {
+    cz: { translation: translationCZ },
+    de: { translation: translationDE },
+    en: { translation: translationEN },
+    es: { translation: translationES },
     fr: { translation: translationFR },
+    it: { translation: translationIT },
     pl: { translation: translationPL },
-};
+} as const;
 
 export const myLangs: object = {
-    en_US: "US",
-    en_GB: "GB",
+    cz: "CZ",
+    de: "DE",
+    en: "EN",
+    es: "ES",
     fr: "FR",
-    pl: "PL",
+    it: "IT",
+    pl: "PL"
 };
+
+Object.keys(myLangs)
 
 i18next
     .use(LocalStorageBackend)
@@ -40,7 +52,7 @@ i18next
     .init({
         partialBundledLanguages: true,
         resources: resources,
-        fallbackLng: "en_US",
+        fallbackLng: "en",
         debug: true,
         interpolation: {
             escapeValue: false
@@ -59,7 +71,7 @@ i18next
         }
     });
 
-i18next.loadLanguages(['cz', 'de', 'en-GB', 'es', 'fr', 'it', 'pl']);
+i18next.loadLanguages(Object.keys(myLangs));
 i18next.services.formatter?.add('lowercase', (value, lng, options) => {
     return value.toLowerCase();
 });

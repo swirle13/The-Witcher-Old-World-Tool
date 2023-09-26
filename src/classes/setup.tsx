@@ -10,57 +10,21 @@ const coastalLocations = getTerrainLocations({ coastal: true });
  * placement in Setup.
  * @returns Three random TerrainLocations that are valid locations for boats.
  */
-function randomizeSkelligeBoatStartingLocations(allCoastalLocations: TerrainLocation[]): TerrainLocation[] {
-    const locs = shuffle(allCoastalLocations).slice(0, 3);
+export function randomizeSkelligeBoatStartingLocations(): TerrainLocation[] {
+    const locs = shuffle(coastalLocations).slice(0, 3);
     return locs.slice(0, 3);
-}
-
-function skelligeBoatStep(t) {
-    const locations = randomizeSkelligeBoatStartingLocations(coastalLocations);
-    // const updateLocations = () => {
-    //     setLocations(randomizeSkelligeBoatStartingLocations());
-    // };
-
-    return (
-        <>
-            {t('setupHelper.skellige.playmat.0')}
-            <ol>
-                <li key={'1'}>{t('setupHelper.skellige.playmat.1')}</li>
-                <li key={'2'}>{t('setupHelper.skellige.playmat.2')}
-                    <ul>
-                        {locations.map((loc, index) => (
-                            <li key={index}>{t(loc.name)}, {loc.num}</li>
-                        ))}
-                    </ul>
-                </li>
-            </ol>
-
-            {t('setupHelper.skellige.board.0')}
-            <ol>
-                {[1, 2, 3, 4].map((val, index) => (
-                    <li key={index}>
-                        {t(`setupHelper.skellige.board.${val}`)}
-                    </li>
-
-                ))}
-                {/* <li>{t('setupHelper.skellige.board.2')}</li>
-                <li>{t('setupHelper.skellige.board.3')}</li>
-                <li>{t('setupHelper.skellige.board.4')}</li> */}
-            </ol>
-        </>
-    );
 }
 
 
 /**
  * Generates a string composed of the expansion names in order to access the translation key in
- * locales/**\/Translation.json
+ * locales/[lang]/translation.json
  * @param w Wild Hunt expansion boolean
  * @param m Mages expansion boolean
  * @param mT Monster Trail expansion boolean
  * @returns Constructed string composed of the expansions used for translation key
  */
-function playerSetup(w: boolean, m: boolean, mT: boolean) {
+export function playerSetup(w: boolean, m: boolean, mT: boolean) {
     let name = "base";
     if (w) name = "wildHunt";
     if (m) name += "Mages";
@@ -80,7 +44,7 @@ export function compileSteps(
     adventurePack = false,
     wildHunt = false,
     numPlayers = 1,
-): string[] {
+) {
     if (numPlayers < 1 || numPlayers > 5) {
         throw new Error(t('setupHelper.error'));
     }
@@ -89,11 +53,11 @@ export function compileSteps(
     let tempElem = {}, tempArr: any[] = [];
 
     finalSteps.push(t('setupHelper.base.1'));
-    if (legendaryHunt) finalSteps.push(t('setupHelper.legendaryHunt.1'));
+    if (legendaryHunt) finalSteps.push(t('setupHelper.legendaryHunt.help'));
 
     if (wildHunt) {
         finalSteps.push(
-            <>
+            <div>
                 {t('setupHelper.wildHunt.difficultyTitle')}
                 <Table className='lh-base' style={{ tableLayout: 'fixed' }}>
                     <thead style={{ textAlign: 'center', verticalAlign: 'middle' }}>
@@ -107,32 +71,28 @@ export function compileSteps(
                     <tbody style={{ textAlign: 'center', verticalAlign: 'middle' }}>
                         <tr>
                             {t(`setupHelper.wildHunt.difficultyValues.${numPlayers}`).map((text, index) => (
-                                <td key={index} style={{
-                                    whiteSpace: 'pre-wrap', borderBottom: 'none'
-                                }}>
-                                    {text}
-                                </td>
+                                <td key={index} style={{whiteSpace: 'pre-wrap', borderBottom: 'none'}}>{text}</td>
                             ))}
                         </tr>
                     </tbody>
                 </Table>
-            </>
+            </div>
         );
 
         finalSteps.push(t('setupHelper.wildHunt.manage'));
     }
 
-    const locations = randomizeSkelligeBoatStartingLocations(coastalLocations);
+    const locations = randomizeSkelligeBoatStartingLocations();
     if (skellige) {
         finalSteps.push(
-            <>
+            <div>
                 {t('setupHelper.skellige.playmat.0')}
                 <ul>
-                    <li>{t('setupHelper.skellige.playmat.1')}</li>
-                    <li>{t('setupHelper.skellige.playmat.2')}
+                    <li key={0}>{t('setupHelper.skellige.playmat.1')}</li>
+                    <li key={1}>{t('setupHelper.skellige.playmat.2')}
                         <ul>
-                            {locations.map((loc) => (
-                                <li>{t(loc.name)}, {loc.num}</li>
+                            {locations.map((loc: TerrainLocation, idx) => (
+                                <li key={idx}>{t(`locationTokens.${loc.name}`)}, {loc.num}</li>
                             ))}
                         </ul>
                     </li>
@@ -145,7 +105,7 @@ export function compileSteps(
                     <li>{t('setupHelper.skellige.board.3')}</li>
                     <li>{t('setupHelper.skellige.board.4')}</li>
                 </ul>
-            </>
+            </div>
         );
     }
 
@@ -220,7 +180,7 @@ export function compileSteps(
     wildHunt ? expansion = "wildHunt" : expansion = "base";
     finalSteps.push(t(`setupHelper.${expansion}.monsterFightDeck`));
 
-    if (legendaryHunt) finalSteps.push(t('setupHelper.legendaryHunt.2'));
+    if (legendaryHunt) finalSteps.push(t('setupHelper.legendaryHunt.choose'));
     if (wildHunt) finalSteps.push(...t('setupHelper.wildHunt.enemies'));
 
     finalSteps.push(t('setupHelper.base.startingPlayer'));
