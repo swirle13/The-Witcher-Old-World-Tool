@@ -32,12 +32,12 @@
         "cardWithCount_one": "{{count}} carte",
         "cardWithCount_many": "{{count}} cartes",
         "cardWithCount_other": "{{count}} carte(s)",
-        "Under Construction!": "En construction !"
+        "underConstruction": "En construction !"
     },
     "navbar": {
         "titleLong": "Assistant pour The Witcher: L'Ancien Monde",
         "titleShort": "Assistant pour L'Ancien Monde",
-        "communityLinks": "Liens de la Communauté",
+        "communityLinks": "$t(communityLinks.title)",
         "gameplayTools": "Outils pour le jeu",
         "setupHelper": "$t(setupHelper.title)",
         "locationTokens": "$t(locationTokens.title)",
@@ -58,7 +58,7 @@
         "title": "Piocher un nouveau Monstre"
     },
     "monsterRoller": {
-        "title": "Piocher un monstre aléatoire"
+        "title": "Piocher un Monstre aléatoire"
     },
     "exps": {
         "adventurePack": "Adventure Pack",
@@ -70,10 +70,10 @@
         "legendaryHunt": "Legendary Hunt",
         "skellige": "Skellige",
         "monsterPack": "Monster Pack",
-        "mountedEredin": "Mounted Eredin"
+        "mountedEredin": "$t(monsters.Mounted Eredin)"
     },
     "locationTokens": {
-        "title": "Location Tokens",
+        "title": "Jetons Lieu",
         "mountain": "Montagne",
         "forest": "Forêt",
         "water": "Eau",
@@ -127,7 +127,7 @@
                 "btn": "Montre-moi"
             },
             {
-                "name": "Inventory Checker",
+                "name": "$t(inventoryChecker.title)",
                 "link": "#/inventoryChecker",
                 "desc": "Pour aider celles et ceux qui viennent de recevoir leur jeu The Witcher: L'Ancien Monde, voici un guide détaillé pour vérifier ce que vous avez (espérons-le) reçu.",
                 "btn": "Le médaillon vibre.."
@@ -413,7 +413,7 @@
                     ]
                 },
                 {
-                    "title": "Extensions",
+                    "title": "$t(common.expansions)",
                     "details": [
                         "Ceci sont les extensions auxquelles appartiennent les cartes dans ce paquet."
                     ]
@@ -502,38 +502,38 @@
         "officialDiscord": "Discord Officiel",
         "links": [
             {
-                "title": "Discord officiel",
-                "subtitle": "Lien",
+                "title": "$t(communityLinks.officialDiscord)",
+                "subtitle": "$t(communityLinks.contentType.link)",
                 "desc": "Le Discord officiel de Go on Board. Viens discuter des règles du jeu, partages tes figurines peintes, ou discutes simplement du jeu.",
                 "link": "https://discord.com/invite/mX8yvYQTuq"
             },
             {
                 "title": "Guide officiel : Ranger les cartes dans la Big Box",
-                "subtitle": "Vidéo",
+                "subtitle": "$t(communityLinks.contentType.video)",
                 "desc": "Un guide plus détaillé sur comment ranger toutes les cardes dans la Big Box.",
                 "link": "https://youtu.be/Hj7oTXJOFfg"
             },
             {
                 "title": "FAQ officielle : Pour clarifier les règles ou situations ambigues.",
-                "subtitle": "PDF",
+                "subtitle": "$t(communityLinks.contentType.pdf)",
                 "desc": "Réponses et clarifications pour les situations sujettes à confusion ou pas assez claires.",
                 "link": "https://www.dropbox.com/s/6fxx058x76kc9rn/FAQ_ENG_v01.pdf?dl=0"
             },
             {
                 "title": "Fichiers BoardGameGeek pour le jeu The Witcher: L'Ancien Monde",
-                "subtitle": "Lien",
+                "subtitle": "$t(communityLinks.contentType.link)",
                 "desc": "Un autre endroit pour les passionés où les membres partagent leurs propres créations, automates, guides et bien plus.",
                 "link": "https://boardgamegeek.com/boardgame/331106/witcher-old-world/files"
             },
             {
-                "title": "Emplacement des figurines de monstres dans les inserts",
-                "subtitle": "Création d'un membre de la Communauté",
+                "title": "Emplacement des figurines de Monstres dans les inserts",
+                "subtitle": "$t(communityLinks.contentType.member)",
                 "desc": "Un guide détaillé de l'emplacement des figurines de chaque monstre, dans les inserts. Pour les retrouver et les ranger plus facilement.",
                 "link": "https://boardgamegeek.com/filepage/259976/witcher-monster-tray-position"
             },
             {
-                "title": "Organiseur de cartes et jetons",
-                "subtitle": "Création d'un membre de la Communauté",
+                "title": "De meilleurs inserts pour les cartes et jetons",
+                "subtitle": "$t(communityLinks.contentType.member)",
                 "desc": "Des plans d'impression 3D pour organiser toutes les cartes, même sleevées, dans la Big Box, ainsi que les jetons.",
                 "link": "https://thingiverse.com/thing:6078120"
             }
