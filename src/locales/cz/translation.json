@@ -1,24 +1,28 @@
 {
     "common": {
-        "expansions": "expansions",
+        "expansions": "Expansions",
         "Step": "Step",
+        "players": "Players",
         "player1": "Player 1",
         "player2": "Player 2",
         "player3": "Player 3",
         "player4": "Player 4",
         "player5": "Player 5",
-        "goldWithCount_one": "{{count}} gold",
         "goldWithCount_other": "{{count}} gold",
-        "card_one": "card",
-        "card_other": "cards",
         "cardWithCount_one": "{{count}} card",
         "cardWithCount_other": "{{count}} cards",
+        "cardWithCount_witchertrophy_one": "{{count}} Witcher Trophy Card",
+        "cardWithCount_witchertrophy_other": "{{count}} Witcher Trophy Cards",
+        "cardWithCount_witchermagetrophy_one": "{{count}} Witcher/Mage Trophy Card",
+        "cardWithCount_witchermagetrophy_other": "{{count}} Witcher/Mage Trophy Cards",
+        "token_level1_one": "{{count}} Level I token",
+        "token_level1_other": "{{count}} Level I tokens",
         "underConstruction": "Under Construction!"
     },
     "navbar": {
         "titleLong": "The Witcher: Old World Helper",
         "titleShort": "Old World Helper",
-        "communityLinks": "Community Links",
+        "communityLinks": "$t(communityLinks.title)",
         "gameplayTools": "Gameplay Tools",
         "setupHelper": "$t(setupHelper.title)",
         "locationTokens": "$t(locationTokens.title)",
@@ -29,7 +33,7 @@
         "githubIssues": "Github Issues",
         "githubDiscussions": "Github Discussions",
         "projectTimeline": "Project Timeline",
-        "__flag": "🇨🇿"
+        "__flag": "🇬🇧"
     },
     "monsterPicker": {
         "toggle": "Toggle changes:",
@@ -51,7 +55,7 @@
         "legendaryHunt": "Legendary Hunt",
         "skellige": "Skellige",
         "monsterPack": "Monster Pack",
-        "mountedEredin": "Mounted Eredin"
+        "mountedEredin": "$t(monsters.Mounted Eredin)"
     },
     "locationTokens": {
         "title": "Location Tokens",
@@ -108,7 +112,7 @@
                 "btn": "Show me"
             },
             {
-                "name": "Inventory Checker",
+                "name": "$t(inventoryChecker.title)",
                 "link": "#/inventoryChecker",
                 "desc": "To help those just receiving their The Witcher: Old World game, here's an in-depth guide on what you (hopefully) received.",
                 "btn": "Medallion's humming.."
@@ -206,7 +210,7 @@
             "locationTokens": "Sort Location Tokens into 3 piles by terrain type. Shuffle each pile and place them (face down) near the game board. Draw 1 token from each pile and place them (face up) on their slots on the game board (to the right of the Monster slots).",
             "monsterSetup": {
                 "0": "Sort Monster Cards and Monster Tokens by level (I, II, and III). Place the cards near the game board (face up). Shuffle the tokens and place them near the game board (face down).",
-                "1": "Move {{numTokens}} Level I tokens into a separate “additional monsters” stack. See p. 26 of core rules for how these are used.",
+                "1": "Move $t(common.token, { 'context': 'level1', 'count': {{count}}}) into a separate “additional monsters” stack. See p. 26 of core rules for how these are used.",
                 "2": [
                     "Draw 3 Monster Tokens: One of each level.",
                     "Draw 3 Monster Tokens: One of each level.",
@@ -230,11 +234,10 @@
                 "wildHuntMages": "Take a Wild Hunt Help Card, player board, and matching miniature (with colored ring), cubes, Shield or Energy marker, scoring token, and starting deck of 10 cards. (Starting cards have a School icon in the top right corner.)",
                 "wildHuntMonsterTrail": "Take a Wild Hunt Help Card, player board, and matching miniature (with colored ring), cubes, Shield marker, scoring token, and starting deck of 11 cards. (Starting cards have a School icon in the top right corner.)",
                 "wildHuntMagesMonsterTrail": "Take a Wild Hunt Help Card, player board, and matching miniature (with colored ring), cubes, Shield or Energy marker, scoring token, and starting deck of 11 cards. (Starting cards have a School icon in the top right corner.)",
-                "trophyCards": "Take {{num}} of their Witcher Trophy Cards (equal to the other players).",
-                "trophyCardsMages": "Take {{num}} of their Witcher/Mage Trophy Cards (equal to the other players).",
+                "trophyCards": "Take $t(common.cardWithCount, {'count': {{count}}, 'context': '{{context}}'}) (equal to the other players).",
                 "ifMage": "If a mage, place their School and Specialty tokens on the map, covering those of an unused Witcher School.",
-                "markers": "Place the 5 cubes and Shield marker on the lowest (“level 1”) spot of each player board track.",
-                "markersMages": "Place the 5 cubes and Shield or Energy marker on the lowest (“level 1”) spot of each player board track.",
+                "markers": "Place the 5 cubes and Shield marker on the “level 1” spots of each player board track.",
+                "markersMages": "Place the 5 cubes and Shield or Energy marker on the “level 1” spots of each player board track.",
                 "raiseAttr": "Choose one Attribute to raise to level 2.",
                 "token": "Place the scoring token on the lowest spot of the Trophy Track.",
                 "cards": "Shuffle their starting cards and set the deck to the left of their board.",
@@ -247,29 +250,29 @@
                         "placeholder for 0 players"
                     ],
                     [
-                        "$t(common.player1): $t(common.cardWithCount, {\"count\": 5}), $t(common.goldWithCount, {\"count\": 3})"
+                        "$t(common.player1): $t(common.cardWithCount, {'count': 5}), $t(common.goldWithCount, {'count': 3})"
                     ],
                     [
-                        "$t(common.player1): $t(common.cardWithCount, {\"count\": 3}), $t(common.goldWithCount, {\"count\": 2})",
-                        "$t(common.player2): $t(common.cardWithCount, {\"count\": 5}), $t(common.goldWithCount, {\"count\": 4})"
+                        "$t(common.player1): $t(common.cardWithCount, {'count': 3}), $t(common.goldWithCount, {'count': 2})",
+                        "$t(common.player2): $t(common.cardWithCount, {'count': 5}), $t(common.goldWithCount, {'count': 4})"
                     ],
                     [
-                        "$t(common.player1): $t(common.cardWithCount, {\"count\": 3}), $t(common.goldWithCount, {\"count\": 2})",
-                        "$t(common.player2): $t(common.cardWithCount, {\"count\": 4}), $t(common.goldWithCount, {\"count\": 4})",
-                        "$t(common.player3): $t(common.cardWithCount, {\"count\": 5}), $t(common.goldWithCount, {\"count\": 6})"
+                        "$t(common.player1): $t(common.cardWithCount, {'count': 3}), $t(common.goldWithCount, {'count': 2})",
+                        "$t(common.player2): $t(common.cardWithCount, {'count': 4}), $t(common.goldWithCount, {'count': 4})",
+                        "$t(common.player3): $t(common.cardWithCount, {'count': 5}), $t(common.goldWithCount, {'count': 6})"
                     ],
                     [
-                        "$t(common.player1): $t(common.cardWithCount, {\"count\": 2}), $t(common.goldWithCount, {\"count\": 4})",
-                        "$t(common.player2): $t(common.cardWithCount, {\"count\": 3}), $t(common.goldWithCount, {\"count\": 5})",
-                        "$t(common.player3): $t(common.cardWithCount, {\"count\": 4}), $t(common.goldWithCount, {\"count\": 6})",
-                        "$t(common.player4): $t(common.cardWithCount, {\"count\": 5}), $t(common.goldWithCount, {\"count\": 7})"
+                        "$t(common.player1): $t(common.cardWithCount, {'count': 2}), $t(common.goldWithCount, {'count': 4})",
+                        "$t(common.player2): $t(common.cardWithCount, {'count': 3}), $t(common.goldWithCount, {'count': 5})",
+                        "$t(common.player3): $t(common.cardWithCount, {'count': 4}), $t(common.goldWithCount, {'count': 6})",
+                        "$t(common.player4): $t(common.cardWithCount, {'count': 5}), $t(common.goldWithCount, {'count': 7})"
                     ],
                     [
-                        "$t(common.player1): $t(common.cardWithCount, {\"count\": 2}), $t(common.goldWithCount, {\"count\": 5})",
-                        "$t(common.player2): $t(common.cardWithCount, {\"count\": 3}), $t(common.goldWithCount, {\"count\": 5})",
-                        "$t(common.player3): $t(common.cardWithCount, {\"count\": 4}), $t(common.goldWithCount, {\"count\": 7})",
-                        "$t(common.player4): $t(common.cardWithCount, {\"count\": 4}), $t(common.goldWithCount, {\"count\": 7})",
-                        "$t(common.player5): $t(common.cardWithCount, {\"count\": 5}), $t(common.goldWithCount, {\"count\": 7})"
+                        "$t(common.player1): $t(common.cardWithCount, {'count': 2}), $t(common.goldWithCount, {'count': 5})",
+                        "$t(common.player2): $t(common.cardWithCount, {'count': 3}), $t(common.goldWithCount, {'count': 5})",
+                        "$t(common.player3): $t(common.cardWithCount, {'count': 4}), $t(common.goldWithCount, {'count': 7})",
+                        "$t(common.player4): $t(common.cardWithCount, {'count': 4}), $t(common.goldWithCount, {'count': 7})",
+                        "$t(common.player5): $t(common.cardWithCount, {'count': 5}), $t(common.goldWithCount, {'count': 7})"
                     ]
                 ]
             }
@@ -280,41 +283,41 @@
             "movementDeck": "The last player in turn order takes the Legendary Monster Movement deck (shuffled, face down)."
         },
         "wildHunt": {
-            "shieldTokens": "{{num}} Shield Tokens",
+            "shieldTokens_other": "{{count}} Shield Tokens",
             "difficultyTitle": "Choose the game difficulty on the table below. This determines starting monsters and shields later.",
             "difficultyValues": [
                 [
                     "placeholder for 0 players"
                 ],
                 [
-                    "$t(monsters.lvl1)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 5 })",
-                    "$t(monsters.lvl1)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 7 })",
-                    "$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 9 })",
-                    "$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 11 })"
+                    "$t(monsters.lvl1)\n$t(setupHelper.wildHunt.shieldTokens, { 'count': 5 })",
+                    "$t(monsters.lvl1)\n$t(setupHelper.wildHunt.shieldTokens, { 'count': 7 })",
+                    "$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { 'count': 9 })",
+                    "$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { 'count': 11 })"
                 ],
                 [
-                    "$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 28 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 31 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 34 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 37 })"
+                    "$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { 'count': 28 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { 'count': 31 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { 'count': 34 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { 'count': 37 })"
                 ],
                 [
-                    "$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 54 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 58 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 62 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 66 })"
+                    "$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { 'count': 54 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { 'count': 58 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { 'count': 62 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { 'count': 66 })"
                 ],
                 [
-                    "2 × $t(monsters.lvl1)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 77 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 82 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 87 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 92 })"
+                    "2 × $t(monsters.lvl1)\n$t(setupHelper.wildHunt.shieldTokens, { 'count': 77 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { 'count': 82 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { 'count': 87 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { 'count': 92 })"
                 ],
                 [
-                    "2 × $t(monsters.lvl1)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 97 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 106 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 113 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 120 })"
+                    "2 × $t(monsters.lvl1)\n$t(setupHelper.wildHunt.shieldTokens, { 'count': 97 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { 'count': 106 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { 'count': 113 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { 'count': 120 })"
                 ]
             ],
             "easy": "Just the Story!",
@@ -352,8 +355,8 @@
                 "Flip them back to the anchor side, as a reminder"
             ],
             "decks": "Shuffle the Skellige Exploration deck. Do not shuffle the Skellige Event deck! Place both in their slots above the islands on the game board.",
-            "dagon": "Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus deck and place it near its track.",
-            "dagonMT": "Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus deck and place it and the large Dagon card near its track.",
+            "dagon": "Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus cards and place them, Dagon monster card, and Dagon Trail tokens near its track.",
+            "dagonMT": "Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus cards and place them, Large Dagon monster card, and Dagon Trail tokens near its track.",
             "siren": "Place the Siren miniature on the Dagon location, with its Monster Card nearby."
         },
         "magesExp": {
@@ -372,7 +375,7 @@
         }
     },
     "inventoryChecker": {
-        "title": "Inventory Checklist",
+        "title": "Inventory Checker",
         "cardSubtitle": "Cards",
         "noteTitle": "Notes",
         "noteText": [
@@ -394,7 +397,7 @@
                     ]
                 },
                 {
-                    "title": "Expansions",
+                    "title": "$t(common.expansions)",
                     "details": [
                         "These are the expansions that the cards belong to in this pack."
                     ]
@@ -483,38 +486,38 @@
         "officialDiscord": "Official Discord",
         "links": [
             {
-                "title": "Official Discord",
-                "subtitle": "Link",
+                "title": "$t(communityLinks.officialDiscord)",
+                "subtitle": "$t(communityLinks.contentType.link)",
                 "desc": "The Go On Board official discord. Discuss rules, share your painted minis, or just chat about the game.",
                 "link": "https://discord.com/invite/mX8yvYQTuq"
             },
             {
                 "title": "Official Guide: Organizing All Cards in Big Box",
-                "subtitle": "Video",
+                "subtitle": "$t(communityLinks.contentType.video)",
                 "desc": "A more in-depth guide on how to fit all the cards inside the Big Box.",
                 "link": "https://youtu.be/Hj7oTXJOFfg"
             },
             {
                 "title": "Official FAQ: Clarifying ambiguous rules/situations",
-                "subtitle": "PDF",
+                "subtitle": "$t(communityLinks.contentType.pdf)",
                 "desc": "Answers and clarification for potentially confusing or difficult situations.",
                 "link": "https://www.dropbox.com/s/6fxx058x76kc9rn/FAQ_ENG_v01.pdf?dl=0"
             },
             {
                 "title": "BoardGameGeek Old World Files",
-                "subtitle": "Link",
-                "desc": "Another corner for the hobby where members upload their own creations, automata, guides, and more.",
+                "subtitle": "$t(communityLinks.contentType.link)",
+                "desc": "Another community where members upload their own creations, automata, guides, and more.",
                 "link": "https://boardgamegeek.com/boardgame/331106/witcher-old-world/files"
             },
             {
                 "title": "Witcher Monster Tray Position",
-                "subtitle": "Community member created",
-                "desc": "A detailed guide on locations of all the monster minis and their locations in their respective trays.",
+                "subtitle": "$t(communityLinks.contentType.member)",
+                "desc": "A detailed guide on locations of all the monster minis in their respective trays (Big Box only).",
                 "link": "https://boardgamegeek.com/filepage/259976/witcher-monster-tray-position"
             },
             {
                 "title": "Card and Token Organizers",
-                "subtitle": "Community member created",
+                "subtitle": "$t(communityLinks.contentType.member)",
                 "desc": "3D printer files for card organizers to better fit in the Big Box, as well as token organizers.",
                 "link": "https://thingiverse.com/thing:6078120"
             }
@@ -563,7 +566,7 @@
         "communities": "Communities",
         "communitiesLinks": [
             {
-                "text": "Official Discord",
+                "text": "$t(communityLinks.officialDiscord)",
                 "link": "https://discord.com/invite/mX8yvYQTuq"
             },
             {

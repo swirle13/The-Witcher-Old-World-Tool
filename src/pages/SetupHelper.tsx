@@ -56,7 +56,7 @@ export default function SetupHelper({ t }) {
                 <Col id="setupConfiguration" lg="4">
                     <Row className='justify-content-center' lg={1}>
                         <Col id="playersCol">
-                            <h4 className='text-center mb-3'>{t('common.Players')}</h4>
+                            <h4 className='text-center mb-3'>{t('common.players')}</h4>
                             <div key="inlinePlayers" className="mb-3 pl-1 text-center">
                                 {[1, 2, 3, 4, 5].map((num) => (
                                     <FormCheck
