@@ -1,33 +1,14 @@
 {
     "common": {
-        "Level": "Niveau",
-        "Expansion": "Extension",
         "Expansions": "Extensions",
-        "expansion": "extension",
-        "expansions": "extensions",
         "Step": "Étape",
-        "setup": "installation",
-        "Player": "Joueur",
-        "Players": "Joueurs",
-        "player": "joueur",
-        "players": "joueurs",
-        "Witcher": "Sorceleur",
-        "witcher": "sorceleur",
-        "Mage": "Mage",
-        "Mages": "Mages",
-        "mage": "mage",
-        "mages": "mages",
-        "name": "nom",
         "player1": "Joueur 1",
         "player2": "Joueur 2",
         "player3": "Joueur 3",
         "player4": "Joueur 4",
         "player5": "Joueur 5",
-        "goldWithCount_one": "{{count}} pièce d'or",
-        "goldWithCount_many": "{{count}} pièces d'or",
         "goldWithCount_other": "{{count}} pièce(s) d'or",
         "card_one": "carte",
-        "card_many": "cartes",
         "card_other": "carte(s)",
         "cardWithCount_one": "{{count}} carte",
         "cardWithCount_many": "{{count}} cartes",
@@ -251,9 +232,9 @@
                 "wildHuntMagesMonsterTrail": "Prendre une carte Aide de jeu Wild Hunt, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier/Energie, son jeton Trophée, et son deck de départ de 11 cartes Action de Départ (les cartes Action de Départ ont le logo du personnage en haut à droite).",
                 "trophyCards": "Prendre {{num}} cartes Trophée Sorceleur de son personnage (autant que d'autres joueurs).",
                 "trophyCardsMages": "Prendre {{num}} cartes Trophée Sorceleur/Mage de son personnage (autant que d'autres joueurs).",
-                "ifMage": "Si vous jouez un Mage, placez ses jetons Ecole et Spécialité sur la carte du Continent, sur une école de Sorceleur qui n'est pas déjà prise.",
-                "markers": "Placer les 5 cubes et le marqueur Bouclier sur les niveaux 1 de son plateau Joueur.",
-                "markersMages": "Placer les 5 cubes et le marqueur Bouclier/Energie sur les niveaux 1 de son plateau Joueur.",
+                "ifMage": "Si vous jouez un Mage, placez ses jetons École et Technique sur la carte du Continent, de sorte à recouvrir une école de Sorceleur qui n'est pas déjà prise.",
+                "markers": "Placer les 5 cubes et le marqueur Bouclier sur les emplacements "niveau 1" de son plateau Joueur.",
+                "markersMages": "Placer les 5 cubes et le marqueur Bouclier/Énergie sur les emplacements "niveau 1" de son plateau Joueur.",
                 "raiseAttr": "Choisir un Attribut à augmenter au niveau 2.",
                 "token": "Placer le jeton Trophée sur le plus petit niveau de la piste Trophée.",
                 "cards": "Mélanger la pioche Action de Départ et la placer à gauche du plateau Joueur.",
@@ -371,8 +352,8 @@
                 "Les retourner sur la face Ancre, pour s'en rappeler"
             ],
             "decks": "Mélanger la pioche Exploration Skellige. Ne PAS mélanger la pioche Événements Skellige ! Placer les deux pioches sur leurs emplacements, au bord du plateau près des îles.",
-            "dagon": "Placer la figurine Dagon sur l'emplacement de départ correspond au nombre de joueurs. Mélanger la pioche Bonus Dagon et la placer près de sa piste.",
-            "dagonMT": "Placer la figurine Dagon sur l'emplacement de départ correspond au nombre de joueurs. Mélanger la pioche Bonus Dagon et la placer avec la grande carte Dagon près de sa piste.",
+            "dagon": "Placer la figurine Dagon sur l'emplacement de départ de sa Piste (celui qui correspondant au nombre de joueurs). Mélanger la pioche Bonus Dagon et la placer près de sa Piste, ainsi que la carte Monstre de Dagon et les jetons Piste Dagon.",
+            "dagonMT": "Placer la figurine Dagon sur l'emplacement de départ de sa Piste (celui qui correspondant au nombre de joueurs). Mélanger la pioche Bonus Dagon et la placer près de sa Piste, ainsi que la grande carte Monstre de Dagon et les jetons Piste Dagon.",
             "siren": "Placer la figurine de la Sirène sur l'emplacement Dagon, avec sa carte Monstre à proximité."
         },
         "magesExp": {
@@ -534,7 +515,7 @@
             {
                 "title": "De meilleurs inserts pour les cartes et jetons",
                 "subtitle": "$t(communityLinks.contentType.member)",
-                "desc": "Des plans d'impression 3D pour organiser toutes les cartes, même sleevées, dans la Big Box, ainsi que les jetons.",
+                "desc": "Des plans d'impression 3D pour mieux organiser toutes les cartes, même sleevées, dans la Big Box, ainsi que les jetons.",
                 "link": "https://thingiverse.com/thing:6078120"
             }
         ]
