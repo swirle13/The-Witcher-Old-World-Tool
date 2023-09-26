@@ -1,32 +1,12 @@
 {
     "common": {
-        "Level": "Level",
-        "Expansion": "Expansion",
-        "Expansions": "Expansions",
-        "expansion": "expansion",
         "expansions": "expansions",
         "Step": "Step",
-        "setup": "setup",
-        "Player": "Player",
-        "Players": "Players",
-        "player": "player",
-        "players": "players",
-        "Witcher": "Witcher",
-        "witcher": "witcher",
-        "Mage": "Mage",
-        "Mages": "Mages",
-        "mage": "mage",
-        "mages": "mages",
-        "name": "name",
         "player1": "Player 1",
         "player2": "Player 2",
         "player3": "Player 3",
         "player4": "Player 4",
         "player5": "Player 5",
-        "gold_one": "gold",
-        "gold_few": "gold",
-        "gold_many": "gold",
-        "gold_other": "gold",
         "goldWithCount_one": "{{count}} gold",
         "goldWithCount_few": "{{count}} gold",
         "goldWithCount_many": "{{count}} gold",
@@ -500,6 +480,13 @@
     },
     "communityLinks": {
         "title": "Community Links",
+        "contentType": {
+            "link": "Link",
+            "video": "Video",
+            "pdf": "PDF",
+            "member": "Community member created"
+        },
+        "officialDiscord": "Official Discord",
         "links": [
             {
                 "title": "Official Discord",

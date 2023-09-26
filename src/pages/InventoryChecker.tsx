@@ -76,7 +76,7 @@ export default function inventoryChecker({ t }) {
                         />
                         <ul className='ms-4'>
                             <li key={"Expansions"}>
-                                {t("common.Expansions")}: {t(`inventoryChecker.${pack.expansions}`)}
+                                {t("common.expansions")}: {t(`inventoryChecker.${pack.expansions}`)}
                             </li>
                             {Object.entries(pack.cards).map((type) => (
                                 <li key={type[0]}>{t(`inventoryChecker.${type[0]}`)}: {type[1]}</li>

@@ -15,7 +15,7 @@ export default function MonsterPicker({
     const expansionsNames = ["legendaryHunt", "wildHunt", "monsterPack", "mountedEredin"];
     const [localMonsterDeck, setLocalMonsterDeck] = useState(new MonstersDeck());
     const [displayedToken, setToken] = useState<levelOneMonster | levelTwoMonster | levelThreeMonster>(
-        new levelOneMonster(".")
+        new levelOneMonster("")
     );
     const [expansions, setExpansions] = useState(new Array(expansionsNames.length).fill(false));
 
@@ -38,7 +38,7 @@ export default function MonsterPicker({
     return (
         <Container fluid className="mx-auto min-h-screen">
             <PageTitle HeaderText={HeaderText} t={t}/>
-            <Row id='tokensRow' className='py-2 mb-2'>
+            <Row id='tokensRow' className='py-2'>
                 <Col className='justify-content-center'>
                     {displayedToken?.tokenImg(t)}
                 </Col>
@@ -95,11 +95,11 @@ export default function MonsterPicker({
                 <Col className='mx-3' style={{ maxWidth: "550px" }}>
                     <strong className="fw-light text-center">{t("monsterPicker.toggle")}</strong>
                     <ul className='fw-lighter'>
-                        <li>{t("exps.legendaryHunt") + ": " + t("monsters.legendaryHunt", { joinArrays: ', ' }) + " (" + t("All Legendary") + ")"}</li>
-                        <li>{t("exps.wildHunt")}: {t("Eredin")}, {t("Nithral")}, {t("Imlerith")}, {t("Caranthir")} ({t("monsterPicker.allLegendary")})</li>
-                        <li>{t("exps.monsterPack")}: {t("Koshchey")} ({t("monsters.lvl3")}), {t("Kayran")} ({t("Legendary")}). {t("monsterPicker.sirenExplain")}.
+                        <li>{t("exps.legendaryHunt") + ": " + t("monsters.legendaryHunt", { joinArrays: ', ' }) + " (" + t("monsterPicker.allLegendary") + ")"}</li>
+                        <li>{t("exps.wildHunt")}: {t("monsters.Eredin")}, {t("monsters.Nithral")}, {t("monsters.Imlerith")}, {t("monsters.Caranthir")} ({t("monsterPicker.allLegendary")})</li>
+                        <li>{t("exps.monsterPack")}: {t("monsters.Koshchey")} ({t("monsters.lvl3")}), {t("monsters.Kayran")} ({t("monsterPicker.legendary")}). {t("monsterPicker.sirenExplain")}.
                         </li>
-                        <li>{t("Mounted Eredin")}: {t("Mounted Eredin")} ({t("monsters.lvl3")})</li>
+                        <li>{t("exps.mountedEredin")}: {t("exps.mountedEredin")} ({t("monsters.lvl3")})</li>
                     </ul>
                 </Col>
             </Row>

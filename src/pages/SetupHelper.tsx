@@ -77,7 +77,7 @@ export default function SetupHelper({ t }) {
                     </Row>
                     <Row className='justify-content-center mb-3' lg={1}>
                         <Col id="expansionsCol">
-                            <h4 className='text-center mb-3'>{t('common.Expansions')}</h4>
+                            <h4 className='text-center mb-3'>{t('common.expansions')}</h4>
                             <Row key="inlineExpansions" className="text-center justify-content-center" xl={1}>
                                 {expansions.map((exp, index) => (
                                     <Col key={index} className={"d-flex justify-content-center " + (index === 6 ? '' : 'mb-2')} xs="auto">

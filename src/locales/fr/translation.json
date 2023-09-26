@@ -1,46 +1,23 @@
 {
     "common": {
-        "Level": "Niveau",
-        "Expansion": "Extension",
-        "Expansions": "Extensions",
-        "expansion": "extension",
         "expansions": "extensions",
         "Step": "Étape",
-        "setup": "installation",
-        "Player": "Joueur",
-        "Players": "Joueurs",
-        "player": "joueur",
-        "players": "joueurs",
-        "Witcher": "Sorceleur",
-        "witcher": "sorceleur",
-        "Mage": "Mage",
-        "Mages": "Mages",
-        "mage": "mage",
-        "mages": "mages",
-        "name": "nom",
         "player1": "Joueur 1",
         "player2": "Joueur 2",
         "player3": "Joueur 3",
         "player4": "Joueur 4",
         "player5": "Joueur 5",
-        "gold_one": "or",
-        "gold_many": "or",
-        "gold_other": "or",
-        "goldWithCount_one": "{{count}} or",
-        "goldWithCount_many": "{{count}} or",
-        "goldWithCount_other": "{{count}} or",
+        "goldWithCount_other": "{{count}} pièce(s) d'or",
         "card_one": "carte",
-        "card_many": "cartes",
         "card_other": "cartes",
         "cardWithCount_one": "{{count}} carte",
-        "cardWithCount_many": "{{count}} cartes",
         "cardWithCount_other": "{{count}} cartes",
-        "Under Construction!": "En construction !"
+        "underConstruction": "En construction !"
     },
     "navbar": {
         "titleLong": "Assistant pour The Witcher: L'Ancien Monde",
         "titleShort": "Assistant pour L'Ancien Monde",
-        "communityLinks": "Liens de la Communauté",
+        "communityLinks": "$t(communityLinks.title)",
         "gameplayTools": "Outils pour le jeu",
         "setupHelper": "$t(setupHelper.title)",
         "locationTokens": "$t(locationTokens.title)",
@@ -73,7 +50,7 @@
         "legendaryHunt": "Legendary Hunt",
         "skellige": "Skellige",
         "monsterPack": "Monster Pack",
-        "mountedEredin": "Mounted Eredin"
+        "mountedEredin": "$t(monsters.Mounted Eredin)"
     },
     "locationTokens": {
         "title": "Jetons Lieu",
@@ -130,7 +107,7 @@
                 "btn": "Montre-moi"
             },
             {
-                "name": "Inventory Checker",
+                "name": "$t(inventoryChecker.title)",
                 "link": "#/inventoryChecker",
                 "desc": "Pour aider celles et ceux qui viennent de recevoir leur jeu The Witcher: L'Ancien Monde, voici un guide détaillé pour vérifier ce que vous avez (espérons-le) reçu.",
                 "btn": "Le médaillon vibre.."
@@ -256,13 +233,13 @@
                 "trophyCardsMages": "Prendre {{num}} cartes Trophée Sorceleur/Mage de son personnage (autant que d'autres joueurs).",
                 "ifMage": "Si vous jouez un Mage, placez ses jetons Ecole et Spécialité sur la carte du Continent, sur une école de Sorceleur qui n'est pas déjà prise.",
                 "markers": "Placer les 5 cubes et le marqueur Bouclier sur les niveaux 1 de son plateau Joueur.",
-                "markersMages": "Placer les 5 cubes et le marqueur Bouclier/Energie sur les niveaux 1 de son piste des plateaux Joueur.",
+                "markersMages": "Placer les 5 cubes et le marqueur Bouclier/Energie sur les niveaux 1 de son plateau Joueur.",
                 "raiseAttr": "Choisir un Attribut à augmenter au niveau 2.",
                 "token": "Placer le jeton Trophée sur le plus petit niveau de la piste Trophée.",
                 "cards": "Mélanger la pioche Action de Départ et la placer à gauche du plateau Joueur.",
                 "miniature": "Placer sa figurine sur l'emplacement de son école de Sorceleur, sur la carte du Continent.",
-                "drawBaseHeader": "Piocher le nombre de cartes et d'or, basé sur l'ordre des joueurs : ",
-                "drawWildHunt": "Piocher 5 cartes et prendre 3 or.",
+                "drawBaseHeader": "Piocher le nombre de cartes et de pièces d'or, basé sur l'ordre des joueurs : ",
+                "drawWildHunt": "Piocher 5 cartes et prendre 3 pièces d'or.",
                 "title": "Chaque joueur doit :",
                 "drawBaseResources": [
                     [
@@ -297,8 +274,8 @@
             }
         },
         "legendaryHunt": {
-            "1": "Placer la grande carte d'Aide de jeu Legendary Hunt près du plateau. Utiliser la face B pour une partie plus longue.",
-            "2": "Choisir un Monstre Légendaire. Placer sa grande carte et la pioche de cartes Combat Spécial mélangée près du plateau. Placer sa figurine sur le lieu indiqué par sa carte. Mélanger les jetons Destruction et les placer face cachée près du plateau.",
+            "help": "Placer la grande carte d'Aide de jeu Legendary Hunt près du plateau. Utiliser la face B pour une partie plus longue.",
+            "choose": "Choisir un Monstre Légendaire. Placer sa grande carte et la pioche de cartes Combat Spécial mélangée près du plateau. Placer sa figurine sur le lieu indiqué par sa carte. Mélanger les jetons Destruction et les placer face cachée près du plateau.",
             "movementDeck": "Le dernier joueur dans l'ordre de jeu prend la pioche Mouvement du Monstre Légendaire (mélangée et placée face cachée)."
         },
         "wildHunt": {
@@ -344,7 +321,7 @@
             "hard": "Sang et os brisés !",
             "veryHard": "La Mort en marche !",
             "manage": "Choisir un joueur qui gérera le plateau de suivi des manches. Lui remettre le plateau qui correspond au nombre de joueurs. Placer le jeton de Suivi sur l'emplacement numéro 1, dans le coin supérieur gauche.",
-            "createExplorationDeck": "Créer la pioche Exploration de Wild Hunt, en plaçant 3 cartes \"Phase II\" au hasard et face cachée, puis {{num}} cartes “Phase I“ au hasard et face cachée par dessus.",
+            "createExplorationDeck": "Créer la pioche Exploration de Wild Hunt, en plaçant 3 cartes “Phase II“ au hasard et face cachée, puis {{num}} cartes “Phase I“ au hasard et face cachée par dessus.",
             "decks": "Sans les mélanger, placer les pioches Exploration et Evénement de Wild Hunt sur leurs emplacement sur le plateau. (les cartes Exploration Cité et Nature du jeu de base ne sont pas utilisées avec l'extension Wild Hunt)",
             "tokens": "Placer les jetons/pièces d'or, les jetons Quête bleus, les dés et le jeton/figurine Taverne Fermée près du plateau de jeu. Si vous avez les dés additionnels, chaque joueur peut en prendre un jeu.",
             "monsterSetup": [
@@ -404,7 +381,7 @@
         ],
         "legendHeader": "Légende",
         "legendBody": {
-            "header": "Si affiché en deux colonnes : lire de gauche à droite et de haut en bas. Cela vous assurera de parcourir l'intégralité des cartes, qui sont réparties dans plusieurs paquets sous blister. (Exemple \"Cartes Monstre: 11 (11/29)\" indique que ce paquet contient 11 cartes sur les 29.)",
+            "header": "Si affiché en deux colonnes : lire de gauche à droite et de haut en bas. Cela vous assurera de parcourir l'intégralité des cartes, qui sont réparties dans plusieurs paquets sous blister. (Exemple “Cartes Monstre: 11 (11/29)“ indique que ce paquet contient 11 cartes sur les 29.)",
             "body": [
                 {
                     "title": "TWOW(XX) Y/Z",
@@ -416,7 +393,7 @@
                     ]
                 },
                 {
-                    "title": "Extensions",
+                    "title": "$t(common.expansions)",
                     "details": [
                         "Ceci sont les extensions auxquelles appartiennent les cartes dans ce paquet."
                     ]
@@ -496,40 +473,47 @@
     },
     "communityLinks": {
         "title": "Liens de la Communauté",
+        "contentType": {
+            "link": "Lien",
+            "video": "Vidéo",
+            "pdf": "PDF",
+            "member": "Création d'un membre de la Communauté"
+        },
+        "officialDiscord": "Discord Officiel",
         "links": [
             {
-                "title": "Discord Officielle",
-                "subtitle": "Lien",
+                "title": "$t(communityLinks.officialDiscord)",
+                "subtitle": "$t(communityLinks.contentType.link)",
                 "desc": "Le Discord officiel de Go on Board. Viens discuter des règles du jeu, partages tes figurines peintes, ou discutes simplement du jeu.",
                 "link": "https://discord.com/invite/mX8yvYQTuq"
             },
             {
-                "title": "Guide officiel : Ranger les cartes dans la Big Box",
-                "subtitle": "Vidéo",
+                "title": "Official Guide: Organizing All Cards in Big Box",
+                "subtitle": "$t(communityLinks.contentType.video)",
                 "desc": "Un guide plus détaillé sur comment ranger toutes les cardes dans la Big Box.",
                 "link": "https://youtu.be/Hj7oTXJOFfg"
             },
             {
-                "title": "FAQ officielle : Pour clarifier les règles ou situations ambigues.",
-                "subtitle": "PDF",
+                "title": "Official FAQ: Clarifying ambiguous rules/situations",
+                "subtitle": "$t(communityLinks.contentType.pdf)",
                 "desc": "Réponses et clarifications pour les situations sujettes à confusion ou pas assez claires.",
                 "link": "https://www.dropbox.com/s/6fxx058x76kc9rn/FAQ_ENG_v01.pdf?dl=0"
             },
             {
-                "title": "Fichiers BoardGameGeek pour le jeu The Witcher: L'Ancien Monde",
-                "subtitle": "Lien",
+                "title": "BoardGameGeek Old World Files",
+                "subtitle": "$t(communityLinks.contentType.link)",
                 "desc": "Un autre endroit pour les passionés où les membres partagent leurs propres créations, automates, guides et bien plus.",
                 "link": "https://boardgamegeek.com/boardgame/331106/witcher-old-world/files"
             },
             {
-                "title": "Emplacement des figurines de monstres dans les inserts",
-                "subtitle": "Création d'un membre de la Communauté",
+                "title": "Witcher Monster Tray Position",
+                "subtitle": "$t(communityLinks.contentType.member)",
                 "desc": "Un guide détaillé de l'emplacement des figurines de chaque monstre, dans les inserts. Pour les retrouver et les ranger plus facilement.",
                 "link": "https://boardgamegeek.com/filepage/259976/witcher-monster-tray-position"
             },
             {
-                "title": "Organiseur de cartes et jetons",
-                "subtitle": "Création d'un membre de la Communauté",
+                "title": "Card and Token Organizers",
+                "subtitle": "$t(communityLinks.contentType.member)",
                 "desc": "Des plans d'impression 3D pour organiser toutes les cartes, même sleevées, dans la Big Box, ainsi que les jetons.",
                 "link": "https://thingiverse.com/thing:6078120"
             }
