@@ -38,20 +38,20 @@
         "Under Construction!": "En construction !"
     },
     "navbar": {
-        "titleLong": "Assistant The Witcher: L'Ancien Monde",
-        "titleShort": "Assistant L'Ancien Monde",
-        "communityLinks": "Liens communautaires",
-        "gameplayTools": "Outils de jeu",
+        "titleLong": "Assistant pour The Witcher: L'Ancien Monde",
+        "titleShort": "Assistant pour L'Ancien Monde",
+        "communityLinks": "Liens de la Communauté",
+        "gameplayTools": "Outils pour le jeu",
         "setupHelper": "$t(setupHelper.title)",
         "locationTokens": "$t(locationTokens.title)",
         "monsterRoller": "$t(monsterRoller.title)",
         "lostMount": "$t(lostMount.title)",
         "browseAllTools": "Parcourir tous les outils",
-        "projectHelp": "Project Help",
-        "githubIssues": "Github Issues",
-        "githubDiscussions": "Github Discussions",
-        "projectTimeline": "Project Timeline",
-        "__flag": "🇫🇷"
+        "projectHelp": "Aide du projet",
+        "githubIssues": "Bugs sur Github",
+        "githubDiscussions": "Discussions sur Github",
+        "projectTimeline": "Historique du projet",
+        "__flag": "🥖"
     },
     "monsterPicker": {
         "toggle": "Activer/désactiver les modifications:",
@@ -100,7 +100,7 @@
         "Stygga": "Stygga",
         "Ard Modron": "Ard Modron",
         "Ard Skellig": "Ard Skellig",
-        "Isle of Mists": "Isle of Mists",
+        "Isle of Mists": "Île des Brumes",
         "Eyna": "Eyna"
     },
     "home": {
@@ -127,7 +127,7 @@
                 "name": "$t(communityLinks.title)",
                 "link": "#/communityLinks",
                 "desc": "Une collection de liens géniaux de la Communauté. Liste en constante évolution !",
-                "btn": "Montre moi"
+                "btn": "Montre-moi"
             },
             {
                 "name": "Inventory Checker",
@@ -207,7 +207,7 @@
         ]
     },
     "setupHelper": {
-		"title": "Aide à la mise en place",
+        "title": "Aide à la mise en place du jeu",
         "error": "Erreur, le nombre de joueurs est invalide. Il doit être compris entre 1 et 5.",
         "collapse": "Tout réduire",
         "expand": "Tout développer",
@@ -266,7 +266,7 @@
                 "title": "Chaque joueur doit :",
                 "drawBaseResources": [
                     [
-                        "placeholder for 0 players"
+                        "Sélectionner un nombre de joueurs"
                     ],
                     [
                         "$t(common.player1): $t(common.cardWithCount, {\"count\": 5}), $t(common.goldWithCount, {\"count\": 3})"
@@ -306,7 +306,7 @@
             "difficultyTitle": "Choisir la difficulté de jeu dans le tableau ci-dessous. Cela déterminera les monstres de départ et les boucliers.",
             "difficultyValues": [
                 [
-                    "placeholder for 0 players"
+                    "Sélectionner un nombre de joueurs"
                 ],
                 [
                     "$t(monsters.lvl1)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 5 })",
@@ -394,7 +394,7 @@
         }
     },
     "inventoryChecker": {
-        "title": "Vérifier le contenu du jeu",
+        "title": "Inventaire du matériel du jeu",
         "cardSubtitle": "Cartes",
         "noteTitle": "Notes",
         "noteText": [
@@ -500,37 +500,37 @@
             {
                 "title": "Discord Officielle",
                 "subtitle": "Lien",
-                "desc": "Le discord officiel de Go On Board. Discutez des règles, partagez vos figurines peintes ou discutez simplement du jeu.",
+                "desc": "Le Discord officiel de Go on Board. Viens discuter des règles du jeu, partages tes figurines peintes, ou discutes simplement du jeu.",
                 "link": "https://discord.com/invite/mX8yvYQTuq"
             },
             {
-                "title": "Guide officiel : Organiser toutes les cartes dans la Big Box",
+                "title": "Guide officiel : Ranger les cartes dans la Big Box",
                 "subtitle": "Vidéo",
-                "desc": "Un guide plus approfondi sur la façon de faire entrer toutes les cartes dans la Big Box.",
+                "desc": "Un guide plus détaillé sur comment ranger toutes les cardes dans la Big Box.",
                 "link": "https://youtu.be/Hj7oTXJOFfg"
             },
             {
-                "title": "FAQ officiel: Clarifier les règles/situations ambiguës",
+                "title": "FAQ officielle : Pour clarifier les règles ou situations ambigues.",
                 "subtitle": "PDF",
-                "desc": "Des réponses et des éclaircissements sur des situations potentiellement confuses ou difficiles.",
+                "desc": "Réponses et clarifications pour les situations sujettes à confusion ou pas assez claires.",
                 "link": "https://www.dropbox.com/s/6fxx058x76kc9rn/FAQ_ENG_v01.pdf?dl=0"
             },
             {
-                "title": "BoardGameGeek Fichiers de L'Ancien Monde",
+                "title": "Fichiers BoardGameGeek pour le jeu The Witcher: L'Ancien Monde",
                 "subtitle": "Lien",
-                "desc": "Un autre coin pour le hobby où les membres téléchargent leurs propres créations, automates, guides, et plus encore.",
+                "desc": "Un autre endroit pour les passionés où les membres partagent leurs propres créations, automates, guides et bien plus.",
                 "link": "https://boardgamegeek.com/boardgame/331106/witcher-old-world/files"
             },
             {
-                "title": "Witcher Monster Tray Position",
-                "subtitle": "Création d'un membre de la communauté",
-                "desc": "Un guide détaillé sur les emplacements de toutes les figurines de monstres et leurs emplacements dans leurs rangement respectifs.",
+                "title": "Emplacement des figurines de monstres dans les inserts",
+                "subtitle": "Création d'un membre de la Communauté",
+                "desc": "Un guide détaillé de l'emplacement des figurines de chaque monstre, dans les inserts. Pour les retrouver et les ranger plus facilement.",
                 "link": "https://boardgamegeek.com/filepage/259976/witcher-monster-tray-position"
             },
             {
-                "title": "Organiseurs de Cartes et Tokens",
-                "subtitle": "Création d'un membre de la communauté",
-                "desc": "Fichiers d'imprimante 3D pour des organiseurs de cartes pour mieux s'adapter à la Big Box, ainsi que des organiseurs de jetons.",
+                "title": "Organiseur de cartes et jetons",
+                "subtitle": "Création d'un membre de la Communauté",
+                "desc": "Des plans d'impression 3D pour organiser toutes les cartes, même sleevées, dans la Big Box, ainsi que les jetons.",
                 "link": "https://thingiverse.com/thing:6078120"
             }
         ]
@@ -539,19 +539,19 @@
         "title": "Emplacements pour la Monture Perdue"
     },
     "footer": {
-        "aboutTitle": "About me",
+        "aboutTitle": "À propos de moi",
         "aboutBody": [
-            "I am a one-man team and I work on this unofficial fan website in my spare time. If you appreciate the work I do, consider buying me a coffee!",
-            "Updates to this site will continuously roll out. If you're interested in participating in the improvement of this tool, please check out the Github links to fill out bug reports, enhancement suggestions, see my current tasks and ideas, participate in polls for the next major improvement/feature I work on, and more!"
+            "Je développe seul, et je travaille sur ce site non-officiel sur mon temps libre. Si tu apprécies mon travail, penses peut-être à m'offrir un café !",
+            "Ce site sera régulièrement mis à jour. Si tu es intéressé pour participer à l'amélioration de cet outil, regarde du côté des liens Github. Tu pourras y remonter des bugs, des suggestions d'amélioration, voir mon travail en cours et mes prochaines idées, participer à des sondages pour les groesses fonctionnalités à venir, et bien plus !"
         ],
         "github": "Github",
         "githubLinks": [
             {
-                "text": "Find a bug?",
+                "text": "Tu as trouvé un bug ?",
                 "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBUG%5D+"
             },
             {
-                "text": "Enhancement idea?",
+                "text": "Une idée d'amélioration ?",
                 "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=%5BENHANCEMENT%5D+"
             },
             {
@@ -559,34 +559,34 @@
                 "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/discussions"
             },
             {
-                "text": "Project timeline",
+                "text": "Historique du projet",
                 "link": "https://github.com/users/swirle13/projects/2/views/3"
             },
             {
-                "text": "Task Board",
+                "text": "Travail en cours et à venir",
                 "link": "https://github.com/users/swirle13/projects/2/views/1"
             },
             {
-                "text": "All open bugs/enhancements",
+                "text": "Toutes les tâches ouvertes de bug/fonctionnalité",
                 "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
             },
             {
-                "text": "Source code",
+                "text": "Code source",
                 "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool"
             }
         ],
-        "communities": "Communities",
+        "communities": "Communautés",
         "communitiesLinks": [
             {
-                "text": "Official Discord",
+                "text": "Discord officiel",
                 "link": "https://discord.com/invite/mX8yvYQTuq"
             },
             {
-                "text": "Official Twitter",
+                "text": "Twitter officiel",
                 "link": "https://twitter.com/board_go26242"
             },
             {
-                "text": "Official Instagram",
+                "text": "Instagram officiel",
                 "link": "https://www.instagram.com/go.on.board"
             },
             {
@@ -598,10 +598,10 @@
                 "link": "https://boardgamegeek.com/boardgame/331106/witcher-old-world"
             }
         ],
-        "supportTitle": "Support Me",
+        "supportTitle": "Me soutenir",
         "supportLinks": [
             {
-                "text": "Buy me a coffee ☕️",
+                "text": "Offres-moi un café ☕️",
                 "link": "https://bmc.link/swirle13"
             }
         ]
