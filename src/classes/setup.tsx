@@ -10,21 +10,21 @@ const coastalLocations = getTerrainLocations({ coastal: true });
  * placement in Setup.
  * @returns Three random TerrainLocations that are valid locations for boats.
  */
-function randomizeSkelligeBoatStartingLocations(allCoastalLocations: TerrainLocation[]): TerrainLocation[] {
-    const locs = shuffle(allCoastalLocations).slice(0, 3);
+export function randomizeSkelligeBoatStartingLocations(): TerrainLocation[] {
+    const locs = shuffle(coastalLocations).slice(0, 3);
     return locs.slice(0, 3);
 }
 
 
 /**
  * Generates a string composed of the expansion names in order to access the translation key in
- * locales/**\/Translation.json
+ * locales/[lang]/translation.json
  * @param w Wild Hunt expansion boolean
  * @param m Mages expansion boolean
  * @param mT Monster Trail expansion boolean
  * @returns Constructed string composed of the expansions used for translation key
  */
-function playerSetup(w: boolean, m: boolean, mT: boolean) {
+export function playerSetup(w: boolean, m: boolean, mT: boolean) {
     let name = "base";
     if (w) name = "wildHunt";
     if (m) name += "Mages";
@@ -44,7 +44,7 @@ export function compileSteps(
     adventurePack = false,
     wildHunt = false,
     numPlayers = 1,
-): string[] {
+) {
     if (numPlayers < 1 || numPlayers > 5) {
         throw new Error(t('setupHelper.error'));
     }
@@ -53,7 +53,7 @@ export function compileSteps(
     let tempElem = {}, tempArr: any[] = [];
 
     finalSteps.push(t('setupHelper.base.1'));
-    if (legendaryHunt) finalSteps.push(t('setupHelper.legendaryHunt.1'));
+    if (legendaryHunt) finalSteps.push(t('setupHelper.legendaryHunt.help'));
 
     if (wildHunt) {
         finalSteps.push(
@@ -82,7 +82,7 @@ export function compileSteps(
         finalSteps.push(t('setupHelper.wildHunt.manage'));
     }
 
-    const locations = randomizeSkelligeBoatStartingLocations(coastalLocations);
+    const locations = randomizeSkelligeBoatStartingLocations();
     if (skellige) {
         finalSteps.push(
             <div>
@@ -180,7 +180,7 @@ export function compileSteps(
     wildHunt ? expansion = "wildHunt" : expansion = "base";
     finalSteps.push(t(`setupHelper.${expansion}.monsterFightDeck`));
 
-    if (legendaryHunt) finalSteps.push(t('setupHelper.legendaryHunt.2'));
+    if (legendaryHunt) finalSteps.push(t('setupHelper.legendaryHunt.choose'));
     if (wildHunt) finalSteps.push(...t('setupHelper.wildHunt.enemies'));
 
     finalSteps.push(t('setupHelper.base.startingPlayer'));

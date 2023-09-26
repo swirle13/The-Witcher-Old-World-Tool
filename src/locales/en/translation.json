@@ -1,29 +1,12 @@
 {
     "common": {
-        "Level": "Level",
-        "Expansion": "Expansion",
-        "Expansions": "Expansions",
-        "expansion": "expansion",
-        "expansions": "expansions",
+        "expansions": "Expansions",
         "Step": "Step",
-        "setup": "setup",
-        "Player": "Player",
-        "Players": "Players",
-        "player": "player",
-        "players": "players",
-        "Witcher": "Witcher",
-        "witcher": "witcher",
-        "Mage": "Mage",
-        "Mages": "Mages",
-        "mage": "mage",
-        "mages": "mages",
-        "name": "name",
         "player1": "Player 1",
         "player2": "Player 2",
         "player3": "Player 3",
         "player4": "Player 4",
         "player5": "Player 5",
-        "gold_other": "gold",
         "goldWithCount_other": "{{count}} gold",
         "card_one": "card",
         "card_other": "cards",
@@ -34,7 +17,7 @@
     "navbar": {
         "titleLong": "The Witcher: Old World Helper",
         "titleShort": "Old World Helper",
-        "communityLinks": "Community Links",
+        "communityLinks": "$t(communityLinks.title)",
         "gameplayTools": "Gameplay Tools",
         "setupHelper": "$t(setupHelper.title)",
         "locationTokens": "$t(locationTokens.title)",
@@ -45,7 +28,7 @@
         "githubIssues": "Github Issues",
         "githubDiscussions": "Github Discussions",
         "projectTimeline": "Project Timeline",
-        "__flag": "🇺🇸"
+        "__flag": "🇬🇧"
     },
     "monsterPicker": {
         "toggle": "Toggle changes:",
@@ -67,7 +50,7 @@
         "legendaryHunt": "Legendary Hunt",
         "skellige": "Skellige",
         "monsterPack": "Monster Pack",
-        "mountedEredin": "Mounted Eredin"
+        "mountedEredin": "$t(monsters.Mounted Eredin)"
     },
     "locationTokens": {
         "title": "Location Tokens",
@@ -124,7 +107,7 @@
                 "btn": "Show me"
             },
             {
-                "name": "Inventory Checker",
+                "name": "$t(inventoryChecker.title)",
                 "link": "#/inventoryChecker",
                 "desc": "To help those just receiving their The Witcher: Old World game, here's an in-depth guide on what you (hopefully) received.",
                 "btn": "Medallion's humming.."
@@ -249,8 +232,8 @@
                 "trophyCards": "Take {{num}} of their Witcher Trophy Cards (equal to the other players).",
                 "trophyCardsMages": "Take {{num}} of their Witcher/Mage Trophy Cards (equal to the other players).",
                 "ifMage": "If a mage, place their School and Specialty tokens on the map, covering those of an unused Witcher School.",
-                "markers": "Place the 5 cubes and Shield marker on the lowest (“level 1”) spot of each player board track.",
-                "markersMages": "Place the 5 cubes and Shield or Energy marker on the lowest (“level 1”) spot of each player board track.",
+                "markers": "Place the 5 cubes and Shield marker on the “level 1” spots of each player board track.",
+                "markersMages": "Place the 5 cubes and Shield or Energy marker on the “level 1” spots of each player board track.",
                 "raiseAttr": "Choose one Attribute to raise to level 2.",
                 "token": "Place the scoring token on the lowest spot of the Trophy Track.",
                 "cards": "Shuffle their starting cards and set the deck to the left of their board.",
@@ -291,8 +274,8 @@
             }
         },
         "legendaryHunt": {
-            "1": "Put the large Legendary Hunt help near the board. Use Side B for a longer game.",
-            "2": "Choose a Legendary Monster. Place its large card and the Special Fight cards (shuffled) near the game board. Place its miniature on the location shown on its card. Shuffle the Destruction Tokens and keep them (face-down) near the board.",
+            "help": "Put the large Legendary Hunt help near the board. Use Side B for a longer game.",
+            "choose": "Choose a Legendary Monster. Place its large card and the Special Fight cards (shuffled) near the game board. Place its miniature on the location shown on its card. Shuffle the Destruction Tokens and keep them (face-down) near the board.",
             "movementDeck": "The last player in turn order takes the Legendary Monster Movement deck (shuffled, face down)."
         },
         "wildHunt": {
@@ -368,8 +351,8 @@
                 "Flip them back to the anchor side, as a reminder"
             ],
             "decks": "Shuffle the Skellige Exploration deck. Do not shuffle the Skellige Event deck! Place both in their slots above the islands on the game board.",
-            "dagon": "Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus deck and place it near its track.",
-            "dagonMT": "Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus deck and place it and the large Dagon card near its track.",
+            "dagon": "Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus cards and place them, Dagon monster card, and Dagon Trail tokens near its track.",
+            "dagonMT": "Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus cards and place them, Large Dagon monster card, and Dagon Trail tokens near its track.",
             "siren": "Place the Siren miniature on the Dagon location, with its Monster Card nearby."
         },
         "magesExp": {
@@ -388,7 +371,7 @@
         }
     },
     "inventoryChecker": {
-        "title": "Inventory Checklist",
+        "title": "Inventory Checker",
         "cardSubtitle": "Cards",
         "noteTitle": "Notes",
         "noteText": [
@@ -410,7 +393,7 @@
                     ]
                 },
                 {
-                    "title": "Expansions",
+                    "title": "$t(common.expansions)",
                     "details": [
                         "These are the expansions that the cards belong to in this pack."
                     ]
@@ -490,40 +473,47 @@
     },
     "communityLinks": {
         "title": "Community Links",
+        "contentType": {
+            "link": "Link",
+            "video": "Video",
+            "pdf": "PDF",
+            "member": "Community member created"
+        },
+        "officialDiscord": "Official Discord",
         "links": [
             {
-                "title": "Official Discord",
-                "subtitle": "Link",
+                "title": "$t(communityLinks.officialDiscord)",
+                "subtitle": "$t(communityLinks.contentType.link)",
                 "desc": "The Go On Board official discord. Discuss rules, share your painted minis, or just chat about the game.",
                 "link": "https://discord.com/invite/mX8yvYQTuq"
             },
             {
                 "title": "Official Guide: Organizing All Cards in Big Box",
-                "subtitle": "Video",
+                "subtitle": "$t(communityLinks.contentType.video)",
                 "desc": "A more in-depth guide on how to fit all the cards inside the Big Box.",
                 "link": "https://youtu.be/Hj7oTXJOFfg"
             },
             {
                 "title": "Official FAQ: Clarifying ambiguous rules/situations",
-                "subtitle": "PDF",
+                "subtitle": "$t(communityLinks.contentType.pdf)",
                 "desc": "Answers and clarification for potentially confusing or difficult situations.",
                 "link": "https://www.dropbox.com/s/6fxx058x76kc9rn/FAQ_ENG_v01.pdf?dl=0"
             },
             {
                 "title": "BoardGameGeek Old World Files",
-                "subtitle": "Link",
-                "desc": "Another corner for the hobby where members upload their own creations, automata, guides, and more.",
+                "subtitle": "$t(communityLinks.contentType.link)",
+                "desc": "Another community where members upload their own creations, automata, guides, and more.",
                 "link": "https://boardgamegeek.com/boardgame/331106/witcher-old-world/files"
             },
             {
                 "title": "Witcher Monster Tray Position",
-                "subtitle": "Community member created",
-                "desc": "A detailed guide on locations of all the monster minis and their locations in their respective trays.",
+                "subtitle": "$t(communityLinks.contentType.member)",
+                "desc": "A detailed guide on locations of all the monster minis in their respective trays (Big Box only).",
                 "link": "https://boardgamegeek.com/filepage/259976/witcher-monster-tray-position"
             },
             {
                 "title": "Card and Token Organizers",
-                "subtitle": "Community member created",
+                "subtitle": "$t(communityLinks.contentType.member)",
                 "desc": "3D printer files for card organizers to better fit in the Big Box, as well as token organizers.",
                 "link": "https://thingiverse.com/thing:6078120"
             }
@@ -572,7 +562,7 @@
         "communities": "Communities",
         "communitiesLinks": [
             {
-                "text": "Official Discord",
+                "text": "$t(communityLinks.officialDiscord)",
                 "link": "https://discord.com/invite/mX8yvYQTuq"
             },
             {
