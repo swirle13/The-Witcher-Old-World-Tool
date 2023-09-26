@@ -157,7 +157,9 @@ export const terrainLocations: ReadonlyArray<TerrainLocation> = [
  * 
  * TODO: Add support for equations for number, e.g. '> 15' or '5 < x < 20'
  */
-export function getTerrainLocations(reqAttrs: { num?: number, type?: TerrainType, coastal?: boolean; }): TerrainLocation[] {
+export function getTerrainLocations(
+        reqAttrs: { num?: number, type?: TerrainType, coastal?: boolean; }
+    ): TerrainLocation[] {
     let retArray: TerrainLocation[] = [];
     retArray = terrainLocations.filter((loc) => {
         return loc.num === reqAttrs.num || loc.type === reqAttrs.type || loc.coastal === reqAttrs.coastal;
@@ -241,7 +243,7 @@ class WaterToken extends TerrainTokenClass implements TerrainToken {
     }
 }
 
-const MountainTokens: Array<MountainToken> = [
+const MountainTokens: MountainToken[] = [
     new MountainToken(2, "Hengfors", "Mountain2Hengfors"),
     new MountainToken(3, "Kaer Morhen", "Mountain3KaerMorhen"),
     new MountainToken(9, "Cintra", "Mountain9Cintra"),
@@ -250,7 +252,7 @@ const MountainTokens: Array<MountainToken> = [
     new MountainToken(18, "Ard Modron", "Mountain18ArdModron"),
 ];
 
-const MountainTokensSkellige: Array<MountainToken> = [
+const MountainTokensSkellige: MountainToken[] = [
     new MountainToken(2, "Hengfors", "Mountain2Hengfors"),
     new MountainToken(3, "Kaer Morhen", "Mountain3KaerMorhen"),
     new MountainToken(9, "Cintra", "Mountain9Cintra"),
@@ -260,7 +262,7 @@ const MountainTokensSkellige: Array<MountainToken> = [
     new MountainToken(19, "Ard Skellig", "Mountain19ArdSkellig")
 ];
 
-const ForestTokens: Array<ForestToken> = [
+const ForestTokens: ForestToken[] = [
     new ForestToken(6, "Novigrad", "Forest6Novigrad"),
     new ForestToken(7, "Vizima", "Forest7Vizima"),
     new ForestToken(8, "Vengerberg", "Forest8Vengerberg"),
@@ -269,7 +271,7 @@ const ForestTokens: Array<ForestToken> = [
     new ForestToken(17, "Stygga", "Forest17Stygga"),
 ];
 
-const ForestTokensSkellige: Array<ForestToken> = [
+const ForestTokensSkellige: ForestToken[] = [
     new ForestToken(6, "Novigrad", "Forest6Novigrad"),
     new ForestToken(7, "Vizima", "Forest7Vizima"),
     new ForestToken(8, "Vengerberg", "Forest8Vengerberg"),
@@ -279,7 +281,7 @@ const ForestTokensSkellige: Array<ForestToken> = [
     new ForestToken(21, "Eyna", "Forest21Eyna")
 ];
 
-const WaterTokens: Array<WaterToken> = [
+const WaterTokens: WaterToken[] = [
     new WaterToken(1, "Kaer Seren", "Water1KaerSeren"),
     new WaterToken(4, "Ban Ard", "Water4BanArd"),
     new WaterToken(5, "Cidaris", "Water5Cidaris"),
@@ -288,7 +290,7 @@ const WaterTokens: Array<WaterToken> = [
     new WaterToken(15, "Gorthur Guaed", "Water15GorthurGuaed"),
 ];
 
-const WaterTokensSkellige: Array<WaterToken> = [
+const WaterTokensSkellige: WaterToken[] = [
     new WaterToken(1, "Kaer Seren", "Water1KaerSeren"),
     new WaterToken(4, "Ban Ard", "Water4BanArd"),
     new WaterToken(5, "Cidaris", "Water5Cidaris"),

@@ -63,15 +63,15 @@ interface monsterToken {
 }
 
 abstract class monsterClass {
-    readonly name: string = "DefaultMonsterName";
+    readonly name: string = "";
     readonly level: number = 1;
     readonly tokenImgStr: string = "";
     readonly miniImgStr: string = "";
     tokenImg(t): React.ReactNode {
         return (
             <Container id='TokenContainer' className='mx-auto px-4 py-2'>
-                <Row className='justify-content-center'>
-                    <Col xs='auto'>
+                <Row id='TokenContainerImageRow' className='justify-content-center'>
+                    <Col id='TokenContainerImageCol' xs='auto'>
                         <Image
                             id={`${this.name}IconImage`}
                             src={require(`../img/monsters/level${this.level}Monsters/${this.tokenImgStr}.png`)}
@@ -81,9 +81,11 @@ abstract class monsterClass {
                         />
                     </Col>
                 </Row>
-                <Row className='justify-content-center'>
-                    <Col>
-                        <h2 className="text-center">{t(this.name)}</h2>
+                <Row id='TokenContainerTitleRow' className='justify-content-center'>
+                    <Col id='TokenContainerTitleCol' className='py-2 mt-2'>
+                        <h2 id='TokenContainerTitle' className="text-center" style={{ height: "calc(1.325rem + .9vw)" }}>
+                            {this.name ? t(`monsters.${this.name}`) : ""}
+                        </h2>
                     </Col>
                 </Row>
             </Container>
@@ -109,7 +111,7 @@ abstract class monsterClass {
 }
 
 export class levelOneMonster extends monsterClass implements monsterToken {
-    readonly name: string = "DefaultLevelOneName";
+    readonly name: string = "";
     readonly level: number = 1;
     readonly tokenImgStr: string = "level1Backside";
     readonly tokenBackImgStr: string = "level1Backside";
@@ -128,7 +130,7 @@ export class levelOneMonster extends monsterClass implements monsterToken {
 }
 
 export class levelTwoMonster extends monsterClass implements monsterToken {
-    readonly name: string = "DefaultLevelTwoName";
+    readonly name: string = "";
     readonly level: number = 2;
     readonly tokenImgStr: string = "level2Backside";
     readonly tokenBackImgStr: string = "level2Backside";
@@ -147,7 +149,7 @@ export class levelTwoMonster extends monsterClass implements monsterToken {
 }
 
 export class levelThreeMonster extends monsterClass implements monsterToken {
-    readonly name: string = "DefaultLevelThreeName";
+    readonly name: string = "";
     readonly level: number = 3;
     readonly tokenImgStr: string = "level3Backside";
     readonly tokenBackImgStr: string = "level3Backside";
@@ -166,7 +168,7 @@ export class levelThreeMonster extends monsterClass implements monsterToken {
 }
 
 export class legendaryMonster extends monsterClass implements monsterToken {
-    readonly name: string = "DefaultLegendaryName";
+    readonly name: string = "";
     readonly level: number = 4;
     readonly tokenImgStr: string = "level3Backside";
     readonly tokenBackImgStr: string = "level3Backside";
