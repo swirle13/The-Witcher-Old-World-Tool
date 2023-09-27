@@ -1,6 +1,6 @@
 {
     "common": {
-        "expansions": "extensions",
+        "expansions": "Extensions",
         "Step": "Étape",
         "players": "Joueurs",
         "player1": "Joueur 1",
@@ -8,17 +8,24 @@
         "player3": "Joueur 3",
         "player4": "Joueur 4",
         "player5": "Joueur 5",
+        "gold_one": "{{count}} pièce d'or",
+        "gold_many": "{{count}} pièces d'or",
         "gold_other": "{{count}} pièce(s) d'or",
         "card_one": "{{count}} carte",
-        "card_other": "{{count}} cartes",
-        "card_witchertrophy_one": "{{count}} Witcher Trophy Card",
-        "card_witchertrophy_other": "{{count}} Witcher Trophy Cards",
-        "card_witchermagetrophy_one": "{{count}} Witcher/Mage Trophy Card",
-        "card_witchermagetrophy_other": "{{count}} Witcher/Mage Trophy Cards",
-        "token_level1_one": "{{count}} Level I token",
-        "token_level1_other": "{{count}} Level I tokens",
-        "token_shield_one": "{{count}} Shield Token",
-        "token_shield_other": "{{count}} Shield Tokens",
+        "card_many": "{{count}} cartes",
+        "card_other": "{{count}} carte(s)",
+        "card_witchertrophy_one": "{{count}} carte Trophée Sorceleur",
+        "card_witchertrophy_many": "{{count}} cartes Trophée Sorceleur",
+        "card_witchertrophy_other": "{{count}} carte(s) Trophée Sorceleur",
+        "card_witchermagetrophy_one": "{{count}} carte Trophée Sorceleur/Mage",
+        "card_witchermagetrophy_many": "{{count}} cartes Trophée Sorceleur/Mage",
+        "card_witchermagetrophy_other": "{{count}} carte(s) Trophée Sorceleur/Mage",
+        "token_level1_one": "{{count}} jeton de Niveau I",
+        "token_level1_many": "{{count}} jetons de Niveau I",
+        "token_level1_other": "{{count}} jeton(s) de Niveau I",
+        "token_shield_one": "{{count}} jeton Bouclier",
+        "token_shield_many": "{{count}} jetons Bouclier",
+        "token_shield_other": "{{count}} jeton(s) Bouclier",
         "underConstruction": "En construction !"
     },
     "navbar": {
@@ -45,7 +52,7 @@
         "title": "Piocher un nouveau Monstre"
     },
     "monsterRoller": {
-        "title": "Piocher un Monstre"
+        "title": "Piocher un Monstre aléatoire"
     },
     "exps": {
         "adventurePack": "Adventure Pack",
@@ -163,7 +170,7 @@
         "Imperial Golem": "Golem Impérial",
         "Cyclops": "Cyclope",
         "Cave Troll": "Troll des cavernes",
-        "Toad": "Crapaud",
+        "Toad": "(Prince) Crapaud",
         "Frightener": "Épouvanteur",
         "Unseen Elder": "Doyen des Invisibles",
         "Ice Giant": "Géant de glace",
@@ -173,12 +180,12 @@
         "Imlerith": "Imlerith",
         "Caranthir": "Caranthir",
         "Koshchey": "Kochtcheï",
-        "Kayran": "Keyran",
+        "Kayran": "Kayran",
         "Siren": "Sirène",
         "Mounted Eredin": "Eredin monté",
-        "lvl1": "Monstres de niveau I",
-        "lvl2": "Monstres de niveau II",
-        "lvl3": "Monstres de niveau III",
+        "lvl1": "Monstre de niveau I",
+        "lvl2": "Monstre de niveau II",
+        "lvl3": "Monstre de niveau III",
         "legendaryHunt": [
             "$t(monsters.Imperial Golem)",
             "$t(monsters.Cyclops)",
@@ -212,7 +219,7 @@
             "locationTokens": "Trier les jetons Lieu en 3 piles séparées, par type de Terrain. Mélanger chacune de ces 3 piles, et les placer face cachée près du plateau. Piocher un jeton de chaque pile et les placer face visible sur leur emplacement (à droite de l'emplacement des cartes Monstres).",
             "monsterSetup": {
                 "0": "Trier les cartes Profil Monstres et les jetons Monstres en piles distinctes par niveau (I, II, III). Placer les cartes face visible près du plateau. Mélanger les jetons et les placer face cachée, en pile, à côté des cartes Monstres.",
-                "1": "Move $t(common.token, { 'context': 'level1', 'count': {{count}}}) into a separate “additional monsters” stack. See p. 26 of core rules for how these are used.",
+                "1": "Faire une nouvelle pile séparée de “Monstres Additionnels“ avec $t(common.token, { 'context': 'level1', 'count': {{count}}}). Confère page 26 des règles de base pour savoir comment les utiliser.",
                 "2": [
                     "Piocher 3 jetons Monstres : un de chaque niveau.",
                     "Piocher 3 jetons Monstres : un de chaque niveau.",
@@ -221,8 +228,8 @@
                     "Piocher 3 jetons Monstres : 3 de niveau I.",
                     "Piocher 3 jetons Monstres : 3 de niveau I."
                 ],
-                "3": "Placer au hasard et sans les révéler ces 3 jetons, sur les Lieux indiqués par les 3 jetons Lieux révélés précédement.",
-                "4": "Retourner face visible les 3 jetons Monstres et placer leur carte Profil correspondante dans les emplacements du plateau, en face du jeton Lieu qui leur correspond. Si vous avez leur figurine, placez la à la place de leur jeton Monstre (sur la carte du Continent).",
+                "3": "Placer au hasard et sans les révéler ces trois jetons, sur les Lieux indiqués par les trois jetons Lieux révélés précédement.",
+                "4": "Retourner face visible les trois jetons Monstres et placer leur carte Profil correspondante dans les emplacements du plateau, en face du jeton Lieu qui leur correspond. Si vous avez leur figurine, placez la à la place de leur jeton Monstre (sur la carte du Continent).",
                 "5": "Installer les monstres :"
             },
             "monsterFightDeck": "Mélanger la pioche Combat Monstre et la placer face cachée près du plateau.",
@@ -236,17 +243,16 @@
                 "wildHuntMages": "Prendre une carte Aide de jeu Wild Hunt, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier/Energie, son jeton Trophée, et son deck de départ de 10 cartes Action de Départ (les cartes Action de Départ ont le logo du personnage en haut à droite).",
                 "wildHuntMonsterTrail": "Prendre une carte Aide de jeu Wild Hunt, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier, son jeton Trophée, et son deck de départ de 11 cartes Action de Départ (les cartes Action de Départ ont le logo de l'école de leur Sorceleur en haut à droite).",
                 "wildHuntMagesMonsterTrail": "Prendre une carte Aide de jeu Wild Hunt, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier/Energie, son jeton Trophée, et son deck de départ de 11 cartes Action de Départ (les cartes Action de Départ ont le logo du personnage en haut à droite).",
-                "trophyCards": "Prendre {{num}} cartes Trophée Sorceleur de son personnage (autant que d'autres joueurs).",
-                "trophyCardsMages": "Prendre {{num}} cartes Trophée Sorceleur/Mage de son personnage (autant que d'autres joueurs).",
-                "ifMage": "Si vous jouez un Mage, placez ses jetons Ecole et Spécialité sur la carte du Continent, sur une école de Sorceleur qui n'est pas déjà prise.",
-                "markers": "Placer les 5 cubes et le marqueur Bouclier sur les niveaux 1 de son plateau Joueur.",
-                "markersMages": "Placer les 5 cubes et le marqueur Bouclier/Energie sur les niveaux 1 de son plateau Joueur.",
+                "trophyCards": "Prendre $t(common.card, {'count': {{count}}, 'context': '{{context}}'}) de son personnage (autant que d'autres joueurs).",
+                "ifMage": "Si vous jouez un Mage, placez ses jetons École et Technique sur la carte du Continent, de sorte à recouvrir une école de Sorceleur qui n'est pas déjà prise.",
+                "markers": "Placer les 5 cubes et le marqueur Bouclier sur les emplacements “niveau 1” de son plateau Joueur.",
+                "markersMages": "Placer les 5 cubes et le marqueur Bouclier/Énergie sur les emplacements “niveau 1” de son plateau Joueur.",
                 "raiseAttr": "Choisir un Attribut à augmenter au niveau 2.",
                 "token": "Placer le jeton Trophée sur le plus petit niveau de la piste Trophée.",
                 "cards": "Mélanger la pioche Action de Départ et la placer à gauche du plateau Joueur.",
                 "miniature": "Placer sa figurine sur l'emplacement de son école de Sorceleur, sur la carte du Continent.",
                 "drawBaseHeader": "Piocher le nombre de cartes et de pièces d'or, basé sur l'ordre des joueurs : ",
-                "drawWildHunt": "Piocher 5 cartes et prendre 3 pièces d'or.",
+                "drawWildHunt": "Piocher cinq cartes et prendre trois pièces d'or.",
                 "title": "Chaque joueur doit :",
                 "drawBaseResources": [
                     [
@@ -357,8 +363,8 @@
                 "Les retourner sur la face Ancre, pour s'en rappeler"
             ],
             "decks": "Mélanger la pioche Exploration Skellige. Ne PAS mélanger la pioche Événements Skellige ! Placer les deux pioches sur leurs emplacements, au bord du plateau près des îles.",
-            "dagon": "Placer la figurine Dagon sur l'emplacement de départ correspond au nombre de joueurs. Mélanger la pioche Bonus Dagon et la placer près de sa piste.",
-            "dagonMT": "Placer la figurine Dagon sur l'emplacement de départ correspond au nombre de joueurs. Mélanger la pioche Bonus Dagon et la placer avec la grande carte Dagon près de sa piste.",
+            "dagon": "Placer la figurine Dagon sur l'emplacement de départ de sa Piste (celui qui correspondant au nombre de joueurs). Mélanger la pioche Bonus Dagon et la placer près de sa Piste, ainsi que la carte Monstre de Dagon et les jetons Piste Dagon.",
+            "dagonMT": "Placer la figurine Dagon sur l'emplacement de départ de sa Piste (celui qui correspondant au nombre de joueurs). Mélanger la pioche Bonus Dagon et la placer près de sa Piste, ainsi que la grande carte Monstre de Dagon et les jetons Piste Dagon.",
             "siren": "Placer la figurine de la Sirène sur l'emplacement Dagon, avec sa carte Monstre à proximité."
         },
         "magesExp": {
@@ -494,33 +500,33 @@
                 "link": "https://discord.com/invite/mX8yvYQTuq"
             },
             {
-                "title": "Official Guide: Organizing All Cards in Big Box",
+                "title": "Guide officiel : Ranger les cartes dans la Big Box",
                 "subtitle": "$t(communityLinks.contentType.video)",
                 "desc": "Un guide plus détaillé sur comment ranger toutes les cardes dans la Big Box.",
                 "link": "https://youtu.be/Hj7oTXJOFfg"
             },
             {
-                "title": "Official FAQ: Clarifying ambiguous rules/situations",
+                "title": "FAQ officielle : Pour clarifier les règles ou situations ambigues.",
                 "subtitle": "$t(communityLinks.contentType.pdf)",
                 "desc": "Réponses et clarifications pour les situations sujettes à confusion ou pas assez claires.",
                 "link": "https://www.dropbox.com/s/6fxx058x76kc9rn/FAQ_ENG_v01.pdf?dl=0"
             },
             {
-                "title": "BoardGameGeek Old World Files",
+                "title": "Fichiers BoardGameGeek pour le jeu The Witcher: L'Ancien Monde",
                 "subtitle": "$t(communityLinks.contentType.link)",
                 "desc": "Un autre endroit pour les passionés où les membres partagent leurs propres créations, automates, guides et bien plus.",
                 "link": "https://boardgamegeek.com/boardgame/331106/witcher-old-world/files"
             },
             {
-                "title": "Witcher Monster Tray Position",
+                "title": "Emplacement des figurines de Monstres dans les inserts",
                 "subtitle": "$t(communityLinks.contentType.member)",
                 "desc": "Un guide détaillé de l'emplacement des figurines de chaque monstre, dans les inserts. Pour les retrouver et les ranger plus facilement.",
-                "link": "https://boardgamegeek.com/filepage/259976/witcher-monster-tray-position"
+                "link": "https://mega.nz/folder/ZdJAWI7a#OtC4bsSFoDI9T5RBS_W4CA/file/oYhVFIzL"
             },
             {
-                "title": "Card and Token Organizers",
+                "title": "De meilleurs inserts pour les cartes et jetons",
                 "subtitle": "$t(communityLinks.contentType.member)",
-                "desc": "Des plans d'impression 3D pour organiser toutes les cartes, même sleevées, dans la Big Box, ainsi que les jetons.",
+                "desc": "Des plans d'impression 3D pour mieux organiser toutes les cartes, même sleevées, dans la Big Box, ainsi que les jetons.",
                 "link": "https://thingiverse.com/thing:6078120"
             }
         ]
@@ -568,7 +574,7 @@
         "communities": "Communautés",
         "communitiesLinks": [
             {
-                "text": "Discord officiel",
+                "text": "$t(communityLinks.officialDiscord)",
                 "link": "https://discord.com/invite/mX8yvYQTuq"
             },
             {
