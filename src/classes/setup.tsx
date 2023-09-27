@@ -155,7 +155,7 @@ export function compileSteps(
         tempArr.push(t('setupHelper.wildHunt.monsterSetup.1'));
     } else {
         if (numPlayers > 3)
-            tempArr.push(t('setupHelper.base.monsterSetup.1', { numTokens: numPlayers > 3 ? numPlayers - 3 : 3 }));
+            tempArr.push(t('setupHelper.base.monsterSetup.1', { count: numPlayers - 3 }));
         tempArr.push(t(`setupHelper.base.monsterSetup.2.${numPlayers}`));
         tempArr.push(t('setupHelper.base.monsterSetup.3'));
         tempArr.push(t('setupHelper.base.monsterSetup.4'));
@@ -186,7 +186,13 @@ export function compileSteps(
     finalSteps.push(t('setupHelper.base.startingPlayer'));
 
     tempArr.push(t(playerSetup(wildHunt, mages, monsterTrail)));
-    if (numPlayers > 1) tempArr.push(t(`setupHelper.base.playerSetup.${mages ? "trophyCardsMages" : "trophyCards"}`, { num: numPlayers - 1 }));
+    if (numPlayers > 1)
+        tempArr.push(
+            t('setupHelper.base.playerSetup.trophyCards', {
+                context: mages ? "witchermagetrophy" : "witchertrophy",
+                count: numPlayers - 1
+            })
+        );
     if (mages) tempArr.push(t('setupHelper.base.playerSetup.ifMage'));
     tempArr.push(t(`setupHelper.base.playerSetup.${mages ? 'markersMages' : 'markers'}`));
     if (numPlayers > 3) tempArr.push(t('setupHelper.base.playerSetup.raiseAttr'));

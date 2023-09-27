@@ -2,16 +2,23 @@
     "common": {
         "expansions": "extensions",
         "Step": "Étape",
+        "players": "Joueurs",
         "player1": "Joueur 1",
         "player2": "Joueur 2",
         "player3": "Joueur 3",
         "player4": "Joueur 4",
         "player5": "Joueur 5",
-        "goldWithCount_other": "{{count}} pièce(s) d'or",
-        "card_one": "carte",
-        "card_other": "cartes",
-        "cardWithCount_one": "{{count}} carte",
-        "cardWithCount_other": "{{count}} cartes",
+        "gold_other": "{{count}} pièce(s) d'or",
+        "card_one": "{{count}} carte",
+        "card_other": "{{count}} cartes",
+        "card_witchertrophy_one": "{{count}} Witcher Trophy Card",
+        "card_witchertrophy_other": "{{count}} Witcher Trophy Cards",
+        "card_witchermagetrophy_one": "{{count}} Witcher/Mage Trophy Card",
+        "card_witchermagetrophy_other": "{{count}} Witcher/Mage Trophy Cards",
+        "token_level1_one": "{{count}} Level I token",
+        "token_level1_other": "{{count}} Level I tokens",
+        "token_shield_one": "{{count}} Shield Token",
+        "token_shield_other": "{{count}} Shield Tokens",
         "underConstruction": "En construction !"
     },
     "navbar": {
@@ -156,7 +163,7 @@
         "Imperial Golem": "Golem Impérial",
         "Cyclops": "Cyclope",
         "Cave Troll": "Troll des cavernes",
-        "Toad": "(Prince) Crapaud",
+        "Toad": "Crapaud",
         "Frightener": "Épouvanteur",
         "Unseen Elder": "Doyen des Invisibles",
         "Ice Giant": "Géant de glace",
@@ -166,7 +173,7 @@
         "Imlerith": "Imlerith",
         "Caranthir": "Caranthir",
         "Koshchey": "Kochtcheï",
-        "Kayran": "Kayran",
+        "Kayran": "Keyran",
         "Siren": "Sirène",
         "Mounted Eredin": "Eredin monté",
         "lvl1": "Monstres de niveau I",
@@ -205,7 +212,7 @@
             "locationTokens": "Trier les jetons Lieu en 3 piles séparées, par type de Terrain. Mélanger chacune de ces 3 piles, et les placer face cachée près du plateau. Piocher un jeton de chaque pile et les placer face visible sur leur emplacement (à droite de l'emplacement des cartes Monstres).",
             "monsterSetup": {
                 "0": "Trier les cartes Profil Monstres et les jetons Monstres en piles distinctes par niveau (I, II, III). Placer les cartes face visible près du plateau. Mélanger les jetons et les placer face cachée, en pile, à côté des cartes Monstres.",
-                "1": "Faire une nouvelle pile séparée de “Monstres Additionnels“ avec {{numTokens}} jetons de Niveau I. Confère page 26 des règles de base pour savoir comment les utiliser.",
+                "1": "Move $t(common.token, { 'context': 'level1', 'count': {{count}}}) into a separate “additional monsters” stack. See p. 26 of core rules for how these are used.",
                 "2": [
                     "Piocher 3 jetons Monstres : un de chaque niveau.",
                     "Piocher 3 jetons Monstres : un de chaque niveau.",
@@ -246,29 +253,29 @@
                         "Sélectionner un nombre de joueurs"
                     ],
                     [
-                        "$t(common.player1): $t(common.cardWithCount, {\"count\": 5}), $t(common.goldWithCount, {\"count\": 3})"
+                        "$t(common.player1): $t(common.card, {'count': 5}), $t(common.gold, {'count': 3})"
                     ],
                     [
-                        "$t(common.player1): $t(common.cardWithCount, {\"count\": 3}), $t(common.goldWithCount, {\"count\": 2})",
-                        "$t(common.player2): $t(common.cardWithCount, {\"count\": 5}), $t(common.goldWithCount, {\"count\": 4})"
+                        "$t(common.player1): $t(common.card, {'count': 3}), $t(common.gold, {'count': 2})",
+                        "$t(common.player2): $t(common.card, {'count': 5}), $t(common.gold, {'count': 4})"
                     ],
                     [
-                        "$t(common.player1): $t(common.cardWithCount, {\"count\": 3}), $t(common.goldWithCount, {\"count\": 2})",
-                        "$t(common.player2): $t(common.cardWithCount, {\"count\": 4}), $t(common.goldWithCount, {\"count\": 4})",
-                        "$t(common.player3): $t(common.cardWithCount, {\"count\": 5}), $t(common.goldWithCount, {\"count\": 6})"
+                        "$t(common.player1): $t(common.card, {'count': 3}), $t(common.gold, {'count': 2})",
+                        "$t(common.player2): $t(common.card, {'count': 4}), $t(common.gold, {'count': 4})",
+                        "$t(common.player3): $t(common.card, {'count': 5}), $t(common.gold, {'count': 6})"
                     ],
                     [
-                        "$t(common.player1): $t(common.cardWithCount, {\"count\": 2}), $t(common.goldWithCount, {\"count\": 4})",
-                        "$t(common.player2): $t(common.cardWithCount, {\"count\": 3}), $t(common.goldWithCount, {\"count\": 5})",
-                        "$t(common.player3): $t(common.cardWithCount, {\"count\": 4}), $t(common.goldWithCount, {\"count\": 6})",
-                        "$t(common.player4): $t(common.cardWithCount, {\"count\": 5}), $t(common.goldWithCount, {\"count\": 7})"
+                        "$t(common.player1): $t(common.card, {'count': 2}), $t(common.gold, {'count': 4})",
+                        "$t(common.player2): $t(common.card, {'count': 3}), $t(common.gold, {'count': 5})",
+                        "$t(common.player3): $t(common.card, {'count': 4}), $t(common.gold, {'count': 6})",
+                        "$t(common.player4): $t(common.card, {'count': 5}), $t(common.gold, {'count': 7})"
                     ],
                     [
-                        "$t(common.player1): $t(common.cardWithCount, {\"count\": 2}), $t(common.goldWithCount, {\"count\": 5})",
-                        "$t(common.player2): $t(common.cardWithCount, {\"count\": 3}), $t(common.goldWithCount, {\"count\": 5})",
-                        "$t(common.player3): $t(common.cardWithCount, {\"count\": 4}), $t(common.goldWithCount, {\"count\": 7})",
-                        "$t(common.player4): $t(common.cardWithCount, {\"count\": 4}), $t(common.goldWithCount, {\"count\": 7})",
-                        "$t(common.player5): $t(common.cardWithCount, {\"count\": 5}), $t(common.goldWithCount, {\"count\": 7})"
+                        "$t(common.player1): $t(common.card, {'count': 2}), $t(common.gold, {'count': 5})",
+                        "$t(common.player2): $t(common.card, {'count': 3}), $t(common.gold, {'count': 5})",
+                        "$t(common.player3): $t(common.card, {'count': 4}), $t(common.gold, {'count': 7})",
+                        "$t(common.player4): $t(common.card, {'count': 4}), $t(common.gold, {'count': 7})",
+                        "$t(common.player5): $t(common.card, {'count': 5}), $t(common.gold, {'count': 7})"
                     ]
                 ]
             }
@@ -279,41 +286,40 @@
             "movementDeck": "Le dernier joueur dans l'ordre de jeu prend la pioche Mouvement du Monstre Légendaire (mélangée et placée face cachée)."
         },
         "wildHunt": {
-            "shieldTokens": "{{num}} Jetons Bouclier",
             "difficultyTitle": "Choisir la difficulté de jeu dans le tableau ci-dessous. Cela déterminera les monstres de départ et les boucliers.",
             "difficultyValues": [
                 [
                     "Sélectionner un nombre de joueurs"
                 ],
                 [
-                    "$t(monsters.lvl1)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 5 })",
-                    "$t(monsters.lvl1)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 7 })",
-                    "$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 9 })",
-                    "$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 11 })"
+                    "$t(monsters.lvl1)\n$t(common.token, { 'context': 'shield', 'count': 5 })",
+                    "$t(monsters.lvl1)\n$t(common.token, { 'context': 'shield', 'count': 7 })",
+                    "$t(monsters.lvl2)\n$t(common.token, { 'context': 'shield', 'count': 9 })",
+                    "$t(monsters.lvl2)\n$t(common.token, { 'context': 'shield', 'count': 11 })"
                 ],
                 [
-                    "$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 28 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 31 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 34 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 37 })"
+                    "$t(monsters.lvl2)\n$t(common.token, { 'context': 'shield', 'count': 28 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl2)\n$t(common.token, { 'context': 'shield', 'count': 31 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(common.token, { 'context': 'shield', 'count': 34 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(common.token, { 'context': 'shield', 'count': 37 })"
                 ],
                 [
-                    "$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 54 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl2)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 58 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 62 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 66 })"
+                    "$t(monsters.lvl2)\n$t(common.token, { 'context': 'shield', 'count': 54 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl2)\n$t(common.token, { 'context': 'shield', 'count': 58 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(common.token, { 'context': 'shield', 'count': 62 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(common.token, { 'context': 'shield', 'count': 66 })"
                 ],
                 [
-                    "2 × $t(monsters.lvl1)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 77 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 82 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 87 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 92 })"
+                    "2 × $t(monsters.lvl1)\n$t(common.token, { 'context': 'shield', 'count': 77 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(common.token, { 'context': 'shield', 'count': 82 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(common.token, { 'context': 'shield', 'count': 87 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(common.token, { 'context': 'shield', 'count': 92 })"
                 ],
                 [
-                    "2 × $t(monsters.lvl1)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 97 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 106 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 113 })",
-                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(setupHelper.wildHunt.shieldTokens, { \"num\": 120 })"
+                    "2 × $t(monsters.lvl1)\n$t(common.token, { 'context': 'shield', 'count': 97 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(common.token, { 'context': 'shield', 'count': 106 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(common.token, { 'context': 'shield', 'count': 113 })",
+                    "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(common.token, { 'context': 'shield', 'count': 120 })"
                 ]
             ],
             "easy": "Juste l'histoire !",
