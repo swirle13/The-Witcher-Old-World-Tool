@@ -363,8 +363,8 @@
                 "Les retourner sur la face Ancre, pour s'en rappeler"
             ],
             "decks": "Mélanger la pioche Exploration Skellige. Ne PAS mélanger la pioche Événements Skellige ! Placer les deux pioches sur leurs emplacements, au bord du plateau près des îles.",
-            "dagon": "Placer la figurine Dagon sur l'emplacement de départ de sa Piste (celui qui correspondant au nombre de joueurs). Mélanger la pioche Bonus Dagon et la placer près de sa Piste, ainsi que la carte Monstre de Dagon et les jetons Piste Dagon.",
-            "dagonMT": "Placer la figurine Dagon sur l'emplacement de départ de sa Piste (celui qui correspondant au nombre de joueurs). Mélanger la pioche Bonus Dagon et la placer près de sa Piste, ainsi que la grande carte Monstre de Dagon et les jetons Piste Dagon.",
+            "dagon": "Placer la figurine Dagon sur l'emplacement de départ de sa Piste (celui qui correspondant au nombre de joueurs). Mélanger la pioche Bonus Dagon et la placer près de sa Piste, ainsi que la carte Monstre de Dagon (face Capacité Spéciale visible) et les jetons Piste Dagon.",
+            "dagonMT": "Placer la figurine Dagon sur l'emplacement de départ de sa Piste (celui qui correspondant au nombre de joueurs). Mélanger la pioche Bonus Dagon et la placer près de sa Piste, ainsi que la carte Monstre de Dagon (face 4 Attaques Spéciales visible) et les jetons Piste Dagon.",
             "siren": "Placer la figurine de la Sirène sur l'emplacement Dagon, avec sa carte Monstre à proximité."
         },
         "magesExp": {
@@ -379,7 +379,7 @@
         },
         "adventurePack": {
             "tokens": "Placer les jetons/pièces d'or, les jetons Quête verts, les dés et le jeton/figurine Taverne Fermée près du plateau de jeu. Si vous avez les dés additionnels, chaque joueur peut en prendre un jeu.",
-            "lostMount": "Puis ils piochent deux jetons Lieu (de n'importe quel terrain), en choisissent un sur lequel placer la figurine Monture Perdue, et remélanger les jetons dans leur pile."
+            "lostMount": "Le dernier joueur pioche deux jetons Lieu (d'un type de terrain), en choisit un sur lequel placer la figurine Monture Perdue, et remélange les jetons dans leur pile."
         }
     },
     "inventoryChecker": {

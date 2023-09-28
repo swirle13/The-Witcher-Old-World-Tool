@@ -369,8 +369,8 @@
                 "Flip them back to the anchor side, as a reminder"
             ],
             "decks": "Shuffle the Skellige Exploration deck. Do not shuffle the Skellige Event deck! Place both in their slots above the islands on the game board.",
-            "dagon": "Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus cards and place them, Dagon monster card, and Dagon Trail tokens near its track.",
-            "dagonMT": "Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus cards and place them, Large Dagon monster card, and Dagon Trail tokens near its track.",
+            "dagon": "Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus cards and place them, Dagon monster card (Special Ability face-up), and Dagon Trail tokens near its track.",
+            "dagonMT": "Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus cards and place them, Dagon monster card (4 Special Attacks face-up), and Dagon Trail tokens near its track.",
             "siren": "Place the Siren miniature on the Dagon location, with its Monster Card nearby."
         },
         "magesExp": {
@@ -385,7 +385,7 @@
         },
         "adventurePack": {
             "tokens": "Place Gold Tokens, Green Quest Tokens, Poker Dice, and Closed Tavern token or mini near the game board.",
-            "lostMount": "Then they draw two Location Tokens (of any terrain), choose one to put the Lost Mount miniature at, and shuffle the tokens back in."
+            "lostMount": "The last player draws two Location Tokens (of any 1 type of terrain), chooses one to put the Lost Mount miniature at, and shuffles the tokens back in."
         }
     },
     "inventoryChecker": {
