@@ -1,9 +1,10 @@
 {
-    "name": "The-Witcher-Old-World-Tool",
-    "version": "0.0.1",
+    "name": "the-witcher-old-world-tool",
+    "version": "0.0.9",
     "description": "Tool to help ease the small tedia of the board game The Witcher: Old World",
     "main": "index.js",
     "scripts": {
+        "clean": "rm -r dist",
         "dev": "tsc-watch --onSuccess \"npm start\"",
         "start": "webpack serve --port 3000",
         "build": "NODE_ENV=production webpack",
@@ -22,7 +23,11 @@
         "Automations",
         "Board game"
     ],
-    "author": "Matthew Johnson",
+    "author": {
+        "name": "Matthew Johnson",
+        "url": "https://github.com/swirle13",
+        "email": "swirle13@gmail.com"
+    },
     "license": "GPL-3.0-or-later",
     "bugs": {
         "url": "https://github.com/swirle13/The-Witcher-Old-World-Tool/issues"
@@ -39,6 +44,8 @@
         "eslint-config-xo": "^0.43.1",
         "eslint-config-xo-typescript": "^0.57.0",
         "eslint-plugin-react": "^7.32.2",
+        "favicons": "^7.1.4",
+        "favicons-webpack-plugin": "^6.0.1",
         "html-webpack-plugin": "^5.5.3",
         "i18next-locales-sync": "^2.0.1",
         "image-minimizer-webpack-plugin": "^3.8.3",

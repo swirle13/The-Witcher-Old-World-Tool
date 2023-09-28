@@ -1,6 +1,7 @@
 import React from "react";
 import { ReadonlyDeck } from "./dataClasses";
 import { Container, Row, Col, Image } from "react-bootstrap";
+import TokenContainer from '../components/TokenContainer';
 
 /*
 Identify what monsters come in which expansions and set toggles for each
@@ -65,30 +66,18 @@ interface monsterToken {
 abstract class monsterClass {
     readonly name: string = "";
     readonly level: number = 1;
-    readonly tokenImgStr: string = "";
-    readonly miniImgStr: string = "";
+    readonly tokenImgStr: string = "level1Backside";
+    readonly miniImgStr: string = "level1Backside";
+    src = `../img/monsters/level${this.level}Monsters/${this.tokenImgStr}.png`;
+    tName = `monsters.${this.name}`;
     tokenImg(t): React.ReactNode {
         return (
-            <Container id='TokenContainer' className='mx-auto px-4 py-2'>
-                <Row id='TokenContainerImageRow' className='justify-content-center'>
-                    <Col id='TokenContainerImageCol' xs='auto'>
-                        <Image
-                            id={`${this.name}IconImage`}
-                            src={require(`../img/monsters/level${this.level}Monsters/${this.tokenImgStr}.png`)}
-                            height={150}
-                            alt={this.name}
-                            loading='lazy'
-                        />
-                    </Col>
-                </Row>
-                <Row id='TokenContainerTitleRow' className='justify-content-center'>
-                    <Col id='TokenContainerTitleCol' className='py-2 mt-2'>
-                        <h2 id='TokenContainerTitle' className="text-center" style={{ height: "calc(1.325rem + .9vw)" }}>
-                            {this.name ? t(`monsters.${this.name}`) : ""}
-                        </h2>
-                    </Col>
-                </Row>
-            </Container>
+            <TokenContainer
+                t={t}
+                src={this.src}
+                name={this.name}
+                tName={this.tName}
+            />
         );
     }
     miniImg(): React.ReactNode {
@@ -126,6 +115,8 @@ export class levelOneMonster extends monsterClass implements monsterToken {
         if (name) this.name = name;
         if (tokenImgStr) this.tokenImgStr = tokenImgStr;
         if (miniImgStr) this.miniImgStr = miniImgStr;
+        this.tName = `monsters.${this.name}`;
+        this.src = require(`../img/monsters/level1Monsters/${this.tokenImgStr}.png`)
     }
 }
 
@@ -145,6 +136,8 @@ export class levelTwoMonster extends monsterClass implements monsterToken {
         if (name) this.name = name;
         if (tokenImgStr) this.tokenImgStr = tokenImgStr;
         if (miniImgStr) this.miniImgStr = miniImgStr;
+        this.tName = `monsters.${this.name}`;
+        this.src = require(`../img/monsters/level2Monsters/${this.tokenImgStr}.png`)
     }
 }
 
@@ -164,6 +157,8 @@ export class levelThreeMonster extends monsterClass implements monsterToken {
         if (name) this.name = name;
         if (tokenImgStr) this.tokenImgStr = tokenImgStr;
         if (miniImgStr) this.miniImgStr = miniImgStr;
+        this.tName = `monsters.${this.name}`;
+        this.src = require(`../img/monsters/level3Monsters/${this.tokenImgStr}.png`)
     }
 }
 
@@ -183,37 +178,13 @@ export class legendaryMonster extends monsterClass implements monsterToken {
         if (name) this.name = name;
         if (tokenImgStr) this.tokenImgStr = tokenImgStr;
         if (miniImgStr) this.miniImgStr = miniImgStr;
+        this.tName = `monsters.${this.name}`;
+        this.src = require(`../img/monsters/${this.__isWildHunt() ? 'wildHunt' : 'legendaryHunt'}/${this.tokenImgStr}.png`);
     }
 
     private __isWildHunt(): boolean {
         const wildHuntNames = ['Eredin', 'Nithral', 'Imlerith', 'Caranthir'];
         return wildHuntNames.includes(this.name);
-    }
-
-    tokenImg(t): React.ReactNode {
-        return (
-            <Container id='TokenContainer' className='mx-auto px-4 py-2'>
-                <Row className='justify-content-center'>
-                    <Col xs='auto'>
-                        <Image
-                            id={`${this.name}IconImage`}
-                            src={require(
-                                `../img/monsters/${this.__isWildHunt() ?
-                                    'wildHunt' : 'legendaryHunt'}/${this.tokenImgStr}.png`
-                            )}
-                            height={150}
-                            alt={this.name}
-                            loading='lazy'
-                        />
-                    </Col>
-                </Row>
-                <Row className='justify-content-center'>
-                    <Col>
-                        <h2 className="text-center">{t(this.name)}</h2>
-                    </Col>
-                </Row>
-            </Container>
-        );
     }
 }
 

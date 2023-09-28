@@ -98,7 +98,7 @@ export function compileSteps(
                     </li>
                 </ul>
 
-                {t('setupHelper.skellige.board.0') + ":"}
+                {t('setupHelper.skellige.board.0')}
                 <ul>
                     <li>{t('setupHelper.skellige.board.1')}</li>
                     <li>{t('setupHelper.skellige.board.2')}</li>
