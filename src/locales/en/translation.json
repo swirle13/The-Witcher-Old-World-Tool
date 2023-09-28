@@ -349,7 +349,7 @@
                 "Place ship miniatures at the following randomized locations:"
             ],
             "board": [
-                "If using the board",
+                "If using the board:",
                 "Shuffle the Harbor tokens, anchor side up",
                 "Place them on the coastal locations (1, 5, 6, 9, 12, 13) and flip them over",
                 "Place a ship miniature on the three locations with a ship symbol",

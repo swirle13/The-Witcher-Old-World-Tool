@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import { default as BSNavbar } from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import logo from '../../public/logo192.png';
+import logo from '../../src/img/logo192.png';
 import useResize from '../util/useResize';
 import { myLangs } from "../i18n";
 import { ReactNode } from 'react';
