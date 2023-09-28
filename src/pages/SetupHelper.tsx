@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Accordion, Button, Col, Container, Form, FormCheck, Image, Row, Stack } from "react-bootstrap";
+import { Accordion, Button, Col, Container, FormCheck, Image, Row, Stack } from "react-bootstrap";
 import { compileSteps } from "../classes/setup";
 import legendaryHunt from "../img/expansionHeaders/legendaryHunt.png";
 import mages from "../img/expansionHeaders/mages.png";
@@ -11,25 +11,18 @@ import wildHunt from "../img/expansionHeaders/wildHunt.png";
 import "../css/SetupHelper.css";
 import PageTitle from '../components/PageTitle';
 import { AccordionEventKey } from 'react-bootstrap/esm/AccordionContext';
+import { lenToStrArr } from '../util/generic';
 
 const expansions = ["Legendary Hunt", "Mages", "Monster Pack", "Monster Trail", "Skellige", "Adventure Pack", "Wild Hunt"];
 const expansionsImages = [legendaryHunt, mages, monsterPack, monsterTrail, skellige, adventurePack, wildHunt];
 
-/**
- * Produces an array of strings, starting at '0' through to 'obj.length', e.g. `my_arr.length = 3`, produces `['0', '1', '2']`.
- * @param obj Array of strings
- * @returns Array of strings of the stringified length of obj
- */
-function lenToStrArr(obj: Array<string>): string[] {
-    return [...Array(obj.length).keys()].map(a => String(a));
-}
 
 export default function SetupHelper({ t }) {
     const [players, setPlayers] = useState<number>(1);
     const [expansionsState, setExpansionsState] = useState<Array<boolean>>(
         new Array(expansions.length).fill(false)
     );
-    const [steps, setSteps] = useState<Array<string>>(compileSteps());
+    const [steps, setSteps] = useState<Array<string>>(compileSteps(t));
     const [stepsKeys, setStepsKeys] = useState<Array<string>>(steps as string[]);
     const handleSelect = (eventKey: AccordionEventKey) => setStepsKeys(eventKey as string[]);
 
@@ -49,84 +42,80 @@ export default function SetupHelper({ t }) {
 
     useEffect(() => {
         const tempArr = [...expansionsState, players] as [boolean, boolean, boolean, boolean, boolean, boolean, boolean, number];
-        setSteps(compileSteps(...tempArr));
-    }, [players, expansionsState]);
+        setSteps(compileSteps(t, ...tempArr));
+    }, [players, expansionsState, t]);
 
     useEffect(() => {
         setStepsKeys(lenToStrArr(steps));
     }, [steps]);
 
-    useEffect(() => {
-        console.log(`stepsKeys: ${stepsKeys}`);
-    });
-
     return (
         <Container>
-            <PageTitle HeaderText={t('Setup Helper')} ConditionalRender='d-lg-none' t={t} />
+            <PageTitle HeaderText={t('setupHelper.title')} ConditionalRender='d-lg-none' t={t} />
             <Row className="gap-2 mb-4 pb-4">
                 <Col id="setupConfiguration" lg="4">
-                    <Form>
-                        <Row className='justify-content-center' lg={1}>
-                            <Col id="playersCol">
-                                <h4 className='text-center mb-3'>{t('Players')}</h4>
-                                <div key="inlinePlayers" className="mb-3 pl-1 text-center">
-                                    {[1, 2, 3, 4, 5].map((num) => (
+                    <Row className='justify-content-center' lg={1}>
+                        <Col id="playersCol">
+                            <h4 className='text-center mb-3'>{t('common.players')}</h4>
+                            <div key="inlinePlayers" className="mb-3 pl-1 text-center">
+                                {[1, 2, 3, 4, 5].map((num) => (
+                                    <FormCheck
+                                        defaultChecked={num === 1}
+                                        inline
+                                        type="radio"
+                                        name="group1"
+                                        id={`${num}Player`}
+                                        label={num}
+                                        key={num}
+                                        onChange={() => { setPlayers(num); }}
+                                        className={'align-items-center ' + (num === 5 ? 'mr-0 !important' : '')}
+                                        style={{ textAlign: 'center' }}
+                                    />
+                                ))}
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row className='justify-content-center mb-3' lg={1}>
+                        <Col id="expansionsCol">
+                            <h4 className='text-center mb-3'>{t('common.expansions')}</h4>
+                            <Row key="inlineExpansions" className="text-center justify-content-center" xl={1}>
+                                {expansions.map((exp, index) => (
+                                    <Col key={index} className={"d-flex justify-content-center " + (index === 6 ? '' : 'mb-2')} xs="auto">
                                         <FormCheck
-                                            defaultChecked={num === 1}
-                                            inline
-                                            type="radio"
-                                            name="group1"
-                                            id={`${num}Player`}
-                                            label={num}
-                                            key={num}
-                                            onChange={() => { setPlayers(num); }}
-                                            className={'align-items-center ' + (num === 5 ? 'mr-0 !important' : '')}
-                                            style={{ textAlign: 'center' }}
+                                            name="group2"
+                                            id={exp}
+                                            checked={expansionsState[index]}
+                                            label={<Image src={expansionsImages[index]} width={150} />}
+                                            key={exp}
+                                            onChange={() => handleExpansionOnChange(index)}
+                                            className='d-flex align-items-center'
+                                            disabled={expansionsState[6] && ["Legendary Hunt", "Monster Pack", "Adventure Pack"].includes(exp)}
                                         />
-                                    ))}
-                                </div>
-                            </Col>
-                        </Row>
-                        <Row className='justify-content-center mb-3' lg={1}>
-                            <Col id="expansionsCol">
-                                <h4 className='text-center mb-3'>{t('Expansions')}</h4>
-                                <Row key="inlineExpansions" className="text-center justify-content-center" xl={1}>
-                                    {expansions.map((exp, index) => (
-                                        <Col className={"d-flex justify-content-center " + (index === 6 ? '' : 'mb-2')} xs="auto">
-                                            <FormCheck
-                                                name="group2"
-                                                id={exp}
-                                                checked={expansionsState[index]}
-                                                label={<Image src={expansionsImages[index]} width={150} />}
-                                                key={exp}
-                                                onChange={() => handleExpansionOnChange(index)}
-                                                className='d-flex align-items-center'
-                                                disabled={expansionsState[6] && ["Legendary Hunt", "Monster Pack", "Adventure Pack"].includes(exp)}
-                                            />
-                                        </Col>
-                                    ))}
-                                </Row>
-                            </Col>
-                        </Row>
-                        <Row className='justify-content-center mt-4' lg={1}>
-                            <Col id="collapseButtonsCol">
-                                <Row className='text-center justify-content-center' xs="auto">
-                                    <Col>
-                                        <Button id="collapseAllButton" variant="outline-secondary"
-                                            onClick={() => { setStepsKeys([]); }}>
-                                            {t('Collapse All')}
-                                        </Button>
                                     </Col>
-                                    <Col>
-                                        <Button id="expandAllButton" variant="outline-secondary"
-                                            onClick={() => { setStepsKeys(lenToStrArr(steps)); }}>
-                                            {t('Expand All')}
-                                        </Button>
-                                    </Col>
-                                </Row>
-                            </Col>
-                        </Row>
-                    </Form>
+                                ))}
+                            </Row>
+                        </Col>
+                    </Row>
+                    <Row className='justify-content-center mt-4' lg={1}>
+                        <Col id="collapseButtonsCol">
+                            <Row className='text-center justify-content-center' xs="auto">
+                                <Col>
+                                    <Button id="collapseAllButton" variant="outline-secondary"
+                                        onClick={() => { setStepsKeys([]); }}
+                                    >
+                                        {t('setupHelper.collapse')}
+                                    </Button>
+                                </Col>
+                                <Col>
+                                    <Button id="expandAllButton" variant="outline-secondary"
+                                        onClick={() => { setStepsKeys(lenToStrArr(steps)); }}
+                                    >
+                                        {t('setupHelper.expand')}
+                                    </Button>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
                 </Col>
                 <div className="vr p-0 mx-2 d-none d-lg-block" />
                 <div className="d-lg-none my-3 px-5"><hr className='my-0' /></div>
@@ -134,9 +123,9 @@ export default function SetupHelper({ t }) {
                     <Stack gap={3}>
                         <Accordion alwaysOpen flush activeKey={stepsKeys} onSelect={handleSelect}>
                             {steps.map((body, index) => (
-                                <Accordion.Item eventKey={`${index}`}>
+                                <Accordion.Item eventKey={`${index}`} key={index}>
                                     <Accordion.Header>
-                                        {t('Step')} {index + 1}
+                                        {t('common.Step')} {index + 1}
                                     </Accordion.Header>
                                     <Accordion.Body className='lh-lg'>{body}</Accordion.Body>
                                 </Accordion.Item>

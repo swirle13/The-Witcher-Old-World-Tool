@@ -12,10 +12,10 @@ export default function MonsterPicker({
     HeaderText: string;
     t;
 }) {
-    const expansionsNames = ["Legendary Hunt", "Wild Hunt", "Monster Pack", "Mounted Eredin"];
+    const expansionsNames = ["legendaryHunt", "wildHunt", "monsterPack", "mountedEredin"];
     const [localMonsterDeck, setLocalMonsterDeck] = useState(new MonstersDeck());
     const [displayedToken, setToken] = useState<levelOneMonster | levelTwoMonster | levelThreeMonster>(
-        new levelOneMonster(".")
+        new levelOneMonster("")
     );
     const [expansions, setExpansions] = useState(new Array(expansionsNames.length).fill(false));
 
@@ -38,41 +38,45 @@ export default function MonsterPicker({
     return (
         <Container fluid className="mx-auto min-h-screen">
             <PageTitle HeaderText={HeaderText} t={t}/>
-            <Row id='tokensRow' className='py-2 mb-2'>
+            <Row id='tokensRow' className='py-2'>
                 <Col className='justify-content-center'>
                     {displayedToken?.tokenImg(t)}
                 </Col>
             </Row>
             <Row id='MonsterButtons' className='justify-content-center px-1 py-2 mb-4'>
                 <Col xs="auto" className='p-1'>
-                    <Button variant="secondary" size="lg"
+                    <Button variant="secondary" size="lg" style={{ width: 75 }}
                         onClick={() => setToken(localMonsterDeck.drawLevelOneMonster())}
                     >
-                        {t('Level') + ' I'}
+                        I
                     </Button>
                 </Col>
                 <Col xs="auto" className='p-1'>
-                    <Button variant="warning" size="lg"
+                    <Button variant="warning" size="lg" style={{ width: 75 }}
                         onClick={() => setToken(localMonsterDeck.drawLevelTwoMonster())}
                     >
-                        {t('Level') + ' II'}
+                        II
                     </Button>
                 </Col>
                 <Col xs="auto" className='p-1'>
-                    <Button variant="danger" size="lg"
+                    <Button variant="danger" size="lg" style={{ width: 75 }}
                         onClick={() => setToken(localMonsterDeck.drawLevelThreeMonster())}
                     >
-                        {t('Level') + ' III'}
+                        III
                     </Button>
                 </Col>
                 {expansions[0] || expansions[1] ?
                     <Col xs="auto" className='p-1'>
-                        <Button size="lg" variant="custom" style={{
-                            backgroundColor:"#960a0a", color:"#ffffff", /* tint on cursor hover: "#640a0a" */
-                        }}
+                        <Button
+                            size="lg"
+                            variant="custom"
+                            style={{
+                                backgroundColor:"#960a0a",
+                                color:"#ffffff", /* tint on cursor hover: "#640a0a" */
+                            }}
                             onClick={() => setToken(localMonsterDeck.drawLegendaryMonster())}
                         >
-                            {expansions[0] ? t("Legendary") : t("Wild Hunt")}
+                            {expansions[0] ? t("monsterPicker.legendary") : t("exps.wildHunt")}
                         </Button>
                     </Col>
                     : <></>}
@@ -82,20 +86,20 @@ export default function MonsterPicker({
                     <Form.Switch
                         checked={expansions[index]}
                         onChange={() => handleToggleExpansions(index)}
-                        label={t(name)}
+                        label={t(`exps.${name}`)}
                         key={name}
                     />
                 ))}
             </Row>
             <Row className='justify-content-center p-2 m-4' id="ToggleTooltip">
                 <Col className='mx-3' style={{ maxWidth: "550px" }}>
-                    <strong className="fw-light text-center">{t("Toggle changes")}</strong>
+                    <strong className="fw-light text-center">{t("monsterPicker.toggle")}</strong>
                     <ul className='fw-lighter'>
-                        <li>{t("Legendary Hunt")}: {t("Imperial Golem")}, {t("Cyclops")}, {t("Cave Troll")}, {t("Toad")}, {t("Frightener")}, {t("Unseen Elder")}, {t("Ice Giant")}, {t("Gaunter O'Dimm")} ({t("All Legendary")})</li>
-                        <li>{t("Wild Hunt")}: {t("Eredin")}, {t("Nithral")}, {t("Imlerith")}, {t("Caranthir")} ({t("All Legendary")})</li>
-                        <li>{t("Monster Pack")}: {t("Koshchey")} ({t("Level")} III), {t("Kayran")} ({t("Legendary")}). {t("Siren")} {t("Siren excluded as it can't be randomly selected")}.
+                        <li>{t("exps.legendaryHunt") + ": " + t("monsters.legendaryHunt", { joinArrays: ', ' }) + " (" + t("monsterPicker.allLegendary") + ")"}</li>
+                        <li>{t("exps.wildHunt")}: {t("monsters.Eredin")}, {t("monsters.Nithral")}, {t("monsters.Imlerith")}, {t("monsters.Caranthir")} ({t("monsterPicker.allLegendary")})</li>
+                        <li>{t("exps.monsterPack")}: {t("monsters.Koshchey")} ({t("monsters.lvl3")}), {t("monsters.Kayran")} ({t("monsterPicker.legendary")}). {t("monsterPicker.sirenExplain")}.
                         </li>
-                        <li>{t("Mounted Eredin")}: {t("Mounted Eredin")} ({t("Level")} III)</li>
+                        <li>{t("exps.mountedEredin")}: {t("exps.mountedEredin")} ({t("monsters.lvl3")})</li>
                     </ul>
                 </Col>
             </Row>

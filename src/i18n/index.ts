@@ -1,10 +1,14 @@
 import i18next from "i18next";
 import LanguageDetector from 'i18next-browser-languagedetector';
+import LocalStorageBackend from 'i18next-localstorage-backend';
 import { initReactI18next } from "react-i18next";
 
-import translationEN_US from '../locales/en-US/translation.json';
-import translationEN_GB from '../locales/en-GB/translation.json';
+import translationCS from '../locales/cs/translation.json';
+import translationDE from '../locales/de/translation.json';
+import translationEN from '../locales/en/translation.json';
+import translationES from '../locales/es/translation.json';
 import translationFR from '../locales/fr/translation.json';
+import translationIT from '../locales/it/translation.json';
 import translationPL from '../locales/pl/translation.json';
 
 /*
@@ -14,40 +18,62 @@ Custom Formatting for lowercasing all new words added: https://www.i18next.com/t
     * Github issue asking: https://github.com/i18next/i18next/issues/765
 Automatically translate i18next JSON: https://translate.i18next.com/
 Interpolation (most used functionalities - dynamic values): https://www.i18next.com/translation-function/interpolation
-
+ 
 Use i18next-parser to locate and generate locales JSON files: https://github.com/i18next/i18next-parser
 */
 
-const resources = {
-    en_US: { translation: translationEN_US },
-    en_GB: { translation: translationEN_GB },
+export const defaultNS = "translation";
+export const resources = {
+    cs: { translation: translationCS },
+    de: { translation: translationDE },
+    en: { translation: translationEN },
+    es: { translation: translationES },
     fr: { translation: translationFR },
+    it: { translation: translationIT },
     pl: { translation: translationPL },
-};
+} as const;
 
 export const myLangs: object = {
-    en_US: "US",
-    en_GB: "GB",
+    cs: "CS",
+    de: "DE",
+    en: "EN",
+    es: "ES",
     fr: "FR",
-    pl: "PL",
-}
+    it: "IT",
+    pl: "PL"
+};
+
+Object.keys(myLangs)
 
 i18next
+    .use(LocalStorageBackend)
     .use(LanguageDetector)
     .use(initReactI18next) // passes i18n down to react-i18next
     .init({
+        partialBundledLanguages: true,
         resources: resources,
-        fallbackLng: "en_US",
+        fallbackLng: "en",
         debug: true,
         interpolation: {
             escapeValue: false
         },
-        ns: "translation", // namespaces help to divide huge translations into multiple small files.
-        defaultNS: "translation"
+        keySeparator: ".",
+        returnObjects: true,
+        backend: {
+            backends: [
+                LocalStorageBackend,
+            ],
+            backendOptions: [{
+                expirationTime: 7 * 24 * 60 * 60 * 1000 // 7 days
+            }, {
+                loadPath: '../locales/{{lng}}/{{ns}}.json'
+            }]
+        }
     });
 
+i18next.loadLanguages(Object.keys(myLangs));
 i18next.services.formatter?.add('lowercase', (value, lng, options) => {
     return value.toLowerCase();
-})
+});
 
 export default i18next;

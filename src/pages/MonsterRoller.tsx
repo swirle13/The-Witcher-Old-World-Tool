@@ -4,7 +4,7 @@ import MonsterPicker from "../components/MonsterPicker";
 export default function MonsterRoller({ t }) {
     return (
         <Container id="MonsterRoller">
-            <MonsterPicker HeaderText={t("Roll A New Monster")} t={t} />
+            <MonsterPicker HeaderText={t("monsterPicker.title")} t={t} />
         </Container>
     );
 }
