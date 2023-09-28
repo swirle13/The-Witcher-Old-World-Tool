@@ -1,9 +1,10 @@
 {
     "name": "the-witcher-old-world-tool",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "description": "Tool to help ease the small tedia of the board game The Witcher: Old World",
     "main": "index.js",
     "scripts": {
+        "clean": "rm -r dist",
         "dev": "tsc-watch --onSuccess \"npm start\"",
         "start": "webpack serve --port 3000",
         "build": "NODE_ENV=production webpack",
