@@ -8,6 +8,21 @@
 @tailwind components;
 @tailwind utilities;
 
+.dropdown-menu {
+    /* --bs-dropdown-min-width: 0rem !important; */
+    min-width: 0rem;
+}
+
+.dropdown {
+    align-self: center;
+}
+.dropdown-toggle {
+    align-self: center;
+}
+.nav-link {
+    align-self: center;
+}
+
 .hr {
     width: 200px;
 }
