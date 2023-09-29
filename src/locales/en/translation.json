@@ -33,8 +33,8 @@
         "lostMount": "$t(lostMount.title)",
         "browseAllTools": "Browse All Tools",
         "projectHelp": "Project Help",
-        "githubIssues": "Github Issues",
-        "githubDiscussions": "Github Discussions",
+        "githubIssues": "GitHub Issues",
+        "githubDiscussions": "GitHub Discussions",
         "projectTimeline": "$t(footer.projectTimeline)",
         "__flag": "🇬🇧"
     },
@@ -94,7 +94,7 @@
                 "name": "$t(setupHelper.title)",
                 "link": "#/setupHelper",
                 "desc": "A dynamically updated set of consolidated instructions for any expansion and player combination.",
-                "btn": "Wind's howling.."
+                "btn": "Wind's howling…"
             },
             {
                 "name": "$t(locationTokens.title)",
@@ -118,7 +118,7 @@
                 "name": "$t(inventoryChecker.title)",
                 "link": "#/inventoryChecker",
                 "desc": "To help those just receiving their The Witcher: Old World game, here's an in-depth guide on what you (hopefully) received.",
-                "btn": "Medallion's humming.."
+                "btn": "Medallion's humming…"
             },
             {
                 "name": "$t(lostMount.title)",
@@ -331,7 +331,7 @@
             "decks": "Without shuffling, place the Wild Hunt Exploration and Wild Hunt Event decks on their slots on the game board. (Standard City and Wilds Exploration decks are not used in Wild Hunt).",
             "tokens": "Place Gold Tokens, Blue Quest Tokens, Poker Dice, and Closed Tavern token or mini near the game board.",
             "monsterSetup": [
-                "Draw a Monster Token of level based on the game difficulty. Draw a Forest Location Token. Place the monster token or miniature on the map there an place its Monster Card and the Location Token in the matching space on the game board.",
+                "Draw a Monster Token of level based on the game difficulty. Draw a Forest Location Token. Place the monster token or miniature on the map there and place its Monster Card and the Location Token in the matching space on the game board.",
                 "If the game difficulty indicates a second monster, repeat the above step but with a Water location."
             ],
             "monsterFightDeck": "Shuffle the Monster Fight deck and place it (face down) near the game board. Place the Charge/Bite token near the deck.",
@@ -490,7 +490,7 @@
             {
                 "title": "$t(communityLinks.officialDiscord)",
                 "subtitle": "$t(communityLinks.contentType.link)",
-                "desc": "The Go On Board official discord. Discuss rules, share your painted minis, or just chat about the game.",
+                "desc": "The Go On Board official Discord. Discuss rules, share your painted minis, or just chat about the game.",
                 "link": "https://discord.com/invite/mX8yvYQTuq"
             },
             {
@@ -532,9 +532,9 @@
         "aboutTitle": "About me",
         "aboutBody": [
             "I am a one-man team and I work on this unofficial fan website in my spare time. If you appreciate the work I do, consider buying me a coffee!",
-            "Updates to this site will continuously roll out. If you're interested in participating in the improvement of this tool, please check out the Github links to fill out bug reports, enhancement suggestions, see my current tasks and ideas, participate in polls for the next major improvement/feature I work on, and more!"
+            "Updates to this site will continuously roll out. If you're interested in participating in the improvement of this tool, please check out the GitHub links to fill out bug reports, enhancement suggestions, see my current tasks and ideas, participate in polls for the next major improvement/feature I work on, and more!"
         ],
-        "github": "Github",
+        "github": "GitHub",
         "projectTimeline": "Project Timeline",
         "githubLinks": [
             {
@@ -585,7 +585,7 @@
                 "link": "https://www.kickstarter.com/projects/goonboard/the-witcher"
             },
             {
-                "text": "Board Game Geek",
+                "text": "BoardGameGeek",
                 "link": "https://boardgamegeek.com/boardgame/331106/witcher-old-world"
             }
         ],
