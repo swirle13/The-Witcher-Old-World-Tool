@@ -47,7 +47,7 @@
         "projectHelp": "Pomoc projektu",
         "githubIssues": "GitHub Issues",
         "githubDiscussions": "GitHub Discussions",
-        "projectTimeline": "Project Timeline",
+        "projectTimeline": "$t(footer.projectTimeline)",
         "__flag": "🇵🇱"
     },
     "monsterPicker": {
@@ -546,7 +546,8 @@
             "Jestem „jednoosobowym zespołem” i tę nieoficjalną fanowską stronę tworzę w swoim wolnym czasie. Jeśli doceniasz moją pracę, rozważ zafundowanie mi kawy!",
             "Aktualizacje tej witryny będą wprowadzane na bieżąco. Jeśli jesteś zainteresowany udziałem w ulepszaniu tego narzędzia, użyj linków GitHub, aby zgłosić błędy, sugestie, zobaczyć moje bieżące zadania i pomysły, wziąć udział w ankietach na temat kolejnego ważnego ulepszenia/funkcji, nad którym pracuję, i wiele więcej!"
         ],
-        "github": "GitHub ",
+        "github": "GitHub",
+        "projectTimeline": "Harmonogram projektu",
         "githubLinks": [
             {
                 "text": "Widzisz błąd?",
@@ -561,7 +562,7 @@
                 "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/discussions"
             },
             {
-                "text": "Harmonogram projektu",
+                "text": "$t(footer.projectTimeline)",
                 "link": "https://github.com/users/swirle13/projects/2/views/3"
             },
             {

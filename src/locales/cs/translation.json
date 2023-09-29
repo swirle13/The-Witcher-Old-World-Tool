@@ -47,7 +47,7 @@
         "projectHelp": "Project Help",
         "githubIssues": "Github Issues",
         "githubDiscussions": "Github Discussions",
-        "projectTimeline": "Project Timeline",
+        "projectTimeline": "$t(footer.projectTimeline)",
         "__flag": "🇨🇿"
     },
     "monsterPicker": {
@@ -547,6 +547,7 @@
             "Updates to this site will continuously roll out. If you're interested in participating in the improvement of this tool, please check out the Github links to fill out bug reports, enhancement suggestions, see my current tasks and ideas, participate in polls for the next major improvement/feature I work on, and more!"
         ],
         "github": "Github",
+        "projectTimeline": "Project Timeline",
         "githubLinks": [
             {
                 "text": "Find a bug?",
@@ -561,7 +562,7 @@
                 "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/discussions"
             },
             {
-                "text": "Project timeline",
+                "text": "$t(footer.projectTimeline)",
                 "link": "https://github.com/users/swirle13/projects/2/views/3"
             },
             {

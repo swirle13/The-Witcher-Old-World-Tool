@@ -10,22 +10,22 @@
         "player5": "Joueur 5",
         "gold_one": "{{count}} pièce d'or",
         "gold_many": "{{count}} pièces d'or",
-        "gold_other": "{{count}} pièce(s) d'or",
+        "gold_other": "{{count}} pièces d'or",
         "card_one": "{{count}} carte",
         "card_many": "{{count}} cartes",
-        "card_other": "{{count}} carte(s)",
+        "card_other": "{{count}} cartes",
         "card_witchertrophy_one": "{{count}} carte Trophée Sorceleur",
         "card_witchertrophy_many": "{{count}} cartes Trophée Sorceleur",
-        "card_witchertrophy_other": "{{count}} carte(s) Trophée Sorceleur",
+        "card_witchertrophy_other": "{{count}} cartes Trophée Sorceleur",
         "card_witchermagetrophy_one": "{{count}} carte Trophée Sorceleur/Mage",
         "card_witchermagetrophy_many": "{{count}} cartes Trophée Sorceleur/Mage",
-        "card_witchermagetrophy_other": "{{count}} carte(s) Trophée Sorceleur/Mage",
+        "card_witchermagetrophy_other": "{{count}} cartes Trophée Sorceleur/Mage",
         "token_level1_one": "{{count}} jeton de Niveau I",
         "token_level1_many": "{{count}} jetons de Niveau I",
-        "token_level1_other": "{{count}} jeton(s) de Niveau I",
+        "token_level1_other": "{{count}} jetons de Niveau I",
         "token_shield_one": "{{count}} jeton Bouclier",
         "token_shield_many": "{{count}} jetons Bouclier",
-        "token_shield_other": "{{count}} jeton(s) Bouclier",
+        "token_shield_other": "{{count}} jetons Bouclier",
         "underConstruction": "En construction !"
     },
     "navbar": {
@@ -41,7 +41,7 @@
         "projectHelp": "Aide du projet",
         "githubIssues": "Bugs sur Github",
         "githubDiscussions": "Discussions sur Github",
-        "projectTimeline": "Historique du projet",
+        "projectTimeline": "$t(footer.projectTimeline)",
         "__flag": "🇫🇷"
     },
     "monsterPicker": {
@@ -541,6 +541,7 @@
             "Ce site sera régulièrement mis à jour. Si tu es intéressé pour participer à l'amélioration de cet outil, regarde du côté des liens Github. Tu pourras y remonter des bugs, des suggestions d'amélioration, voir mon travail en cours et mes prochaines idées, participer à des sondages pour les groesses fonctionnalités à venir, et bien plus !"
         ],
         "github": "Github",
+        "projectTimeline": "Historique du projet",
         "githubLinks": [
             {
                 "text": "Tu as trouvé un bug ?",
@@ -555,7 +556,7 @@
                 "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/discussions"
             },
             {
-                "text": "Historique du projet",
+                "text": "$t(footer.projectTimeline)",
                 "link": "https://github.com/users/swirle13/projects/2/views/3"
             },
             {

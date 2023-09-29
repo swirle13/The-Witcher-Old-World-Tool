@@ -35,7 +35,6 @@ export default function Footer({ t }) {
                             {t("footer.supportLinks").map((obj, index) => (
                                 <li key={index}><a href={obj.link}>{obj.text}</a></li>
                             ))}
-                            {/* <li><a href="https://bmc.link/swirle13">Buy me a coffee ☕️</a></li> */}
                         </ul>
                     </Col>
                 </Row>
