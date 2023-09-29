@@ -92,7 +92,7 @@
         "Glenmore": "Glenmore",
         "Doldeth": "Doldeth",
         "Loc Ichaer": "Loc Ichaer",
-        "Gorthur Guaed": "Gorthur Guaed",
+        "Gorthur Gvaed": "Gorthur Gvaed",
         "Dhuwod": "Dhuwod",
         "Stygga": "Stygga",
         "Ard Modron": "Ard Modron",
@@ -106,7 +106,7 @@
                 "name": "$t(setupHelper.title)",
                 "link": "#/setupHelper",
                 "desc": "Dynamicznie aktualizowany i skonsolidowany zestaw instrukcji dla dowolnej kombinacji rozszerzeń i liczby graczy.",
-                "btn": "Wiatr wyje.."
+                "btn": "Wiatr wyje…"
             },
             {
                 "name": "$t(locationTokens.title)",
@@ -130,7 +130,7 @@
                 "name": "$t(inventoryChecker.title)",
                 "link": "#/inventoryChecker",
                 "desc": "Aby pomóc tym, którzy właśnie otrzymali grę Wiedźmin: Stary Świat, przedstawiamy szczegółowy przewodnik po tym, co (miejmy nadzieję) otrzymaliście.",
-                "btn": "Medalion wibruje.."
+                "btn": "Medalion wibruje…"
             },
             {
                 "name": "$t(lostMount.title)",
