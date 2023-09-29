@@ -86,6 +86,7 @@ export default function MonsterPicker({
                     <Form.Switch
                         checked={expansions[index]}
                         onChange={() => handleToggleExpansions(index)}
+                        id={t(`exps.${name}`)}
                         label={t(`exps.${name}`)}
                         key={name}
                     />
