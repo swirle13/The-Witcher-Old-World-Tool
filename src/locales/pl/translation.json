@@ -105,19 +105,19 @@
             {
                 "name": "$t(setupHelper.title)",
                 "link": "#/setupHelper",
-                "desc": "Dynamicznie aktualizowany i skonsolidowany zestaw instrukcji dla dowolnej kombinacji rozszerzeń i liczby graczy.",
+                "desc": "Skonsolidowana instrukcja generowana dynamicznie dla dowolnej kombinacji rozszerzeń i liczby graczy.",
                 "btn": "Wiatr wyje…"
             },
             {
                 "name": "$t(locationTokens.title)",
                 "link": "#/locationTokens",
-                "desc": "Łatwo dobierz dowolny typ żetonu obszaru. Zawsze losowo. Bez tasowania kartonowych żetonów.",
+                "desc": "Jednym kliknięciem wylosuj dowolny typ żetonu obszaru. Całkowita losowość. Bez tasowania kartonowych żetonów.",
                 "btn": "Eksploruj Kontynent"
             },
             {
                 "name": "$t(monsterRoller.title)",
                 "link": "#/monsterRoller",
-                "desc": "Masz dość tasowania żetonów, kart potworów i tropienia figurki?",
+                "desc": "Masz dość tasowania żetonów, kart potworów i tropienia figurek?",
                 "btn": "Cholera, aleś ty brzydki"
             },
             {
@@ -234,12 +234,12 @@
                     "Wylosuj 3 żetony potworów: 3 × poziomu I.",
                     "Wylosuj 3 żetony potworów: 3 × poziomu I."
                 ],
-                "3": "Losowo rozłóż wylosowane żetony potworów zakryte w obszarach wylosowanych wcześniej.",
-                "4": "Odwróć żetony potworów i umieść ich karty potworów w miejscach na planszy pod odpowiadającymi im żetonami obszarów. Jeśli masz figurki potworów to użyj ich w miejscu żetonów potworów.",
+                "3": "Wylosowane żetony potworów umieść losowo w obszarach wylosowanych wcześniej (rewersem do góry).",
+                "4": "Odwróć żetony potworów i umieść ich karty potworów na planszy w sekcji potworów pod odpowiadającymi im żetonami obszarów. Jeśli masz figurki potworów to połóż je na mapie zamiast żetonów potworów.",
                 "5": "Rozłóż potwory:"
             },
             "monsterFightDeck": "Talię kart walki potworów połóż potasowaną i zakrytą obok planszy.",
-            "startingPlayer": "Graczem rozpoczynającym jest osoba, która ostatnio przeczytała książkę o Wiedźminie; może też zostać wylosowany lub wyłoniony w dowolny inny sposób. Gracze wybierają planszetki gracza dowolną metodą, np. opisaną na str. 7 instrukcji.",
+            "startingPlayer": "Graczem rozpoczynającym jest osoba, która ostatnio przeczytała książkę o Wiedźminie, lub wyłoniona w dowolny inny sposób (np. wylosowana). Gracze wybierają planszetki gracza dowolną metodą, np. opisaną na str. 7 instrukcji.",
             "playerSetup": {
                 "base": "Bierze kartę pomocy, planszetkę i figurkę postaci (z kolorową podstawką), znaczniki (atrybutów i tarczy), żeton reputacji i talię 10 startowych kart akcji (karty z symbolem szkoły w górnym prawym rogu).",
                 "baseMages": "Bierze kartę pomocy, planszetkę i figurkę postaci (z kolorową podstawką), znaczniki (atrybutów i tarczy/energii), żeton reputacji i talię 10 startowych kart akcji (karty z symbolem szkoły w górnym prawym rogu).",
@@ -338,22 +338,22 @@
             "medium": "Opowieść i miecz!",
             "hard": "Krew i połamane kości!",
             "veryHard": "Marsz Śmierci!",
-            "manage": "Wybierz gracza obsługującego kartę rund. Podaj mu kartę dotyczącą odpowiedniej liczby graczy i połóż żeton na polu „1” w górnym lewym rogu.",
-            "createExplorationDeck": "Stwórz talię eksploracji Dzikiego Gonu biorąc 3 losowe (i zakryte) karty poziomu 2 oraz kładąc na nich zakryte {{num}} karty poziomu 1.",
+            "manage": "Wybierz gracza obsługującego planszę przebiegu rund. Podaj mu planszę dotyczącą odpowiedniej liczby graczy i połóż żeton na polu „1” w górnym lewym rogu.",
+            "createExplorationDeck": "Stwórz talię eksploracji Dzikiego Gonu biorąc 3 losowe (i zakryte) karty etapu II oraz kładąc na nich zakryte {{num}} karty etapu I.",
             "decks": "Połóż talie eksploracji i zdarzeń Dzikiego Gonu bez tasowania na odpowiednich polach na planszy. (Standardowych talii eksploracji miast i dzikich ostępów nie używa się grając z Dzikim Gonem).",
             "tokens": "Obok planszy połóż żetony złota (lub monety), niebieskie żetony zadań, kości do pokera i żeton/figurkę zamkniętej tawerny.",
             "monsterSetup": [
                 "Wylosuj żeton potwora zależnie od poziomu trudności. Wylosuj żeton obszaru leśnego. Połóż żeton/figurkę potwora na tym obszarze na mapie, a jego kartę i wylosowany żeton obszaru na odpowiednim polu na planszy.",
                 "Jeśli poziom trudności wskazuje dwa potwory, powtórz powyższy krok z obszarem wodnym."
             ],
-            "monsterFightDeck": "Talię kart walki potworów połóż potasowaną i zakrytą obok planszy razem z żetonem szarży/gryzienia.",
+            "monsterFightDeck": "Talię kart walki potworów połóż potasowaną i zakrytą obok planszy razem z żetonem szarży/ugryzienia.",
             "enemies": [
-                "Wybierz członka Dzikiego Gonu, któremu stawicie czoła. Jego kartę (stroną A do góry) i jego 4 karty specjalnego ataku połóż obok planszy.",
-                "Połóż na nim odpowiednią liczbę żetonów tarczy.",
+                "Wybierz jeźdźca Dzikiego Gonu, któremu stawicie czoła. Jego kartę (stroną A do góry) i jego 4 karty walki połóż obok planszy.",
+                "Połóż na nim odpowiednią liczbę żetonów tarcz.",
                 "Wylosuj żeton obszaru górskiego, umieść tam figurkę Dzikiego Gonu i wtasuj żeton z powrotem do stosu.",
                 "Połóż obok planszy 6 żetonów/figurek Ogarów i kartę Ogarów odpowiednią do liczby graczy."
             ],
-            "movementPool": "Stwórz stos ruchu Dzikiego Gonu z potasowanych i zakrytych żetonów reputacji graczy i zamkniętej tawerny."
+            "movementPool": "Stwórz pulę ruchu jeźdźca Dzikiego Gonu z potasowanych i zakrytych żetonów reputacji graczy i zamkniętej tawerny."
         },
         "skellige": {
             "playmat": [
@@ -371,7 +371,7 @@
             "decks": "Talię eksploracji Skellige potasuj. Talii zdarzeń Skellige nie tasuj! Połóż talie na planszy nad wyspami.",
             "dagon": "Figurkę Dagona połóż na torze Dagona na pozycji startowej zależnej od liczby graczy. Obok toru połóż potasowaną talię kart bonusów Dagona, żetony tropów Dagona i dużą kartę Dagona (stroną ze zdolnością specjalną potwora do góry).",
             "dagonMT": "Figurkę Dagona połóż na torze Dagona na pozycji startowej zależnej od liczby graczy. Obok toru połóż potasowaną talię kart bonusów Dagona, żetony tropów Dagona i dużą kartę Dagona (stroną z 4 atakami specjalnymi do góry).",
-            "siren": "Figurkę Syreny połóż na pozycji Dagona razem z jej kartą potwora."
+            "siren": "Na obszarze Dagona połóż również figurkę Syreny i jej kartę potwora."
         },
         "magesExp": {
             "actionCards": "Powtórz powyższy krok z talią akcji magów. (Jeśli wszyscy grają magami, po prostu pomiń poprzedni krok)."
@@ -385,7 +385,7 @@
         },
         "adventurePack": {
             "tokens": "Obok planszy połóż żetony złota (lub monety), zielone żetony zadań, kości do pokera i żeton/figurkę zamkniętej tawerny.",
-            "lostMount": "Wylosuj dwa żetony obszarów (dowolnego typu), wybierz jeden, w którym ma się znaleźć figurka Zagubionego Wierzchowca, i wtasuj żetony z powrotem w stos(y)."
+            "lostMount": "Ostatni gracz losuje dwa żetony obszarów (jednego z typów), wybiera jeden, w którym ma się znaleźć figurka Zagubionego Wierzchowca, i wtasowuje żetony z powrotem w stos."
         }
     },
     "inventoryChecker": {
@@ -399,7 +399,7 @@
         ],
         "legendHeader": "Legenda",
         "legendBody": {
-            "header": "Jeśli wyświetlane są 2 kolumny – czytaj od lewej do prawej, rzędami od góry do dołu. W ten sposób prawidłowo odczytasz podsumy kart podzielonych na różne paczki (e.g. \"karty potworów: 11 (11/29)\").",
+            "header": "Jeśli wyświetlane są 2 kolumny – czytaj od lewej do prawej, rzędami od góry do dołu. W ten sposób prawidłowo odczytasz podsumy kart podzielonych na różne paczki (e.g. „karty potworów: 11 (11/29)”).",
             "body": [
                 {
                     "title": "TWOW(XX) Y/Z",
@@ -428,7 +428,7 @@
                 {
                     "title": "(ZP)",
                     "details": [
-                        "Jest to ujednoznacznienie dotyczące kart Zestawu Przygód. Można je rozpoznać po symbolu gwiazdy w górnej części awersu karty."
+                        "Skrót dla kart z Zestawu Przygód. Karty te można rozpoznać po symbolu gwiazdy w górnej części awersu."
                     ]
                 }
             ]
@@ -464,8 +464,8 @@
         "Wild Hunt Help": "Dziki Gon karty pomocy",
         "Hounds": "Ogary",
         "Wild Hunt Monsters": "Dziki Gon karty potworów",
-        "Wild Hunt Exploration - Stage 1": "Dziki Gon karty eksploracji poziomu 1",
-        "Wild Hunt Exploration - Stage 2": "Dziki Gon karty eksploracji poziomu 2",
+        "Wild Hunt Exploration - Stage 1": "Dziki Gon karty eksploracji etapu I",
+        "Wild Hunt Exploration - Stage 2": "Dziki Gon karty eksploracji etapu II",
         "Wild Hunt Event": "Dziki Gon karty wydarzeń",
         "Mage Special Action": "karty akcji specjalnych (magowie)",
         "Lost Mount": "Zagubiony Wierzchowiec",
@@ -512,7 +512,7 @@
                 "link": "https://youtu.be/Hj7oTXJOFfg"
             },
             {
-                "title": "Oficjalne FAQ: uściślenie niejasnych zasad/sytuacji",
+                "title": "Oficjalne FAQ: uściślenie niejasnych zasad i sytuacji",
                 "subtitle": "$t(communityLinks.contentType.pdf)",
                 "desc": "Odpowiedzi i wyjaśnienia dotyczące potencjalnie mylących lub trudnych sytuacji.",
                 "link": "https://www.dropbox.com/s/6fxx058x76kc9rn/FAQ_ENG_v01.pdf?dl=0"
@@ -543,8 +543,8 @@
     "footer": {
         "aboutTitle": "O mnie",
         "aboutBody": [
-            "Jestem „jednoosobowym zespołem” i tę nieoficjalną fanowską stronę tworzę w swoim wolnym czasie. Jeśli doceniasz moją pracę, rozważ zafundowanie mi kawy!",
-            "Aktualizacje tej witryny będą wprowadzane na bieżąco. Jeśli jesteś zainteresowany udziałem w ulepszaniu tego narzędzia, użyj linków GitHub, aby zgłosić błędy, sugestie, zobaczyć moje bieżące zadania i pomysły, wziąć udział w ankietach na temat kolejnego ważnego ulepszenia/funkcji, nad którym pracuję, i wiele więcej!"
+            "Jestem „jednoosobowym zespołem” i to nieoficjalne narzędzie tworzę w swoim wolnym czasie. Jeśli doceniasz moją pracę, rozważ zafundowanie mi kawy!",
+            "Aktualizacje tego narzędzia będą wprowadzane na bieżąco. Jeśli chciałbyś je ulepszyć lub współtworzyć, obok znajdziesz linki do miejsc na GitHubie, gdzie możesz zgłosić błędy, sugestie, zobaczyć moje bieżące zadania i pomysły, wziąć udział w ankietach na temat kolejnych ważnych ulepszeń lub funkcji, nad którymi pracuję, oraz wiele więcej!"
         ],
         "github": "GitHub",
         "projectTimeline": "Harmonogram projektu",
@@ -554,7 +554,7 @@
                 "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBUG%5D+"
             },
             {
-                "text": "Pomysł na ulepszenie?",
+                "text": "Masz sugestie?",
                 "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=%5BENHANCEMENT%5D+"
             },
             {
