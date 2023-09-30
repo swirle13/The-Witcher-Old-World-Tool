@@ -375,11 +375,11 @@
             "bomb": "Mélanger la pioche Bombe et la placer près de la pioche Potion.",
             "lgCards": "Placer les grandes cartes Monstre près du plateau.",
             "spFightCards": "Retirer 8 cartes Combat Monstre de la pioche. En remettre 4 dans la boîte et réserver les 4 autres pour plus tard (quand un Monstre de niveau III apparaitra). Ajouter les cartes Attaque Spéciale à la pioche Attaque Monstre.",
-            "weaknessTokens": "Piocher 3 jetons Lion (1 pour chaque type de terrain). Si un Sorceleur est sur ce Lieu, piocher à nouveau. Piocher et placer face cachée un jeton Faiblesse Monstre correspondant à ce type de terrain, sur chaque Lieu. Remettre ces jetons Lieu dans leurs piles et les remélanger."
+            "weaknessTokens": "Piocher 3 jetons Lieu (1 pour chaque type de terrain). Si un Sorceleur est sur ce Lieu, piocher à nouveau. Piocher et placer face cachée un jeton Point faible Monstre correspondant à ce type de terrain, sur chaque Lieu. Remettre ces jetons Lieu dans leurs piles et les remélanger."
         },
         "adventurePack": {
             "tokens": "Placer les jetons/pièces d'or, les jetons Quête verts, les dés et le jeton/figurine Taverne Fermée près du plateau de jeu. Si vous avez les dés additionnels, chaque joueur peut en prendre un jeu.",
-            "lostMount": "Le dernier joueur pioche deux jetons Lieu (d'un type de terrain), en choisit un sur lequel placer la figurine Monture Perdue, et remélange les jetons dans leur pile."
+            "lostMount": "Le dernier joueur pioche deux jetons Lieu d’une pile de son choix, en choisit un et place la figurine Monture Perdue dans ce Lieu. Mélangez les jetons Lieu dans leur pile."
         }
     },
     "inventoryChecker": {
