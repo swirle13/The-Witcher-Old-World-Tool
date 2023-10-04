@@ -62,9 +62,9 @@
     },
     "locationTokens": {
         "title": "Ortsplättchen",
-        "Gebirge": "Mountain",
-        "Wald": "Forest",
-        "Wasser": "Water",
+        "mountain": "Gebirge",
+        "forest": "Wald",
+        "water": "Wasser",
         "Behelt Nar": "Behelt Nar",
         "Kaer Seren": "Kaer Seren",
         "Hengfors": "Hengfors",
