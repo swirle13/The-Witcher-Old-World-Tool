@@ -406,7 +406,7 @@
                 },
                 {
                     "title": "Beispielkartentypen: X (Y/Z) ODER X/Z",
-                    "details": [                      
+                    "details": [
                         "Beispieltyp ist die Art der Karte, wie sie in den 'Komponenten'-Listen von Go On Board bezeichnet wird.",
                         "X gibt an, wie viele dieser Karten in diesem Set enthalten sind.",
                         "Y ist die aktuelle Gesamtanzahl dieser Kartentypen über alle Sets hinweg. Wenn ausgelassen, sind alle Karten dieses Typs in diesem Set enthalten.",
