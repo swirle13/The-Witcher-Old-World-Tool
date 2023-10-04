@@ -39,8 +39,8 @@
         "lostMount": "$t(lostMount.title)",
         "browseAllTools": "Parcourir tous les outils",
         "projectHelp": "Aide du projet",
-        "githubIssues": "Bugs sur Github",
-        "githubDiscussions": "Discussions sur Github",
+        "githubIssues": "Bugs sur GitHub",
+        "githubDiscussions": "Discussions sur GitHub",
         "projectTimeline": "$t(footer.projectTimeline)",
         "__flag": "🇫🇷"
     },
@@ -86,7 +86,7 @@
         "Glenmore": "Glenmore",
         "Doldeth": "Doldeth",
         "Loc Ichaer": "Loc Ichaer",
-        "Gorthur Guaed": "Gorthur Guaed",
+        "Gorthur Gvaed": "Gorthur Gvaed",
         "Dhuwod": "Dhuwod",
         "Stygga": "Stygga",
         "Ard Modron": "Ard Modron",
@@ -100,7 +100,7 @@
                 "name": "$t(setupHelper.title)",
                 "link": "#/setupHelper",
                 "desc": "Un ensemble d'instructions aggrégées, calculées dynamiquement pour toute combinaison d'extension et de nombre de joueurs.",
-                "btn": "Le vent hurle.."
+                "btn": "Le vent hurle…"
             },
             {
                 "name": "$t(locationTokens.title)",
@@ -124,7 +124,7 @@
                 "name": "$t(inventoryChecker.title)",
                 "link": "#/inventoryChecker",
                 "desc": "Pour aider celles et ceux qui viennent de recevoir leur jeu The Witcher: L'Ancien Monde, voici un guide détaillé pour vérifier ce que vous avez (espérons-le) reçu.",
-                "btn": "Le médaillon vibre.."
+                "btn": "Le médaillon vibre…"
             },
             {
                 "name": "$t(lostMount.title)",
@@ -363,8 +363,8 @@
                 "Les retourner sur la face Ancre, pour s'en rappeler"
             ],
             "decks": "Mélanger la pioche Exploration Skellige. Ne PAS mélanger la pioche Événements Skellige ! Placer les deux pioches sur leurs emplacements, au bord du plateau près des îles.",
-            "dagon": "Placer la figurine Dagon sur l'emplacement de départ de sa Piste (celui qui correspondant au nombre de joueurs). Mélanger la pioche Bonus Dagon et la placer près de sa Piste, ainsi que la carte Monstre de Dagon et les jetons Piste Dagon.",
-            "dagonMT": "Placer la figurine Dagon sur l'emplacement de départ de sa Piste (celui qui correspondant au nombre de joueurs). Mélanger la pioche Bonus Dagon et la placer près de sa Piste, ainsi que la grande carte Monstre de Dagon et les jetons Piste Dagon.",
+            "dagon": "Placer la figurine Dagon sur l'emplacement de départ de sa Piste (celui qui correspondant au nombre de joueurs). Mélanger la pioche Bonus Dagon et la placer près de sa Piste, ainsi que la carte Monstre de Dagon (face Capacité Spéciale visible) et les jetons Piste Dagon.",
+            "dagonMT": "Placer la figurine Dagon sur l'emplacement de départ de sa Piste (celui qui correspondant au nombre de joueurs). Mélanger la pioche Bonus Dagon et la placer près de sa Piste, ainsi que la carte Monstre de Dagon (face 4 Attaques Spéciales visible) et les jetons Piste Dagon.",
             "siren": "Placer la figurine de la Sirène sur l'emplacement Dagon, avec sa carte Monstre à proximité."
         },
         "magesExp": {
@@ -375,11 +375,11 @@
             "bomb": "Mélanger la pioche Bombe et la placer près de la pioche Potion.",
             "lgCards": "Placer les grandes cartes Monstre près du plateau.",
             "spFightCards": "Retirer 8 cartes Combat Monstre de la pioche. En remettre 4 dans la boîte et réserver les 4 autres pour plus tard (quand un Monstre de niveau III apparaitra). Ajouter les cartes Attaque Spéciale à la pioche Attaque Monstre.",
-            "weaknessTokens": "Piocher 3 jetons Lion (1 pour chaque type de terrain). Si un Sorceleur est sur ce Lieu, piocher à nouveau. Piocher et placer face cachée un jeton Faiblesse Monstre correspondant à ce type de terrain, sur chaque Lieu. Remettre ces jetons Lieu dans leurs piles et les remélanger."
+            "weaknessTokens": "Piocher 3 jetons Lieu (1 pour chaque type de terrain). Si un Sorceleur est sur ce Lieu, piocher à nouveau. Piocher et placer face cachée un jeton Point faible Monstre correspondant à ce type de terrain, sur chaque Lieu. Remettre ces jetons Lieu dans leurs piles et les remélanger."
         },
         "adventurePack": {
             "tokens": "Placer les jetons/pièces d'or, les jetons Quête verts, les dés et le jeton/figurine Taverne Fermée près du plateau de jeu. Si vous avez les dés additionnels, chaque joueur peut en prendre un jeu.",
-            "lostMount": "Puis ils piochent deux jetons Lieu (de n'importe quel terrain), en choisissent un sur lequel placer la figurine Monture Perdue, et remélanger les jetons dans leur pile."
+            "lostMount": "Le dernier joueur pioche deux jetons Lieu d’une pile de son choix, en choisit un et place la figurine Monture Perdue dans ce Lieu. Mélangez les jetons Lieu dans leur pile."
         }
     },
     "inventoryChecker": {
@@ -538,9 +538,9 @@
         "aboutTitle": "À propos de moi",
         "aboutBody": [
             "Je développe seul, et je travaille sur ce site non-officiel sur mon temps libre. Si tu apprécies mon travail, penses peut-être à m'offrir un café !",
-            "Ce site sera régulièrement mis à jour. Si tu es intéressé pour participer à l'amélioration de cet outil, regarde du côté des liens Github. Tu pourras y remonter des bugs, des suggestions d'amélioration, voir mon travail en cours et mes prochaines idées, participer à des sondages pour les groesses fonctionnalités à venir, et bien plus !"
+            "Ce site sera régulièrement mis à jour. Si tu es intéressé pour participer à l'amélioration de cet outil, regarde du côté des liens GitHub. Tu pourras y remonter des bugs, des suggestions d'amélioration, voir mon travail en cours et mes prochaines idées, participer à des sondages pour les groesses fonctionnalités à venir, et bien plus !"
         ],
-        "github": "Github",
+        "github": "GitHub",
         "projectTimeline": "Historique du projet",
         "githubLinks": [
             {
@@ -591,7 +591,7 @@
                 "link": "https://www.kickstarter.com/projects/goonboard/the-witcher"
             },
             {
-                "text": "Board Game Geek",
+                "text": "BoardGameGeek",
                 "link": "https://boardgamegeek.com/boardgame/331106/witcher-old-world"
             }
         ],

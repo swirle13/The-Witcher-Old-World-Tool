@@ -64,6 +64,7 @@ export default function TerrainTokenPicker({
                 <Form.Switch
                     checked={skellige}
                     onChange={() => handleSkellige()}
+                    id={t("exps.skellige")}
                     label={t("exps.skellige")}
                 />
             </Row>

@@ -196,7 +196,7 @@ export function compileSteps(
     if (mages) tempArr.push(t('setupHelper.base.playerSetup.ifMage'));
     tempArr.push(t(`setupHelper.base.playerSetup.${mages ? 'markersMages' : 'markers'}`));
     if (numPlayers > 3) tempArr.push(t('setupHelper.base.playerSetup.raiseAttr'));
-    tempArr.push(t('setupHelper.base.playerSetup.token'));
+    if (!wildHunt) tempArr.push(t('setupHelper.base.playerSetup.token'));
     tempArr.push(t('setupHelper.base.playerSetup.cards'));
     tempArr.push(t('setupHelper.base.playerSetup.miniature'));
 

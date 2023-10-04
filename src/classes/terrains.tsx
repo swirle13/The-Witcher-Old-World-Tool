@@ -103,8 +103,8 @@ const locIchaer: TerrainLocation = {
     type: "Water",
     coastal: false
 };
-const gorthurGuaed: TerrainLocation = {
-    name: "Gorthur Guaed",
+const gorthurGvaed: TerrainLocation = {
+    name: "Gorthur Gvaed",
     num: 15,
     type: "Water",
     coastal: false
@@ -148,7 +148,7 @@ const eyna: TerrainLocation = {
 
 export const terrainLocations: ReadonlyArray<TerrainLocation> = [
     beheltNar, kaerSeren, hengfors, kaerMorhen, banArd, cidaris, novigrad, vizima, vengerberg, cintra, haernCaduch,
-    beauclair, glenmore, doldeth, locIchaer, gorthurGuaed, dhuwod, stygga, ardModron, ardSkellig, isleOfMists, eyna
+    beauclair, glenmore, doldeth, locIchaer, gorthurGvaed, dhuwod, stygga, ardModron, ardSkellig, isleOfMists, eyna
 ];
 
 /**
@@ -287,7 +287,7 @@ const WaterTokens: WaterToken[] = [
     new WaterToken(5, "Cidaris", "Water5Cidaris"),
     new WaterToken(12, "Glenmore", "Water12Glenmore"),
     new WaterToken(14, "Loc Ichaer", "Water14LocIchaer"),
-    new WaterToken(15, "Gorthur Guaed", "Water15GorthurGuaed"),
+    new WaterToken(15, "Gorthur Gvaed", "Water15GorthurGvaed"),
 ];
 
 const WaterTokensSkellige: WaterToken[] = [
@@ -296,7 +296,7 @@ const WaterTokensSkellige: WaterToken[] = [
     new WaterToken(5, "Cidaris", "Water5Cidaris"),
     new WaterToken(12, "Glenmore", "Water12Glenmore"),
     new WaterToken(14, "Loc Ichaer", "Water14LocIchaer"),
-    new WaterToken(15, "Gorthur Guaed", "Water15GorthurGuaed"),
+    new WaterToken(15, "Gorthur Gvaed", "Water15GorthurGvaed"),
     new WaterToken(20, "Isle of Mists", "Water20IsleOfMists")
 ];
 
