@@ -62,36 +62,43 @@ export default function inventoryChecker({ t }) {
             </Accordion>
             <Row id="cardTitleRow" className="gap-2 mb-4 pb-4">
                 <Col id="cardTitleCol">
-                    <h4 className='text-center mb-3'>{t('inventoryChecker.cardSubtitle')}</h4>
+                    <h2 className='text-center mb-3'>{t('inventoryChecker.cardSubtitle')}</h2>
                 </Col>
             </Row>
             <Row id="packRow" key="packRow" className="mb-2 justify-content-center" md="8">
                 {cardPacks.map((pack, index) => (
-                    <Col key={index} className="ps-6 justify-content-center" md="5">
-                        <FormCheck
-                            name="packFormCheck"
-                            id={pack.name}
-                            checked={packsState[index]}
-                            label={pack.name}
-                            key={pack.name}
-                            onChange={() => handlePacksChange(index)}
-                            className='d-flex align-items-center'
-                        />
-                        <ul className='ms-4'>
-                            <li key={"Expansions"}>
-                                {t("common.expansions")}: {t(`inventoryChecker.${pack.expansions}`)}
-                            </li>
-                            {Object.entries(pack.cards).map((type) => (
-                                <li key={type[0]}>{t(`inventoryChecker.${type[0]}`)}: {type[1]}</li>
-                            ))}
-                            <li key={"cardsInPack"}>
-                                {t("inventoryChecker.cardsInPack")}: {pack.cardsInPack}
-                            </li>
-                        </ul>
-                    </Col>
+                    <Row key={index} className="ps-6 justify-content-center">
+                        <h4 className='text-center'>{pack.name}</h4>
+                        <Row>
+                            {/* TODO: Update all of this ul/li crap with a new class for displaying data */}
+                            <ul className='ms-4'>
+                                <li key={"Expansions"}>
+                                    {/* TODO: expand pack.expansions array; no longer a single string */}
+                                    {t("common.expansions")}: {t(`inventoryChecker.${pack.expansions}`)}
+                                </li>
+                                {/* TODO: make these small, reusable components and not ul items
+                                          No longer necessary to use Object.entries now that we have a
+                                          standardized object structure, Card.
+                                */}
+                                {Object.entries(pack.cards).map((type) => (
+                                    <Row>
+                                        <Col>
+                                            <li key={type[0]}>{t(`inventoryChecker.${type[0]}`)}: {type[1]}</li>
+                                        </Col>
+                                        <Col>
+                                            {/* TODO: loop through all pack.cards.exampleImages images*/}
+                                            <ImageContainer t={t} src={img} name={"adventurePackExample"} tName={"adventurePackExample"} />
+                                        </Col>
+                                    </Row>
+                                ))}
+                                <li key={"cardsInPack"}>
+                                    {t("inventoryChecker.cardsInPack")}: {pack.cardsInPack}
+                                </li>
+                            </ul>
+                        </Row>
+                    </Row>
                 ))}
             </Row>
-            {/* <ImageContainer t={t} src={img} name={"adventurePackExample"} tName={"adventurePackExample"} /> */}
         </Container>
     );
 }
