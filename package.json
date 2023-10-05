@@ -64,6 +64,7 @@
         "-": "^0.0.1",
         "@react-three/fiber": "^8.13.3",
         "@types/three": "^0.152.1",
+        "@vanyapr/react-image-magnifiers": "^1.4.2",
         "bootstrap": "^5.3.0",
         "gh-pages": "^5.0.0",
         "i18next": "^23.4.6",
