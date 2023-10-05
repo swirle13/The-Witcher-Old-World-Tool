@@ -9,19 +9,21 @@ type Cards = {
     numSoFar: number,
     numTotal: number,
     note?: string;
+    exampleImages?: string[];
 };
 
 type CardPack = {
     name: string,
     expansions: string[],
     cards: Cards[],
-    totalNumCards: number,
+    cardsInPack: number,
 };
 
 export const cards: CardPack[] = [
     {
         name: "TWOW(06) 1/4",
         expansions: ["Base Set"],
+        cardsInPack: 99,
         cards: [
             {
                 type: "Starting Action cards",
@@ -29,7 +31,8 @@ export const cards: CardPack[] = [
                 numInPack: 50,
                 numSoFar: 50,
                 numTotal: 50,
-                note: "5 sets of 10 cards per witcher"
+                note: "5 sets of 10 cards per witcher",
+                exampleImages: []
             },
             {
                 type: "Action cards",
@@ -37,7 +40,8 @@ export const cards: CardPack[] = [
                 numInPack: 38,
                 numSoFar: 38,
                 numTotal: 90,
-                note: ""
+                note: "",
+                exampleImages: []
             },
             {
                 type: "Help cards",
@@ -45,7 +49,8 @@ export const cards: CardPack[] = [
                 numInPack: 10,
                 numSoFar: 10,
                 numTotal: 10,
-                note: "5x Dice/turn order cards, 5x Icon Legend cards"
+                note: "5x Dice/turn order cards, 5x Icon Legend cards",
+                exampleImages: []
             },
             {
                 type: "Solo Help card",
@@ -53,12 +58,534 @@ export const cards: CardPack[] = [
                 numInPack: 1,
                 numSoFar: 1,
                 numTotal: 1,
-                note: ""
+                note: "",
+                exampleImages: []
             },
         ],
-        totalNumCards: 99
     },
-
+    {
+        name: "TWOW(06) 2/4",
+        expansions: ["Base Set"],
+        cardsInPack: 61,
+        cards: [
+            {
+                type: "Monster cards",
+                expansion: "Base Set",
+                numInPack: 11,
+                numSoFar: 11,
+                numTotal: 29,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "City Exploration cards",
+                expansion: "Base Set",
+                numInPack: 36,
+                numSoFar: 36,
+                numTotal: 36,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "Action cards",
+                expansion: "Base Set",
+                numInPack: 14,
+                numSoFar: 52,
+                numTotal: 90,
+                note: "",
+                exampleImages: []
+            },
+        ],
+    },
+    {
+        name: "TWOW(06) 3/4",
+        expansions: ["Base Set"],
+        cardsInPack: 99,
+        cards: [
+            {
+                type: "Monster cards",
+                expansion: "Base Set",
+                numInPack: 15,
+                numSoFar: 26,
+                numTotal: 29,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "Attribute Trophy cards",
+                expansion: "Base Set",
+                numInPack: 8,
+                numSoFar: 8,
+                numTotal: 8,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "Monster fight cards",
+                expansion: "Base Set",
+                numInPack: 20,
+                numSoFar: 20,
+                numTotal: 20,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "Event cards",
+                expansion: "Base Set",
+                numInPack: 56,
+                numSoFar: 56,
+                numTotal: 56,
+                note: "",
+                exampleImages: []
+            },
+        ],
+    },
+    {
+        name: "TWOW(06) 4/4",
+        expansions: ["Base Set"],
+        cardsInPack: 86,
+        cards: [
+            {
+                type: "Potion cards",
+                expansion: "Base Set",
+                numInPack: 28,
+                numSoFar: 28,
+                numTotal: 28,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "Witcher Trophy cards",
+                expansion: "Base Set",
+                numInPack: 20,
+                numSoFar: 20,
+                numTotal: 20,
+                note: "4 per Witcher x 5 witchers",
+                exampleImages: []
+            },
+            {
+                type: "Wilds Exploration cards",
+                expansion: "Base Set",
+                numInPack: 36,
+                numSoFar: 36,
+                numTotal: 36,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "Monster cards",
+                expansion: "Base Set",
+                numInPack: 2,
+                numSoFar: 28,
+                numTotal: 29,
+                note: "",
+                exampleImages: []
+            },
+        ],
+    },
+    {
+        name: "TWOW(21) 1/4",
+        expansions: ["Adventure Pack", "Wild Hunt", "Monster Trail"],
+        cardsInPack: 107,
+        cards: [
+            {
+                type: "(AP) Wilds Exploration cards",
+                expansion: "Adventure Pack",
+                numInPack: 28,
+                numSoFar: 28,
+                numTotal: 60,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "Wild Hunt Monster Fight cards",
+                expansion: "Wild Hunt",
+                numInPack: 16,
+                numSoFar: 16,
+                numTotal: 16,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "Special Monster Fight cards",
+                expansion: "Monster Trail",
+                numInPack: 4,
+                numSoFar: 4,
+                numTotal: 4,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "(AP) City Exploration cards",
+                expansion: "Adventure Pack",
+                numInPack: 59,
+                numSoFar: 59,
+                numTotal: 59,
+                note: "",
+                exampleImages: []
+            },
+        ],
+    },
+    {
+        name: "TWOW(21) 2/4",
+        expansions: ["Adventure Pack"],
+        cardsInPack: 107,
+        cards: [
+            {
+                type: "(AP) Wilds Exploration cards",
+                expansion: "Adventure Pack",
+                numInPack: 32,
+                numSoFar: 60,
+                numTotal: 60,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "(AP) Event cards",
+                expansion: "Adventure Pack",
+                numInPack: 75,
+                numSoFar: 75,
+                numTotal: 81,
+                note: "",
+                exampleImages: []
+            },
+        ],
+    },
+    {
+        name: "TWOW(21) 3/4",
+        expansions: ["Wild Hunt", "Mages", "Adventure Pack", "Monster Trail"],
+        cardsInPack: 107,
+        cards: [
+            {
+                type: "Mutagens",
+                expansion: "Monster Trail",
+                numInPack: 15,
+                numSoFar: 15,
+                numTotal: 15,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "Wild Hunt Help",
+                expansion: "Wild Hunt",
+                numInPack: 5,
+                numSoFar: 5,
+                numTotal: 5,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "Hounds",
+                expansion: "Wild Hunt",
+                numInPack: 2,
+                numSoFar: 2,
+                numTotal: 2,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "Wild Hunt Monsters",
+                expansion: "Wild Hunt",
+                numInPack: 4,
+                numSoFar: 4,
+                numTotal: 4,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "Wild Hunt Exploration - Stage 1",
+                expansion: "Wild Hunt",
+                numInPack: 20,
+                numSoFar: 20,
+                numTotal: 20,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "Wild Hunt Exploration - Stage 2",
+                expansion: "Wild Hunt",
+                numInPack: 15,
+                numSoFar: 15,
+                numTotal: 15,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "Wild Hunt Event",
+                expansion: "Wild Hunt",
+                numInPack: 35,
+                numSoFar: 35,
+                numTotal: 35,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "Mage Special Action",
+                expansion: "Mages",
+                numInPack: 5,
+                numSoFar: 5,
+                numTotal: 5,
+                note: "1 per Mage, art on card is of the corresponding Mage",
+                exampleImages: []
+            },
+            {
+                type: "(AP) Event cards",
+                expansion: "Adventure Pack",
+                numInPack: 6,
+                numSoFar: 81,
+                numTotal: 81,
+                note: "",
+                exampleImages: []
+            },
+        ],
+    },
+    {
+        name: "TWOW(21) 4/4",
+        expansions: ["Adventure Pack", "Monster Trail", "Ciri"],
+        cardsInPack: 105,
+        cards: [
+            {
+                type: "Lost Mount",
+                expansion: "Adventure Pack",
+                numInPack: 1,
+                numSoFar: 1,
+                numTotal: 1,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "Monster card",
+                expansion: "Monster Trail",
+                numInPack: 1,
+                numSoFar: 1,
+                numTotal: 1,
+                note: "Troll card",
+                exampleImages: []
+            },
+            {
+                type: "Witcher Trophy cards",
+                expansion: "Monster Trail",
+                numInPack: 10,
+                numSoFar: 10,
+                numTotal: 10,
+                note: "Manticore",
+                exampleImages: []
+            },
+            {
+                type: "Witcher Trophy cards",
+                expansion: "Ciri",
+                numInPack: 10,
+                numSoFar: 10,
+                numTotal: 10,
+                note: "Ciri",
+                exampleImages: []
+            },
+            {
+                type: "Bomb cards",
+                expansion: "Monster Trail",
+                numInPack: 28,
+                numSoFar: 28,
+                numTotal: 28,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "Starting Action cards",
+                expansion: "Monster Trail",
+                numInPack: 10,
+                numSoFar: 10,
+                numTotal: 10,
+                note: "Manticore",
+                exampleImages: []
+            },
+            {
+                type: "Advanced Action cards",
+                expansion: "Monster Trail",
+                numInPack: 40,
+                numSoFar: 40,
+                numTotal: 40,
+                note: "Contains text in bottom field on Action cards",
+                exampleImages: []
+            },
+            {
+                type: "Starting Action cards",
+                expansion: "Ciri",
+                numInPack: 10,
+                numSoFar: 10,
+                numTotal: 10,
+                note: "Ciri",
+                exampleImages: []
+            },
+            {
+                type: "Unique Action cards",
+                expansion: "Monster Trail",  // unsure if this is accurate
+                numInPack: 7,
+                numSoFar: 7,
+                numTotal: 7,
+                note: "1 per Witcher, art on card is of the corresponding Witcher",
+                exampleImages: []
+            },
+        ],
+    },
+    {
+        name: "TWOW(22) 1/1",
+        expansions: ["Monster Trail", "Wild Hunt"],
+        cardsInPack: 32,
+        cards: [
+            {
+                type: "Large Monster cards",
+                expansion: "Monster Trail",
+                numInPack: 29,
+                numSoFar: 29,
+                numTotal: 29,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "Difficulty Jumbo Reference cards",
+                expansion: "Wild Hunt",
+                numInPack: 3,
+                numSoFar: 3,
+                numTotal: 3,
+                note: "",
+                exampleImages: []
+            },
+        ],
+    },
+    {
+        name: "TWOW(34) 1/2",
+        expansions: ["Mages"],
+        cardsInPack: 80,
+        cards: [
+            {
+                type: "Mage Unique Action cards",
+                expansion: "Mages",
+                numInPack: 50,
+                numSoFar: 50,
+                numTotal: 50,
+                note: "10 cards per 5 Mages",
+                exampleImages: []
+            },
+            {
+                type: "Mage Trophy cards",
+                expansion: "Mages",
+                numInPack: 20,
+                numSoFar: 20,
+                numTotal: 20,
+                note: "4 per 5 Mages",
+                exampleImages: []
+            },
+            {
+                type: "Mage Action cards",
+                expansion: "Mages",
+                numInPack: 10,
+                numSoFar: 10,
+                numTotal: 90,
+                note: "",
+                exampleImages: []
+            },
+        ],
+    },
+    {
+        name: "TWOW(34) 2/2",
+        expansions: ["Mages"],
+        cardsInPack: 80,
+        cards: [
+            {
+                type: "Mage Action cards",
+                expansion: "Mages",
+                numInPack: 80,
+                numSoFar: 90,
+                numTotal: 90,
+                note: "",
+                exampleImages: []
+            },
+        ],
+    },
+    {
+        name: "TWOW(45) 1/1",
+        expansions: ["Legendary Hunt"],
+        cardsInPack: 32,
+        cards: [
+            {
+                type: "Legendary Monster movement cards",
+                expansion: "Legendary Hunt",
+                numInPack: 12,
+                numSoFar: 12,
+                numTotal: 12,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "Legendary Hunt Special Fight cards",
+                expansion: "Legendary Hunt",
+                numInPack: 20,
+                numSoFar: 20,
+                numTotal: 20,
+                note: "",
+                exampleImages: []
+            },
+        ],
+    },
+    {
+        name: "TWOW(46) 1/1",
+        expansions: ["Legendary Hunt"],
+        cardsInPack: 8,
+        cards: [
+            {
+                type: "Large Legendary Monster cards",
+                expansion: "Legendary Hunt",
+                numInPack: 7,
+                numSoFar: 7,
+                numTotal: 7,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "Large Fight Reference card",
+                expansion: "Legendary Hunt",
+                numInPack: 1,
+                numSoFar: 1,
+                numTotal: 1,
+                note: "",
+                exampleImages: []
+            },
+        ],
+    },
+    {
+        name: "TWOW(53) 1/1",
+        expansions: ["Skellige"],
+        cardsInPack: 85,
+        cards: [
+            {
+                type: "Dagon Bonus Monster cards",
+                expansion: "Skellige",
+                numInPack: 5,
+                numSoFar: 5,
+                numTotal: 5,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "Skellige Event cards",
+                expansion: "Skellige",
+                numInPack: 30,
+                numSoFar: 30,
+                numTotal: 30,
+                note: "",
+                exampleImages: []
+            },
+            {
+                type: "Skellige Exploration cards",
+                expansion: "Skellige",
+                numInPack: 50,
+                numSoFar: 50,
+                numTotal: 50,
+                note: "",
+                exampleImages: []
+            },
+        ],
+    },
 ];
 
 
