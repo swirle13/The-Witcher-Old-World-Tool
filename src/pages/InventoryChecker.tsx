@@ -1,7 +1,10 @@
+import React from "react";
 import { Accordion, Col, Container, Form, FormCheck, Row } from 'react-bootstrap';
 import PageTitle from '../components/PageTitle';
 import { simplifiedCards } from '../classes/inventory';
 import { useState } from 'react';
+import ImageContainer from '../components/ImageContainer';
+import img = require("../img/inventory/adventurePackExample.jpg");
 
 export default function inventoryChecker({ t }) {
     const cardPacks = simplifiedCards;
@@ -24,7 +27,7 @@ export default function inventoryChecker({ t }) {
     return (
         <Container>
             <PageTitle HeaderText={t('inventoryChecker.title')} t={t} />
-            <Accordion flush defaultActiveKey="0">
+            <Accordion id="NotesAccordion" flush defaultActiveKey="0">
                 <Accordion.Item eventKey="0" key={0}>
                     <Accordion.Header>
                         {t('inventoryChecker.noteTitle')}
@@ -62,9 +65,9 @@ export default function inventoryChecker({ t }) {
                     <h4 className='text-center mb-3'>{t('inventoryChecker.cardSubtitle')}</h4>
                 </Col>
             </Row>
-            <Row id="packRow" key="packRow" className="mb-2 justify-content-center" xs={1} md="8">
+            <Row id="packRow" key="packRow" className="mb-2 justify-content-center" md="8">
                 {cardPacks.map((pack, index) => (
-                    <Col key={index} className="ps-6 ms-4 justify-content-center" md="5">
+                    <Col key={index} className="ps-6 justify-content-center" md="5">
                         <FormCheck
                             name="packFormCheck"
                             id={pack.name}
@@ -88,6 +91,7 @@ export default function inventoryChecker({ t }) {
                     </Col>
                 ))}
             </Row>
+            {/* <ImageContainer t={t} src={img} name={"adventurePackExample"} tName={"adventurePackExample"} /> */}
         </Container>
     );
 }
