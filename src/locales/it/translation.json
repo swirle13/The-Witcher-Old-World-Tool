@@ -233,7 +233,7 @@
                 "5": "Set up Monsters:"
             },
             "monsterFightDeck": "Shuffle the Monster Fight deck and place it (face down) near the game board.",
-            "startingGiocatore": "Determine the starting player randomly, or it is whoever most recently read a Witcher book. Giocatores choose Giocatore Boards via any method they wish; see p. 7 of core rules for a fair drafting method.",
+            "startingPlayer": "Il Giocatore che ha letto più di recente un libro di The Withcer è il Primo Giocatore; in alternativa, sceglietelo casualmente. I Giocatori possono distribuire le Plance Giocatore con qualunque metodo di loro scelta; vedere pag. 7 del Regolamento Base per un metodo di distribusione imparziale.",
             "playerSetup": {
                 "base": "Take a Help Card, player board, and matching miniature (with colored ring), cubes, Shield marker, scoring token, and starting deck of 10 cards. (Starting cards have a School icon in the top right corner.)",
                 "baseMages": "Take a Help Card, player board, and matching miniature (with colored ring), cubes, Shield or Energy marker, scoring token, and starting deck of 10 cards. (Starting cards have a School icon in the top right corner.)",
