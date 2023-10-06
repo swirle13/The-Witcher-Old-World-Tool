@@ -2,75 +2,75 @@
     "common": {
         "expansions": "Expansions",
         "Step": "Step",
-        "players": "Players",
-        "player1": "Player 1",
-        "player2": "Player 2",
-        "player3": "Player 3",
-        "player4": "Player 4",
-        "player5": "Player 5",
-        "gold_one": "{{count}} gold",
-        "gold_many": "{{count}} gold",
-        "gold_other": "{{count}} gold",
-        "card_one": "{{count}} card",
-        "card_many": "{{count}} cards",
-        "card_other": "{{count}} cards",
-        "card_witchertrophy_one": "{{count}} Witcher Trophy Card",
-        "card_witchertrophy_many": "{{count}} Witcher Trophy Cards",
-        "card_witchertrophy_other": "{{count}} Witcher Trophy Cards",
-        "card_witchermagetrophy_one": "{{count}} Witcher/Mage Trophy Card",
-        "card_witchermagetrophy_many": "{{count}} Witcher/Mage Trophy Cards",
-        "card_witchermagetrophy_other": "{{count}} Witcher/Mage Trophy Cards",
+        "players": "Giocatori",
+        "player1": "Giocatore 1",
+        "player2": "Giocatore 2",
+        "player3": "Giocatore 3",
+        "player4": "Giocatore 4",
+        "player5": "Giocatore 5",
+        "gold_one": "{{count}} oro",
+        "gold_many": "{{count}} oro",
+        "gold_other": "{{count}} oro",
+        "card_one": "{{count}} carta",
+        "card_many": "{{count}} carte",
+        "card_other": "{{count}} carte",
+        "card_witchertrophy_one": "{{count}} Carta Trofeo Witcher",
+        "card_witchertrophy_many": "{{count}} Carte Trofeo Witcher",
+        "card_witchertrophy_other": "{{count}} Carte Trofeo Witcher",
+        "card_witchermagetrophy_one": "{{count}} Carta Trofeo Mago/Witcher",
+        "card_witchermagetrophy_many": "{{count}} Carte Trofeo Mago/Witcher",
+        "card_witchermagetrophy_other": "{{count}} Carte Trofeo Mago/Witcher",
         "token_level1_one": "{{count}} Level I token",
         "token_level1_many": "{{count}} Level I tokens",
         "token_level1_other": "{{count}} Level I tokens",
-        "token_shield_one": "{{count}} Shield Token",
-        "token_shield_many": "{{count}} Shield Tokens",
-        "token_shield_other": "{{count}} Shield Tokens",
-        "underConstruction": "Under Construction!"
+        "token_shield_one": "{{count}} Indicatore Scudo",
+        "token_shield_many": "{{count}} Indicatori Scudo",
+        "token_shield_other": "{{count}} Indicatori Scudo",
+        "underConstruction": "In allestimento!"
     },
     "navbar": {
-        "titleLong": "The Witcher: Old World Helper",
-        "titleShort": "Old World Helper",
+        "titleLong": "The Witcher: Il Vecchio Mondo Helper",
+        "titleShort": "Il Vecchio Mondo Helper",
         "communityLinks": "$t(communityLinks.title)",
-        "gameplayTools": "Gameplay Tools",
+        "gameplayTools": "Strumenti di gioco",
         "setupHelper": "$t(setupHelper.title)",
         "locationTokens": "$t(locationTokens.title)",
         "monsterRoller": "$t(monsterRoller.title)",
         "lostMount": "$t(lostMount.title)",
-        "browseAllTools": "Browse All Tools",
-        "projectHelp": "Project Help",
+        "browseAllTools": "Scorri tutti i tool",
+        "projectHelp": "Aiuta il progetto",
         "githubIssues": "GitHub Issues",
-        "githubDiscussions": "GitHub Discussions",
+        "githubDiscussions": "Discussioni su GitHub",
         "projectTimeline": "$t(footer.projectTimeline)",
         "__flag": "🇮🇹"
     },
     "monsterPicker": {
-        "toggle": "Toggle changes:",
-        "sirenExplain": "Siren excluded as it can't be randomly selected",
-        "legendary": "Legendary",
-        "allLegendary": "All Legendary",
-        "title": "Roll A New Monster"
+        "toggle": "Legenda filtri:",
+        "sirenExplain": "Le sirene sono escluse, non vengono estratte randomicamente",
+        "legendary": "Leggendario",
+        "allLegendary": "Tutti i Leggendari",
+        "title": "Estrai un nuovo mostro"
     },
     "monsterRoller": {
         "title": "Monster Roller"
     },
     "exps": {
-        "adventurePack": "Adventure Pack",
-        "lostMount": "Lost Mount",
-        "ciri": "Ciri",
-        "wildHunt": "Wild Hunt",
-        "monsterTrail": "Monster Trail",
-        "mages": "Mages",
-        "legendaryHunt": "Legendary Hunt",
-        "skellige": "Skellige",
-        "monsterPack": "Monster Pack",
+        "adventurePack": "Espansione \"Avventure\"",
+        "lostMount": "Espansione \"Destriero Perduto\"",
+        "ciri": "Espansione \"Ciri\"",
+        "wildHunt": "Espansione \"Caccia Selvaggia\"",
+        "monsterTrail": "Espansione \"Sulle Tracce dei Mostri\"",
+        "mages": "Espansione \"Maghi\"",
+        "legendaryHunt": "Espansione \"Caccia Leggendaria\"",
+        "skellige": "Espansione \"Skellige\"",
+        "monsterPack": "Espansione \"Mostri\"",
         "mountedEredin": "$t(monsters.Mounted Eredin)"
     },
     "locationTokens": {
-        "title": "Location Tokens",
-        "mountain": "Mountain",
-        "forest": "Forest",
-        "water": "Water",
+        "title": "Segnalini Luogo",
+        "mountain": "Montagna",
+        "forest": "Foresta",
+        "water": "Acqua",
         "Behelt Nar": "Behelt Nar",
         "Kaer Seren": "Kaer Seren",
         "Hengfors": "Hengfors",
@@ -99,37 +99,37 @@
             {
                 "name": "$t(setupHelper.title)",
                 "link": "#/setupHelper",
-                "desc": "A dynamically updated set of consolidated instructions for any expansion and player combination.",
+                "desc": "Un set di istruzioni consolidate, aggiornato dinamicamente, per qualsiasi espansione e combinazione di giocatori.",
                 "btn": "Wind's howling…"
             },
             {
                 "name": "$t(locationTokens.title)",
                 "link": "#/locationTokens",
-                "desc": "Easily draw any terrain token type. Always randomized. No shuffling of cardboard tokens.",
-                "btn": "Explore the Continent"
+                "desc": "Estrai in semplicità e randomicamente i segnalini terreno. Non avrai più bisogno di mescolare i gettoni di cartone a mano.",
+                "btn": "Esplora il continente"
             },
             {
                 "name": "$t(monsterRoller.title)",
                 "link": "#/monsterRoller",
-                "desc": "Tired of shuffling your tokens, monster cards, and hunting down the mini?",
+                "desc": "Stanco di mescolare i tuoi gettoni, carte mostro e cercare la miniatura giusta?",
                 "btn": "Damn, you're ugly"
             },
             {
                 "name": "$t(communityLinks.title)",
                 "link": "#/communityLinks",
-                "desc": "A collection of neat and awesome links from the community. Always growing!",
+                "desc": "Una raccolta di fantastici collegamenti dalla comunità. Sempre in crescita!",
                 "btn": "Show me"
             },
             {
                 "name": "$t(inventoryChecker.title)",
                 "link": "#/inventoryChecker",
-                "desc": "To help those just receiving their The Witcher: Old World game, here's an in-depth guide on what you (hopefully) received.",
+                "desc": "Per aiutare coloro che hanno appena ricevuto il gioco The Witcher: Il Vecchio Mondo, ecco una guida approfondita su ciò che (si spera) tu abbia ricevuto.",
                 "btn": "Medallion's humming…"
             },
             {
                 "name": "$t(lostMount.title)",
                 "link": "#/lostMount",
-                "desc": "A more specific variant of the Location Token page with two tokens to choose from.",
+                "desc": "Una variante più specifica della pagina dei Segnalini Luogo con due gettoni tra cui scegliere.",
                 "btn": "Come, Roach"
             }
         ]
@@ -182,10 +182,10 @@
         "Koshchey": "Koshchey",
         "Kayran": "Kayran",
         "Siren": "Siren",
-        "Mounted Eredin": "Mounted Eredin",
-        "lvl1": "Level I Monster",
-        "lvl2": "Level II Monster",
-        "lvl3": "Level III Monster",
+        "Mounted Eredin": "Eredin a Cavallo",
+        "lvl1": "Mostro di Livello I",
+        "lvl2": "Mostro di Livello II",
+        "lvl3": "Mostro di Livello III",
         "legendaryHunt": [
             "$t(monsters.Imperial Golem)",
             "$t(monsters.Cyclops)",
@@ -198,22 +198,22 @@
         ]
     },
     "setupHelper": {
-        "title": "Setup Helper",
-        "error": "Error, number of players is invalid. Must be between 1 and 5.",
-        "collapse": "Collapse All",
-        "expand": "Expand All",
+        "title": "Aiuto alla preparazione",
+        "error": "Errore, numero di giocatori non valido. Deve essere compreso tra 1 e 5.",
+        "collapse": "Collassa tutto",
+        "expand": "Espandi tutto",
         "base": {
-            "1": "Set out the playmat or game boards.",
-            "actionCards": "Shuffle the Action Card deck and place it above the Action Card slots. Reveal cards until you have 3 “0-cost” cards, which go in the 3 lowest spaces (face up). Reshuffle any other revealed cards, then reveal 3 more cards for the remaining spaces (face up).",
+            "1": "Posiziona il tappetino o il tabellone di gioco.",
+            "actionCards": "Mescola il mazzo Carte Azione e posizionalo sopra lo spazio Carte Azione. Rivela carte finché non ottieni 3 carte a “costo 0”. Posizionale nei 3 spazi più in basso nella plancia (a faccia in su). Rimescola le altre carte rivelate, poi rivela altre 3 carte per gli spazi rimanenti (a faccia in su).",
             "attrTrophies": [
-                "Draw 1 random Attribute Trophy and place it on the edge of the board, below the Exploration Card slots, face up.",
-                "Draw 1 random Attribute Trophy and place it on the edge of the board, below the Exploration Card slots, face up.",
-                "Draw 4 Attribute Trophies, one for each attribute, and place them on the edge of the board, below the Exploration Card slots, face up.",
-                "Draw 4 Attribute Trophies, one for each attribute, and place them on the edge of the board, below the Exploration Card slots, face up.",
-                "Place all 8 Attribute Trophies on the edge of the board, below the Exploration Card slots, face up.",
-                "Place all 8 Attribute Trophies on the edge of the board, below the Exploration Card slots, face up."
+                "Pesca 1 Trofeo Attributo casuale e posizionalo (a faccia in su) sul bordo del tabellone nello spazio apposito, si trova sotto gli spazi dedicati alle Carte Esplorazione.",
+                "Pesca 1 Trofeo Attributo casuale e posizionalo (a faccia in su) sul bordo del tabellone nello spazio apposito, si trova sotto gli spazi dedicati alle Carte Esplorazione.",
+                "Pesca 4 Trofei Attributo, uno per ogni attributo, e posizionali (a faccia in su) sul bordo del tabellone nello spazio apposito, si trova sotto gli spazi dedicati alle Carte Esplorazione.",
+                "Pesca 4 Trofei Attributo, uno per ogni attributo, e posizionali (a faccia in su) sul bordo del tabellone nello spazio apposito, si trova sotto gli spazi dedicati alle Carte Esplorazione.",
+                "Posiziona tutti gli 8 Trofei Attributo (a faccia in su) sul bordo del tabellone nello spazio apposito, si trova sotto gli spazi dedicati alle Carte Esplorazione.",
+                "Posiziona tutti gli 8 Trofei Attributo (a faccia in su) sul bordo del tabellone nello spazio apposito, si trova sotto gli spazi dedicati alle Carte Esplorazione."
             ],
-            "potions": "Shuffle the Potion deck and place it on the edge of the board, below the Action Cards.",
+            "potions": "Mescola il mazzo delle Pozioni e posizionalo sul bordo del tabellone, si trova sotto lo spazio dedicato alle Carte Azione.",
             "decks": "Shuffle the City Exploration deck and Wilds Exploration deck. Do not shuffle the Event deck! Place each in the appropriate slot on the game board.",
             "tokens": "Place Gold Tokens, Poker Dice, and Closed Tavern token or mini near the game board.",
             "locationTokens": "Sort Location Tokens into 3 piles by terrain type. Shuffle each pile and place them (face down) near the game board. Draw 1 token from each pile and place them (face up) on their slots on the game board (to the right of the Monster slots).",
@@ -233,7 +233,7 @@
                 "5": "Set up Monsters:"
             },
             "monsterFightDeck": "Shuffle the Monster Fight deck and place it (face down) near the game board.",
-            "startingPlayer": "Determine the starting player randomly, or it is whoever most recently read a Witcher book. Players choose Player Boards via any method they wish; see p. 7 of core rules for a fair drafting method.",
+            "startingGiocatore": "Determine the starting player randomly, or it is whoever most recently read a Witcher book. Giocatores choose Giocatore Boards via any method they wish; see p. 7 of core rules for a fair drafting method.",
             "playerSetup": {
                 "base": "Take a Help Card, player board, and matching miniature (with colored ring), cubes, Shield marker, scoring token, and starting deck of 10 cards. (Starting cards have a School icon in the top right corner.)",
                 "baseMages": "Take a Help Card, player board, and matching miniature (with colored ring), cubes, Shield or Energy marker, scoring token, and starting deck of 10 cards. (Starting cards have a School icon in the top right corner.)",
@@ -343,7 +343,7 @@
             "monsterFightDeck": "Shuffle the Monster Fight deck and place it (face down) near the game board. Place the Charge/Bite token near the deck.",
             "enemies": [
                 "Choose a member of the Wild Hunt to face this game. Place its card (Side A up) and its 4 Special Attack cards near the board.",
-                "Place Shield Tokens on the Wild Hunt member based on the difficulty.",
+                "Place Indicatori Scudo on the Wild Hunt member based on the difficulty.",
                 "Draw a Mountain Location Token, place the Wild Hunt miniature there, and shuffle that token back in.",
                 "Place the 6 Hound tokens or miniatures and the Hound card matching the player count nearby."
             ],
@@ -387,6 +387,7 @@
         "cardSubtitle": "Cards",
         "noteTitle": "Notes",
         "noteText": [
+            "Questa è una prima bozza per far arrivare Controllo Inventario nelle mani della sconda ondata di spedizioni il più velocemente possibile e, come tale, sarà minimale e (probabilmente) privo di traduzione.",
             "This is currently a first pass to get this inventory checker into the hands of the second wave of shipments as fast as possible, and as such, will be minimal and (probably) lacking translation.",
             "I aim to add different sections for the tokens and miniatures shortly after this goes live.",
             "Currently, the check boxes are not persistent. If you refresh or navigate away from this page, you will lose your progress. Apologies for the inconvenience while I sort this out."
@@ -484,9 +485,9 @@
         "Skellige Exploration cards": "Skellige Exploration cards"
     },
     "communityLinks": {
-        "title": "Community Links",
+        "title": "Collegamenti della comunità",
         "contentType": {
-            "link": "Link",
+            "link": "Collegamenti",
             "video": "Video",
             "pdf": "PDF",
             "member": "Community member created"
@@ -535,24 +536,24 @@
         "title": "Lost Mount Locations"
     },
     "footer": {
-        "aboutTitle": "About me",
+        "aboutTitle": "Su di me",
         "aboutBody": [
-            "I am a one-man team and I work on this unofficial fan website in my spare time. If you appreciate the work I do, consider buying me a coffee!",
-            "Updates to this site will continuously roll out. If you're interested in participating in the improvement of this tool, please check out the GitHub links to fill out bug reports, enhancement suggestions, see my current tasks and ideas, participate in polls for the next major improvement/feature I work on, and more!"
+            "Sono un one-man team e lavoro su questo \"fan site\" non ufficiale nel mio tempo libero. Se apprezzi il lavoro che faccio, valuta l'idea di offrirmi un caffè!",
+            "Il sito verrà aggiornato continuamente. Se sei interessato a partecipare al miglioramento di questo tool, usa i collegamenti a GitHub per compilare segnalazioni di bug, suggerimenti di miglioramento, vedere le mie attività e idee attuali, partecipare a sondaggi per il prossimo importante miglioramento/funzionalità su lavorare, e altro ancora!"
         ],
         "github": "GitHub",
-        "projectTimeline": "Project Timeline",
+        "projectTimeline": "Timeline di progetto",
         "githubLinks": [
             {
-                "text": "Find a bug?",
+                "text": "Hai trovato un bug?",
                 "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBUG%5D+"
             },
             {
-                "text": "Enhancement idea?",
+                "text": "Suggerisci un miglioramento",
                 "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=%5BENHANCEMENT%5D+"
             },
             {
-                "text": "Discussions",
+                "text": "Discussioni",
                 "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/discussions"
             },
             {
@@ -560,30 +561,30 @@
                 "link": "https://github.com/users/swirle13/projects/2/views/3"
             },
             {
-                "text": "Task Board",
+                "text": "Board delle attività",
                 "link": "https://github.com/users/swirle13/projects/2/views/1"
             },
             {
-                "text": "All open bugs/enhancements",
+                "text": "Tutti i bugs/enhancements aperti",
                 "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
             },
             {
-                "text": "Source code",
+                "text": "Codice Sorgente",
                 "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool"
             }
         ],
-        "communities": "Communities",
+        "communities": "Comunità",
         "communitiesLinks": [
             {
                 "text": "$t(communityLinks.officialDiscord)",
                 "link": "https://discord.com/invite/mX8yvYQTuq"
             },
             {
-                "text": "Official Twitter",
+                "text": "Twitter Ufficiale",
                 "link": "https://twitter.com/board_go26242"
             },
             {
-                "text": "Official Instagram",
+                "text": "Instagram Ufficiale",
                 "link": "https://www.instagram.com/go.on.board"
             },
             {
@@ -595,10 +596,10 @@
                 "link": "https://boardgamegeek.com/boardgame/331106/witcher-old-world"
             }
         ],
-        "supportTitle": "Support Me",
+        "supportTitle": "Supportami",
         "supportLinks": [
             {
-                "text": "Buy me a coffee ☕️",
+                "text": "Offrimi un caffè ☕️",
                 "link": "https://bmc.link/swirle13"
             }
         ]
