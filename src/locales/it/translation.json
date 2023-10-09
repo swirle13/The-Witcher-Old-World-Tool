@@ -214,25 +214,25 @@
                 "Posiziona tutti gli 8 Trofei Attributo (a faccia in su) sul bordo del tabellone nello spazio apposito, si trova sotto gli spazi dedicati alle Carte Esplorazione."
             ],
             "potions": "Mescola il mazzo delle Pozioni e posizionalo sul bordo del tabellone, si trova sotto lo spazio dedicato alle Carte Azione.",
-            "decks": "Shuffle the City Exploration deck and Wilds Exploration deck. Do not shuffle the Event deck! Place each in the appropriate slot on the game board.",
-            "tokens": "Place Gold Tokens, Poker Dice, and Closed Tavern token or mini near the game board.",
-            "locationTokens": "Sort Location Tokens into 3 piles by terrain type. Shuffle each pile and place them (face down) near the game board. Draw 1 token from each pile and place them (face up) on their slots on the game board (to the right of the Monster slots).",
+            "decks": "Mescola il mazzo Esplorazione Città e il mazzo Esplorazione Regioni Selvagge. Non mescolare il mazzo delle Carte Evento! Posiziona ciascuno nello slot appropriato sul tabellone.",
+            "tokens": "Posiziona le monete, i dadi da poker e il Segnalino Taverna Chiusa vicino al tabellone di gioco.",
+            "locationTokens": "Disponi i Segnalini Luogo in 3 pile, divise per tipo di terreno. Mescola ogni pila e posizionala (a faccia in giù) vicino al tabellone. Pesca 1 segnalino da ogni pila e posizionalo (a faccia in su) nei rispettivi spazi sul tabellone (a destra degli spazi Mostro).",
             "monsterSetup": {
-                "0": "Sort Monster Cards and Monster Tokens by level (I, II, and III). Place the cards near the game board (face up). Shuffle the tokens and place them near the game board (face down).",
-                "1": "Move $t(common.token, { 'context': 'level1', 'count': {{count}}}) into a separate “additional monsters” stack. See p. 26 of core rules for how these are used.",
+                "0": "Raggruppa le Carte Mostro e i Segnalini Mostro per livello (I, II e III). Posiziona le carte vicino al tabellone di gioco (a faccia in su). Mescola i gettoni e posizionali vicino al tabellone (a faccia in giù).",
+                "1": "Posiziona $t(common.token, { 'context': 'level1', 'count': {{count}}}) in una pila addizionale separata. Vedi pag. 26 del Regolamento Base per informazioni sull'utilizzo della \"pila addizionale\".",
                 "2": [
-                    "Draw 3 Monster Tokens: One of each level.",
-                    "Draw 3 Monster Tokens: One of each level.",
-                    "Draw 3 Monster Tokens: 2 × Level I and 1 × Level II.",
-                    "Draw 3 Monster Tokens: 3 × Level I.",
-                    "Draw 3 Monster Tokens: 3 × Level I.",
-                    "Draw 3 Monster Tokens: 3 × Level I."
+                    "Pesca 3 segnalini mostro: uno per ogni livello.",
+                    "Pesca 3 segnalini mostro: uno per ogni livello.",
+                    "Pesca 3 Segnalini Mostro: 2 di Livello I e 1 di Livello II.",
+                    "Pesca 3 Segnalini Mostro: 3 di Livello I.",
+                    "Pesca 3 Segnalini Mostro: 3 di Livello I.",
+                    "Pesca 3 Segnalini Mostro: 3 di Livello I."
                 ],
-                "3": "Place the three Monster Tokens (randomly) in locations on the map matching the three face-up Location Tokens.",
-                "4": "Turn the three Monster Tokens face up and place their corresponding Monster Cards in the slots on the game board matching the corresponding Location Tokens. Replace the tokens with miniatures if you have them.",
-                "5": "Set up Monsters:"
+                "3": "Posiziona i tre Segnalini Mostro (a caso) in posizioni sulla mappa corrispondenti ai tre Segnalini Luogo già a faccia in su.",
+                "4": "Gira i tre Segnalini Mostro a faccia in su: cerca e posiziona la corrispondente Carta Mostro nello spazio sul tabellone di gioco in concomitanza del Segnalino Luogo corrispondente per ogniuno dei tre mostri estratti in questo modo. Puoi sostituire i segnalini con le miniature, se le hai.",
+                "5": "Prepara i mostri:"
             },
-            "monsterFightDeck": "Shuffle the Monster Fight deck and place it (face down) near the game board.",
+            "monsterFightDeck": "Mescola il mazzo Scontri Mostro e posizionalo (a faccia in giù) vicino al tabellone.",
             "startingPlayer": "Il Giocatore che ha letto più di recente un libro di The Withcer è il Primo Giocatore; in alternativa, sceglietelo casualmente. I Giocatori possono distribuire le Plance Giocatore con qualunque metodo di loro scelta; vedere pag. 7 del Regolamento Base per un metodo di distribusione imparziale.",
             "playerSetup": {
                 "base": "Take a Help Card, player board, and matching miniature (with colored ring), cubes, Shield marker, scoring token, and starting deck of 10 cards. (Starting cards have a School icon in the top right corner.)",
@@ -253,7 +253,7 @@
                 "miniature": "Place their miniature on their School location on the map.",
                 "drawBaseHeader": "Draw the following cards and gold based on player position: ",
                 "drawWildHunt": "Draw 5 cards and take 3 Gold.",
-                "title": "Each player must:",
+                "title": "Ogni giocatore deve:",
                 "drawBaseResources": [
                     [
                         "placeholder for 0 players"
