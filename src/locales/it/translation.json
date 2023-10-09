@@ -1,6 +1,6 @@
 {
     "common": {
-        "expansions": "Expansions",
+        "expansions": "Espansioni",
         "Step": "Step",
         "players": "Giocatori",
         "player1": "Giocatore 1",
@@ -383,52 +383,51 @@
         }
     },
     "inventoryChecker": {
-        "title": "Inventory Checker",
-        "cardSubtitle": "Cards",
-        "noteTitle": "Notes",
+        "title": "Controllo Componenti",
+        "cardSubtitle": "Carte",
+        "noteTitle": "Note",
         "noteText": [
             "Questa è una prima bozza per far arrivare Controllo Inventario nelle mani della sconda ondata di spedizioni il più velocemente possibile e, come tale, sarà minimale e (probabilmente) privo di traduzione.",
-            "This is currently a first pass to get this inventory checker into the hands of the second wave of shipments as fast as possible, and as such, will be minimal and (probably) lacking translation.",
-            "I aim to add different sections for the tokens and miniatures shortly after this goes live.",
-            "Currently, the check boxes are not persistent. If you refresh or navigate away from this page, you will lose your progress. Apologies for the inconvenience while I sort this out."
+            "Il mio obiettivo è aggiungere diverse sezioni per i token e le miniature subito dopo la pubblicazione.",
+            "Al momento le spunte di controllo non sono persistenti. Se aggiorni o esci da questa pagina perderai i tuoi progressi. Mi scuso per l'inconveniente mentre risolvo la questione."
         ],
-        "legendHeader": "Legend",
+        "legendHeader": "Legenda",
         "legendBody": {
-            "header": "If two columns: read left to right, top to bottom. This will ensure the running totals of cards spread across multiple packs (e.g. \"Monster cards: 11 (11/29)\") are read properly.",
+            "header": "Se su due colonne: leggi da sinistra a destra, dall'alto in basso. Ciò garantirà che i totali parziali delle carte distribuite su più mazzi (ad esempio \"Carte Mostro: 11 (29/11)\") vengano letti correttamente.",
             "body": [
                 {
                     "title": "TWOW(XX) Y/Z",
                     "details": [
-                        "This is the title of the gray card for each pack of cards. This is how I refer to each pack.",
-                        "XX is the arbitrary code that the supplier used to identify the groups of cards.",
-                        "Y is the current number of the pack out of total packs for code XX.",
-                        "Z is the total number of packs for value XX."
+                        "Questo è il titolo della carta grigia presente in ogni mazzo di carte impacchettato. Questo è il modo in cui mi riferisco a ciascun pacchetto.",
+                        "XX è il codice arbitrario utilizzato dal fornitore per identificare i gruppi di carte.",
+                        "Y è il numero corrente del pacchetto sul totale dei pacchetti per il codice XX.",
+                        "Z è il numero totale di pacchietti per valore XX."
                     ]
                 },
                 {
                     "title": "$t(common.expansions)",
                     "details": [
-                        "These are the expansions that the cards belong to in this pack."
+                        "Queste sono le espansioni a cui appartengono le carte di questo pacchetto."
                     ]
                 },
                 {
                     "title": "Example Type Cards: X (Y/Z) OR X/Z",
                     "details": [
-                        "Example Type is the type of card, as referred to in Go On Board's \"Components\" lists.",
-                        "X is how many of the cards are found in this pack.",
-                        "Y is the current running total of this type of card across all packs. If excluded, all cards of this type were included in this pack",
-                        "Z is the total number of these cards you should have."
+                        "Example Type è il tipo di carta, come indicato negli elenchi \"Componenti\" della Go On Board.",
+                        "X è il numero di carte presenti in questo pacchetto.",
+                        "Y è il totale corrente di questo tipo di carta in tutti i pacchetti. Se viene omesso, tutte le carte di questo tipo sono incluse in questo pacchetto",
+                        "Z è il numero totale di queste carte che dovresti avere."
                     ]
                 },
                 {
                     "title": "(AP)",
                     "details": [
-                        "This is a disambiguation for Adventure Pack cards. These are distinguished by the star symbol in the top center of the card face."
+                        "Questa è una soluzione per chiarire le ambiguità delle carte dell'Espanzione \"Avventure\". Queste si distinguono dal simbolo con un piccola stella in alto al centro del lato anteriore della carta."
                     ]
                 }
             ]
         },
-        "Base Set": "Base Set",
+        "Base Set": "Gioco Base",
         "Adventure Pack, Wild Hunt, Monster Trail": "$t(exps.adventurePack), $t(exps.wildHunt), $t(exps.monsterTrail)",
         "Adventure Pack": "$t(exps.adventurePack)",
         "Wild Hunt, Mages, Adventure Pack": "$t(exps.wildHunt), $t(exps.mages), $t(exps.adventurePack)",
@@ -437,52 +436,52 @@
         "Mages": "$t(exps.mages)",
         "Legendary Hunt": "$t(exps.legendaryHunt)",
         "Skellige": "$t(exps.skellige)",
-        "cardsInPack": "Cards in pack",
-        "Starting Action cards": "Starting Action cards",
-        "Action cards": "Action cards",
-        "Help cards": "Help cards",
-        "Solo Help card": "Solo Help card",
-        "Monster cards": "Monster cards",
-        "City Exploration cards": "City Exploration cards",
-        "Attribute Trophy cards": "Attribute Trophy cards",
-        "Monster Fight cards": "Monster Fight cards",
-        "Event cards": "Event cards",
-        "Potion cards": "Potion cards",
-        "Witcher Trophy cards": "Witcher Trophy cards",
-        "Wilds Exploration cards": "Wilds Exploration cards",
-        "(AP) Wilds Exploration cards": "(AP) Wilds Exploration cards",
-        "Wild Hunt Monster Fight cards": "Wild Hunt Monster Fight cards",
-        "Special Monster Fight cards": "Special Monster Fight cards",
-        "(AP) City Exploration cards": "(AP) City Exploration cards",
-        "(AP) Event cards": "(AP) Event cards",
-        "Mutagens": "Mutagens",
-        "Wild Hunt Help": "Wild Hunt Help",
-        "Hounds": "Hounds",
-        "Wild Hunt Monsters": "Wild Hunt Monsters",
-        "Wild Hunt Exploration - Stage 1": "Wild Hunt Exploration - Stage 1",
-        "Wild Hunt Exploration - Stage 2": "Wild Hunt Exploration - Stage 2",
-        "Wild Hunt Event": "Wild Hunt Event",
+        "cardsInPack": "Carte nel pacchetto",
+        "Starting Action cards": "Carte Azione Iniziali",
+        "Action cards": "Carte Azione",
+        "Help cards": "Carte Aiuto",
+        "Solo Help card": "Carta aiuto Solitario",
+        "Monster cards": "Carte Mostrro",
+        "City Exploration cards": "Carte Esplorazione Città",
+        "Attribute Trophy cards": "Carte Trofeo Attributi",
+        "Monster Fight cards": "Carte Scontri Mostro",
+        "Event cards": "Carte Evento",
+        "Potion cards": "Carte Pozione",
+        "Witcher Trophy cards": "Carte Trofeo Witcher",
+        "Wilds Exploration cards": "Carte Esplorazione Regioni Selvagge",
+        "(AP) Wilds Exploration cards": "(AP) Carte Esplorazione Regioni Selvagge",
+        "Wild Hunt Monster Fight cards": "Carte Caccia Selvaggia",
+        "Special Monster Fight cards": "Carte Attacco Speciale Mostri",
+        "(AP) City Exploration cards": "(AP) Carte Esplorazione Città",
+        "(AP) Event cards": "(AP) Carte Evento",
+        "Mutagens": "Mutageni",
+        "Wild Hunt Help": "carte Aiuto Caccia Selvaggia",
+        "Hounds": "Segugi della Caccia Selvaggia",
+        "Wild Hunt Monsters": "Membri della Caccia Selvaggia",
+        "Wild Hunt Exploration - Stage 1": "Carte Esplorazione Caccia Selvaggia - Stadio 1",
+        "Wild Hunt Exploration - Stage 2": "Carte Esplorazione Caccia Selvaggia - Stadio 2",
+        "Wild Hunt Event": "Carte Evento Caccia Selvaggia",
         "Mage Special Action": "Mage Special Action",
-        "Lost Mount": "Lost Mount",
-        "Monster card (Troll)": "Monster card (Troll)",
-        "Trophy cards": "Trophy cards",
-        "Bomb cards": "Bomb cards",
-        "Starting Action cards (Manticore)": "Starting Action cards (Manticore)",
+        "Lost Mount": "Destriero Perduto",
+        "Monster card (Troll)": "Carta Mostro (Troll)",
+        "Trophy cards": "Carte Trofeo",
+        "Bomb cards": "Carte Bomba",
+        "Starting Action cards (Manticore)": "Carte Azione Iniziali (Manticora)",
         "Advanced Action cards": "Advanced Action cards",
-        "Starting Action cards (Ciri)": "Starting Action cards (Ciri)",
-        "Unique Action cards (witchers)": "Unique Action cards (witchers)",
-        "Large Monster cards": "Large Monster cards",
+        "Starting Action cards (Ciri)": "Carte Azione Iniziali (Ciri)",
+        "Unique Action cards (witchers)": "Carte Azione Uniche (Witchers)",
+        "Large Monster cards": "Carte grandi Mostro",
         "Difficulty Jumbo Reference cards": "Difficulty Jumbo Reference cards",
-        "Mage Unique Action cards": "Mage Unique Action cards",
-        "Mage Trophy cards": "Mage Trophy cards",
-        "Mage Action cards": "Mage Action cards",
-        "Legendary Monster movement cards": "Legendary Monster movement cards",
-        "Legendary Hunt Special Fight cards": "Legendary Hunt Special Fight cards",
-        "Large Legendary Monster cards": "Large Legendary Monster cards",
-        "Large Fight Reference card": "Large Fight Reference card",
-        "Dagon Bonus Monster cards": "Dagon Bonus Monster cards",
-        "Skellige Event cards": "Skellige Event cards",
-        "Skellige Exploration cards": "Skellige Exploration cards"
+        "Mage Unique Action cards": "Carte Azione Uniche dei Maghi",
+        "Mage Trophy cards": "Carte Trofeo Maghi",
+        "Mage Action cards": "Carte Azione Maghi",
+        "Legendary Monster movement cards": "Carte Movimento Mostro Leggendario",
+        "Legendary Hunt Special Fight cards": "Scarte Scontro Speciali Legendary Hunt",
+        "Large Legendary Monster cards": "Carte Mostro Leggendario grandi",
+        "Large Fight Reference card": "Carta Grande Aiuto",
+        "Dagon Bonus Monster cards": "Carte Bonus Dagon",
+        "Skellige Event cards": "Carte Evento Skellige",
+        "Skellige Exploration cards": "Carte Esplorazione Skellige"
     },
     "communityLinks": {
         "title": "Collegamenti della comunità",
