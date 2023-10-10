@@ -31,7 +31,7 @@
         "token_shield_one": "{{count}} žeton Štítu",
         "token_shield_few": "{{count}} žetony Štítu",
         "token_shield_many": "{{count}} žetonů Štítu",
-       "token_shield_other": "{{count}} žetonu Štítu",
+        "token_shield_other": "{{count}} žetonu Štítu",
         "underConstruction": "Ve vývoji!"
     },
     "navbar": {
@@ -371,7 +371,7 @@
             "decks": "Zamíchejte balíček průzkumu Skellige. Nemíchejte balíček událostí Skellige! Oba umístěte na jejich místo, nad ostrovy na herním plánu.",
             "dagon": "Umístěte figurku Dagona na počáteční místo dle počtu hráčů. Zamíchejte bonusové karty Dagona a umístěte je, kartu nestvůry Dagona (speciální schopností nahoru) a žetony stopování Dagona poblíž stupnice nebezpečí.",
             "dagonMT": "Umístěte figurku Dagona na počáteční místo dle počtu hráčů. Zamíchejte bonusové karty Dagona a umístěte je, kartu nestvůry Dagona (čtyřmi speciálními útoky nahoru) a žetony stopování Dagona poblíž stupnice nebezpečí.",
-            "siren": "Umístěte figurku Sirény na Dagonovu lokaci a poblíž její kartu nestvůry.",
+            "siren": "Umístěte figurku Sirény na Dagonovu lokaci a poblíž její kartu nestvůry."
         },
         "magesExp": {
             "actionCards": "Opakujte kroky výše pro karty akcí mágů. (případně nahraďte tyto krok úplně, pokud všichni hrají mágy)"
