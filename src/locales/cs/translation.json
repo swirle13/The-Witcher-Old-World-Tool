@@ -537,7 +537,7 @@
             }
         ]
     },
-    "Mount": {
+    "lostMount": {
         "title": "Umístění Zbloudilého oře"
     },
     "footer": {
