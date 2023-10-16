@@ -1,10 +1,9 @@
-import React from "react";
-import { Accordion, Col, Container, Form, FormCheck, Row } from 'react-bootstrap';
+import { Accordion, Col, Container, Row } from 'react-bootstrap';
 import PageTitle from '../components/PageTitle';
 import { simplifiedCards } from '../classes/inventory';
 import { useState } from 'react';
 import ImageContainer from '../components/ImageContainer';
-import img = require("../img/inventory/adventurePackExample.jpg");
+import img = require("../img/inventory/adventurePackExample.png");
 
 export default function inventoryChecker({ t }) {
     const cardPacks = simplifiedCards;
@@ -80,8 +79,8 @@ export default function inventoryChecker({ t }) {
                                           No longer necessary to use Object.entries now that we have a
                                           standardized object structure, Card.
                                 */}
-                                {Object.entries(pack.cards).map((type) => (
-                                    <Row>
+                                {Object.entries(pack.cards).map((type, idx) => (
+                                    <Row key={idx}>
                                         <Col>
                                             <li key={type[0]}>{t(`inventoryChecker.${type[0]}`)}: {type[1]}</li>
                                         </Col>
