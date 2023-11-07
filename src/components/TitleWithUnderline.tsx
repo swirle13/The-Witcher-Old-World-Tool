@@ -7,10 +7,10 @@ import { ElementType, HTMLAttributes } from "react";
  * Supports h1 through h6. Contains a default margin above the header, regardless of HeaderSize, of 1.5rem.
  * 
  * @param {string} [obj.HeaderText] - Text to display in header.
- * @param {boolean} [obj.HeaderUnderline] - optional - Toggle for underline or not. Default: true
- * @param {number} [obj.HeaderSize] - optional - Header size; corresponds to html tag, e.g. h1.
+ * @param {boolean} [obj.HeaderUnderline] - (optional) Toggle for underline or not. Default: true
+ * @param {number} [obj.HeaderSize] - (optional) Header size; corresponds to html tag, e.g. h1.
  *                                    Allowed values: [1, 2, 3, 4, 5, 6]. Default: 1.
- * @param {conditionalRender} [obj.ConditionalRender] - optional - Sets HeaderUnderline to conditionally
+ * @param {conditionalRender} [obj.ConditionalRender] - (optional) Sets HeaderUnderline to conditionally
  *                              render up until the chosen size. Allowed values: conditionalRender enum containing
  *                              [xs, sm, md, lg, xl, xxl]
  * @returns Row containing title with horizontal rule below, if enabled.

@@ -1,5 +1,4 @@
-import { Row, Col } from "react-bootstrap";
-import HorizontalSpacer, { conditionalRender } from "./HorizontalSpacer";
+import { conditionalRender } from "./HorizontalSpacer";
 import Title from "./TitleWithUnderline";
 
 export default function PageTitle(

@@ -12,6 +12,8 @@ import "../css/SetupHelper.css";
 import PageTitle from '../components/PageTitle';
 import { AccordionEventKey } from 'react-bootstrap/esm/AccordionContext';
 import { lenToStrArr } from '../util/generic';
+import PageSeparator from "../components/PageSeparator";
+import { conditionalRender } from "../components/HorizontalSpacer";
 
 const expansions = ["Legendary Hunt", "Mages", "Monster Pack", "Monster Trail", "Skellige", "Adventure Pack", "Wild Hunt"];
 const expansionsImages = [legendaryHunt, mages, monsterPack, monsterTrail, skellige, adventurePack, wildHunt];
@@ -51,7 +53,7 @@ export default function SetupHelper({ t }) {
 
     return (
         <Container>
-            <PageTitle HeaderText={t('setupHelper.title')} ConditionalRender='d-lg-none' t={t} />
+            <PageTitle HeaderText={t('setupHelper.title')} ConditionalRender={conditionalRender.lg} />
             <Row className="gap-2 mb-4 pb-4">
                 <Col id="setupConfiguration" lg="4">
                     <Row className='justify-content-center' lg={1}>
@@ -117,8 +119,7 @@ export default function SetupHelper({ t }) {
                         </Col>
                     </Row>
                 </Col>
-                <div className="vr p-0 mx-2 d-none d-lg-block" />
-                <div className="d-lg-none my-3 px-5"><hr className='my-0' /></div>
+                <PageSeparator />
                 <Col id="setupInstructions">
                     <Stack gap={3}>
                         <Accordion alwaysOpen flush activeKey={stepsKeys} onSelect={handleSelect}>
