@@ -1,29 +1,11 @@
-import { Accordion, Col, Container, Row } from 'react-bootstrap';
+import { Accordion, Container, Row } from 'react-bootstrap';
 import PageTitle from '../components/PageTitle';
-import { simplifiedCards, cards } from '../classes/inventory';
-import { useState } from 'react';
-import img = require("../img/inventory/adventurePackExample.png");
-import CardDetails from '../components/CardDetails';
-import HorizontalSpacer from '../components/HorizontalSpacer';
+import { cards } from '../classes/inventory';
 import Title from '../components/TitleWithUnderline';
+import CardPack from '../components/CardPack';
 
 export default function inventoryChecker({ t }) {
-    const cardPacks = simplifiedCards;
-    const [packsState, setPacksState] = useState<Array<boolean>>(
-        new Array(cardPacks.length).fill(false)
-    );
-    // const [cardsState, setCardsState] = useState<Array<boolean>>(
-    //     new Array(simplifiedCards.length).fill(false)
-    // );
-
-    const handlePacksChange = (position: number) => {
-        const updatedPacksState = packsState.map((item, index) => index === position ? !item : item);
-        setPacksState(updatedPacksState);
-    };
-    // const handleCardsChange = (position: number) => {
-    //     const updatedCardsState = cardsState.map((item, index) => index === position ? !item : item);
-    //     setCardsState(updatedCardsState);
-    // };
+    const cardPacks = cards;
 
     return (
         <Container>
@@ -66,38 +48,8 @@ export default function inventoryChecker({ t }) {
                 HeaderSize={2}
             />
             <Row id="packRow" key="packRow" className="mb-2 justify-content-center" md="8">
-                {cardPacks.map((pack, index) => (
-                    <Row key={index} className="ps-6 justify-content-center">
-                        <h4 className='text-center'>{pack.name}</h4>
-                        <Row className='g-0'>
-                            {/* TODO: Update all of this ul/li crap with a new class for displaying data */}
-                            <CardDetails card={cards[0].cards[0]} />
-                            <ul className='ms-4'>
-                                <li key={"Expansions"}>
-                                    {/* TODO: expand pack.expansions array; no longer a single string */}
-                                    {t("common.expansions")}: {t(`inventoryChecker.${pack.expansions}`)}
-                                </li>
-                                {/* TODO: make these small, reusable components and not ul items
-                                          No longer necessary to use Object.entries now that we have a
-                                          standardized object structure, Card.
-                                */}
-                                {Object.entries(pack.cards).map((type, idx) => (
-                                    <Row key={idx}>
-                                        <Col>
-                                            <li key={type[0]}>{t(`inventoryChecker.${type[0]}`)}: {type[1]}</li>
-                                        </Col>
-                                        <Col>
-                                            {/* TODO: loop through all pack.cards.exampleImages images*/}
-                                            {/* <ImageContainer t={t} src={img} name={"adventurePackExample"} tName={"adventurePackExample"} /> */}
-                                        </Col>
-                                    </Row>
-                                ))}
-                                <li key={"cardsInPack"}>
-                                    {t("inventoryChecker.cardsInPack")}: {pack.cardsInPack}
-                                </li>
-                            </ul>
-                        </Row>
-                    </Row>
+                {cardPacks.map((pack) => (
+                    <CardPack pack={pack} t={t} key={pack.name} />
                 ))}
             </Row>
         </Container>
