@@ -1,9 +1,11 @@
 import { Accordion, Col, Container, Row } from 'react-bootstrap';
 import PageTitle from '../components/PageTitle';
-import { simplifiedCards } from '../classes/inventory';
+import { simplifiedCards, cards } from '../classes/inventory';
 import { useState } from 'react';
-import ImageContainer from '../components/ImageContainer';
 import img = require("../img/inventory/adventurePackExample.png");
+import CardDetails from '../components/CardDetails';
+import HorizontalSpacer from '../components/HorizontalSpacer';
+import Title from '../components/TitleWithUnderline';
 
 export default function inventoryChecker({ t }) {
     const cardPacks = simplifiedCards;
@@ -25,7 +27,7 @@ export default function inventoryChecker({ t }) {
 
     return (
         <Container>
-            <PageTitle HeaderText={t('inventoryChecker.title')} t={t} />
+            <PageTitle HeaderText={t('inventoryChecker.title')} />
             <Accordion id="NotesAccordion" flush defaultActiveKey="0">
                 <Accordion.Item eventKey="0" key={0}>
                     <Accordion.Header>
@@ -59,17 +61,17 @@ export default function inventoryChecker({ t }) {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
-            <Row id="cardTitleRow" className="gap-2 mb-4 pb-4">
-                <Col id="cardTitleCol">
-                    <h2 className='text-center mb-3'>{t('inventoryChecker.cardSubtitle')}</h2>
-                </Col>
-            </Row>
+            <Title
+                HeaderText={t('inventoryChecker.cardSubtitle')}
+                HeaderSize={2}
+            />
             <Row id="packRow" key="packRow" className="mb-2 justify-content-center" md="8">
                 {cardPacks.map((pack, index) => (
                     <Row key={index} className="ps-6 justify-content-center">
                         <h4 className='text-center'>{pack.name}</h4>
-                        <Row>
+                        <Row className='g-0'>
                             {/* TODO: Update all of this ul/li crap with a new class for displaying data */}
+                            <CardDetails card={cards[0].cards[0]} />
                             <ul className='ms-4'>
                                 <li key={"Expansions"}>
                                     {/* TODO: expand pack.expansions array; no longer a single string */}
@@ -86,7 +88,7 @@ export default function inventoryChecker({ t }) {
                                         </Col>
                                         <Col>
                                             {/* TODO: loop through all pack.cards.exampleImages images*/}
-                                            <ImageContainer t={t} src={img} name={"adventurePackExample"} tName={"adventurePackExample"} />
+                                            {/* <ImageContainer t={t} src={img} name={"adventurePackExample"} tName={"adventurePackExample"} /> */}
                                         </Col>
                                     </Row>
                                 ))}
