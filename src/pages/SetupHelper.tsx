@@ -18,7 +18,11 @@ import { conditionalRender } from "../components/HorizontalSpacer";
 const expansions = ["Legendary Hunt", "Mages", "Monster Pack", "Monster Trail", "Skellige", "Adventure Pack", "Wild Hunt"];
 const expansionsImages = [legendaryHunt, mages, monsterPack, monsterTrail, skellige, adventurePack, wildHunt];
 
-
+/**
+ * TODO: Revamp logic following react docs: "Choosing the State Structure" and related articles
+ * https://react.dev/learn/updating-arrays-in-state
+ * https://react.dev/learn/choosing-the-state-structure
+ */
 export default function SetupHelper({ t }) {
     const [players, setPlayers] = useState<number>(1);
     const [expansionsState, setExpansionsState] = useState<Array<boolean>>(
