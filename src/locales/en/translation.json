@@ -249,9 +249,7 @@
                 "drawWildHunt": "Draw 5 cards and take 3 Gold.",
                 "title": "Each player must:",
                 "drawBaseResources": [
-                    [
-                        "placeholder for 0 players"
-                    ],
+                    ["placeholder for 0 players"],
                     [
                         "$t(common.player1): $t(common.card, {'count': 5}), $t(common.gold, {'count': 3})"
                     ],
@@ -288,9 +286,7 @@
         "wildHunt": {
             "difficultyTitle": "Choose the game difficulty on the table below. This determines starting monsters and shields later.",
             "difficultyValues": [
-                [
-                    "placeholder for 0 players"
-                ],
+                ["placeholder for 0 players"],
                 [
                     "$t(monsters.lvl1)\n$t(common.token, { 'context': 'shield', 'count': 5 })",
                     "$t(monsters.lvl1)\n$t(common.token, { 'context': 'shield', 'count': 7 })",
@@ -420,6 +416,11 @@
                     ]
                 }
             ]
+        },
+        "card": {
+            "numInPack": "# in this pack",
+            "numSoFar": "# so far",
+            "numTotal": "# total"
         },
         "Base Set": "Base Set",
         "Adventure Pack, Wild Hunt, Monster Trail": "$t(exps.adventurePack), $t(exps.wildHunt), $t(exps.monsterTrail)",

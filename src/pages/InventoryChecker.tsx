@@ -8,9 +8,9 @@ export default function inventoryChecker({ t }) {
     const cardPacks = cards;
 
     return (
-        <Container>
+        <Container id="inventoryCheckerContainer" fluid="lg">
             <PageTitle HeaderText={t('inventoryChecker.title')} />
-            <Accordion id="NotesAccordion" flush defaultActiveKey="0">
+            <Accordion id="NotesAccordion" className="mx-auto p-2" defaultActiveKey="0" style={{ maxWidth: "750px" }}>
                 <Accordion.Item eventKey="0" key={0}>
                     <Accordion.Header>
                         {t('inventoryChecker.noteTitle')}
@@ -47,7 +47,7 @@ export default function inventoryChecker({ t }) {
                 HeaderText={t('inventoryChecker.cardSubtitle')}
                 HeaderSize={2}
             />
-            <Row id="packRow" key="packRow" className="mb-2 justify-content-center" md="8">
+            <Row id="packRow" key="packRow" className="mb-2 justify-content-center">
                 {cardPacks.map((pack) => (
                     <CardPack pack={pack} t={t} key={pack.name} />
                 ))}

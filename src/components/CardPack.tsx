@@ -1,6 +1,5 @@
 import { Row, Col, Card } from 'react-bootstrap';
 import { CardPack } from '../classes/inventory';
-import Title from './TitleWithUnderline';
 import CardDetails from './CardDetails';
 
 export default function CardPack(
@@ -8,11 +7,11 @@ export default function CardPack(
 ) {
     return (
         <>
-            <Row key={pack.name} className="ps-6 justify-content-center">
-                <Col>
-                    <Title HeaderText={pack.name} HeaderSize={3} />
-                    <Card className="mb-3">
-                        <Card.Body>
+            <Row id={`${pack.name}TitleCardRow`} key={pack.name} className="ps-6 justify-content-center" xs={1} >
+                <Col xs={11} md={6}>
+                    <Card className="mx-auto" style={{ border: "none" }}>
+                        <Card.Header as="h3" className="text-center">{pack.name}</Card.Header>
+                        <Card.Body className="mx-auto text-center">
                             <Card.Title>{t("common.expansions")}</Card.Title>
                             <Card.Text>
                                 {pack.expansions.map((exp, index) => (
@@ -24,9 +23,9 @@ export default function CardPack(
                     </Card>
                 </Col>
             </Row>
-            <Row className="row-cols-2">
+            <Row id={`${pack.name}ChildrenCardsRow`} className="row-cols-md-2 row-cols-1 g-4 g-lg-6 mt-0 mb-4">
                 {pack.cards.map((card, index) => (
-                    <Col>
+                    <Col key={index} className="d-flex justify-content-center">
                         <CardDetails card={card} key={index} />
                     </Col>
                 ))}
