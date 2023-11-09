@@ -32,7 +32,8 @@ export const cards: CardPack[] = [
                 numSoFar: 50,
                 numTotal: 50,
                 note: "5 sets of 10 cards per witcher",
-                exampleImage: require("../img/inventory/adventurePackExample.png"),
+                // TODO: Add starting card front examples
+                exampleImage: require("../img/inventory/witcherAction.jpg"),
             },
             {
                 type: "Action cards",
@@ -195,17 +196,18 @@ export const cards: CardPack[] = [
                 numSoFar: 28,
                 numTotal: 60,
                 note: "",
-                exampleImage: require("../img/inventory/adventurePackExample.png"),
+                // TODO: Add exploreWilds.jpg
+                exampleImage: require("../img/inventory/adventurePackWildsExplorationFront.jpg"),
             },
             {
-                type: "Wild Hunt Monster Fight cards",
+                type: "Wild Hunt Special Fight cards",
                 expansion: "Wild Hunt",
                 numInPack: 16,
                 numSoFar: 16,
                 numTotal: 16,
-                note: "",
-                // TODO: Replace example.jpg placeholder
-                exampleImage: require("../img/inventory/example.jpg"),
+                note: "4 cards per Wild Hunt member",
+                // TODO: Get monster fight back image
+                exampleImage: require("../img/inventory/wildHuntSpecialFightFront.jpg"),
             },
             {
                 type: "Special Monster Fight cards",
@@ -214,7 +216,7 @@ export const cards: CardPack[] = [
                 numSoFar: 4,
                 numTotal: 4,
                 note: "One for each monster ability, 1 through 4",
-                exampleImage: require("../img/inventory/monsterFight.jpg"),
+                exampleImage: require("../img/inventory/monsterFightSpecialFront.jpg"),
             },
             {
                 type: "(AP) City Exploration cards",
@@ -223,7 +225,8 @@ export const cards: CardPack[] = [
                 numSoFar: 59,
                 numTotal: 59,
                 note: "",
-                exampleImage: require("../img/inventory/adventurePackExample.png"),
+                // TODO: Add exploreCity.jpg
+                exampleImage: require("../img/inventory/adventurePackCityExplorationFront.jpg"),
             },
         ],
     },
@@ -239,7 +242,8 @@ export const cards: CardPack[] = [
                 numSoFar: 60,
                 numTotal: 60,
                 note: "",
-                exampleImage: require("../img/inventory/adventurePackExample.png"),
+                // TODO: Add exploreWilds.jpg
+                exampleImage: require("../img/inventory/adventurePackWildsExplorationFront.jpg"),
             },
             {
                 type: "(AP) Event cards",
@@ -248,7 +252,8 @@ export const cards: CardPack[] = [
                 numSoFar: 75,
                 numTotal: 81,
                 note: "Starts at 57",
-                exampleImage: require("../img/inventory/eventCard.jpg"),
+                // TODO: add eventCard.jpg
+                exampleImage: require("../img/inventory/adventurePackEventFront.jpg"),
             },
         ],
     },
@@ -267,15 +272,13 @@ export const cards: CardPack[] = [
                 exampleImage: require("../img/inventory/mutagen.jpg"),
             },
             {
-                // TODO: Get Wild Hunt card images
                 type: "Wild Hunt Help",
                 expansion: "Wild Hunt",
                 numInPack: 5,
                 numSoFar: 5,
                 numTotal: 5,
                 note: "",
-                // TODO: Replace example.jpg placeholder
-                exampleImage: require("../img/inventory/example.jpg"),
+                exampleImage: require("../img/inventory/wildHuntHelp1.jpg"),
             },
             {
                 type: "Hounds",
@@ -284,8 +287,7 @@ export const cards: CardPack[] = [
                 numSoFar: 2,
                 numTotal: 2,
                 note: "",
-                // TODO: Replace example.jpg placeholder
-                exampleImage: require("../img/inventory/example.jpg"),
+                exampleImage: require("../img/inventory/wildHuntHound.jpg"),
             },
             {
                 type: "Wild Hunt Monsters",
@@ -293,9 +295,8 @@ export const cards: CardPack[] = [
                 numInPack: 4,
                 numSoFar: 4,
                 numTotal: 4,
-                note: "",
-                // TODO: Replace example.jpg placeholder
-                exampleImage: require("../img/inventory/example.jpg"),
+                note: "One for each Wild Hunt member",
+                exampleImage: require("../img/inventory/wildHuntMonsterFront.jpg"),
             },
             {
                 type: "Wild Hunt Exploration - Stage 1",
@@ -304,8 +305,8 @@ export const cards: CardPack[] = [
                 numSoFar: 20,
                 numTotal: 20,
                 note: "",
-                // TODO: Replace example.jpg placeholder
-                exampleImage: require("../img/inventory/example.jpg"),
+                // TODO: Add stage1back.jpg
+                exampleImage: require("../img/inventory/wildHuntExplorationStage1Front.jpg"),
             },
             {
                 type: "Wild Hunt Exploration - Stage 2",
@@ -314,8 +315,8 @@ export const cards: CardPack[] = [
                 numSoFar: 15,
                 numTotal: 15,
                 note: "",
-                // TODO: Replace example.jpg placeholder
-                exampleImage: require("../img/inventory/example.jpg"),
+                // TODO: Add stage2back.jpg
+                exampleImage: require("../img/inventory/wildHuntExplorationStage2Front.jpg"),
             },
             {
                 type: "Wild Hunt Event",
@@ -324,8 +325,8 @@ export const cards: CardPack[] = [
                 numSoFar: 35,
                 numTotal: 35,
                 note: "",
-                // TODO: Replace example.jpg placeholder
-                exampleImage: require("../img/inventory/example.jpg"),
+                // TODO: Add wildHuntEventBack.jpg
+                exampleImage: require("../img/inventory/wildHuntEventFront.jpg"),
             },
             {
                 type: "Mage Special Action",
@@ -334,6 +335,7 @@ export const cards: CardPack[] = [
                 numSoFar: 5,
                 numTotal: 5,
                 note: "1 per Mage, art on card is of the corresponding Mage",
+                // TODO: Add all 5 mageSpecialActionFront.jpg
                 exampleImage: require("../img/inventory/mageAction.jpg"),
             },
             {
@@ -343,7 +345,7 @@ export const cards: CardPack[] = [
                 numSoFar: 81,
                 numTotal: 81,
                 note: "",
-                exampleImage: require("../img/inventory/adventurePackExample.png"),
+                exampleImage: require("../img/inventory/adventurePackEventFront.jpg"),
             },
         ],
     },
@@ -368,8 +370,7 @@ export const cards: CardPack[] = [
                 numSoFar: 1,
                 numTotal: 1,
                 note: "Troll card",
-                // TODO: Get Troll card image
-                exampleImage: require("../img/inventory/smallMonsterFront.jpg"),
+                exampleImage: require("../img/inventory/trollFront.jpg"),
             },
             {
                 type: "Witcher Trophy cards",
@@ -407,8 +408,8 @@ export const cards: CardPack[] = [
                 numSoFar: 10,
                 numTotal: 10,
                 note: "Manticore",
-                // TODO: Get manticore card back images
-                exampleImage: require("../img/inventory/example.jpg"),
+                // TODO: Add manticore card front image
+                exampleImage: require("../img/inventory/witcherAction.jpg"),
             },
             {
                 type: "Advanced Action cards",
@@ -417,7 +418,7 @@ export const cards: CardPack[] = [
                 numSoFar: 40,
                 numTotal: 40,
                 note: "Contains text in bottom field on Action cards",
-                exampleImage: require("../img/inventory/witcherAction.jpg"),
+                exampleImage: require("../img/inventory/advancedActionCardFront.jpg"),
             },
             {
                 type: "Starting Action cards",
@@ -436,8 +437,8 @@ export const cards: CardPack[] = [
                 numSoFar: 7,
                 numTotal: 7,
                 note: "1 per Witcher, art on card is of the corresponding Witcher",
-                // TODO: Get witcher card back images
-                exampleImage: require("../img/inventory/example.jpg"),
+                // TODO: Get witcher card front images
+                exampleImage: require("../img/inventory/witcherAction.jpg"),
             },
         ],
     },
@@ -462,8 +463,7 @@ export const cards: CardPack[] = [
                 numSoFar: 3,
                 numTotal: 3,
                 note: "",
-                // TODO: Get wild hunt card images
-                exampleImage: require("../img/inventory/example.jpg"),
+                exampleImage: require("../img/inventory/wildHuntJumboDifficultyCard.jpg"),
             },
         ],
     },
@@ -479,7 +479,7 @@ export const cards: CardPack[] = [
                 numSoFar: 50,
                 numTotal: 50,
                 note: "10 cards per 5 Mages. Corresponding icons to mage's icon in top right corner",
-                // TODO: Get mage card back images
+                // TODO: Get mage card front images
                 exampleImage: require("../img/inventory/mageAction.jpg"),
             },
             {
@@ -581,7 +581,7 @@ export const cards: CardPack[] = [
                 numSoFar: 5,
                 numTotal: 5,
                 note: "Trophy cards with perks gained when defeating Dagon",
-                exampleImage: require("../img/inventory/dagonTrophy.jpg"),
+                exampleImage: require("../img/inventory/dagonTrophyBack.jpg"),
             },
             {
                 type: "Skellige Event cards",
@@ -599,7 +599,7 @@ export const cards: CardPack[] = [
                 numSoFar: 50,
                 numTotal: 50,
                 note: "",
-                exampleImage: require("../img/inventory/skelligeExplore.jpg"),
+                exampleImage: require("../img/inventory/skelligeExploreBack.jpg"),
             },
         ],
     },
@@ -655,10 +655,10 @@ export const simplifiedCards = [
         "expansions": "Adventure Pack, Wild Hunt, Monster Trail",
         "cards": {
             // Adventure pack there is a star symbol in the top center
-            "(AP) Wilds Exploration cards": "28 (28/125)",
+            "(AP) Wilds Exploration cards": "28 (28/60)",
             "Wild Hunt Monster Fight cards": "16/16",
             "Special Monster Fight cards": "4/4",  // Monster Trail
-            "(AP) City Exploration cards": "59 (87/125)"
+            "(AP) City Exploration cards": "59/59"
         },
         "cardsInPack": 107,
     },
@@ -666,8 +666,8 @@ export const simplifiedCards = [
         "name": "TWOW(21) 2/4",
         "expansions": "Adventure Pack",
         "cards": {
-            "(AP) Wilds Exploration cards": "32 (119/125)",
-            "(AP) Event cards": "75/75 (194/200)"
+            "(AP) Wilds Exploration cards": "32 (60/60)",
+            "(AP) Event cards": "75 (75/81)"
         },
         "cardsInPack": 107,
     },
@@ -683,7 +683,7 @@ export const simplifiedCards = [
             "Wild Hunt Exploration - Stage 2": "15/15",
             "Wild Hunt Event": "35/35",
             "Mage Special Action": "5/5",
-            "(AP) Event cards": "6 (125/125)"
+            "(AP) Event cards": "6 (81/81)"
         },
         "cardsInPack": 107,
     },

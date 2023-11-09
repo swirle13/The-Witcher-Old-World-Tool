@@ -21,12 +21,16 @@ export default function CardDetails(
                         <Card.Body className="p-2 p-sm-3">
                             <Card.Title as="h5">{t(card.type)}</Card.Title>
                             <Card.Text>{t(card.expansion)}</Card.Text>
-                            <Card.Text><small className="text-body-secondary">{card.note}</small></Card.Text>
+                            <Card.Text>
+                                <small className="text-body-secondary">
+                                    {card.note ? t(`notes.${card.note}`) : ''}
+                                </small>
+                            </Card.Text>
                         </Card.Body>
                         <ListGroup className="list-group-flush align-self-end flex-grow-1 d-flex pt-auto">
                             {["card.numInPack", "card.numSoFar", "card.numTotal"].map((val, index) => (
                                 <ListGroup.Item key={index} className="list-group-item px-2 px-sm-3 py-1 py-sm-2">
-                                    {/* Use string to look up translation, but evaluate to get value from 'card' */}
+                                    {/* Use val to look up translation, but evaluate to get value from 'card' */}
                                     {t(val)}: {eval(val)}
                                 </ListGroup.Item>
                             ))}
