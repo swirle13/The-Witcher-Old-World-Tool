@@ -10,39 +10,6 @@ export default function inventoryChecker({ t }) {
     return (
         <Container id="inventoryCheckerContainer" fluid="lg">
             <PageTitle HeaderText={t('inventoryChecker.title')} />
-            <Accordion id="NotesAccordion" className="mx-auto p-2" defaultActiveKey="0" style={{ maxWidth: "750px" }}>
-                <Accordion.Item eventKey="0" key={0}>
-                    <Accordion.Header>
-                        {t('inventoryChecker.noteTitle')}
-                    </Accordion.Header>
-                    <Accordion.Body className='lh-md'>
-                        {t('inventoryChecker.noteText.0')}
-                        <br /><br />
-                        {t('inventoryChecker.noteText.1')}
-                        <br /><br />
-                        {t('inventoryChecker.noteText.2')}
-                    </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="1" key={1}>
-                    <Accordion.Header>
-                        {t('inventoryChecker.legendHeader')}
-                    </Accordion.Header>
-                    <Accordion.Body className='lh-md'>
-                        {t('inventoryChecker.legendBody.header')}
-                        <br key={0} /><br key={1} />
-                        <dl key={2}>
-                            {t('inventoryChecker.legendBody.body').map((item, index) => (
-                                <div key={index}>
-                                    <dt key={index + 10}>{item.title}</dt>
-                                    {item.details.map((desc, idx) => (
-                                        <dd key={idx + 50}>{desc}</dd>
-                                    ))}
-                                </div>
-                            ))}
-                        </dl>
-                    </Accordion.Body>
-                </Accordion.Item>
-            </Accordion>
             <Title
                 HeaderText={t('inventoryChecker.cardSubtitle')}
                 HeaderSize={2}
