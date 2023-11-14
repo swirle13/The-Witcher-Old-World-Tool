@@ -385,7 +385,7 @@
         },
         "adventurePack": {
             "tokens": "Umístěte žetony zlaťáků, úkolů (zelené), pokerové kostky a žeton zavřené krčmy poblíž herního plánu.",
-            "lostMount": "The last player draws two Location Tokens (of any 1 type of terrain), chooses one to put the Lost Mount miniature at, and shuffles the tokens back in."
+            "lostMount": "Poslední hráč vylosuje dva žetony z jedné z hromádek lokací, vybere, na kterou z nich umístí Zbloudilého oře a žetony zamíchá zpět."
         }
     },
     "inventoryChecker": {
@@ -494,7 +494,7 @@
         "Wild Hunt Exploration - Stage 2": "Průzkum Divokého honu - dějství 2",
         "Wild Hunt Event": "Událost Divokého honu",
         "Mage Special Action cards": "Speciální akce mága",
-        "Lost Mount": "Lost Mount",
+        "Lost Mount": "Zbloudilý oř",
         "Monster card (Troll)": "Karta nestvůry (Trol)",
         "Trophy cards": "Karty trofejí",
         "Bomb cards": "Karty petard",
