@@ -1,20 +1,27 @@
-import ImageContainer from "./ImageContainer";
 import { Card as tCard } from "../classes/inventory";
 import { useTranslation } from "react-i18next";
-import { Card, Col, ListGroup, Row } from "react-bootstrap";
+import { Card, Carousel, Col, ListGroup, Row } from "react-bootstrap";
 
 export default function CardDetails(
-    { card }: { card: tCard }
+    { card }: Readonly<{ card: tCard }>
 ) {
     const { t } = useTranslation('translation', { keyPrefix: 'inventoryChecker' });
     return (
         <Card className="h-100" style={{ maxWidth: "540px" }}>
             <Row id="horizontalCardRow" className="g-0 flex-grow-1 overflow-hidden rounded-2">
                 <Col id="horizontalCardImgCol" className="px-0 d-flex align-items-center bg-black">
-                    <ImageContainer
-                        src={card.exampleImage}
-                        name={card.exampleImage.substring(card.exampleImage.lastIndexOf('/') + 1)}
-                    />
+                    <Carousel fade>
+                        {card.exampleImages.map((img) => (
+                            <Carousel.Item key={img}>
+                                <img
+                                    className="d-block w-100"
+                                    src={img}
+                                    alt={img.substring(card.exampleImages.lastIndexOf('/') + 1)}
+                                />
+                            </Carousel.Item>
+
+                        ))}
+                    </Carousel>
                 </Col>
                 <Col id="horizontalCardTextCol" className="px-0 d-flex">
                     <Row id="horizontalCardTextRow" className="g-0 flex-grow-1 d-flex" xs={1}>
@@ -28,8 +35,8 @@ export default function CardDetails(
                             </Card.Text>
                         </Card.Body>
                         <ListGroup className="list-group-flush align-self-end flex-grow-1 d-flex pt-auto">
-                            {["card.numInPack", "card.numSoFar", "card.numTotal"].map((val, index) => (
-                                <ListGroup.Item key={index} className="list-group-item px-2 px-sm-3 py-1 py-sm-2">
+                            {["card.numInPack", "card.numSoFar", "card.numTotal"].map((val) => (
+                                <ListGroup.Item key={val} className="list-group-item px-2 px-sm-3 py-1 py-sm-2">
                                     {/* Use val to look up translation, but evaluate to get value from 'card' */}
                                     {t(val)}: {eval(val)}
                                 </ListGroup.Item>
