@@ -47,10 +47,10 @@ export default function Navbar({ t, i18n }) {
                             </NavDropdown.Item>
                         </NavDropdown>
                         <NavDropdown title={t("navbar.projectHelp")} id="github-nav-dropdown">
-                            <NavDropdown.Item href="https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues">
+                            <NavDropdown.Item href="https://github.com/swirle13/The-Witcher-Old-World-Tool/issues">
                                 {t('navbar.githubIssues')}
                             </NavDropdown.Item>
-                            <NavDropdown.Item href="https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/discussions">
+                            <NavDropdown.Item href="https://github.com/swirle13/The-Witcher-Old-World-Tool/discussions">
                                 {t('navbar.githubDiscussions')}
                             </NavDropdown.Item>
                             <NavDropdown.Item href="https://github.com/users/swirle13/projects/2/views/3">

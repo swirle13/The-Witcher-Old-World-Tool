@@ -565,15 +565,15 @@
         "githubLinks": [
             {
                 "text": "Find a bug?",
-                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBUG%5D+"
+                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBUG%5D+"
             },
             {
                 "text": "Enhancement idea?",
-                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=%5BENHANCEMENT%5D+"
+                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=%5BENHANCEMENT%5D+"
             },
             {
                 "text": "Discussions",
-                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/discussions"
+                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool/discussions"
             },
             {
                 "text": "$t(footer.projectTimeline)",
@@ -585,7 +585,7 @@
             },
             {
                 "text": "All open bugs/enhancements",
-                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
+                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
             },
             {
                 "text": "Source code",
