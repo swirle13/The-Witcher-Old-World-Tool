@@ -237,17 +237,17 @@
             "playerSetup": {
                 "base": "Prendre une carte Aide de jeu, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier, son jeton Trophée, et son deck de départ de 10 cartes Action de Départ (les cartes Action de Départ ont le logo de l'école de leur Sorceleur en haut à droite).",
                 "baseMages": "Prendre une carte Aide de jeu, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier/Energie, son jeton Trophée, et son deck de départ de 10 cartes Action de Départ (les cartes Action de Départ ont le logo du personnage en haut à droite).",
-                "baseMonsterTrail": "Prendre une carte Aide de jeu, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier, son jeton Trophée, et son deck de départ de 11 cartes Action de Départ (les cartes Action de Départ ont le logo de l'école de leur Sorceleur en haut à droite).",
-                "baseMagesMonsterTrail": "Prendre une carte Aide de jeu, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier/Energie, son jeton Trophée, et son deck de départ de 11 cartes Action de Départ (les cartes Action de Départ ont le logo du personnage en haut à droite).",
+                "baseMonsterTrail": "Prendre une carte Aide de jeu, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier, son jeton Trophée, et son deck de départ de 11 cartes Action de Départ (les 10 cartes Action de Départ ont le logo de l'école de leur Sorceleur en haut à droite, + la carte Action Unique de Monster Trail).",
+                "baseMagesMonsterTrail": "Prendre une carte Aide de jeu, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier/Energie, son jeton Trophée, et son deck de départ de 11 cartes Action de Départ (les 10 cartes Action de Départ ont le logo du Mage en haut à droite, + la carte Action Unique de Monster Trail).",
                 "wildHunt": "Prendre une carte Aide de jeu Wild Hunt, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier, son jeton Trophée, et son deck de départ de 10 cartes Action de Départ (les cartes Action de Départ ont le logo de l'école de leur Sorceleur en haut à droite).",
                 "wildHuntMages": "Prendre une carte Aide de jeu Wild Hunt, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier/Energie, son jeton Trophée, et son deck de départ de 10 cartes Action de Départ (les cartes Action de Départ ont le logo du personnage en haut à droite).",
-                "wildHuntMonsterTrail": "Prendre une carte Aide de jeu Wild Hunt, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier, son jeton Trophée, et son deck de départ de 11 cartes Action de Départ (les cartes Action de Départ ont le logo de l'école de leur Sorceleur en haut à droite).",
-                "wildHuntMagesMonsterTrail": "Prendre une carte Aide de jeu Wild Hunt, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier/Energie, son jeton Trophée, et son deck de départ de 11 cartes Action de Départ (les cartes Action de Départ ont le logo du personnage en haut à droite).",
+                "wildHuntMonsterTrail": "Prendre une carte Aide de jeu Wild Hunt, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier, son jeton Trophée, et son deck de départ de 11 cartes Action de Départ (les 10 cartes Action de Départ ont le logo de l'école de leur Sorceleur en haut à droite, + la carte Action Unique de Monster Trail).",
+                "wildHuntMagesMonsterTrail": "Prendre une carte Aide de jeu Wild Hunt, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier/Energie, son jeton Trophée, et son deck de départ de 11 cartes Action de Départ (les 10 cartes Action de Départ ont le logo du Mage en haut à droite, + la carte Action Unique de Monster Trail).",
                 "trophyCards": "Prendre $t(common.card, {'count': {{count}}, 'context': '{{context}}'}) de son personnage (autant que d'autres joueurs).",
                 "ifMage": "Si vous jouez un Mage, placez ses jetons École et Technique sur la carte du Continent, de sorte à recouvrir une école de Sorceleur qui n'est pas déjà prise.",
                 "markers": "Placer les 5 cubes et le marqueur Bouclier sur les emplacements “niveau 1” de son plateau Joueur.",
                 "markersMages": "Placer les 5 cubes et le marqueur Bouclier/Énergie sur les emplacements “niveau 1” de son plateau Joueur.",
-                "raiseAttr": "Choisir un Attribut à augmenter au niveau 2.",
+                "raiseAttr": "Choisir un Attribut que vous augmentez au niveau 2.",
                 "token": "Placer le jeton Trophée sur le plus petit niveau de la piste Trophée.",
                 "cards": "Mélanger la pioche Action de Départ et la placer à gauche du plateau Joueur.",
                 "miniature": "Placer sa figurine sur l'emplacement de son école de Sorceleur, sur la carte du Continent.",
@@ -359,13 +359,13 @@
                 "Si vous utilisez le plateau de jeu cartonné :",
                 "Mélanger les jetons Ports, face Ancre visible",
                 "Les placer sur les emplacements côtiers (1, 5, 6, 9, 12, 13) puis les retourner",
-                "Placer une figurine de bâteau sur les 3 lieux avec un symbol de bâteau",
+                "Placer une figurine de bâteau sur les 3 lieux avec un symbole de bâteau",
                 "Les retourner sur la face Ancre, pour s'en rappeler"
             ],
             "decks": "Mélanger la pioche Exploration Skellige. Ne PAS mélanger la pioche Événements Skellige ! Placer les deux pioches sur leurs emplacements, au bord du plateau près des îles.",
             "dagon": "Placer la figurine Dagon sur l'emplacement de départ de sa Piste (celui qui correspondant au nombre de joueurs). Mélanger la pioche Bonus Dagon et la placer près de sa Piste, ainsi que la carte Monstre de Dagon (face Capacité Spéciale visible) et les jetons Piste Dagon.",
-            "dagonMT": "Placer la figurine Dagon sur l'emplacement de départ de sa Piste (celui qui correspondant au nombre de joueurs). Mélanger la pioche Bonus Dagon et la placer près de sa Piste, ainsi que la carte Monstre de Dagon (face 4 Attaques Spéciales visible) et les jetons Piste Dagon.",
-            "siren": "Placer la figurine de la Sirène sur l'emplacement Dagon, avec sa carte Monstre à proximité."
+            "dagonMT": "Placer la figurine Dagon sur l'emplacement de départ de sa Piste (celui qui correspondant au nombre de joueurs). Mélanger la pioche Bonus Dagon et la placer près de sa Piste, ainsi que la carte Monstre de Dagon (face avec les 4 Attaques Spéciales visible) et les jetons Piste Dagon.",
+            "siren": "Placer la figurine de la Sirène sur le Lieu Dagon, avec sa carte Monstre à proximité (elle occupe le Lieu Dagon tant que Dagon n'a pas émergé)."
         },
         "magesExp": {
             "actionCards": "répéter les étapes précédentes pour les cartes Action Mage. (Ou refaire cette étape si tout le monde joue un Mage.)"
@@ -374,8 +374,8 @@
             "mutagen": "Mélanger la pioche Mutagène et la placer près de la pioche Trophée Attribut.",
             "bomb": "Mélanger la pioche Bombe et la placer près de la pioche Potion.",
             "lgCards": "Placer les grandes cartes Monstre près du plateau.",
-            "spFightCards": "Retirer 8 cartes Combat Monstre de la pioche. En remettre 4 dans la boîte et réserver les 4 autres pour plus tard (quand un Monstre de niveau III apparaitra). Ajouter les cartes Attaque Spéciale à la pioche Attaque Monstre.",
-            "weaknessTokens": "Piocher 3 jetons Lieu (1 pour chaque type de terrain). Si un Sorceleur est sur ce Lieu, piocher à nouveau. Piocher et placer face cachée un jeton Point faible Monstre correspondant à ce type de terrain, sur chaque Lieu. Remettre ces jetons Lieu dans leurs piles et les remélanger."
+            "spFightCards": "Retirer 8 cartes Combat Monstre de la pioche. En remettre 4 dans la boîte et réserver les 4 autres pour plus tard (quand un Monstre de niveau III apparaitra). Ajouter les 4 cartes Attaque Spéciale de Monster Trail à la pioche Attaque Monstre.",
+            "weaknessTokens": "Piocher 3 jetons Lieu (1 pour chaque type de terrain). Si un Sorceleur est sur ce Lieu, piocher à nouveau. Piocher et placer face cachée un jeton Point faible Monstre correspondant à ce type de terrain, sur chaque Lieu indiqué. Remettre les jetons Lieu dans leurs piles et les remélanger."
         },
         "adventurePack": {
             "tokens": "Placer les jetons/pièces d'or, les jetons Quête verts, les dés et le jeton/figurine Taverne Fermée près du plateau de jeu. Si vous avez les dés additionnels, chaque joueur peut en prendre un jeu.",
