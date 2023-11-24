@@ -9,9 +9,18 @@ interface DisplayProps {
   children: any,
   style?: React.CSSProperties,
 }
+
+/**
+ * Sets children components to Display only the set breakpoints. This
+ * enables opposite behavior of Bootstrap breakpoints that define a
+ * value where the behavior starts and works for all larger sizes.
+ * @param props 
+ * @returns 
+ */
 export const Display = (props: DisplayProps) => {
+  // TODO: allow passing in values to each breakpoint to allow choosing the display type, e.g. block, inline, etc
   const {
-    xs, sm, md, lg, xl, 
+    xs, sm, md, lg, xl,
     children,
     ...rest
   } = props;
@@ -24,7 +33,7 @@ export const Display = (props: DisplayProps) => {
   if (xl) className += ' d-xl-inline ';
 
   return (
-    <span 
+    <span
       className={className}
       {...rest}
     >

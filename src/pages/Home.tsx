@@ -16,19 +16,19 @@ export default function Home({ t }): JSX.Element {
     return (
         <Container className="p-6">
             <Row xs={1} md={2} lg={3} className="g-4 p-3">
-                {t("home.linkedPages").map((_, idx) => (
-                    <Col key={idx}>
+                {t("home.linkedPages").map((page) => (
+                    <Col key={page}>
                         <Card className="h-100">
                             <Card.Img variant="top" src="" />
                             <Col id="horizontalCardTextCol" className="px-0 d-flex">
-                                <Row id="horizontalCardTextRow" className="g-0 flex-grow-1 d-flex" /* xs={1} */>
+                                <Row id="horizontalCardTextRow" className="g-0 flex-grow-1 d-flex" xs={1} >
                                     <Card.Body>
-                                        <Card.Title>{_.name}</Card.Title>
-                                        <Card.Text>{_.desc}</Card.Text>
+                                        <Card.Title>{page.name}</Card.Title>
+                                        <Card.Text>{page.desc}</Card.Text>
                                     </Card.Body>
                                     <Button variant="secondary" className='align-self-end pt-auto m-3 flex-shrink-1'
-                                        href={_.link}>
-                                        {_.btn}
+                                        href={page.link}>
+                                        {page.btn}
                                     </Button>
                                 </Row>
                             </Col>
