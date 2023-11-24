@@ -1,6 +1,32 @@
 import { Card as tCard } from "../classes/inventory";
 import { useTranslation } from "react-i18next";
 import { Card, Carousel, Col, ListGroup, Row } from "react-bootstrap";
+import '../css/CardDetails.css'
+
+function CardImages({ images }: Readonly<{ images: string[] }>) {
+    if (images.length === 1) {
+        return <img
+            className="d-block w-100"
+            src={images[0]}
+            alt={images[0].substring(images[0].lastIndexOf('/') + 1)}
+        />
+    } else {
+        return (
+            <Carousel fade>
+                {images.map((img) => (
+                    <Carousel.Item key={img}>
+                        <img
+                            className="d-block w-100"
+                            src={img}
+                            alt={img.substring(img.lastIndexOf('/') + 1)}
+                        />
+                    </Carousel.Item>
+
+                ))}
+            </Carousel>
+        )
+    }
+}
 
 export default function CardDetails(
     { card }: Readonly<{ card: tCard }>
@@ -10,18 +36,7 @@ export default function CardDetails(
         <Card className="h-100" style={{ maxWidth: "540px" }}>
             <Row id="horizontalCardRow" className="g-0 flex-grow-1 overflow-hidden rounded-2">
                 <Col id="horizontalCardImgCol" className="px-0 d-flex align-items-center bg-black">
-                    <Carousel fade>
-                        {card.exampleImages.map((img) => (
-                            <Carousel.Item key={img}>
-                                <img
-                                    className="d-block w-100"
-                                    src={img}
-                                    alt={img.substring(card.exampleImages.lastIndexOf('/') + 1)}
-                                />
-                            </Carousel.Item>
-
-                        ))}
-                    </Carousel>
+                    <CardImages images={card.exampleImages} />
                 </Col>
                 <Col id="horizontalCardTextCol" className="px-0 d-flex">
                     <Row id="horizontalCardTextRow" className="g-0 flex-grow-1 d-flex" xs={1}>
