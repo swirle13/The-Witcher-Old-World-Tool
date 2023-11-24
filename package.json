@@ -1,6 +1,6 @@
 {
     "name": "the-witcher-old-world-tool",
-    "version": "0.0.9",
+    "version": "0.1.0",
     "description": "Tool to help ease the small tedia of the board game The Witcher: Old World",
     "main": "index.js",
     "scripts": {
