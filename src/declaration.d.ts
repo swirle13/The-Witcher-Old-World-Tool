@@ -1,8 +1,8 @@
 declare module '*.png' {
-    const path: string;
-    export default path;
+    const value: string;
+    export default value;
 }
 declare module '*.jpg' {
-    const path: string;
-    export default path;
+    const value: string;
+    export default value;
 }
