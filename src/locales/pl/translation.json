@@ -51,10 +51,10 @@
         "__flag": "🇵🇱"
     },
     "monsterPicker": {
-        "toggle": "Przełącz zmiany",
-        "sirenExplain": "Syrenę wykluczono, ponieważ nie może być wybrana losowo",
-        "legendary": "Legendarne Łowy",
-        "allLegendary": "wszystko Legendarne Łowy",
+        "toggle": "Przełączniki dodają",
+        "sirenExplain": "Syrenę wykluczono, ponieważ jej się nie losuje",
+        "legendary": "legendarny potwór",
+        "allLegendary": "wszystkie potwory legendarne",
         "title": "Losuj nowego potwora"
     },
     "monsterRoller": {
@@ -262,7 +262,7 @@
                 "title": "Każdy gracz:",
                 "drawBaseResources": [
                     [
-                        "symbol zastępczy dla 0 graczy"
+                        "Wybierz liczbę graczy większą niż 0"
                     ],
                     [
                         "$t(common.player1): $t(common.card, {'count': 5}), $t(common.gold, {'count': 3})"
@@ -301,7 +301,7 @@
             "difficultyTitle": "Wybierz poziom trudności w poniższej tabeli – od tego zależy później poziom początkowych potworów i liczba żetonów tarczy.",
             "difficultyValues": [
                 [
-                    "symbol zastępczy dla 0 graczy"
+                    "Wybierz liczbę graczy większą niż 0"
                 ],
                 [
                     "$t(monsters.lvl1)\n$t(common.token, { 'context': 'shield', 'count': 5 })",
@@ -394,12 +394,12 @@
         "noteTitle": "Notatki",
         "noteText": [
             "Jest to obecnie pierwsza wersja tego narzędzia, aby tak szybko jak to możliwe dotarło do rąk odbiorców drugiej fali przesyłek, więc będzie minimalistyczne i (prawdopodobnie) pozbawione tłumaczenia.",
-            "Sekcje dotyczące tokenów i figurek zamierzam dodać niedługo później.",
+            "Sekcje dotyczące żetonów i figurek zamierzam dodać niedługo później.",
             "Obecnie pola wyboru nie są trwałe. Jeśli odświeżysz tę stronę lub ją opuścisz, utracisz swoje dane. Dopóki tego nie rozwiążę przepraszam za niedogodności."
         ],
         "legendHeader": "Legenda",
         "legendBody": {
-            "header": "Jeśli wyświetlane są 2 kolumny – czytaj od lewej do prawej, rzędami od góry do dołu. W ten sposób prawidłowo odczytasz podsumy kart podzielonych na różne paczki (e.g. „karty potworów: 11 (11/29)”).",
+            "header": "Jeśli wyświetlane są 2 kolumny – czytaj od lewej do prawej, rzędami od góry do dołu. W ten sposób prawidłowo odczytasz podsumy kart podzielonych na różne paczki (np. „karty potworów: 11 (11/29)”).",
             "body": [
                 {
                     "title": "TWOW(XX) Y/Z",
@@ -417,10 +417,10 @@
                     ]
                 },
                 {
-                    "title": "karty (rodzaj): X (Y/Z) lub X/Z",
+                    "title": "karty przykładowe: X (Y/Z) lub X/Z",
                     "details": [
-                        "(rodzaj) to typ karty, o którym mowa na liście komponentów Go On Board.",
-                        "X – liczba tych kart w danej paczce",
+                        "„przykładowe” to typ karty wg listy komponentów Go On Board.",
+                        "X – liczba tych kart w danej paczce.",
                         "Y – podsuma tego typu kart z wszystkich ww paczek. Jeśli pominięto to w danej paczce są wszystkie karty tego typu.",
                         "Z – całkowita suma kart tego typu, które powinieneś mieć."
                     ]
@@ -434,27 +434,27 @@
             ]
         },
         "card": {
-            "numInPack": "# in this pack",
-            "numSoFar": "# so far",
-            "numTotal": "# total"
+            "numInPack": "# w tej paczce",
+            "numSoFar": "# do tej pory",
+            "numTotal": "# w sumie"
         },
         "notes": {
-            "5 sets of 10 cards per witcher": "5 sets of 10 cards per witcher",
-            "5x Dice/turn order cards, 5x Icon Legend cards": "5x Dice/turn order cards, 5x Icon Legend cards",
-            "4 per Witcher x 5 witchers": "4 per Witcher x 5 witchers",
-            "4 cards per Wild Hunt member": "4 cards per Wild Hunt member",
-            "One for each monster ability, 1 through 4": "One for each monster ability, 1 through 4",
-            "Starts at 57": "Starts at 57",
-            "One for each Wild Hunt member": "One for each Wild Hunt member",
-            "1 per Mage, art on card is of the corresponding Mage": "1 per Mage, art on card is of the corresponding Mage",
-            "Troll card": "Troll card",
-            "Manticore": "Manticore",
+            "5 sets of 10 cards per witcher": "Po 10 kart dla każdego z 5 wiedźminów",
+            "5x Dice/turn order cards, 5x Icon Legend cards": "5 kart z opisem tury gracza, 5 kart z legendą ikon",
+            "4 per Witcher x 5 witchers": "Po 4 dla każdego z 5 wiedźminów",
+            "4 cards per Wild Hunt member": "Po 4 karty dla każdego jeźdźca Dzikiego Gonu",
+            "One for each monster ability, 1 through 4": "Jeden na każdą zdolność potwora, od 1 do 4",
+            "Starts at 57": "Zaczyna się od 57",
+            "One for each Wild Hunt member": "Po 1 dla każdego jeźdźca Dzikiego Gonu",
+            "1 per Mage, art on card is of the corresponding Mage": "Po 1 na maga, karta zawiera grafikę odpowiadniego maga",
+            "Troll card": "Karta Trolla",
+            "Manticore": "Mantikora",
             "Ciri": "Ciri",
-            "Contains text in bottom field on Action cards": "Contains text in bottom field on Action cards",
-            "1 per Witcher, art on card is of the corresponding Witcher": "1 per Witcher, art on card is of the corresponding Witcher",
-            "10 cards per 5 Mages. Corresponding icons to mage's icon in top right corner": "10 cards per 5 Mages. Corresponding icons to mage's icon in top right corner",
-            "4 per 5 Mages": "4 per 5 Mages",
-            "Trophy cards with perks gained when defeating Dagon": "Trophy cards with perks gained when defeating Dagon"
+            "Contains text in bottom field on Action cards": "Zawiera tekst w dolnej części karty akcji",
+            "1 per Witcher, art on card is of the corresponding Witcher": "Po 1 na wiedźmina, karta zawiera grafikę odpowiadniego wiedźmina",
+            "10 cards per 5 Mages. Corresponding icons to mage's icon in top right corner": "Po 10 kart dla każdego z 5 magów. karta zawiera w górnym prawym rogu ikonę odpowiadniego maga",
+            "4 per 5 Mages": "Po 4 dla każdego z 5 magów",
+            "Trophy cards with perks gained when defeating Dagon": "Karty bonusów Dagona zdobywanych po pokonaniu Dagona"
         },
         "Base Set": "Podstawa",
         "Adventure Pack, Wild Hunt, Monster Trail": "$t(exps.adventurePack), $t(exps.wildHunt), $t(exps.monsterTrail)",
@@ -482,7 +482,7 @@
         "Witcher Trophy cards": "karty trofeów szkół wiedźmińskich",
         "Wilds Exploration cards": "karty eksploracji dzikich ostępów",
         "(AP) Wilds Exploration cards": "(ZP) karty eksploracji dzikich ostępów",
-        "Wild Hunt Special Fight cards": "Dziki Gon karty walki potworów",
+        "Wild Hunt Special Fight cards": "Dziki Gon karty walki jeźdźców",
         "Special Monster Fight cards": "specjalne karty walki potworów",
         "(AP) City Exploration cards": "(ZP) karty eksploracji miast",
         "(AP) Event cards": "(ZP) karty zdarzeń",
@@ -504,7 +504,7 @@
         "Witcher Special Action cards": "karty akcji specjalnych (wiedźmini)",
         "Large Monster cards": "duże karty potworów",
         "Difficulty Jumbo Reference cards": "duże referencyjne karty trudności",
-        "Mage Starting Action cards": "karty akcji specjalnej Magów",
+        "Mage Starting Action cards": "startowe karty akcji magów",
         "Mage Trophy cards": "karty trofeów magów",
         "Mage Action cards": "karty akcji magów",
         "Legendary Monster movement cards": "karty ruchu legendarnego potwora",
