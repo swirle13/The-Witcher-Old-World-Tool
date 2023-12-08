@@ -45,7 +45,7 @@
         "__flag": "🇮🇹"
     },
     "monsterPicker": {
-        "toggle": "Legenda filtri:",
+        "toggle": "Attiva/Disattiva le modifiche:",
         "sirenExplain": "Le sirene sono escluse, non vengono estratte casualmente",
         "legendary": "Leggendario",
         "allLegendary": "Tutti i Leggendari",
@@ -105,13 +105,13 @@
             {
                 "name": "$t(locationTokens.title)",
                 "link": "#/locationTokens",
-                "desc": "Estrai in semplicità e randomicamente i segnalini terreno. Non avrai più bisogno di mescolare i gettoni di cartone a mano.",
+                "desc": "Pesca casualmente qualsiasi tipo di segnalino terreno. Niente più mescolamento di segnalini di cartone.",
                 "btn": "Esplora il continente"
             },
             {
                 "name": "$t(monsterRoller.title)",
                 "link": "#/monsterRoller",
-                "desc": "Stanco di mescolare i tuoi gettoni, carte mostro e cercare la miniatura giusta?",
+                "desc": "Stanco di mescolare i tuoi segnalini, le carte mostro e di dare la caccia alle miniature?",
                 "btn": "Accidenti, sei brutto"
             },
             {
@@ -129,7 +129,7 @@
             {
                 "name": "$t(lostMount.title)",
                 "link": "#/lostMount",
-                "desc": "Una variante più specifica della pagina dei Segnalini Luogo con due gettoni tra cui scegliere.",
+                "desc": "Una variante più specifica del Segnalino Luogo con due segnalini tra cui scegliere.",
                 "btn": "Vieni, Rutilia"
             }
         ]
@@ -256,7 +256,7 @@
                 "title": "Ogni giocatore deve:",
                 "drawBaseResources": [
                     [
-                        "placeholder for 0 players"
+                        "segnaposto per 0 giocatori"
                     ],
                     [
                         "$t(common.player1): $t(common.card, {'count': 5}), $t(common.gold, {'count': 3})"
@@ -287,15 +287,15 @@
             }
         },
         "legendaryHunt": {
-            "help": "Put the large Legendary Hunt help near the board. Use Side B for a longer game.",
-            "choose": "Choose a Legendary Monster. Place its large card and the Special Fight cards (shuffled) near the game board. Place its miniature on the location shown on its card. Shuffle the Destruction Tokens and keep them (face-down) near the board.",
-            "movementDeck": "The last player in turn order takes the Legendary Monster Movement deck (shuffled, face down)."
+            "help": "Metti la Carta Aiuto Grande Caccia Leggendaria vicino al tabellone. Usa il lato B per una partita più lunga.",
+            "choose": "Scegli un Mostro Leggendario. Posiziona la sua Carta Grande e le Carte Combattimento Speciale (mischiate) vicino al tabellone. Posiziona la sua miniatura nella posizione indicata sulla sua carta. Mescola i Segnalini Distruzione e tienili (a faccia in giù) vicino al tabellone.",
+            "movementDeck": "L'ultimo giocatore in ordine di turno prende il mazzo Movimento Mostri Leggendari (mischiato, a faccia in giù)."
         },
         "wildHunt": {
-            "difficultyTitle": "Choose the game difficulty on the table below. This determines starting monsters and shields later.",
+            "difficultyTitle": "Scegli la difficoltà del gioco nella tabella sottostante. Questo determinerà i mostri di partenza e gli scudi.",
             "difficultyValues": [
                 [
-                    "placeholder for 0 players"
+                    "segnaposto per 0 giocatori"
                 ],
                 [
                     "$t(monsters.lvl1)\n$t(common.token, { 'context': 'shield', 'count': 5 })",
