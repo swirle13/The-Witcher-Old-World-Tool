@@ -46,7 +46,7 @@
     },
     "monsterPicker": {
         "toggle": "Legenda filtri:",
-        "sirenExplain": "Le sirene sono escluse, non vengono estratte randomicamente",
+        "sirenExplain": "Le sirene sono escluse, non vengono estratte casualmente",
         "legendary": "Leggendario",
         "allLegendary": "Tutti i Leggendari",
         "title": "Estrai un nuovo mostro"
@@ -229,11 +229,11 @@
                     "Pesca 3 Segnalini Mostro: 3 di Livello I."
                 ],
                 "3": "Posiziona i tre Segnalini Mostro (a caso) in posizioni sulla mappa corrispondenti ai tre Segnalini Luogo già a faccia in su.",
-                "4": "Gira i tre Segnalini Mostro a faccia in su: cerca e posiziona la corrispondente Carta Mostro nello spazio sul tabellone di gioco in concomitanza del Segnalino Luogo corrispondente per ogniuno dei tre mostri estratti in questo modo. Puoi sostituire i segnalini con le miniature, se le hai.",
+                "4": "Gira i tre Segnalini Mostro a faccia in su: cerca e posiziona la corrispondente Carta Mostro nello spazio sul tabellone di gioco in concomitanza del Segnalino Luogo corrispondente per ognuno dei tre mostri estratti in questo modo. Puoi sostituire i segnalini con le miniature, se le hai.",
                 "5": "Prepara i mostri:"
             },
             "monsterFightDeck": "Mescola il mazzo Scontri Mostro e posizionalo (a faccia in giù) vicino al tabellone.",
-            "startingPlayer": "Il Giocatore che ha letto più di recente un libro di The Withcer è il Primo Giocatore; in alternativa, sceglietelo casualmente. I Giocatori possono distribuire le Plance Giocatore con qualunque metodo di loro scelta; vedere pag. 7 del Regolamento Base per un metodo di distribusione imparziale.",
+            "startingPlayer": "Il Giocatore che ha letto più di recente un libro di The Witcher è il Primo Giocatore; in alternativa, sceglietelo casualmente. I Giocatori possono distribuire le Plance Giocatore con qualunque metodo di loro scelta; vedere pag. 7 del Regolamento Base per un metodo di distribuzione imparziale.",
             "playerSetup": {
                 "base": "Take a Help Card, player board, and matching miniature (with colored ring), cubes, Shield marker, scoring token, and starting deck of 10 cards. (Starting cards have a School icon in the top right corner.)",
                 "baseMages": "Take a Help Card, player board, and matching miniature (with colored ring), cubes, Shield or Energy marker, scoring token, and starting deck of 10 cards. (Starting cards have a School icon in the top right corner.)",
@@ -401,7 +401,7 @@
                         "Questo è il titolo della carta grigia presente in ogni mazzo di carte impacchettato. Questo è il modo in cui mi riferisco a ciascun pacchetto.",
                         "XX è il codice arbitrario utilizzato dal fornitore per identificare i gruppi di carte.",
                         "Y è il numero corrente del pacchetto sul totale dei pacchetti per il codice XX.",
-                        "Z è il numero totale di pacchietti per valore XX."
+                        "Z è il numero totale di pacchetti per valore XX."
                     ]
                 },
                 {
@@ -422,7 +422,7 @@
                 {
                     "title": "(AP)",
                     "details": [
-                        "Questa è una soluzione per chiarire le ambiguità delle carte dell'Espanzione \"Avventure\". Queste si distinguono dal simbolo con un piccola stella in alto al centro del lato anteriore della carta."
+                        "Questa è una soluzione per chiarire le ambiguità delle carte dell'Espansione \"Avventure\". Queste si distinguono dal simbolo con un piccola stella in alto al centro del lato anteriore della carta."
                     ]
                 }
             ]
@@ -440,8 +440,8 @@
         "Starting Action cards": "Carte Azione Iniziali",
         "Action cards": "Carte Azione",
         "Help cards": "Carte Aiuto",
-        "Solo Help card": "Carta aiuto Solitario",
-        "Monster cards": "Carte Mostrro",
+        "Solo Help card": "Carta Aiuto Modalità Giocatore in Solitario",
+        "Monster cards": "Carte Mostro",
         "City Exploration cards": "Carte Esplorazione Città",
         "Attribute Trophy cards": "Carte Trofeo Attributi",
         "Monster Fight cards": "Carte Scontri Mostro",
@@ -455,7 +455,7 @@
         "(AP) City Exploration cards": "(AP) Carte Esplorazione Città",
         "(AP) Event cards": "(AP) Carte Evento",
         "Mutagens": "Mutageni",
-        "Wild Hunt Help": "carte Aiuto Caccia Selvaggia",
+        "Wild Hunt Help": "Carte Aiuto Caccia Selvaggia",
         "Hounds": "Segugi della Caccia Selvaggia",
         "Wild Hunt Monsters": "Membri della Caccia Selvaggia",
         "Wild Hunt Exploration - Stage 1": "Carte Esplorazione Caccia Selvaggia - Stadio 1",
@@ -478,7 +478,7 @@
         "Legendary Monster movement cards": "Carte Movimento Mostro Leggendario",
         "Legendary Hunt Special Fight cards": "Scarte Scontro Speciali Legendary Hunt",
         "Large Legendary Monster cards": "Carte Mostro Leggendario grandi",
-        "Large Fight Reference card": "Carta Grande Aiuto",
+        "Large Fight Reference card": "Carta Aiuto Grande",
         "Dagon Bonus Monster cards": "Carte Bonus Dagon",
         "Skellige Event cards": "Carte Evento Skellige",
         "Skellige Exploration cards": "Carte Esplorazione Skellige"
@@ -538,7 +538,7 @@
         "aboutTitle": "Su di me",
         "aboutBody": [
             "Sono un one-man team e lavoro su questo \"fan site\" non ufficiale nel mio tempo libero. Se apprezzi il lavoro che faccio, valuta l'idea di offrirmi un caffè!",
-            "Il sito verrà aggiornato continuamente. Se sei interessato a partecipare al miglioramento di questo tool, usa i collegamenti a GitHub per compilare segnalazioni di bug, suggerimenti di miglioramento, vedere le mie attività e idee attuali, partecipare a sondaggi per il prossimo importante miglioramento/funzionalità su lavorare, e altro ancora!"
+            "Il sito verrà aggiornato continuamente. Se sei interessato a partecipare al miglioramento di questo tool, usa i collegamenti a GitHub per compilare segnalazioni di bug, suggerimenti di miglioramento, vedere le mie attività e idee attuali, partecipare a sondaggi per il prossimo importante miglioramento/funzionalità su cui lavorare, e altro ancora!"
         ],
         "github": "GitHub",
         "projectTimeline": "Timeline di progetto",
