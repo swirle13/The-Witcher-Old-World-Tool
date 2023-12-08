@@ -287,7 +287,7 @@
             }
         },
         "legendaryHunt": {
-            "help": "Metti la Carta Aiuto Grande Caccia Leggendaria vicino al tabellone. Usa il lato B per una partita più lunga.",
+            "help": "Metti la Carta Aiuto Grande della Caccia Leggendaria vicino al tabellone. Usa il lato B per una partita più lunga.",
             "choose": "Scegli un Mostro Leggendario. Posiziona la sua Carta Grande e le Carte Combattimento Speciale (mischiate) vicino al tabellone. Posiziona la sua miniatura nella posizione indicata sulla sua carta. Mescola i Segnalini Distruzione e tienili (a faccia in giù) vicino al tabellone.",
             "movementDeck": "L'ultimo giocatore in ordine di turno prende il mazzo Movimento Mostri Leggendari (mischiato, a faccia in giù)."
         },
@@ -328,26 +328,26 @@
                     "$t(monsters.lvl1)\n$t(monsters.lvl3)\n$t(common.token, { 'context': 'shield', 'count': 120 })"
                 ]
             ],
-            "easy": "Just the Story!",
-            "medium": "Story and Sword!",
-            "hard": "Blood and Broken Bones!",
-            "veryHard": "Death March!",
-            "manage": "Choose a player to manage the Round Tracking board. Hand them the board that matches the number of players. Place the Tracking Token on the \"1\" spot in the top-left corner.",
-            "createExplorationDeck": "Create the Wild Hunt Exploration deck by placing 3 random, face-down \"Stage II\" cards and then placing {{num}} random, face-down \"Stage I\" cards atop them.",
-            "decks": "Without shuffling, place the Wild Hunt Exploration and Wild Hunt Event decks on their slots on the game board. (Standard City and Wilds Exploration decks are not used in Wild Hunt).",
-            "tokens": "Place Gold Tokens, Blue Quest Tokens, Poker Dice, and Closed Tavern token or mini near the game board.",
+            "easy": "Solo la Storia!",
+            "medium": "Storia e Spada!",
+            "hard": "Sangue e Ossa Rotte!",
+            "veryHard": "Marcia della Morte!",
+            "manage": "Scegli un giocatore che gestisca la plancia di Tracciamento dei Turni. Consegnagli la plancia che corrisponde al numero di giocatori. Posiziona il Segnalino di Tracciamento sullo spazio \"1\" nell'angolo in alto a sinistra.",
+            "createExplorationDeck": "Crea il mazzo Esplorazione Caccia Selvaggia posizionando 3 carte casuali a faccia in giù della \"Fase II\" e quindi posiziona a caso, a faccia in giù, {{num}} carte \"Fase I\" sopra di esse.",
+            "decks": "Senza mescolare, posiziona i mazzi Esplorazione Caccia Selvaggia ed Evento Caccia Selvaggia nei rispettivi spazi sul tabellone. (I mazzi Città e Regioni Selvagge standard non vengono utilizzati in Caccia Selvaggia).",
+            "tokens": "Posiziona i Segnalini Oro, Missione Blu, i Dadi da Poker e il Segnalino o la miniatura Taverna Chiusa vicino al tabellone di gioco.",
             "monsterSetup": [
-                "Draw a Monster Token of level based on the game difficulty. Draw a Forest Location Token. Place the monster token or miniature on the map there and place its Monster Card and the Location Token in the matching space on the game board.",
-                "If the game difficulty indicates a second monster, repeat the above step but with a Water location."
+                "Pesca un Segnalino Mostro del livello indicato dalla difficoltà della partita. Pesca un Segnalino Luogo Foresta. Posiziona lì sulla mappa il Segnalino Mostro o la miniatura e posiziona la sua Carta Mostro e il Segnalino Luogo nello spazio corrispondente sul tabellone.",
+                "Se la difficoltà del gioco indica un secondo mostro, ripeti il ​​passaggio precedente ma con un Segnalino Acqua."
             ],
-            "monsterFightDeck": "Shuffle the Monster Fight deck and place it (face down) near the game board. Place the Charge/Bite token near the deck.",
+            "monsterFightDeck": "Mescola il mazzo dei Mostri e posizionalo (a faccia in giù) vicino al tabellone. Posiziona il segnalino Carica/Azzanna vicino al mazzo",
             "enemies": [
-                "Choose a member of the Wild Hunt to face this game. Place its card (Side A up) and its 4 Special Attack cards near the board.",
-                "Place Indicatori Scudo on the Wild Hunt member based on the difficulty.",
-                "Draw a Mountain Location Token, place the Wild Hunt miniature there, and shuffle that token back in.",
-                "Place the 6 Hound tokens or miniatures and the Hound card matching the player count nearby."
+                "Scegli un membro della Caccia Selvaggia per affrontare questa partita. Posiziona la sua carta (lato A rivolto verso l'alto) e le sue 4 carte Attacco Speciale vicino al tabellone.",
+                "Posiziona in base alla difficoltà gli Indicatori Scudo sul membro della Caccia Selvaggia.",
+                "Pesca un Segnalino Luogo Montagna, posiziona lì la miniatura della Caccia Selvaggia e rimescola il segnalino.",
+                "Posiziona lì vicino i 6 Segnalini o le miniature Segugio e la carta Segugio corrispondente al numero dei giocatori."
             ],
-            "movementPool": "Create a Wild Hunt Movement pool by combining every player's scoring token and the Closed Tavern token. Shuffle these face down."
+            "movementPool": "Crea una riserva di Movimento della Caccia Selvaggia combinando il Segnalino Punteggio di ogni giocatore e il Segnalino Taverna Chiusa. Mescolateli a faccia in giù."
         },
         "skellige": {
             "playmat": [
