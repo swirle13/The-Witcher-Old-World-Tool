@@ -250,7 +250,7 @@
                 "raiseAttr": "Scegli un Attributo da portare al livello 2.",
                 "token": "Posiziona il Segnalino Punteggio nel punto più basso del Tracciato Trofei.",
                 "cards": "Mescola le carte iniziali e posiziona il mazzo a sinistra del tabellone.",
-                "miniature": "Posiziona le miniature sulla posizione della Scuola sulla mappa.",
+                "miniature": "Posiziona le miniature sullo spazio della rispettiva Scuola sulla mappa.",
                 "drawBaseHeader": "Pesca le seguenti carte e oro in base alla posizione del giocatore:",
                 "drawWildHunt": "Pesca 5 carte e prendi 3 Oro.",
                 "title": "Ogni giocatore deve:",
@@ -288,8 +288,8 @@
         },
         "legendaryHunt": {
             "help": "Metti la Carta Aiuto Grande della Caccia Leggendaria vicino al tabellone. Usa il lato B per una partita più lunga.",
-            "choose": "Scegli un Mostro Leggendario. Posiziona la sua Carta Grande e le Carte Combattimento Speciale (mischiate) vicino al tabellone. Posiziona la sua miniatura nella posizione indicata sulla sua carta. Mescola i Segnalini Distruzione e tienili (a faccia in giù) vicino al tabellone.",
-            "movementDeck": "L'ultimo giocatore in ordine di turno prende il mazzo Movimento Mostri Leggendari (mischiato, a faccia in giù)."
+            "choose": "Scegli un Mostro Leggendario. Posiziona la sua Carta Grande e le Carte Combattimento Speciale (mescolate) vicino al tabellone. Posiziona la sua miniatura nella posizione indicata sulla sua carta. Mescola i Segnalini Distruzione e tienili (a faccia in giù) vicino al tabellone.",
+            "movementDeck": "L'ultimo giocatore in ordine di turno prende il mazzo Movimento Mostri Leggendari (mescolato, a faccia in giù)."
         },
         "wildHunt": {
             "difficultyTitle": "Scegli la difficoltà del gioco nella tabella sottostante. Questo determinerà i mostri di partenza e gli scudi.",
@@ -335,7 +335,7 @@
             "manage": "Scegli un giocatore che gestisca la plancia di Tracciamento dei Turni. Consegnagli la plancia che corrisponde al numero di giocatori. Posiziona il Segnalino di Tracciamento sullo spazio \"1\" nell'angolo in alto a sinistra.",
             "createExplorationDeck": "Crea il mazzo Esplorazione Caccia Selvaggia posizionando 3 carte casuali a faccia in giù della \"Fase II\" e quindi posiziona a caso, a faccia in giù, {{num}} carte \"Fase I\" sopra di esse.",
             "decks": "Senza mescolare, posiziona i mazzi Esplorazione Caccia Selvaggia ed Evento Caccia Selvaggia nei rispettivi spazi sul tabellone. (I mazzi Città e Regioni Selvagge standard non vengono utilizzati in Caccia Selvaggia).",
-            "tokens": "Posiziona i Segnalini Oro, Missione Blu, i Dadi da Poker e il Segnalino o la miniatura Taverna Chiusa vicino al tabellone di gioco.",
+            "tokens": "Posiziona i Segnalini Oro, Missione Blu, i Dadi da Poker e il Segnalino - o la miniatura - Taverna Chiusa vicino al tabellone di gioco.",
             "monsterSetup": [
                 "Pesca un Segnalino Mostro del livello indicato dalla difficoltà della partita. Pesca un Segnalino Luogo Foresta. Posiziona lì sulla mappa il Segnalino Mostro o la miniatura e posiziona la sua Carta Mostro e il Segnalino Luogo nello spazio corrispondente sul tabellone.",
                 "Se la difficoltà del gioco indica un secondo mostro, ripeti il ​​passaggio precedente ma con un Segnalino Acqua."
@@ -344,42 +344,42 @@
             "enemies": [
                 "Scegli un membro della Caccia Selvaggia per affrontare questa partita. Posiziona la sua carta (lato A rivolto verso l'alto) e le sue 4 carte Attacco Speciale vicino al tabellone.",
                 "Posiziona in base alla difficoltà gli Indicatori Scudo sul membro della Caccia Selvaggia.",
-                "Pesca un Segnalino Luogo Montagna, posiziona lì la miniatura della Caccia Selvaggia e rimescola il segnalino.",
-                "Posiziona lì vicino i 6 Segnalini o le miniature Segugio e la carta Segugio corrispondente al numero dei giocatori."
+                "Pesca un Segnalino Luogo Montagna, posiziona in quel luogo la miniatura della Caccia Selvaggia e rimescola il segnalino.",
+                "Posiziona lì vicino i 6 Segnalini - o le miniature Segugio - e la carta Segugio corrispondente al numero dei giocatori."
             ],
             "movementPool": "Crea una riserva di Movimento della Caccia Selvaggia combinando il Segnalino Punteggio di ogni giocatore e il Segnalino Taverna Chiusa. Mescolateli a faccia in giù."
         },
         "skellige": {
             "playmat": [
-                "If using the playmat:",
-                "Ignore tokens, Harbor tokens are printed on the map",
-                "Place ship miniatures at the following randomized locations:"
+                "Se usi il tappetino da gioco:",
+                "Ignora i segnalini, i segnalini Porto sono stampati sulla mappa",
+                "Posiziona le miniature delle navi nelle seguenti posizioni casuali:"
             ],
             "board": [
-                "If using the board",
-                "Shuffle the Harbor tokens, anchor side up",
-                "Place them on the coastal locations (1, 5, 6, 9, 12, 13) and flip them over",
-                "Place a ship miniature on the three locations with a ship symbol",
-                "Flip them back to the anchor side, as a reminder"
+                "Se usi il tabellone:",
+                "Mescolate i seganlini Porto, con l'ancora rivolta verso l'alto",
+                "Posizionali sulle località costiere (1, 5, 6, 9, 12, 13) e girali",
+                "Posiziona la miniatura di una nave sui tre luoghi con il simbolo della nave",
+                "Rigirateli sul lato dell'ancora, come promemoria"
             ],
-            "decks": "Shuffle the Skellige Exploration deck. Do not shuffle the Skellige Event deck! Place both in their slots above the islands on the game board.",
-            "dagon": "Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus cards and place them, Dagon monster card (Special Ability face-up), and Dagon Trail tokens near its track.",
-            "dagonMT": "Place the Dagon miniature on the starting space corresponding to player count. Shuffle the Dagon Bonus cards and place them, Dagon monster card (4 Special Attacks face-up), and Dagon Trail tokens near its track.",
-            "siren": "Place the Siren miniature on the Dagon location, with its Monster Card nearby."
+            "decks": "Mescola il mazzo Esplorazione Skellige. Non mescolare il mazzo degli eventi Skellige! Posizionali entrambi nei rispettivi spazi sopra le isole sul tabellone.",
+            "dagon": "Posiziona la miniatura di Dagon sullo spazio iniziale corrispondente al numero dei giocatori. Mescola le carte Bonus Dagon e posizionale, la carta mostro Dagon (Abilità Speciale a faccia in su) e i segnalini Traccia Dagon vicino al suo tracciato.",
+            "dagonMT": "Posiziona la miniatura di Dagon sullo spazio iniziale corrispondente al numero dei giocatori. Mescola le carte Bonus Dagon e posizionale, la carta mostro Dagon (4 Attacchi Speciali a faccia in su) e i segnalini Traccia Dagon vicino al suo tracciato.",
+            "siren": "Posiziona la miniatura della Sirena sulla posizione di Dagon, con la sua Carta Mostro nelle vicinanze."
         },
         "magesExp": {
-            "actionCards": "Repeat the above step for the Mage Action Cards. (Or replace that step if everyone is playing a mage.)"
+            "actionCards": "Ripeti il ​​passaggio precedente per le Carte Azione Mago. (Oppure sostituisci quel passaggio se tutti giocano come maghi.)"
         },
         "monsterTrail": {
-            "mutagen": "Shuffle the Mutagen Deck and place it below the Attribute Trophy deck.",
-            "bomb": "Shuffle the Bomb deck and place it below the Potion deck.",
-            "lgCards": "Place the corresponding large Monster Cards near the board.",
-            "spFightCards": "Remove 8 Monster Fight cards from the deck. Put 4 back in the box and set 4 aside for later (when a Level III monster appears). Add the Special Attack cards to the Monster Fight deck.",
-            "weaknessTokens": "Draw 3 Location Tokens (1 of each terrain). If a Witcher is in that location, draw again. Place a random, face-down Monster Weakness token matching that terrain type at each location. Shuffle these location tokens back into their stacks."
+            "mutagen": "Mescola il mazzo dei Mutageni e posizionalo sotto il mazzo Trofeo Attributi.",
+            "bomb": "Mescola il mazzo delle Bombe e posizionalo sotto il mazzo delle Pozioni.",
+            "lgCards": "Posiziona le corrispondenti Carte Mostro grandi vicino al tabellone.",
+            "spFightCards": "Rimuovi 8 carte Combattimento Mostro dal mazzo. Rimettine 4 nella scatola e mettine da parte 4 per dopo (quando appare un mostro di Livello III). Aggiungi le carte Attacco Speciale al mazzo Combattimento Mostri.",
+            "weaknessTokens": Pesca 3 Segnalini Luogo (1 per ogni terreno). Se in quel luogo si trova un Witcher, pesca di nuovo. Posiziona un Segnalino Debolezza Mostro casuale e a faccia in giù corrispondente a quel tipo di terreno in ognuno di quei luoghi. Rimescola i Segnalini Luogo nelle loro pile."
         },
         "adventurePack": {
-            "tokens": "Place Gold Tokens, Green Quest Tokens, Poker Dice, and Closed Tavern token or mini near the game board.",
-            "lostMount": "The last player draws two Location Tokens (of any 1 type of terrain), chooses one to put the Lost Mount miniature at, and shuffles the tokens back in."
+            "tokens": "Posiziona i Segnalini Oro, Missione Verde, i dadi da poker e i Segnalini - o la miniatura - Taverna Chiusa vicino al tabellone di gioco.",
+            "lostMount": "L'ultimo giocatore pesca due Segnalini Luogo (di un qualsiasi tipo di terreno), ne sceglie uno su cui posizionare la miniatura del Destriero Perduto e rimescola nuovamente i segnalini."
         }
     },
     "inventoryChecker": {
@@ -387,9 +387,9 @@
         "cardSubtitle": "Carte",
         "noteTitle": "Note",
         "noteText": [
-            "Questa è una prima bozza per far arrivare Controllo Inventario nelle mani della sconda ondata di spedizioni il più velocemente possibile e, come tale, sarà minimale e (probabilmente) privo di traduzione.",
-            "Il mio obiettivo è aggiungere diverse sezioni per i token e le miniature subito dopo la pubblicazione.",
-            "Al momento le spunte di controllo non sono persistenti. Se aggiorni o esci da questa pagina perderai i tuoi progressi. Mi scuso per l'inconveniente mentre risolvo la questione."
+            "Questa è una prima bozza per far arrivare il Controllo Componenti nelle mani della seconda ondata di spedizioni il più velocemente possibile e, come tale, sarà minimale e (probabilmente) privo di traduzione.",
+            "Il mio obiettivo è aggiungere diverse sezioni per i segnalini e le miniature subito dopo la pubblicazione.",
+            "Al momento le spunte di controllo non sono permanenti. Se aggiorni o esci da questa pagina perderai i tuoi progressi. Mi scuso per l'inconveniente mentre risolvo la questione."
         ],
         "legendHeader": "Legenda",
         "legendBody": {
@@ -398,10 +398,10 @@
                 {
                     "title": "TWOW(XX) Y/Z",
                     "details": [
-                        "Questo è il titolo della carta grigia presente in ogni mazzo di carte impacchettato. Questo è il modo in cui mi riferisco a ciascun pacchetto.",
+                        "Questo è il titolo sulla carta grigia presente in ogni mazzo di carte impacchettato. E' il modo in cui mi riferisco a ciascun pacchetto.",
                         "XX è il codice arbitrario utilizzato dal fornitore per identificare i gruppi di carte.",
                         "Y è il numero corrente del pacchetto sul totale dei pacchetti per il codice XX.",
-                        "Z è il numero totale di pacchetti per valore XX."
+                        "Z è il numero totale di pacchetti per il valore XX."
                     ]
                 },
                 {
@@ -411,9 +411,9 @@
                     ]
                 },
                 {
-                    "title": "Example Type Cards: X (Y/Z) OR X/Z",
+                    "title": "Esempio Tipo di Carte: X (Y/Z) oppure X/Z",
                     "details": [
-                        "Example Type è il tipo di carta, come indicato negli elenchi \"Componenti\" della Go On Board.",
+                        "Esempio Tipo è il tipo di carta, come indicato negli elenchi \"Componenti\" della Go On Board.",
                         "X è il numero di carte presenti in questo pacchetto.",
                         "Y è il totale corrente di questo tipo di carta in tutti i pacchetti. Se viene omesso, tutte le carte di questo tipo sono incluse in questo pacchetto",
                         "Z è il numero totale di queste carte che dovresti avere."
@@ -422,33 +422,33 @@
                 {
                     "title": "(AP)",
                     "details": [
-                        "Questa è una soluzione per chiarire le ambiguità delle carte dell'Espansione \"Avventure\". Queste si distinguono dal simbolo con un piccola stella in alto al centro del lato anteriore della carta."
+                        "Questa è una soluzione per chiarire quali siano le carte dell'Espansione \"Avventure\". Queste si distinguono per il simbolo con un piccola stella in alto al centro del lato anteriore della carta."
                     ]
                 }
             ]
         },
          "card": {
-            "numInPack": "# in this pack",
-            "numSoFar": "# so far",
-            "numTotal": "# total"
+            "numInPack": "# in questo pacchetto",
+            "numSoFar": "# fino ad ora",
+            "numTotal": "# totale"
         },
         "notes": {
-            "5 sets of 10 cards per witcher": "5 sets of 10 cards per witcher",
-            "5x Dice/turn order cards, 5x Icon Legend cards": "5x Dice/turn order cards, 5x Icon Legend cards",
-            "4 per Witcher x 5 witchers": "4 per Witcher x 5 witchers",
-            "4 cards per Wild Hunt member": "4 cards per Wild Hunt member",
-            "One for each monster ability, 1 through 4": "One for each monster ability, 1 through 4",
-            "Starts at 57": "Starts at 57",
-            "One for each Wild Hunt member": "One for each Wild Hunt member",
-            "1 per Mage, art on card is of the corresponding Mage": "1 per Mage, art on card is of the corresponding Mage",
-            "Troll card": "Troll card",
-            "Manticore": "Manticore",
+            "5 sets of 10 cards per witcher": "5 set da 10 carte per witcher",
+            "5x Dice/turn order cards, 5x Icon Legend cards": "5 carte Dadi/ordine di turno, 5 carte Legenda Icone",
+            "4 per Witcher x 5 witchers": "4 per ogni Witcher per 5 witchers",
+            "4 cards per Wild Hunt member": "4 carte per ogni membro Caccia Selvaggia",
+            "One for each monster ability, 1 through 4": "Uno per ogni abilità del mostro, da 1 a 4",
+            "Starts at 57": "Comincia da 57",
+            "One for each Wild Hunt member": "Uno per ogni membro della Caccia Selvaggia",
+            "1 per Mage, art on card is of the corresponding Mage": "1 per Mago, l'immagine sulla carta è del Mago corrispondente",
+            "Troll card": "carta Troll",
+            "Manticore": "Manticora",
             "Ciri": "Ciri",
-            "Contains text in bottom field on Action cards": "Contains text in bottom field on Action cards",
-            "1 per Witcher, art on card is of the corresponding Witcher": "1 per Witcher, art on card is of the corresponding Witcher",
-            "10 cards per 5 Mages. Corresponding icons to mage's icon in top right corner": "10 cards per 5 Mages. Corresponding icons to mage's icon in top right corner",
-            "4 per 5 Mages": "4 per 5 Mages",
-            "Trophy cards with perks gained when defeating Dagon": "Trophy cards with perks gained when defeating Dagon"
+            "Contains text in bottom field on Action cards": "Contiene testo nella parte inferiore delle carte Azione",
+            "1 per Witcher, art on card is of the corresponding Witcher": "1 per Witcher, l'immagine sulla carta è del Witcher corrispondente",
+            "10 cards per 5 Mages. Corresponding icons to mage's icon in top right corner": "10 carte per 5 maghi. Icone corrispondenti all'icona del mago nell'angolo in alto a destra",
+            "4 per 5 Mages": "4 per 5 Maghi",
+            "Trophy cards with perks gained when defeating Dagon": "Carte trofeo con vantaggi ottenuti sconfiggendo Dagon"
         },
         "Base Set": "Gioco Base",
         "Adventure Pack, Wild Hunt, Monster Trail": "$t(exps.adventurePack), $t(exps.wildHunt), $t(exps.monsterTrail)",
@@ -487,13 +487,13 @@
         "Wild Hunt Exploration - Stage 1": "Carte Esplorazione Caccia Selvaggia - Stadio 1",
         "Wild Hunt Exploration - Stage 2": "Carte Esplorazione Caccia Selvaggia - Stadio 2",
         "Wild Hunt Event": "Carte Evento Caccia Selvaggia",
-        "Mage Special Action": "Mage Special Action",
+        "Mage Special Action": "Azione Speciale Maghi",
         "Lost Mount": "Destriero Perduto",
         "Monster card (Troll)": "Carta Mostro (Troll)",
         "Trophy cards": "Carte Trofeo",
         "Bomb cards": "Carte Bomba",
         "Starting Action cards (Manticore)": "Carte Azione Iniziali (Manticora)",
-        "Advanced Action cards": "Advanced Action cards",
+        "Advanced Action cards": "Carte Azione Avanzata",
         "Starting Action cards (Ciri)": "Carte Azione Iniziali (Ciri)",
         "Unique Action cards (witchers)": "Carte Azione Uniche (Witchers)",
         "Large Monster cards": "Carte grandi Mostro",
@@ -502,7 +502,7 @@
         "Mage Trophy cards": "Carte Trofeo Maghi",
         "Mage Action cards": "Carte Azione Maghi",
         "Legendary Monster movement cards": "Carte Movimento Mostro Leggendario",
-        "Legendary Hunt Special Fight cards": "Scarte Scontro Speciali Legendary Hunt",
+        "Legendary Hunt Special Fight cards": "Carte Scontro Speciali Caccia Leggendaria",
         "Large Legendary Monster cards": "Carte Mostro Leggendario grandi",
         "Large Fight Reference card": "Carta Aiuto Grande",
         "Dagon Bonus Monster cards": "Carte Bonus Dagon",
@@ -515,59 +515,59 @@
             "link": "Collegamenti",
             "video": "Video",
             "pdf": "PDF",
-            "member": "Community member created"
+            "member": "Creato da membri della Comunità"
         },
-        "officialDiscord": "Official Discord",
+        "officialDiscord": "Discord Ufficiale",
         "links": [
             {
                 "title": "$t(communityLinks.officialDiscord)",
                 "subtitle": "$t(communityLinks.contentType.link)",
-                "desc": "The Go On Board official Discord. Discuss rules, share your painted minis, or just chat about the game.",
+                "desc": "Il Discord ufficiale di Go On Board. Discuti delle regole, condividi le tue miniature dipinte o semplicemente parla del gioco.",
                 "link": "https://discord.com/invite/mX8yvYQTuq"
             },
             {
-                "title": "Official Guide: Organizing All Cards in Big Box",
+                "title": "Guida Ufficiale: Sistemare tutte le carte nella Big Box",
                 "subtitle": "$t(communityLinks.contentType.video)",
-                "desc": "A more in-depth guide on how to fit all the cards inside the Big Box.",
+                "desc": "Una guida più approfondita su come inserire tutte le carte all'interno della Big Box.",
                 "link": "https://youtu.be/Hj7oTXJOFfg"
             },
             {
-                "title": "Official FAQ: Clarifying ambiguous rules/situations",
+                "title": "FAQ Ufficiale: Chiarire regole/situazioni ambigue",
                 "subtitle": "$t(communityLinks.contentType.pdf)",
-                "desc": "Answers and clarification for potentially confusing or difficult situations.",
+                "desc": "Risposte e chiarimenti per situazioni potenzialmente confuse o difficili.",
                 "link": "https://www.dropbox.com/s/6fxx058x76kc9rn/FAQ_ENG_v01.pdf?dl=0"
             },
             {
-                "title": "BoardGameGeek Old World Files",
+                "title": "Files del 'Vecchio Mondo' su BoardGameGeek",
                 "subtitle": "$t(communityLinks.contentType.link)",
-                "desc": "Another community where members upload their own creations, automata, guides, and more.",
+                "desc": "Un'altra comunità in cui i membri caricano le proprie creazioni, automi, guide e altro ancora.",
                 "link": "https://boardgamegeek.com/boardgame/331106/witcher-old-world/files"
             },
             {
-                "title": "Witcher Monster Tray Position",
+                "title": "Posizione dei Mostri nel contenitore Witcher",
                 "subtitle": "$t(communityLinks.contentType.member)",
-                "desc": "A detailed guide on locations of all the monster minis in their respective trays (Big Box only).",
+                "desc": "Una guida dettagliata sulla posizione di tutte le miniature dei mostri nei rispettivi contenitori (solo Big Box)",
                 "link": "https://boardgamegeek.com/filepage/259976/witcher-monster-tray-position"
             },
             {
-                "title": "Card and Token Organizers",
+                "title": "Organizzatori di carte e segnalini",
                 "subtitle": "$t(communityLinks.contentType.member)",
-                "desc": "3D printer files for card organizers to better fit in the Big Box, as well as token organizers.",
+                "desc": "Files per stampante 3D di organizzatori di carte e segnalini che si adattano meglio alla Big Box.",
                 "link": "https://thingiverse.com/thing:6078120"
             }
         ]
     },
     "lostMount": {
-        "title": "Lost Mount Locations"
+        "title": "Luoghi del Destriero Perduto"
     },
     "footer": {
         "aboutTitle": "Su di me",
         "aboutBody": [
             "Sono un one-man team e lavoro su questo \"fan site\" non ufficiale nel mio tempo libero. Se apprezzi il lavoro che faccio, valuta l'idea di offrirmi un caffè!",
-            "Il sito verrà aggiornato continuamente. Se sei interessato a partecipare al miglioramento di questo tool, usa i collegamenti a GitHub per compilare segnalazioni di bug, suggerimenti di miglioramento, vedere le mie attività e idee attuali, partecipare a sondaggi per il prossimo importante miglioramento/funzionalità su cui lavorare, e altro ancora!"
+            "Il sito verrà aggiornato costantemente. Se sei interessato a partecipare al miglioramento di questo tool, usa i collegamenti a GitHub per compilare segnalazioni di bug, suggerimenti di miglioramento, vedere le mie attività e idee attuali, partecipare a sondaggi per i prossimi importanti miglioramenti/funzionalità su cui lavorare e altro ancora!"
         ],
         "github": "GitHub",
-        "projectTimeline": "Timeline di progetto",
+        "projectTimeline": "Cronologia del progetto",
         "githubLinks": [
             {
                 "text": "Hai trovato un bug?",
@@ -590,7 +590,7 @@
                 "link": "https://github.com/users/swirle13/projects/2/views/1"
             },
             {
-                "text": "Tutti i bugs/enhancements aperti",
+                "text": "Tutti i bugs riscontrati/miglioramenti proposti",
                 "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
             },
             {
