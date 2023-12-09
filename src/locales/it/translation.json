@@ -213,7 +213,7 @@
                 "Posiziona tutti gli 8 Trofei Attributo (a faccia in su) sul bordo del tabellone nello spazio apposito, si trova sotto gli spazi dedicati alle Carte Esplorazione.",
                 "Posiziona tutti gli 8 Trofei Attributo (a faccia in su) sul bordo del tabellone nello spazio apposito, si trova sotto gli spazi dedicati alle Carte Esplorazione."
             ],
-            "potions": "Mescola il mazzo delle Pozioni e posizionalo sul bordo del tabellone, si trova sotto lo spazio dedicato alle Carte Azione.",
+            "potions": "Mescola il mazzo delle Pozioni e posizionalo sul bordo del tabellone, sotto lo spazio dedicato alle Carte Azione.",
             "decks": "Mescola il mazzo Esplorazione Città e il mazzo Esplorazione Regioni Selvagge. Non mescolare il mazzo delle Carte Evento! Posiziona ciascuno nello slot appropriato sul tabellone.",
             "tokens": "Posiziona le monete, i dadi da poker e il Segnalino Taverna Chiusa vicino al tabellone di gioco.",
             "locationTokens": "Disponi i Segnalini Luogo in 3 pile, divise per tipo di terreno. Mescola ogni pila e posizionala (a faccia in giù) vicino al tabellone. Pesca 1 segnalino da ogni pila e posizionalo (a faccia in su) nei rispettivi spazi sul tabellone (a destra degli spazi Mostro).",
@@ -229,7 +229,7 @@
                     "Pesca 3 Segnalini Mostro: 3 di Livello I."
                 ],
                 "3": "Posiziona i tre Segnalini Mostro (a caso) in posizioni sulla mappa corrispondenti ai tre Segnalini Luogo già a faccia in su.",
-                "4": "Gira i tre Segnalini Mostro a faccia in su: cerca e posiziona la corrispondente Carta Mostro nello spazio sul tabellone di gioco in concomitanza del Segnalino Luogo corrispondente per ognuno dei tre mostri estratti in questo modo. Puoi sostituire i segnalini con le miniature, se le hai.",
+                "4": "Gira i tre Segnalini Mostro a faccia in su: cerca e posiziona la corrispondente Carta Mostro nello spazio sul tabellone di gioco che rappresenta il Segnalino Luogo abbinato. Puoi sostituire i segnalini con le miniature, se le hai.",
                 "5": "Prepara i mostri:"
             },
             "monsterFightDeck": "Mescola il mazzo Scontri Mostro e posizionalo (a faccia in giù) vicino al tabellone.",
@@ -357,14 +357,14 @@
             ],
             "board": [
                 "Se usi il tabellone:",
-                "Mescolate i seganlini Porto, con l'ancora rivolta verso l'alto",
+                "Mescolate i segnalini Porto, con l'ancora rivolta verso l'alto",
                 "Posizionali sulle località costiere (1, 5, 6, 9, 12, 13) e girali",
                 "Posiziona la miniatura di una nave sui tre luoghi con il simbolo della nave",
                 "Rigirateli sul lato dell'ancora, come promemoria"
             ],
-            "decks": "Mescola il mazzo Esplorazione Skellige. Non mescolare il mazzo degli eventi Skellige! Posizionali entrambi nei rispettivi spazi sopra le isole sul tabellone.",
-            "dagon": "Posiziona la miniatura di Dagon sullo spazio iniziale corrispondente al numero dei giocatori. Mescola le carte Bonus Dagon e posizionale, la carta mostro Dagon (Abilità Speciale a faccia in su) e i segnalini Traccia Dagon vicino al suo tracciato.",
-            "dagonMT": "Posiziona la miniatura di Dagon sullo spazio iniziale corrispondente al numero dei giocatori. Mescola le carte Bonus Dagon e posizionale, la carta mostro Dagon (4 Attacchi Speciali a faccia in su) e i segnalini Traccia Dagon vicino al suo tracciato.",
+            "decks": "Mescola il mazzo Esplorazione Skellige. Non mescolare il Mazzo Eventi Skellige! Posizionali entrambi nei rispettivi spazi sopra le isole sul tabellone.",
+            "dagon": "Posiziona la miniatura di Dagon sullo spazio iniziale corrispondente al numero dei giocatori. Mescola le carte Bonus Dagon e posizionale, quindi la carta mostro Dagon (Abilità Speciale a faccia in su) e i segnalini Traccia Dagon vicino al suo tracciato.",
+            "dagonMT": "Posiziona la miniatura di Dagon sullo spazio iniziale corrispondente al numero dei giocatori. Mescola le carte Bonus Dagon e posizionale, quindi la carta mostro Dagon (4 Attacchi Speciali a faccia in su) e i segnalini Traccia Dagon vicino al suo tracciato.",
             "siren": "Posiziona la miniatura della Sirena sulla posizione di Dagon, con la sua Carta Mostro nelle vicinanze."
         },
         "magesExp": {
@@ -375,7 +375,7 @@
             "bomb": "Mescola il mazzo delle Bombe e posizionalo sotto il mazzo delle Pozioni.",
             "lgCards": "Posiziona le corrispondenti Carte Mostro grandi vicino al tabellone.",
             "spFightCards": "Rimuovi 8 carte Combattimento Mostro dal mazzo. Rimettine 4 nella scatola e mettine da parte 4 per dopo (quando appare un mostro di Livello III). Aggiungi le carte Attacco Speciale al mazzo Combattimento Mostri.",
-            "weaknessTokens": Pesca 3 Segnalini Luogo (1 per ogni terreno). Se in quel luogo si trova un Witcher, pesca di nuovo. Posiziona un Segnalino Debolezza Mostro casuale e a faccia in giù corrispondente a quel tipo di terreno in ognuno di quei luoghi. Rimescola i Segnalini Luogo nelle loro pile."
+            "weaknessTokens": "Pesca 3 Segnalini Luogo (1 per ogni terreno). Se in quel luogo si trova un Witcher, pesca di nuovo. Posiziona un Segnalino Debolezza Mostro casuale e a faccia in giù corrispondente a quel tipo di terreno in ognuno di quei luoghi. Rimescola i Segnalini Luogo nelle loro pile."
         },
         "adventurePack": {
             "tokens": "Posiziona i Segnalini Oro, Missione Verde, i dadi da poker e i Segnalini - o la miniatura - Taverna Chiusa vicino al tabellone di gioco.",
@@ -544,7 +544,7 @@
                 "link": "https://boardgamegeek.com/boardgame/331106/witcher-old-world/files"
             },
             {
-                "title": "Posizione dei Mostri nel contenitore Witcher",
+                "title": "Posizione dei Mostri nel contenitore di The Witcher",
                 "subtitle": "$t(communityLinks.contentType.member)",
                 "desc": "Una guida dettagliata sulla posizione di tutte le miniature dei mostri nei rispettivi contenitori (solo Big Box)",
                 "link": "https://boardgamegeek.com/filepage/259976/witcher-monster-tray-position"
@@ -563,7 +563,7 @@
     "footer": {
         "aboutTitle": "Su di me",
         "aboutBody": [
-            "Sono un one-man team e lavoro su questo \"fan site\" non ufficiale nel mio tempo libero. Se apprezzi il lavoro che faccio, valuta l'idea di offrirmi un caffè!",
+            "Sono un 'one-man team' e lavoro su questo \"fan site\" non ufficiale nel mio tempo libero. Se apprezzi il lavoro che faccio, valuta l'idea di offrirmi un caffè!",
             "Il sito verrà aggiornato costantemente. Se sei interessato a partecipare al miglioramento di questo tool, usa i collegamenti a GitHub per compilare segnalazioni di bug, suggerimenti di miglioramento, vedere le mie attività e idee attuali, partecipare a sondaggi per i prossimi importanti miglioramenti/funzionalità su cui lavorare e altro ancora!"
         ],
         "github": "GitHub",
