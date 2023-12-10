@@ -31,7 +31,7 @@ export default function TerrainTokenPicker({
 
     return (
         <Container fluid className="mx-auto min-h-screen">
-            <PageTitle HeaderText={HeaderText} t={t}/>
+            <PageTitle HeaderText={HeaderText} />
             <Row id='tokensRow' className='p-2 mb-2'>
                 <Col className='d-flex justify-content-center'>
                     {displayedToken?.img()}

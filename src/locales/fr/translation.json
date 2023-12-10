@@ -237,17 +237,17 @@
             "playerSetup": {
                 "base": "Prendre une carte Aide de jeu, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier, son jeton Trophée, et son deck de départ de 10 cartes Action de Départ (les cartes Action de Départ ont le logo de l'école de leur Sorceleur en haut à droite).",
                 "baseMages": "Prendre une carte Aide de jeu, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier/Energie, son jeton Trophée, et son deck de départ de 10 cartes Action de Départ (les cartes Action de Départ ont le logo du personnage en haut à droite).",
-                "baseMonsterTrail": "Prendre une carte Aide de jeu, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier, son jeton Trophée, et son deck de départ de 11 cartes Action de Départ (les cartes Action de Départ ont le logo de l'école de leur Sorceleur en haut à droite).",
-                "baseMagesMonsterTrail": "Prendre une carte Aide de jeu, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier/Energie, son jeton Trophée, et son deck de départ de 11 cartes Action de Départ (les cartes Action de Départ ont le logo du personnage en haut à droite).",
+                "baseMonsterTrail": "Prendre une carte Aide de jeu, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier, son jeton Trophée, et son deck de départ de 11 cartes Action de Départ (les 10 cartes Action de Départ ont le logo de l'école de leur Sorceleur en haut à droite, + la carte Action Unique de Monster Trail).",
+                "baseMagesMonsterTrail": "Prendre une carte Aide de jeu, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier/Energie, son jeton Trophée, et son deck de départ de 11 cartes Action de Départ (les 10 cartes Action de Départ ont le logo du Mage en haut à droite, + la carte Action Unique de Monster Trail).",
                 "wildHunt": "Prendre une carte Aide de jeu Wild Hunt, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier, son jeton Trophée, et son deck de départ de 10 cartes Action de Départ (les cartes Action de Départ ont le logo de l'école de leur Sorceleur en haut à droite).",
                 "wildHuntMages": "Prendre une carte Aide de jeu Wild Hunt, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier/Energie, son jeton Trophée, et son deck de départ de 10 cartes Action de Départ (les cartes Action de Départ ont le logo du personnage en haut à droite).",
-                "wildHuntMonsterTrail": "Prendre une carte Aide de jeu Wild Hunt, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier, son jeton Trophée, et son deck de départ de 11 cartes Action de Départ (les cartes Action de Départ ont le logo de l'école de leur Sorceleur en haut à droite).",
-                "wildHuntMagesMonsterTrail": "Prendre une carte Aide de jeu Wild Hunt, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier/Energie, son jeton Trophée, et son deck de départ de 11 cartes Action de Départ (les cartes Action de Départ ont le logo du personnage en haut à droite).",
+                "wildHuntMonsterTrail": "Prendre une carte Aide de jeu Wild Hunt, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier, son jeton Trophée, et son deck de départ de 11 cartes Action de Départ (les 10 cartes Action de Départ ont le logo de l'école de leur Sorceleur en haut à droite, + la carte Action Unique de Monster Trail).",
+                "wildHuntMagesMonsterTrail": "Prendre une carte Aide de jeu Wild Hunt, un plateau Joueur et sa figurine correspondante (avec son socle de couleur), ses 5 cubes de couleur, son marqueur Bouclier/Energie, son jeton Trophée, et son deck de départ de 11 cartes Action de Départ (les 10 cartes Action de Départ ont le logo du Mage en haut à droite, + la carte Action Unique de Monster Trail).",
                 "trophyCards": "Prendre $t(common.card, {'count': {{count}}, 'context': '{{context}}'}) de son personnage (autant que d'autres joueurs).",
                 "ifMage": "Si vous jouez un Mage, placez ses jetons École et Technique sur la carte du Continent, de sorte à recouvrir une école de Sorceleur qui n'est pas déjà prise.",
                 "markers": "Placer les 5 cubes et le marqueur Bouclier sur les emplacements “niveau 1” de son plateau Joueur.",
                 "markersMages": "Placer les 5 cubes et le marqueur Bouclier/Énergie sur les emplacements “niveau 1” de son plateau Joueur.",
-                "raiseAttr": "Choisir un Attribut à augmenter au niveau 2.",
+                "raiseAttr": "Choisir un Attribut que vous augmentez au niveau 2.",
                 "token": "Placer le jeton Trophée sur le plus petit niveau de la piste Trophée.",
                 "cards": "Mélanger la pioche Action de Départ et la placer à gauche du plateau Joueur.",
                 "miniature": "Placer sa figurine sur l'emplacement de son école de Sorceleur, sur la carte du Continent.",
@@ -359,13 +359,13 @@
                 "Si vous utilisez le plateau de jeu cartonné :",
                 "Mélanger les jetons Ports, face Ancre visible",
                 "Les placer sur les emplacements côtiers (1, 5, 6, 9, 12, 13) puis les retourner",
-                "Placer une figurine de bâteau sur les 3 lieux avec un symbol de bâteau",
+                "Placer une figurine de bâteau sur les 3 lieux avec un symbole de bâteau",
                 "Les retourner sur la face Ancre, pour s'en rappeler"
             ],
             "decks": "Mélanger la pioche Exploration Skellige. Ne PAS mélanger la pioche Événements Skellige ! Placer les deux pioches sur leurs emplacements, au bord du plateau près des îles.",
             "dagon": "Placer la figurine Dagon sur l'emplacement de départ de sa Piste (celui qui correspondant au nombre de joueurs). Mélanger la pioche Bonus Dagon et la placer près de sa Piste, ainsi que la carte Monstre de Dagon (face Capacité Spéciale visible) et les jetons Piste Dagon.",
-            "dagonMT": "Placer la figurine Dagon sur l'emplacement de départ de sa Piste (celui qui correspondant au nombre de joueurs). Mélanger la pioche Bonus Dagon et la placer près de sa Piste, ainsi que la carte Monstre de Dagon (face 4 Attaques Spéciales visible) et les jetons Piste Dagon.",
-            "siren": "Placer la figurine de la Sirène sur l'emplacement Dagon, avec sa carte Monstre à proximité."
+            "dagonMT": "Placer la figurine Dagon sur l'emplacement de départ de sa Piste (celui qui correspondant au nombre de joueurs). Mélanger la pioche Bonus Dagon et la placer près de sa Piste, ainsi que la carte Monstre de Dagon (face avec les 4 Attaques Spéciales visible) et les jetons Piste Dagon.",
+            "siren": "Placer la figurine de la Sirène sur le Lieu Dagon, avec sa carte Monstre à proximité (elle occupe le Lieu Dagon tant que Dagon n'a pas émergé)."
         },
         "magesExp": {
             "actionCards": "répéter les étapes précédentes pour les cartes Action Mage. (Ou refaire cette étape si tout le monde joue un Mage.)"
@@ -374,8 +374,8 @@
             "mutagen": "Mélanger la pioche Mutagène et la placer près de la pioche Trophée Attribut.",
             "bomb": "Mélanger la pioche Bombe et la placer près de la pioche Potion.",
             "lgCards": "Placer les grandes cartes Monstre près du plateau.",
-            "spFightCards": "Retirer 8 cartes Combat Monstre de la pioche. En remettre 4 dans la boîte et réserver les 4 autres pour plus tard (quand un Monstre de niveau III apparaitra). Ajouter les cartes Attaque Spéciale à la pioche Attaque Monstre.",
-            "weaknessTokens": "Piocher 3 jetons Lieu (1 pour chaque type de terrain). Si un Sorceleur est sur ce Lieu, piocher à nouveau. Piocher et placer face cachée un jeton Point faible Monstre correspondant à ce type de terrain, sur chaque Lieu. Remettre ces jetons Lieu dans leurs piles et les remélanger."
+            "spFightCards": "Retirer 8 cartes Combat Monstre de la pioche. En remettre 4 dans la boîte et réserver les 4 autres pour plus tard (quand un Monstre de niveau III apparaitra). Ajouter les 4 cartes Attaque Spéciale de Monster Trail à la pioche Attaque Monstre.",
+            "weaknessTokens": "Piocher 3 jetons Lieu (1 pour chaque type de terrain). Si un Sorceleur est sur ce Lieu, piocher à nouveau. Piocher et placer face cachée un jeton Point faible Monstre correspondant à ce type de terrain, sur chaque Lieu indiqué. Remettre les jetons Lieu dans leurs piles et les remélanger."
         },
         "adventurePack": {
             "tokens": "Placer les jetons/pièces d'or, les jetons Quête verts, les dés et le jeton/figurine Taverne Fermée près du plateau de jeu. Si vous avez les dés additionnels, chaque joueur peut en prendre un jeu.",
@@ -427,11 +427,37 @@
                 }
             ]
         },
+        "card": {
+            "numInPack": "# dans ce paquet",
+            "numSoFar": "# cumulés jusque maintenant",
+            "numTotal": "# au total"
+        },
+        "notes": {
+            "5 sets of 10 cards per witcher": "5 paquets de 10 cartes, 1 par Sorceleur",
+            "5x Dice/turn order cards, 5x Icon Legend cards": "5x cartes Aide de jeu, 5x cartes iconographie",
+            "4 per Witcher x 5 witchers": "4 par Sorceleur x 5 Sorceleurs",
+            "4 cards per Wild Hunt member": "4 cartes par chasseur de la Wild Hunt",
+            "One for each monster ability, 1 through 4": "Une pour chaque compétence de Monstre, 1 parmi 4",
+            "Starts at 57": "Commence à 57",
+            "One for each Wild Hunt member": "Une pour chaque chasseur de la Wild Hunt",
+            "1 per Mage, art on card is of the corresponding Mage": "1 par Mage, dont l'illustration sur la carte correspond au Mage",
+            "Troll card": "Carte Troll",
+            "Manticore": "Manticore",
+            "Ciri": "Ciri",
+            "Contains text in bottom field on Action cards": "Comporte du texte en bas de la carte Action",
+            "1 per Witcher, art on card is of the corresponding Witcher": "1 par Sorceleur, dont l'illustration sur la carte correspond au Sorceleur",
+            "10 cards per 5 Mages. Corresponding icons to mage's icon in top right corner": "10 cartes pour chacun des 5 Mages. Les icônes correspondent à l'icône du Mage en haut à droite de la carte",
+            "4 per 5 Mages": "4 pour chacun des 5 Mages",
+            "Trophy cards with perks gained when defeating Dagon": "Cartes Trophées avec les bonus obtenus en vainquant Dagon (Bonus Dagon)"
+        },
         "Base Set": "Jeu de base",
         "Adventure Pack, Wild Hunt, Monster Trail": "$t(exps.adventurePack), $t(exps.wildHunt), $t(exps.monsterTrail)",
         "Adventure Pack": "$t(exps.adventurePack)",
+        "Wild Hunt": "$t(exps.wildHunt)",
         "Wild Hunt, Mages, Adventure Pack": "$t(exps.wildHunt), $t(exps.mages), $t(exps.adventurePack)",
+        "Monster Trail": "$t(exps.monsterTrail)",
         "Monster Trail, Adventure Pack, Ciri": "$t(exps.monsterTrail), $t(exps.adventurePack), $t(exps.ciri)",
+        "Ciri": "$t(exps.ciri)",
         "Monster Trail, Wild Hunt": "$t(exps.monsterTrail), $t(exps.wildHunt)",
         "Mages": "$t(exps.mages)",
         "Legendary Hunt": "$t(exps.legendaryHunt)",
@@ -450,7 +476,7 @@
         "Witcher Trophy cards": "Cartes Trophée Sorceleur",
         "Wilds Exploration cards": "Cartes Exploration Nature",
         "(AP) Wilds Exploration cards": "(AP) Cartes Exploration Nature",
-        "Wild Hunt Monster Fight cards": "Cartes Combat Monstre Wild Hunt",
+        "Wild Hunt Special Fight cards": "Cartes Combat Spécial des Monstres Wild Hunt",
         "Special Monster Fight cards": "Cartes Combat Spécial Monstre",
         "(AP) City Exploration cards": "(AP) Cartes Exploration Cité",
         "(AP) Event cards": "(AP) Cartes Événements",
@@ -461,7 +487,7 @@
         "Wild Hunt Exploration - Stage 1": "Cartes Exploration Chasse Sauvage - Phase 1",
         "Wild Hunt Exploration - Stage 2": "Cartes Exploration Chasse Sauvage - Phase 2",
         "Wild Hunt Event": "Événement Chasse Sauvage",
-        "Mage Special Action": "Action Spéciale Mage",
+        "Mage Special Action cards": "Cartes Action Spéciale Mage",
         "Lost Mount": "Monture Perdue",
         "Monster card (Troll)": "Carte Monstre (Troll)",
         "Trophy cards": "Cartes Trophée",
@@ -469,10 +495,10 @@
         "Starting Action cards (Manticore)": "Cartes Action de Départ (Manticore)",
         "Advanced Action cards": "Cartes Action Avancée",
         "Starting Action cards (Ciri)": "Cartes Action de Départ (Ciri)",
-        "Unique Action cards (witchers)": "Cartes Action Unique (Sorceleurs)",
+        "Witcher Special Action cards": "Cartes Action Unique (Sorceleurs)",
         "Large Monster cards": "Grandes cartes Monstre",
         "Difficulty Jumbo Reference cards": "Cartes Progression et difficulté",
-        "Mage Unique Action cards": "Cartes Action Unique Mage",
+        "Mage Starting Action cards": "Cartes Action Mage de départ",
         "Mage Trophy cards": "Cartes Trophée Mage",
         "Mage Action cards": "Cartes Action Mage",
         "Legendary Monster movement cards": "Cartes Mouvement Monstre Légendaire",
@@ -545,15 +571,15 @@
         "githubLinks": [
             {
                 "text": "Tu as trouvé un bug ?",
-                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBUG%5D+"
+                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBUG%5D+"
             },
             {
                 "text": "Une idée d'amélioration ?",
-                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=%5BENHANCEMENT%5D+"
+                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=%5BENHANCEMENT%5D+"
             },
             {
                 "text": "Discussions",
-                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/discussions"
+                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool/discussions"
             },
             {
                 "text": "$t(footer.projectTimeline)",
@@ -565,7 +591,7 @@
             },
             {
                 "text": "Toutes les tâches ouvertes de bug/fonctionnalité",
-                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
+                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
             },
             {
                 "text": "Code source",

@@ -1,13 +1,13 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from "react";
 /*
-    Breakpoints
-    ============================
-    X-Small		 None	<576px
-    Small		 sm		≥576px
-    Medium		 md		≥768px
-    Large		 lg		≥992px
-    Extra large	 xl		≥1200px
-    XX large	xxl		≥1400px
+  Breakpoints
+  ============================
+  X-Small				None	<576px
+  Small					sm		≥576px
+  Medium				md		≥768px
+  Large					lg		≥992px
+  Extra large		xl		≥1200px
+  XX large			xxl		≥1400px
 */
 
 /*
@@ -19,16 +19,15 @@ I need to be able to:
 */
 
 const getSize = () => {
-  return { 
+  return {
     width: window.innerWidth,
     height: window.innerHeight,
   };
 };
- 
-export default function useResize() {
- 
+
+export default function getDisplaySize() {
   const [size, setSize] = useState(getSize());
- 
+
   const handleResize = useCallback(() => {
     let ticking = false;
     if (!ticking) {
@@ -37,13 +36,13 @@ export default function useResize() {
         ticking = false;
       });
       ticking = true;
-    } 
+    }
   }, []);
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
- 
+
   return size;
 }

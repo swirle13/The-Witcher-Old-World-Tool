@@ -61,11 +61,9 @@ export default function App() {
     return (
         <Suspense fallback={<div>Loading....</div>}>
             <div
-                className='flex-wrapper mx-0 px-0'
+                className='flex-wrapper mx-0 px-0 d-flex flex-column'
                 style={{
-                    display: 'flex',
                     minHeight: '100vh',
-                    flexDirection: 'column',
                     justifyContent: 'flex-start'
                 }}
             >

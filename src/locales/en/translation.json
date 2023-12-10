@@ -421,11 +421,37 @@
                 }
             ]
         },
+        "card": {
+            "numInPack": "# in this pack",
+            "numSoFar": "# so far",
+            "numTotal": "# total"
+        },
+        "notes": {
+            "5 sets of 10 cards per witcher": "5 sets of 10 cards per witcher",
+            "5x Dice/turn order cards, 5x Icon Legend cards": "5x Dice/turn order cards, 5x Icon Legend cards",
+            "4 per Witcher x 5 witchers": "4 per Witcher x 5 witchers",
+            "4 cards per Wild Hunt member": "4 cards per Wild Hunt member",
+            "One for each monster ability, 1 through 4": "One for each monster ability, 1 through 4",
+            "Starts at 57": "Starts at 57",
+            "One for each Wild Hunt member": "One for each Wild Hunt member",
+            "1 per Mage, art on card is of the corresponding Mage": "1 per Mage, art on card is of the corresponding Mage",
+            "Troll card": "Troll card",
+            "Manticore": "Manticore",
+            "Ciri": "Ciri",
+            "Contains text in bottom field on Action cards": "Contains text in bottom field on Action cards",
+            "1 per Witcher, art on card is of the corresponding Witcher": "1 per Witcher, art on card is of the corresponding Witcher",
+            "10 cards per 5 Mages. Corresponding icons to mage's icon in top right corner": "10 cards per 5 Mages. Corresponding icons to mage's icon in top right corner",
+            "4 per 5 Mages": "4 per 5 Mages",
+            "Trophy cards with perks gained when defeating Dagon": "Trophy cards with perks gained when defeating Dagon"
+        },
         "Base Set": "Base Set",
         "Adventure Pack, Wild Hunt, Monster Trail": "$t(exps.adventurePack), $t(exps.wildHunt), $t(exps.monsterTrail)",
         "Adventure Pack": "$t(exps.adventurePack)",
+        "Wild Hunt": "$t(exps.wildHunt)",
         "Wild Hunt, Mages, Adventure Pack": "$t(exps.wildHunt), $t(exps.mages), $t(exps.adventurePack)",
+        "Monster Trail": "$t(exps.monsterTrail)",
         "Monster Trail, Adventure Pack, Ciri": "$t(exps.monsterTrail), $t(exps.adventurePack), $t(exps.ciri)",
+        "Ciri": "$t(exps.ciri)",
         "Monster Trail, Wild Hunt": "$t(exps.monsterTrail), $t(exps.wildHunt)",
         "Mages": "$t(exps.mages)",
         "Legendary Hunt": "$t(exps.legendaryHunt)",
@@ -444,7 +470,7 @@
         "Witcher Trophy cards": "Witcher Trophy cards",
         "Wilds Exploration cards": "Wilds Exploration cards",
         "(AP) Wilds Exploration cards": "(AP) Wilds Exploration cards",
-        "Wild Hunt Monster Fight cards": "Wild Hunt Monster Fight cards",
+        "Wild Hunt Special Fight cards": "Wild Hunt Special Fight cards",
         "Special Monster Fight cards": "Special Monster Fight cards",
         "(AP) City Exploration cards": "(AP) City Exploration cards",
         "(AP) Event cards": "(AP) Event cards",
@@ -455,7 +481,7 @@
         "Wild Hunt Exploration - Stage 1": "Wild Hunt Exploration - Stage 1",
         "Wild Hunt Exploration - Stage 2": "Wild Hunt Exploration - Stage 2",
         "Wild Hunt Event": "Wild Hunt Event",
-        "Mage Special Action": "Mage Special Action",
+        "Mage Special Action cards": "Mage Special Action cards",
         "Lost Mount": "Lost Mount",
         "Monster card (Troll)": "Monster card (Troll)",
         "Trophy cards": "Trophy cards",
@@ -463,10 +489,10 @@
         "Starting Action cards (Manticore)": "Starting Action cards (Manticore)",
         "Advanced Action cards": "Advanced Action cards",
         "Starting Action cards (Ciri)": "Starting Action cards (Ciri)",
-        "Unique Action cards (witchers)": "Unique Action cards (witchers)",
+        "Witcher Special Action cards": "Witcher Special Action cards",
         "Large Monster cards": "Large Monster cards",
         "Difficulty Jumbo Reference cards": "Difficulty Jumbo Reference cards",
-        "Mage Unique Action cards": "Mage Unique Action cards",
+        "Mage Starting Action cards": "Mage Starting Action cards",
         "Mage Trophy cards": "Mage Trophy cards",
         "Mage Action cards": "Mage Action cards",
         "Legendary Monster movement cards": "Legendary Monster movement cards",
@@ -539,15 +565,15 @@
         "githubLinks": [
             {
                 "text": "Find a bug?",
-                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBUG%5D+"
+                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBUG%5D+"
             },
             {
                 "text": "Enhancement idea?",
-                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=%5BENHANCEMENT%5D+"
+                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=%5BENHANCEMENT%5D+"
             },
             {
                 "text": "Discussions",
-                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/discussions"
+                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool/discussions"
             },
             {
                 "text": "$t(footer.projectTimeline)",
@@ -559,7 +585,7 @@
             },
             {
                 "text": "All open bugs/enhancements",
-                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
+                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
             },
             {
                 "text": "Source code",

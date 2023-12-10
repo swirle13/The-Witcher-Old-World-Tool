@@ -30,14 +30,14 @@ export default function MonsterPicker({
         }
         setExpansions(updatedExpansions);
     };
-    
+
     useEffect(() => {
         setLocalMonsterDeck(new MonstersDeck(...expansions));
     }, [expansions]);
 
     return (
         <Container fluid className="mx-auto min-h-screen">
-            <PageTitle HeaderText={HeaderText} t={t}/>
+            <PageTitle HeaderText={HeaderText} />
             <Row id='tokensRow' className='py-2'>
                 <Col className='justify-content-center'>
                     {displayedToken?.tokenImg(t)}
@@ -71,8 +71,8 @@ export default function MonsterPicker({
                             size="lg"
                             variant="custom"
                             style={{
-                                backgroundColor:"#960a0a",
-                                color:"#ffffff", /* tint on cursor hover: "#640a0a" */
+                                backgroundColor: "#960a0a",
+                                color: "#ffffff", /* tint on cursor hover: "#640a0a" */
                             }}
                             onClick={() => setToken(localMonsterDeck.drawLegendaryMonster())}
                         >
