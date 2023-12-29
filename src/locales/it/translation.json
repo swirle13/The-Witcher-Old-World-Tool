@@ -393,7 +393,7 @@
         ],
         "legendHeader": "Legenda",
         "legendBody": {
-            "header": "Se su due colonne: leggi da sinistra a destra, dall'alto in basso. Ciò garantirà che i totali parziali delle carte distribuite su più mazzi (ad esempio \"Carte Mostro: 11 (29/11)\") vengano letti correttamente.",
+            "header": "Se su due colonne: leggi da sinistra a destra, dall'alto in basso. Ciò garantirà che i totali parziali delle carte distribuite su più mazzi (ad esempio \"Carte Mostro: 11 (11/29)\") vengano letti correttamente.",
             "body": [
                 {
                     "title": "TWOW(XX) Y/Z",
@@ -427,7 +427,7 @@
                 }
             ]
         },
-         "card": {
+        "card": {
             "numInPack": "# in questo pacchetto",
             "numSoFar": "# fino ad ora",
             "numTotal": "# totale"
@@ -497,7 +497,7 @@
         "Starting Action cards (Ciri)": "Carte Azione Iniziali (Ciri)",
         "Unique Action cards (witchers)": "Carte Azione Uniche (Witchers)",
         "Large Monster cards": "Carte grandi Mostro",
-        "Difficulty Jumbo Reference cards": "Difficulty Jumbo Reference cards",
+        "Difficulty Jumbo Reference cards": "Carte riferimento Difficoltà grandi",
         "Mage Unique Action cards": "Carte Azione Uniche dei Maghi",
         "Mage Trophy cards": "Carte Trofeo Maghi",
         "Mage Action cards": "Carte Azione Maghi",
@@ -571,15 +571,15 @@
         "githubLinks": [
             {
                 "text": "Hai trovato un bug?",
-                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBUG%5D+"
+                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBUG%5D+"
             },
             {
                 "text": "Suggerisci un miglioramento",
-                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=%5BENHANCEMENT%5D+"
+                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=%5BENHANCEMENT%5D+"
             },
             {
                 "text": "Discussioni",
-                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/discussions"
+                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool/discussions"
             },
             {
                 "text": "$t(footer.projectTimeline)",
@@ -591,7 +591,7 @@
             },
             {
                 "text": "Tutti i bugs riscontrati/miglioramenti proposti",
-                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool-Issues/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
+                "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
             },
             {
                 "text": "Codice Sorgente",
