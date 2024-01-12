@@ -241,12 +241,12 @@
                 "ifMage": "Se sei un Mago, posiziona i suoi Segnalini Scuola e Specialità sulla mappa, coprendo quelli di una Scuola di Witcher inutilizzata.",
                 "markers": "Posizionare i 5 cubi e il Segnalino Scudo sugli spazi di “livello 1” di ogni tracciato della plancia giocatore.",
                 "markersMages": "Posizionare i 5 cubi e il Segnalino Scudo o Energia sugli spazi di “livello 1” di ogni tracciato del tabellone giocatore.",
-                "raiseAttr": "Sceglere un Attributo da portare al livello 2.",
+                "raiseAttr": "Scegliere un Attributo da portare al livello 2.",
                 "token": "Posizionare il Segnalino Punteggio nel punto più basso del Tracciato Trofei.",
-                "cards": "Mescolare le carte iniziali e posiziona il mazzo a sinistra del tabellone.",
+                "cards": "Mescolare le carte iniziali e posizionare il mazzo a sinistra del tabellone.",
                 "miniature": "Posizionare le miniature sullo spazio della rispettiva Scuola sulla mappa.",
                 "drawBaseHeader": "Pescare le seguenti carte e oro in base alla posizione del giocatore:",
-                "drawWildHunt": "Pescare 5 carte e prendi 3 Oro.",
+                "drawWildHunt": "Pescare 5 carte e prendere 3 Oro.",
                 "title": "Ogni giocatore deve:",
                 "drawBaseResources": [
                     [
