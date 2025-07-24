@@ -9,28 +9,22 @@
         "player4": "Giocatore 4",
         "player5": "Giocatore 5",
         "gold_one": "{{count}} oro",
-        "gold_many": "{{count}} oro",
         "gold_other": "{{count}} oro",
         "card_one": "{{count}} carta",
-        "card_many": "{{count}} carte",
         "card_other": "{{count}} carte",
         "card_witchertrophy_one": "{{count}} Carta Trofeo Witcher",
-        "card_witchertrophy_many": "{{count}} Carte Trofeo Witcher",
         "card_witchertrophy_other": "{{count}} Carte Trofeo Witcher",
         "card_witchermagetrophy_one": "{{count}} Carta Trofeo Mago/Witcher",
-        "card_witchermagetrophy_many": "{{count}} Carte Trofeo Mago/Witcher",
         "card_witchermagetrophy_other": "{{count}} Carte Trofeo Mago/Witcher",
         "token_level1_one": "{{count}} Segnalino di Livello I",
-        "token_level1_many": "{{count}} Segnalini di Livello I",
         "token_level1_other": "{{count}} Segnalini di Livello I",
         "token_shield_one": "{{count}} Indicatore Scudo",
-        "token_shield_many": "{{count}} Indicatori Scudo",
         "token_shield_other": "{{count}} Indicatori Scudo",
         "underConstruction": "In costruzione!"
     },
     "navbar": {
         "titleLong": "Assistente di The Witcher: Il Vecchio Mondo",
-        "titleShort": "Assistente de 'Il Vecchio Mondo'",
+        "titleShort": "Assistente di TW:Il Vecchio Mondo",
         "communityLinks": "$t(communityLinks.title)",
         "gameplayTools": "Strumenti di gioco",
         "setupHelper": "$t(setupHelper.title)",
@@ -46,13 +40,13 @@
     },
     "monsterPicker": {
         "toggle": "Attiva/Disattiva le modifiche:",
-        "sirenExplain": "Le sirene sono escluse, non vengono estratte casualmente",
+        "sirenExplain": "Le Sirene sono escluse, non vengono estratte casualmente",
         "legendary": "Leggendario",
         "allLegendary": "Tutti i Leggendari",
-        "title": "Estrai un nuovo mostro"
+        "title": "Estrai a sorte un nuovo Mostro"
     },
     "monsterRoller": {
-        "title": "Estrai un Mostro"
+        "title": "Estrai a sorte un Mostro"
     },
     "exps": {
         "adventurePack": "Espansione \"Avventure\"",
@@ -112,7 +106,7 @@
                 "name": "$t(monsterRoller.title)",
                 "link": "#/monsterRoller",
                 "desc": "Stanco di mescolare i tuoi segnalini, le carte mostro e di dare la caccia alle miniature?",
-                "btn": "Accidenti, sei brutto"
+                "btn": "Accidenti, sei brutto!"
             },
             {
                 "name": "$t(communityLinks.title)",
@@ -124,7 +118,7 @@
                 "name": "$t(inventoryChecker.title)",
                 "link": "#/inventoryChecker",
                 "desc": "Per aiutare coloro che hanno appena ricevuto il gioco The Witcher: Il Vecchio Mondo, ecco una guida approfondita su ciò che (si spera) tu abbia ricevuto.",
-                "btn": "Il Medaglione sta vibrando..."
+                "btn": "Il medaglione sta vibrando..."
             },
             {
                 "name": "$t(lostMount.title)",
@@ -235,24 +229,24 @@
             "monsterFightDeck": "Mescola il mazzo Scontri Mostro e posizionalo (a faccia in giù) vicino al tabellone.",
             "startingPlayer": "Il Giocatore che ha letto più di recente un libro di The Witcher è il Primo Giocatore; in alternativa, sceglietelo casualmente. I Giocatori possono distribuire le Plance Giocatore con qualunque metodo di loro scelta; vedere pag. 7 del Regolamento Base per un metodo di distribuzione imparziale.",
             "playerSetup": {
-                "base": "Prendi una Carta Aiuto, una plancia giocatore e una miniatura corrispondente (con anello colorato), cubi, Segnalino Scudo, Punteggio e un mazzo iniziale di 10 carte. (Le carte iniziali hanno l'icona della Scuola nell'angolo in alto a destra.)",
-                "baseMages": "Prendi una Carta Aiuto, una plancia giocatore e una miniatura corrispondente (con anello colorato), cubi, Segnalino Scudo o Energia, Punteggio e un mazzo iniziale di 10 carte. (Le carte iniziali hanno l'icona della Scuola nell'angolo in alto a destra.)",
-                "baseMonsterTrail": "Prendi una Carta Aiuto, una plancia giocatore e una miniatura corrispondente (con anello colorato), cubi, Segnalino Scudo, Punteggio e un mazzo iniziale di 11 carte. (Le carte iniziali hanno l'icona della Scuola nell'angolo in alto a destra.)",
-                "baseMagesMonsterTrail": "Prendi una Carta Aiuto, una plancia giocatore e una miniatura corrispondente (con anello colorato), cubi, Segnalino Scudo o Energia, Punteggio e un mazzo iniziale di 11 carte. (Le carte iniziali hanno l'icona della Scuola nell'angolo in alto a destra.)",
-                "wildHunt": "Prendi una Carta Aiuto per la Caccia Selvaggia, una plancia giocatore e una miniatura corrispondente (con anello colorato), cubi, Segnalino Scudo, Punteggio e un mazzo iniziale di 10 carte. (Le carte iniziali hanno l'icona della Scuola nell'angolo in alto a destra.)",
-                "wildHuntMages": "Prendi una Carta Aiuto per la Caccia Selvaggia, una plancia giocatore e una miniatura corrispondente (con anello colorato), cubi, Segnalino Scudo o Energia, Punteggio e un mazzo iniziale di 10 carte. (Le carte iniziali hanno l'icona della Scuola nell'angolo in alto a destra.)",
-                "wildHuntMonsterTrail": "Prendi una Carta Aiuto per la Caccia Selvaggia, una plancia giocatore e una miniatura corrispondente (con anello colorato), cubi, Segnalino Scudo, Punteggio e un mazzo iniziale di 11 carte. (Le carte iniziali hanno l'icona della Scuola nell'angolo in alto a destra.)",
-                "wildHuntMagesMonsterTrail": "Prendi una Carta Aiuto per la Caccia Selvaggia, una plancia giocatore e una miniatura corrispondente (con anello colorato), cubi, Segnalino Scudo o Energia, Punteggio e un mazzo iniziale di 11 carte. (Le carte iniziali hanno l'icona della Scuola nell'angolo in alto a destra.)",
-                "trophyCards": "Prendi $t(common.card, {'count': {{count}}, 'context': '{{context}}'}) (come agli altri giocatori).",
+                "base": "Prendere una Carta Aiuto, una plancia giocatore e una miniatura corrispondente (con anello colorato), cubi, Segnalino Scudo, Punteggio e un mazzo iniziale di 10 carte. (Le carte iniziali hanno l'icona della Scuola nell'angolo in alto a destra.)",
+                "baseMages": "Prendere una Carta Aiuto, una plancia giocatore e una miniatura corrispondente (con anello colorato), cubi, Segnalino Scudo o Energia, Punteggio e un mazzo iniziale di 10 carte. (Le carte iniziali hanno l'icona della Scuola nell'angolo in alto a destra.)",
+                "baseMonsterTrail": "Prendere una Carta Aiuto, una plancia giocatore e una miniatura corrispondente (con anello colorato), cubi, Segnalino Scudo, Punteggio e un mazzo iniziale di 11 carte. (Le carte iniziali hanno l'icona della Scuola nell'angolo in alto a destra.)",
+                "baseMagesMonsterTrail": "Prendere una Carta Aiuto, una plancia giocatore e una miniatura corrispondente (con anello colorato), cubi, Segnalino Scudo o Energia, Punteggio e un mazzo iniziale di 11 carte. (Le carte iniziali hanno l'icona della Scuola nell'angolo in alto a destra.)",
+                "wildHunt": "Prendere una Carta Aiuto per la Caccia Selvaggia, una plancia giocatore e una miniatura corrispondente (con anello colorato), cubi, Segnalino Scudo, Punteggio e un mazzo iniziale di 10 carte. (Le carte iniziali hanno l'icona della Scuola nell'angolo in alto a destra.)",
+                "wildHuntMages": "Prendere una Carta Aiuto per la Caccia Selvaggia, una plancia giocatore e una miniatura corrispondente (con anello colorato), cubi, Segnalino Scudo o Energia, Punteggio e un mazzo iniziale di 10 carte. (Le carte iniziali hanno l'icona della Scuola nell'angolo in alto a destra.)",
+                "wildHuntMonsterTrail": "Prendere una Carta Aiuto per la Caccia Selvaggia, una plancia giocatore e una miniatura corrispondente (con anello colorato), cubi, Segnalino Scudo, Punteggio e un mazzo iniziale di 11 carte. (Le carte iniziali hanno l'icona della Scuola nell'angolo in alto a destra.)",
+                "wildHuntMagesMonsterTrail": "Prendere una Carta Aiuto per la Caccia Selvaggia, una plancia giocatore e una miniatura corrispondente (con anello colorato), cubi, Segnalino Scudo o Energia, Punteggio e un mazzo iniziale di 11 carte. (Le carte iniziali hanno l'icona della Scuola nell'angolo in alto a destra.)",
+                "trophyCards": "Prendere $t(common.card, {'count': {{count}}, 'context': '{{context}}'}) (come agli altri giocatori).",
                 "ifMage": "Se sei un Mago, posiziona i suoi Segnalini Scuola e Specialità sulla mappa, coprendo quelli di una Scuola di Witcher inutilizzata.",
-                "markers": "Posiziona i 5 cubi e il Segnalino Scudo sugli spazi di “livello 1” di ogni tracciato della plancia giocatore.",
-                "markersMages": "Posiziona i 5 cubi e il Segnalino Scudo o Energia sugli spazi di “livello 1” di ogni tracciato del tabellone giocatore.",
-                "raiseAttr": "Scegli un Attributo da portare al livello 2.",
-                "token": "Posiziona il Segnalino Punteggio nel punto più basso del Tracciato Trofei.",
-                "cards": "Mescola le carte iniziali e posiziona il mazzo a sinistra del tabellone.",
-                "miniature": "Posiziona le miniature sullo spazio della rispettiva Scuola sulla mappa.",
-                "drawBaseHeader": "Pesca le seguenti carte e oro in base alla posizione del giocatore:",
-                "drawWildHunt": "Pesca 5 carte e prendi 3 Oro.",
+                "markers": "Posizionare i 5 cubi e il Segnalino Scudo sugli spazi di “livello 1” di ogni tracciato della plancia giocatore.",
+                "markersMages": "Posizionare i 5 cubi e il Segnalino Scudo o Energia sugli spazi di “livello 1” di ogni tracciato del tabellone giocatore.",
+                "raiseAttr": "Scegliere un Attributo da portare al livello 2.",
+                "token": "Posizionare il Segnalino Punteggio nel punto più basso del Tracciato Trofei.",
+                "cards": "Mescolare le carte iniziali e posizionare il mazzo a sinistra del tabellone.",
+                "miniature": "Posizionare le miniature sullo spazio della rispettiva Scuola sulla mappa.",
+                "drawBaseHeader": "Pescare le seguenti carte e oro in base alla posizione del giocatore:",
+                "drawWildHunt": "Pescare 5 carte e prendere 3 Oro.",
                 "title": "Ogni giocatore deve:",
                 "drawBaseResources": [
                     [
@@ -357,10 +351,10 @@
             ],
             "board": [
                 "Se usi il tabellone:",
-                "Mescolate i segnalini Porto, con l'ancora rivolta verso l'alto",
+                "Mescola i segnalini Porto, con l'ancora rivolta verso l'alto",
                 "Posizionali sulle località costiere (1, 5, 6, 9, 12, 13) e girali",
                 "Posiziona la miniatura di una nave sui tre luoghi con il simbolo della nave",
-                "Rigirateli sul lato dell'ancora, come promemoria"
+                "Rigirali sul lato dell'ancora, come promemoria"
             ],
             "decks": "Mescola il mazzo Esplorazione Skellige. Non mescolare il Mazzo Eventi Skellige! Posizionali entrambi nei rispettivi spazi sopra le isole sul tabellone.",
             "dagon": "Posiziona la miniatura di Dagon sullo spazio iniziale corrispondente al numero dei giocatori. Mescola le carte Bonus Dagon e posizionale, quindi la carta mostro Dagon (Abilità Speciale a faccia in su) e i segnalini Traccia Dagon vicino al suo tracciato.",
@@ -387,7 +381,7 @@
         "cardSubtitle": "Carte",
         "noteTitle": "Note",
         "noteText": [
-            "Questa è una prima bozza per far arrivare il Controllo Componenti nelle mani della seconda ondata di spedizioni il più velocemente possibile e, come tale, sarà minimale e (probabilmente) privo di traduzione.",
+            "Questa è una prima bozza per far arrivare il Controllo Componenti nelle mani del secondo lotto di spedizioni il più velocemente possibile e, come tale, sarà minimale e (probabilmente) privo di traduzione.",
             "Il mio obiettivo è aggiungere diverse sezioni per i segnalini e le miniature subito dopo la pubblicazione.",
             "Al momento le spunte di controllo non sono permanenti. Se aggiorni o esci da questa pagina perderai i tuoi progressi. Mi scuso per l'inconveniente mentre risolvo la questione."
         ],
@@ -429,7 +423,7 @@
         },
         "card": {
             "numInPack": "# in questo pacchetto",
-            "numSoFar": "# fino ad ora",
+            "numSoFar": "# fino ad ora ne hai",
             "numTotal": "# totale"
         },
         "notes": {
@@ -446,7 +440,7 @@
             "Ciri": "Ciri",
             "Contains text in bottom field on Action cards": "Contiene testo nella parte inferiore delle carte Azione",
             "1 per Witcher, art on card is of the corresponding Witcher": "1 per Witcher, l'immagine sulla carta è del Witcher corrispondente",
-            "10 cards per 5 Mages. Corresponding icons to mage's icon in top right corner": "10 carte per 5 maghi. Icone corrispondenti all'icona del mago nell'angolo in alto a destra",
+            "10 cards per 5 Mages. Corresponding icons to mage's icon in top right corner": "10 carte per 5 maghi. Ogni mago è rappresentato dall'icona nell'angolo in alto a destra",
             "4 per 5 Mages": "4 per 5 Maghi",
             "Trophy cards with perks gained when defeating Dagon": "Carte trofeo con vantaggi ottenuti sconfiggendo Dagon"
         },
@@ -476,7 +470,7 @@
         "Witcher Trophy cards": "Carte Trofeo Witcher",
         "Wilds Exploration cards": "Carte Esplorazione Regioni Selvagge",
         "(AP) Wilds Exploration cards": "(AP) Carte Esplorazione Regioni Selvagge",
-        "Wild Hunt Monster Fight cards": "Carte Caccia Selvaggia",
+        "Wild Hunt Special Fight cards": "Carte Attacco Speciale Caccia Selvaggia",
         "Special Monster Fight cards": "Carte Attacco Speciale Mostri",
         "(AP) City Exploration cards": "(AP) Carte Esplorazione Città",
         "(AP) Event cards": "(AP) Carte Evento",
@@ -487,7 +481,7 @@
         "Wild Hunt Exploration - Stage 1": "Carte Esplorazione Caccia Selvaggia - Stadio 1",
         "Wild Hunt Exploration - Stage 2": "Carte Esplorazione Caccia Selvaggia - Stadio 2",
         "Wild Hunt Event": "Carte Evento Caccia Selvaggia",
-        "Mage Special Action": "Azione Speciale Maghi",
+        "Mage Special Action cards": "Carte Azione Speciale Maghi",
         "Lost Mount": "Destriero Perduto",
         "Monster card (Troll)": "Carta Mostro (Troll)",
         "Trophy cards": "Carte Trofeo",
@@ -495,10 +489,10 @@
         "Starting Action cards (Manticore)": "Carte Azione Iniziali (Manticora)",
         "Advanced Action cards": "Carte Azione Avanzata",
         "Starting Action cards (Ciri)": "Carte Azione Iniziali (Ciri)",
-        "Unique Action cards (witchers)": "Carte Azione Uniche (Witchers)",
+        "Witcher Special Action cards": "Carte Azione Speciale Witcher",
         "Large Monster cards": "Carte grandi Mostro",
-        "Difficulty Jumbo Reference cards": "Carte riferimento Difficoltà grandi",
-        "Mage Unique Action cards": "Carte Azione Uniche dei Maghi",
+        "Difficulty Jumbo Reference cards": "Carte grandi riferimento Difficoltà",
+        "Mage Starting Action cards": "Carte Azione Iniziali Maghi",
         "Mage Trophy cards": "Carte Trofeo Maghi",
         "Mage Action cards": "Carte Azione Maghi",
         "Legendary Monster movement cards": "Carte Movimento Mostro Leggendario",
@@ -586,11 +580,11 @@
                 "link": "https://github.com/users/swirle13/projects/2/views/3"
             },
             {
-                "text": "Board delle attività",
+                "text": "Board degli obiettivi",
                 "link": "https://github.com/users/swirle13/projects/2/views/1"
             },
             {
-                "text": "Tutti i bugs riscontrati/miglioramenti proposti",
+                "text": "Tutti i bugs riscontrati/proposte di miglioramento",
                 "link": "https://github.com/swirle13/The-Witcher-Old-World-Tool/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
             },
             {
